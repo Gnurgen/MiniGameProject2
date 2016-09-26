@@ -11,6 +11,9 @@ public class Builder{
 		string buildFolder = System.DateTime.Now.ToString ("dd-MM-yy HH.mm.ss");
 
 		try{
+
+			PlayerSettings.bundleIdentifier = "com.highfiveproductions.doedetoner";
+			PlayerSettings.bundleVersion = "2.2";
 			// Change something to push again and again and again
 			string[] scenes = { "Assets/Scenes/Building/StartScene.unity" };
 
