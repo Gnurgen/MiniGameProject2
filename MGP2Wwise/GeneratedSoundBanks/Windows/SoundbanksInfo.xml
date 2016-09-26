@@ -23,12 +23,6 @@
 			<IncludedEvents>
 				<Event Id="3496604524" Name="PlayJumpSound" ObjectPath="\Events\Default Work Unit\PlayJumpSound"/>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="663881042" Language="SFX">
-					<ShortName>Jump - Sound Effect.wav</ShortName>
-					<Path>SFX\Jump - Sound Effect_9E69E797.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
