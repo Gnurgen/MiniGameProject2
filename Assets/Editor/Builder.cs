@@ -7,20 +7,20 @@ public class Builder{
 
 	static void AndroidBuild(){
 
-		string basePath = "C:/Builds/Android";
+		string basePath = "C:/Users/dadiu/Google Drive/MGP2/Builds";
 		string buildFolder = System.DateTime.Now.ToString ("dd-MM-yy HH.mm.ss");
 
 		try{
 
-			string[] scenes = { "Assets/Scenes/Main.unity" };
+			string[] scenes = { "Assets/Scenes/Building/StartScene.unity" };
 
-			FileUtil.DeleteFileOrDirectory ("C:/Users/Kenned/AppData/LocalUnity/Editor/Editor.log");
+			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
 
 			Directory.CreateDirectory (basePath + "/" + buildFolder);
 
-			BuildPipeline.BuildPlayer (scenes, basePath + "/" + buildFolder + "/" + "buildfile.apk" , BuildTarget.Android, BuildOptions.None);
+			BuildPipeline.BuildPlayer (scenes, basePath + "/" + buildFolder + "/" + "build.apk" , BuildTarget.Android, BuildOptions.None);
 
-			FileUtil.CopyFileOrDirectory ("C:/Users/Kenned/AppData/Local/Unity/Editor/Editor.log", basePath + "/" + buildFolder + "/log.txt");
+			FileUtil.CopyFileOrDirectory ("C:/Users/dadiu/AppData/Local/Unity/Editor/Editor.log", basePath + "/" + buildFolder + "/log.txt");
 		} catch(UnityException e){
 			StreamWriter fil = new StreamWriter(basePath + "/" + buildFolder + "/unity_errors.txt",true);
 			fil.Write (e.Message);
