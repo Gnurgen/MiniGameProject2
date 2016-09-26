@@ -12,6 +12,9 @@ public class Builder{
 
 		try{
 
+			PlayerSettings.bundleIdentifier = "com.highfiveproductions.doedetoner";
+			PlayerSettings.bundleVersion = "2.2";
+			// Change something to push again and again and again
 			string[] scenes = { "Assets/Scenes/Building/StartScene.unity" };
 
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
