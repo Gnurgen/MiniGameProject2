@@ -11,7 +11,7 @@ public class Builder{
 		string buildFolder = System.DateTime.Now.ToString ("dd-MM-yy HH.mm.ss");
 
 		try{
-			// Change something to push again and again
+			// Change something to push again and again and again
 			string[] scenes = { "Assets/Scenes/Building/StartScene.unity" };
 
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
