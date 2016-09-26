@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5479FAAF-EF4A-4F70-81FE-59985C302091}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{5479FAAF-EF4A-4F70-81FE-59985C302091}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Jump - Sound Effect" ID="{95BA2BF9-BBDB-45AF-8CA8-9E6E6BD7151B}" ShortID="107442406" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Jump - Sound Effect" ID="{A0F4223C-E167-4D80-9FFD-3DF7791F792F}" ShortID="663881042">
+							<Language>SFX</Language>
+							<AudioFile>Jump - Sound Effect.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Jump - Sound Effect" ID="{A0F4223C-E167-4D80-9FFD-3DF7791F792F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
