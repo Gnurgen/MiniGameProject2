@@ -6,29 +6,36 @@ using System.Net;
 
 public class StartmenuInteraction : MonoBehaviour {
 
-    private AudioSource AS;
-    public Sprite earImgL, earImgR;
-   public GameObject earFB;
+    private AudioSource _AS;
+    private Sprite _earImgL, _earImgR;
+    private GameObject _earFB, _instrucPopUp;
 
     void Start()
     {
-        earFB = GameObject.Find("EarFeedback");
-        earFB.SetActive(false);
-        earImgL = Resources.Load<Sprite>("StartMenu/leftEar");
-        earImgR = Resources.Load<Sprite>("StartMenu/rightEar");
-        AS = GetComponent<AudioSource>();
-        AS.clip = Resources.Load<AudioClip>("StartMenu/leftRightAudio");
+        _instrucPopUp = GameObject.Find("InstructionsPop-Up");
+        _instrucPopUp.SetActive(false);
+        _earFB = GameObject.Find("EarFeedback");
+        _earFB.SetActive(false);
+        _earImgL = Resources.Load<Sprite>("StartMenu/leftEar");
+        _earImgR = Resources.Load<Sprite>("StartMenu/rightEar");
+        _AS = GetComponent<AudioSource>();
+        _AS.clip = Resources.Load<AudioClip>("StartMenu/leftRightAudio");
         print("NOTE: Left/Right audio and Left/Right images are dummies - REPLACE WITH REAL OBJECTS IN RESOURCES FOLDER");
     }
 
     public void StartGameButton()
     {
-        //gamehandler.startgame
+
     }
 
-    public void InfoScreenButton()
+    public void InstructionsButton()
     {
+        _instrucPopUp.SetActive(true);
+    }
 
+    public void CloseInstructionScreen()
+    {
+        _instrucPopUp.SetActive(false);
     }
 
     public void SoundTestButton()
@@ -43,20 +50,20 @@ public class StartmenuInteraction : MonoBehaviour {
 
     private IEnumerator stereoTest()
     {
-        earFB.SetActive(true);
-        AS.panStereo = -1; //Play to left ear
-        earFB.GetComponent<Image>().sprite = earImgL;
-        AS.Play();
-        yield return new WaitForSeconds(AS.clip.length+0.1f);
-        AS.panStereo = 1; //Play to right ear
-        earFB.GetComponent<Image>().sprite = earImgR;
-        AS.Play();
-        Invoke("turnImgOff", AS.clip.length + 0.1f);
+        _earFB.SetActive(true);
+        _AS.panStereo = -1; //Play to left ear
+        _earFB.GetComponent<Image>().sprite = _earImgL;
+        _AS.Play();
+        yield return new WaitForSeconds(_AS.clip.length+0.1f);
+        _AS.panStereo = 1; //Play to right ear
+        _earFB.GetComponent<Image>().sprite = _earImgR;
+        _AS.Play();
+        Invoke("turnImgOff", _AS.clip.length + 0.1f);
     }
 
 
     void turnImgOff()
     {
-        earFB.SetActive(false);
+        _earFB.SetActive(false);
     }
 }
