@@ -58,6 +58,8 @@ public class AudioManager : MonoBehaviour{
     void MB_Stop()
     {
         AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
+        MB_State();
+        AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Pause()
@@ -87,7 +89,7 @@ public class AudioManager : MonoBehaviour{
     }
     void MB_State()
     {
-      //  AkSoundEngine.SetState(_MusicBoxStateGroup, GameManager.instance.musicBoxCount);
+       AkSoundEngine.SetState(_MusicBoxStateGroup,GameManager.instance.musicBoxCount.ToString());
 
     }
 
@@ -112,22 +114,22 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_PlayerFatigue, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerFreeze()
+    void PlayerFreeze(int value)
     {
         AkSoundEngine.PostEvent(_PlayerFreeze, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerUnfreeze()
+    void PlayerUnfreeze(int value)
     {
         AkSoundEngine.PostEvent(_PlayerUnfreeze, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerTakeDamage()
+    void PlayerTakeDamage(int value)
     {
         AkSoundEngine.PostEvent(_PlayerTakeDamage, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerRecover()
+    void PlayerRecover(int value)
     {
         AkSoundEngine.PostEvent(_PlayerRecover, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
@@ -144,7 +146,7 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_MonsterStep, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
     }
-    void EnemyAttackHit()
+    void EnemyAttackHit(int value)
     {
         AkSoundEngine.PostEvent(_MonsterAttackHit, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
@@ -163,22 +165,21 @@ public class AudioManager : MonoBehaviour{
 
     void Start ()
     {
-        
+       /*                   TO BE CONTINUED
         if (GameManager.instance.audioManager == null)
             GameManager.instance.audioManager = this;
         else
-            Destroy();
+            Destroy(this);
+       */
+
 
         // Music Box Events
-      
         GameManager.instance.OnMusicBoxPlay += MB_Play;
-        GameManager.instance.OnMusicBoxRewinded += MB_Stop;
+        GameManager.instance.OnMusicBoxRewindComplete += MB_Stop;
         GameManager.instance.OnMusicBoxPause += MB_Pause;
         GameManager.instance.OnMusicBoxResume += MB_Resume;
         GameManager.instance.OnMusicBoxRewindStart += MB_Rewind_Play;
         GameManager.instance.OnMusicBoxRewindStop += MB_Rewind_Stop;
-        GameManager.instance.OnMusicBoxPuff += MB_Puff;
-        GameManager.instance.OnMusicBoxState += MB_State;
 
         // Player Events
         GameManager.instance.OnPlayerStep += PlayerStep;
