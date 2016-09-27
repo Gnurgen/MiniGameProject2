@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class AudioManager : MonoBehaviour{
 
@@ -83,15 +84,15 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_MusicBoxRewindStop, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
-    void MB_Puff()
-    {
-        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
-        AkSoundEngine.RenderAudio();
-    }
     void MB_State()
     {
        AkSoundEngine.SetState(_MusicBoxStateGroup,GameManager.instance.musicBoxCount.ToString());
 
+    }
+    void MB_Move()
+    {
+        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
+        AkSoundEngine.RenderAudio();
     }
 
     //Player Events
@@ -216,6 +217,7 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnMusicBoxResume += MB_Resume;
         GameManager.instance.OnMusicBoxRewindStart += MB_Rewind_Play;
         GameManager.instance.OnMusicBoxRewindStop += MB_Rewind_Stop;
+        GameManager.instance.OnMusicBoxMove += MB_Move;
 
         // Player Events
         GameManager.instance.OnPlayerStep += PlayerStep;
@@ -241,6 +243,8 @@ public class AudioManager : MonoBehaviour{
          
          
     }
+
+   
 
     // Update is called once per frame
     void Update () {

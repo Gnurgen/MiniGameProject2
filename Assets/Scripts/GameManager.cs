@@ -185,7 +185,7 @@ public class GameManager {
 
     public delegate void MusicBoxAction();
     public event MusicBoxAction OnMusicBoxPlay;
-    public event MusicBoxAction OnMusicBoxStop;
+    public event MusicBoxAction OnMusicBoxMove;
     public event MusicBoxAction OnMusicBoxPause;
     public event MusicBoxAction OnMusicBoxResume;
     public event MusicBoxAction OnMusicBoxRewindStart;
@@ -195,9 +195,9 @@ public class GameManager {
     {
         OnMusicBoxPlay();
     }
-    public void MusicBoxStop()
+    public void MusicBoxMove()
     {
-        OnMusicBoxStop();
+        OnMusicBoxMove();
     }
     public void MusicBoxPause()
     {
