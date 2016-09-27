@@ -43,11 +43,6 @@ public class StartmenuInteraction : MonoBehaviour {
         StartCoroutine(stereoTest());
     }
 
-    void Update()
-    {
-
-    }
-
     private IEnumerator stereoTest()
     {
         _earFB.SetActive(true);
