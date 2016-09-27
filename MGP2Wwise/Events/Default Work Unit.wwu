@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{769F202A-4C81-4E71-B192-0D69AA055185}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{769F202A-4C81-4E71-B192-0D69AA055185}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlayJumpSound" ID="{04413AC2-8396-440F-915F-97BB42B0C8A4}">
+					<ChildrenList>
+						<Action Name="Play" ID="{6A757404-CC74-4C4F-AAEA-DEA574A8ED27}" ShortID="1036206397" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A38C6F77-3EC5-4DAA-8A7F-92BE8020CB99}" Global="false">
+									<ObjectRef Name="Jump - Sound Effect" ID="{95BA2BF9-BBDB-45AF-8CA8-9E6E6BD7151B}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
