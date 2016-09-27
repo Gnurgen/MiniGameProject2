@@ -47,10 +47,14 @@ public class GameManager {
 
     public GameObject musicBox
     {
+        
         get
         {
             if (_musicBox == null)
-                _musicBox = GameObject.Find("MusicBox");
+            {
+                Debug.Log("kik");
+                _musicBox = GameObject.FindWithTag("MusicBox");
+            }
             return _musicBox;
         }
     }
