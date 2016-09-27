@@ -66,8 +66,10 @@ public class AudioManager : MonoBehaviour{
     }
     void MB_Pause()
     {
+        
         AkSoundEngine.PostEvent(_MusicBoxPause, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
+        print(GameManager.instance.musicBox);
     }
     void MB_Resume()
     {

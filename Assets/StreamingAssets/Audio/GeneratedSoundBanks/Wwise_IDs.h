@@ -13,7 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAYJUMPSOUND = 3496604524U;
+        static const AkUniqueID MUSICBOX_PAUSE = 2302208614U;
+        static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
+        static const AkUniqueID MUSICBOX_RESUME = 3719125665U;
+        static const AkUniqueID MUSICBOX_STOP = 2820245704U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

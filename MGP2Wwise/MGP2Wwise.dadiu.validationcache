@@ -1,50 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="72">
-<<<<<<< HEAD
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="839186537" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="839226540" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="839426551" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Attenuations\Default Work Unit.wwu" DateLow="839436552" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Audio Devices\Default Work Unit.wwu" DateLow="839446552" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="839456553" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="839466553" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="839476554" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="839476554" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Default Work Unit.wwu" DateLow="839486555" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="839506556" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory Auro Headphone.wwu" DateLow="839616562" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory Convolution Reverb Effects.wwu" DateLow="839636563" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory Effects.wwu" DateLow="839646564" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="839666565" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Delay.wwu" DateLow="839676565" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="839686566" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Filters.wwu" DateLow="839686566" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="839696567" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="839706567" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="839706567" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory McDSP Effects.wwu" DateLow="839666565" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Events\Default Work Unit.wwu" DateLow="839716568" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Game Parameters\Default Work Unit.wwu" DateLow="839726568" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="839736569" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="839886577" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="839936580" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\MGP2Wwise.dadiu.wsettings" DateLow="603259767" DateHigh="30545933"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\MGP2Wwise.wproj" DateLow="839926580" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="839946581" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Modulators\Default Work Unit.wwu" DateLow="839956581" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Presets\Default Work Unit.wwu" DateLow="845666908" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Queries\Default Work Unit.wwu" DateLow="845676909" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Queries\Factory Queries.wwu" DateLow="845686909" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\SoundBanks\Default Work Unit.wwu" DateLow="845696910" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="845696910" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\States\Default Work Unit.wwu" DateLow="845706910" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Switches\Default Work Unit.wwu" DateLow="845716911" DateHigh="30545931"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Triggers\Default Work Unit.wwu" DateLow="845726912" DateHigh="30545931"/>
-=======
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="32031074" DateHigh="30545936"/>
+	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3537850782" DateHigh="30546120"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="546612144" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="546662147" DateHigh="30545935"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Attenuations\Default Work Unit.wwu" DateLow="546672147" DateHigh="30545935"/>
+	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Attenuations\Default Work Unit.wwu" DateLow="3537970788" DateHigh="30546120"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Audio Devices\Default Work Unit.wwu" DateLow="546732151" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="546742151" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="546752152" DateHigh="30545935"/>
@@ -63,60 +22,20 @@
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="546942163" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="546942163" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Effects\Factory McDSP Effects.wwu" DateLow="546912161" DateHigh="30545935"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Events\Default Work Unit.wwu" DateLow="32091077" DateHigh="30545936"/>
+	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Events\Default Work Unit.wwu" DateLow="3537890784" DateHigh="30546120"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Game Parameters\Default Work Unit.wwu" DateLow="546952163" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="546962164" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="547072170" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="547112173" DateHigh="30545935"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\MGP2Wwise.dadiu.wsettings" DateLow="547082171" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\MGP2Wwise.wproj" DateLow="518188880" DateHigh="30545936"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="547122173" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Modulators\Default Work Unit.wwu" DateLow="547122173" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Presets\Default Work Unit.wwu" DateLow="553462536" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Queries\Default Work Unit.wwu" DateLow="553472536" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Queries\Factory Queries.wwu" DateLow="553472536" DateHigh="30545935"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\SoundBanks\Default Work Unit.wwu" DateLow="553482537" DateHigh="30545935"/>
+	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\SoundBanks\Default Work Unit.wwu" DateLow="3537940787" DateHigh="30546120"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="553482537" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\States\Default Work Unit.wwu" DateLow="553492537" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Switches\Default Work Unit.wwu" DateLow="553502538" DateHigh="30545935"/>
 	<ValidationCacheItem File="C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\Triggers\Default Work Unit.wwu" DateLow="553502538" DateHigh="30545935"/>
->>>>>>> d2cb9084259083449e079650803e2dd37d5bbbe4
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2086630301" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="2116379272" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="2116919303" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Attenuations\Default Work Unit.wwu" DateLow="2086890316" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Audio Devices\Default Work Unit.wwu" DateLow="2086590298" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="2086570297" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="2086520294" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2117709348" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="2086460291" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Default Work Unit.wwu" DateLow="2086750308" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="2110168917" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory Auro Headphone.wwu" DateLow="2107028737" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory Convolution Reverb Effects.wwu" DateLow="2111268980" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory Effects.wwu" DateLow="2116879301" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="2135250351" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Delay.wwu" DateLow="2134160289" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="2136930447" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Filters.wwu" DateLow="2134580313" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="2138480536" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="2136600429" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="2134050283" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Effects\Factory McDSP Effects.wwu" DateLow="2075076910" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Events\Default Work Unit.wwu" DateLow="2086650302" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Game Parameters\Default Work Unit.wwu" DateLow="2086730306" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="2116309268" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2086830312" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2086610300" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\MGP2Wwise.wproj" DateLow="2086420289" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="2086490293" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Modulators\Default Work Unit.wwu" DateLow="2086550296" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Presets\Default Work Unit.wwu" DateLow="2086770309" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Queries\Default Work Unit.wwu" DateLow="2086810311" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Queries\Factory Queries.wwu" DateLow="2117499336" DateHigh="30542083"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\SoundBanks\Default Work Unit.wwu" DateLow="2086710305" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2086790310" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\States\Default Work Unit.wwu" DateLow="2086690304" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Switches\Default Work Unit.wwu" DateLow="2086670303" DateHigh="30545899"/>
-	<ValidationCacheItem File="C:\Users\dadiu\Documents\WwiseProjects\MGP2Wwise\Triggers\Default Work Unit.wwu" DateLow="2086850313" DateHigh="30545899"/>
 </ValidationCache>
