@@ -19,7 +19,7 @@ public class Builder{
 
 			for(int i = 0; i < scenes.Length; i++){
 				//scenes[i] = trimPath(scenes[i]);
-				print ("TEST PATH: " + scenes[i]);
+				Debug.Log ("TEST PATH: " + scenes[i]);
 			}
 
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
