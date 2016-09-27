@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 7ea5aaa96b6af934ba4d3b9ad295346b
+<<<<<<< HEAD
 timeCreated: 1474959408
+=======
+timeCreated: 1474959447
+>>>>>>> f82892d18929c7a6968477634d17cdcd174a63bc
 licenseType: Pro
 PluginImporter:
   serializedVersion: 1
