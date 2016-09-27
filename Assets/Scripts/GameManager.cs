@@ -123,6 +123,15 @@ public class GameManager {
         OnEnemyAttack();
     }
 
+
+    public delegate void EnemyAggroAction();
+    public event EnemyAggroAction OnEnemyAggro;
+    public void EnemyAggro()
+    {
+        OnEnemyAggro();
+    }
+
+
     public delegate void HitAction(int value);
     public event HitAction OnEnemyAttackHit;
     public void EnemyAttackHit(int i)
@@ -130,14 +139,14 @@ public class GameManager {
         OnEnemyAttackHit(i);
     }
 
-    public delegate void FreezeAction(int value);
+    public delegate void FreezeAction(float value);
     public event FreezeAction OnPlayerFreeze;
     public event FreezeAction OnPlayerUnfreeze;
-    public void PlayerFreeze(int i)
+    public void PlayerFreeze(float i)
     {
         OnPlayerFreeze(i);
     }
-    public void PlayerUnfreeze(int i)
+    public void PlayerUnfreeze(float i)
     {
         OnPlayerFreeze(i);
     }
@@ -157,7 +166,10 @@ public class GameManager {
     public delegate void SprintAction();
     public event SprintAction OnPlayerSprintStart;
     public event SprintAction OnPlayerSprintStop;
-    public event SprintAction OnPlayerFatigue;
+
+    //added Stamina value for Fatigue
+    public delegate void SprintFatigue(int value);
+    public event SprintFatigue OnPlayerFatigue;
     public void PlayerSprintStart()
     {
         OnPlayerSprintStart();
@@ -166,9 +178,9 @@ public class GameManager {
     {
         OnPlayerSprintStop();
     }
-    public void PlayerFatigue()
+    public void PlayerFatigue(int i)
     {
-        OnPlayerFatigue();
+        OnPlayerFatigue(i);
     }
 
     public delegate void MusicBoxAction();
@@ -208,5 +220,28 @@ public class GameManager {
         _musicBoxCount++;
         OnMusicBoxRewindComplete();
     }
+    public delegate void Graveyard();
+    public event Graveyard OnGateOpen;
+    public event Graveyard OnKnockOnCoffin;
+    public event Graveyard OnGateCreak;
+    public void GateOpen()
+    {
+        OnGateOpen();
+    }
+    public void KnockOnCoffin()
+    {
+        OnKnockOnCoffin();
+    }
+    public void GateCreak()
+    {
+        OnGateOpen();
+    }
+    public delegate void MenuButtons();
+    public event MenuButtons StartButton;
+    public void OnStartButton()
+    {
+        StartButton();
+    }
+
 
 }

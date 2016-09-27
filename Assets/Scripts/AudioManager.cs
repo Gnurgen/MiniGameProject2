@@ -34,15 +34,20 @@ public class AudioManager : MonoBehaviour{
     private string _MonsterAttack,
         _MonsterAttackHit,
         _MonsterSpawn,
-        _MonsterDespawn;
+        _MonsterDespawn,
+        _MonsterAggro;
    
     [Header("Ambience")]
     [SerializeField]
-    private string Ambience;
+    private string _Ambience;
     [SerializeField]
-    private string Grave,
-        PlayGround,
-        Lake;
+    private string _KnockOnCoffin,
+        _GateCreak,
+        _GateOpen,
+        _Lake;
+    [Header("Menu")]
+    [SerializeField]
+    private string _StartButton;
 
     void OnEnemyAttack()
     {
@@ -59,6 +64,7 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
         MB_State();
+        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
         AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
@@ -109,18 +115,20 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_PlayerSprintStop, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerFatigue()
+    void PlayerFatigue(int value)
     {
         AkSoundEngine.PostEvent(_PlayerFatigue, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerFreeze(int value)
+    void PlayerFreeze(float value)
     {
+        //value = Vector3.Distance(GameManager.instance.player.transform.position, GameManager.instance.enemy.transform.position);
         AkSoundEngine.PostEvent(_PlayerFreeze, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerUnfreeze(int value)
+    void PlayerUnfreeze(float value)
     {
+        //value = Vector3.Distance(GameManager.instance.player.transform.position, GameManager.instance.enemy.transform.position);
         AkSoundEngine.PostEvent(_PlayerUnfreeze, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
@@ -161,7 +169,40 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_MonsterDespawn, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
     }
+    void EnemyAggro()
+    {
+        AkSoundEngine.PostEvent(_MonsterAggro, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
 
+
+    //Ambience Sound
+    void Ambience()
+    {
+        AkSoundEngine.PostEvent(_Ambience, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void KnockOnCoffin()
+    {
+        AkSoundEngine.PostEvent(_KnockOnCoffin, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void GateCreak()
+    {
+        AkSoundEngine.PostEvent(_GateCreak, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void GateOpen()
+    {
+        AkSoundEngine.PostEvent(_GateOpen, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    //Menu Buttons
+    void StartButton()
+    {
+        AkSoundEngine.PostEvent(_StartButton, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
 
     void Start ()
     {
@@ -196,7 +237,12 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnEnemyStep += EnemyStep;
         GameManager.instance.OnEnemyAttackHit += EnemyAttackHit; 
         GameManager.instance.OnEnemySpawn += EnemySpawn;
-        GameManager.instance.OnEnemyDespawn += EnemyDespawn; 
+        GameManager.instance.OnEnemyDespawn += EnemyDespawn;
+        GameManager.instance.OnEnemyAggro += EnemyAggro;
+        //Ambience Events
+        GameManager.instance.OnKnockOnCoffin += KnockOnCoffin;
+        GameManager.instance.OnGateCreak += GateCreak;
+        GameManager.instance.OnGateOpen += GateOpen;
          
          
     }
