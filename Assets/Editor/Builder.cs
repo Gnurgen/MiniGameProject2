@@ -30,7 +30,7 @@ public class Builder{
 			}
 			allScenes.Remove("StartScene.unity");
 			allScenes.Insert(0,"StartScene.unity");
-			string[] buildScenes = allScenes.ToArray;
+			string[] buildScenes = allScenes.ToArray();
 			for(int i = 0; i < buildScenes.Length; i++){
 				buildScenes[i] = "Assets/Scenes/Building/" + buildScenes[i];
 			}
