@@ -28,6 +28,7 @@ public class Builder{
 			if(!allScenes.Contains("StartScene.unity")){
 				throw new UnityException("There is no start scene");
 			}
+			allScenes.RemoveAll(str => str.Contains(".meta"));
 			allScenes.Remove("StartScene.unity");
 			allScenes.Insert(0,"StartScene.unity");
 			string[] buildScenes = allScenes.ToArray();
