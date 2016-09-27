@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager {
+
+    private static int START_SCENE = 0;
+    private static int GAME_SCENE = 1;
 
     private static GameManager _instance;
 
@@ -9,7 +13,7 @@ public class GameManager {
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
-    public int musicBoxCount = 0;
+    private int _musicBoxCount = 0;
 
     public static GameManager instance
     {
@@ -55,10 +59,37 @@ public class GameManager {
     {
         get
         {
-//            if (_audioManager == null)
-//                _audioManager = Object.FindObjectOfType(typeof (AudioManager)) as AudioManager;
+            if (_audioManager == null)
+                _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
             return _audioManager;
         }
+    }
+
+    public int musicBoxCount
+    {
+        get
+        {
+            return _musicBoxCount;
+        }
+    }
+
+    public void LeaveGame()
+    {
+        _instance = null;
+        SceneManager.LoadScene(START_SCENE);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(GAME_SCENE);
+    }
+
+    public void PlayDeathScene_MusicBox()
+    {
+    }
+
+    public void PlayDeathScene_Monster()
+    {
     }
 
     public delegate void SpawnAction();
@@ -147,10 +178,35 @@ public class GameManager {
     public event MusicBoxAction OnMusicBoxResume;
     public event MusicBoxAction OnMusicBoxRewindStart;
     public event MusicBoxAction OnMusicBoxRewindStop;
-    public event MusicBoxAction OnMusicBoxRewinded;
+    public event MusicBoxAction OnMusicBoxRewindComplete;
     public void MusicBoxPlay()
     {
         OnMusicBoxPlay();
+    }
+    public void MusicBoxStop()
+    {
+        OnMusicBoxStop();
+    }
+    public void MusicBoxPause()
+    {
+        OnMusicBoxPause();
+    }
+    public void MusicBoxResume()
+    {
+        OnMusicBoxResume();
+    }
+    public void MusicBoxRewindStart()
+    {
+        OnMusicBoxRewindStart();
+    }
+    public void MusicBoxRewindStop()
+    {
+        OnMusicBoxRewindStop();
+    }
+    public void MusicBoxRewindComplete()
+    {
+        _musicBoxCount++;
+        OnMusicBoxRewindComplete();
     }
 
 }
