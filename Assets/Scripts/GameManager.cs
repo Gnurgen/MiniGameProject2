@@ -8,6 +8,12 @@ public class GameManager {
     private GameObject _player;
     private GameObject _enemy;
     private GameObject _musicBox;
+    public AudioManager audioManager;
+
+    public GameManager()
+    {
+        audioManager = new AudioManager(this);
+    }
 
     public static GameManager instance
     {
