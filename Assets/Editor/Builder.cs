@@ -17,6 +17,10 @@ public class Builder{
 			// Change something to push again and again and again
 			string[] scenes = { "Assets/Scenes/Tests/WwiseTestScene.unity" };
 
+			foreach(String s in Directory.GetFiles("C:/workspace")){
+				Debug.Log(s);
+			}
+
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
 
 			Directory.CreateDirectory (basePath + "/" + buildFolder);
