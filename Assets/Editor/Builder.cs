@@ -35,6 +35,12 @@ public class Builder{
 				buildScenes[i] = "Assets/Scenes/Building/" + buildScenes[i];
 			}
 
+			string test = "";
+			foreach(string s in buildScenes){
+				test += "TEST SCENE: '" + s + "'\n";
+			}
+			Debug.Log(test);
+
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
 
 			Directory.CreateDirectory (basePath + "/" + buildFolder);
