@@ -5,32 +5,36 @@ public class AudioManager : MonoBehaviour{
 
     [Header("Music Box")]
     [SerializeField]
-    private string MusicBoxPlay;
+    private string _MusicBoxPlay;
           [SerializeField]
-    private string MusicBoxStop,
-        MusicBoxPause,
-        MusicBoxResume, 
-        MusicBoxRewindPlay, 
-        MusicBoxRewindStop, 
-        MusicBoxPuff,
-        MusicBoxStateGroup;
+    private string _MusicBoxStop,
+        _MusicBoxPause,
+        _MusicBoxResume, 
+        _MusicBoxRewindPlay, 
+        _MusicBoxRewindStop, 
+        _MusicBoxPuff,
+        _MusicBoxStateGroup;
 
     [Header("Player")]
     [SerializeField]
-    private string PlayerFootPrint;
+    private string _PlayerStep;
     [SerializeField]
-    private string PlayerStamina,
-        Running,
-        Walking,
-        IcingScreenPlay,
-        IcingScreenStop;
+    private string _PlayerSprintStart,
+        _PlayerSprintStop,
+        _PlayerFatigue,
+        _PlayerFreeze,
+        _PlayerUnfreeze,
+        _PlayerTakeDamage,
+        _PlayerRecover;
 
     [Header("Monster")]
     [SerializeField]
-    private string MonsterFootPrint;
+    private string _MonsterStep;
     [SerializeField]
-    private string MonsterAttack,
-        MonsterWarning;
+    private string _MonsterAttack,
+        _MonsterAttackHit,
+        _MonsterSpawn,
+        _MonsterDespawn;
    
     [Header("Ambience")]
     [SerializeField]
@@ -48,82 +52,152 @@ public class AudioManager : MonoBehaviour{
     // Music Box Events
     void MB_Play()
     {
-        AkSoundEngine.PostEvent(MusicBoxPlay, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Stop()
     {
-        AkSoundEngine.PostEvent(MusicBoxStop, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Pause()
     {
-        AkSoundEngine.PostEvent(MusicBoxPause, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxPause, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Resume()
     {
-        AkSoundEngine.PostEvent(MusicBoxResume, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxResume, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Rewind_Play()
     {
-        AkSoundEngine.PostEvent(MusicBoxRewindPlay, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxRewindPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Rewind_Stop()
     {
-        AkSoundEngine.PostEvent(MusicBoxRewindStop, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxRewindStop, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_Puff()
     {
-        AkSoundEngine.PostEvent(MusicBoxPuff, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
     void MB_State()
     {
-        //AkSoundEngine.SetState(MusicBoxStateGroup, GameManager.instance.musicBoxCount);
+      //  AkSoundEngine.SetState(_MusicBoxStateGroup, GameManager.instance.musicBoxCount);
 
+    }
+
+    //Player Events
+    void PlayerStep()
+    {
+        AkSoundEngine.PostEvent(_PlayerStep, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerSprintStart()
+    {
+        AkSoundEngine.PostEvent(_PlayerSprintStart, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerSprintStop()
+    {
+        AkSoundEngine.PostEvent(_PlayerSprintStop, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerFatigue()
+    {
+        AkSoundEngine.PostEvent(_PlayerFatigue, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerFreeze()
+    {
+        AkSoundEngine.PostEvent(_PlayerFreeze, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerUnfreeze()
+    {
+        AkSoundEngine.PostEvent(_PlayerUnfreeze, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerTakeDamage()
+    {
+        AkSoundEngine.PostEvent(_PlayerTakeDamage, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    void PlayerRecover()
+    {
+        AkSoundEngine.PostEvent(_PlayerRecover, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+
+    // Monster Events
+    void EnemyAttack()
+    {
+        AkSoundEngine.PostEvent(_MonsterAttack, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void EnemyStep()
+    {
+        AkSoundEngine.PostEvent(_MonsterStep, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void EnemyAttackHit()
+    {
+        AkSoundEngine.PostEvent(_MonsterAttackHit, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void EnemySpawn()
+    {
+        AkSoundEngine.PostEvent(_MonsterSpawn, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
+    }
+    void EnemyDespawn()
+    {
+        AkSoundEngine.PostEvent(_MonsterDespawn, GameManager.instance.enemy);
+        AkSoundEngine.RenderAudio();
     }
 
 
     void Start ()
     {
-        /*
+        
         if (GameManager.instance.audioManager == null)
             GameManager.instance.audioManager = this;
         else
             Destroy();
-        GameManager.instance.OnEnemyAttack += OnEnemyAttack;
+
+        // Music Box Events
+      
         GameManager.instance.OnMusicBoxPlay += MB_Play;
-        GameManager.instance.OnMusicBoxStop += MB_Stop;
+        GameManager.instance.OnMusicBoxRewinded += MB_Stop;
         GameManager.instance.OnMusicBoxPause += MB_Pause;
         GameManager.instance.OnMusicBoxResume += MB_Resume;
-        GameManager.instance.OnMusicBoxRewindPlay += MB_Rewind_Play;
+        GameManager.instance.OnMusicBoxRewindStart += MB_Rewind_Play;
         GameManager.instance.OnMusicBoxRewindStop += MB_Rewind_Stop;
         GameManager.instance.OnMusicBoxPuff += MB_Puff;
         GameManager.instance.OnMusicBoxState += MB_State;
-        GameManager.instance.OnPlayerFootprint += PlayerFootPrint;
-        GameManager.instance.OnPlayerRunning += PlayerRunning;
-        GameManager.instance.OnPlayerWalking += PlayerWalking;
-        GameManager.instance.OnIcingScreenStart += IcingScreenStart;
-        GameManager.instance.OnIcingScreenStop += IcingScreenStop;s
-         
-         
-         
-         PlayerFootPrint;
-    [SerializeField]
-    private string PlayerStamina,
-        Running,
-        Walking,
-        IcingScreenPlay,
-        IcingScreenStop;
 
+        // Player Events
+        GameManager.instance.OnPlayerStep += PlayerStep;
+        GameManager.instance.OnPlayerSprintStart += PlayerSprintStart;
+        GameManager.instance.OnPlayerSprintStop += PlayerSprintStop;
+        GameManager.instance.OnPlayerFatigue += PlayerFatigue;
+        GameManager.instance.OnPlayerFreeze += PlayerFreeze;
+        GameManager.instance.OnPlayerUnfreeze += PlayerUnfreeze;
+        GameManager.instance.OnPlayerTakeDamage += PlayerTakeDamage;
+        GameManager.instance.OnPlayerRecover += PlayerRecover;
+        
+        // Monster Events
+        GameManager.instance.OnEnemyAttack += EnemyAttack;
+        GameManager.instance.OnEnemyStep += EnemyStep;
+        GameManager.instance.OnEnemyAttackHit += EnemyAttackHit; 
+        GameManager.instance.OnEnemySpawn += EnemySpawn;
+        GameManager.instance.OnEnemyDespawn += EnemyDespawn; 
          
          
-         
-         */
     }
 
     // Update is called once per frame
