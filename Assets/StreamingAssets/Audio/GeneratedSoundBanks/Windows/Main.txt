@@ -1,6 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3496604524	PlayJumpSound			\Default Work Unit\PlayJumpSound	
 
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	663881042	Jump - Sound Effect	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Jump - Sound Effect_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump - Sound Effect		198208
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1029930033	SS_Air_Fury			\Factory SoundSeed Air Game Syncs\SS_Air_Fury	
+	3074696722	SS_Air_Size			\Factory SoundSeed Air Game Syncs\SS_Air_Size	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	964146970	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects\Game Driven Presets\Weapons\Fly-By Dagger\SoundSeed Woosh	
 
