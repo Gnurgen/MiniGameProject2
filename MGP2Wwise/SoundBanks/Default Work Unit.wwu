@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CCC0C418-E7AC-4BB4-AA54-873F83E3A453}" SchemaVersion="72">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{CCC0C418-E7AC-4BB4-AA54-873F83E3A453}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{CB78265F-883B-4B12-8DEE-A8D690B43F2B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="PlayJumpSound" ID="{04413AC2-8396-440F-915F-97BB42B0C8A4}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
