@@ -49,11 +49,6 @@ public class AudioManager : MonoBehaviour{
     [SerializeField]
     private string _StartButton;
 
-    void OnEnemyAttack()
-    {
-
-    }
-
     // Music Box Events
     void MB_Play()
     {
