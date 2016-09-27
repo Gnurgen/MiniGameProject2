@@ -24,22 +24,16 @@ public class Builder{
 				scenes[i] = extractFile(scenes[i]); // Remove the path up to the file, so only the file name remains
 			}
 
-			List<string> tempScenes = new List<string>(); // Make a list holding all the scenes
-			for(int i = 0; i < scenes.Length; i++){
-				tempScenes.Add(scenes[i]);
+			List<string> allScenes = new List<string>(scenes); // Make a list holding all the scenes
+			if(!allScenes.Contains("StartScene.unity")){
+				throw new UnityException("There is no start scene");
 			}
-			tempScenes.Remove("StartScene.unity"); // Remove the start scene
-			string[] buildScenes = new string[scenes.Length]; // Make the array holding all the scenes to be build
-			buildScenes[0] = "StartScene.unity"; // Set the StartScene as the first one
-			int n = 1;
-			foreach(string s in tempScenes){ // Add the rest of the scenes
-				buildScenes[n] = s;
-				n++;
-			}
+			allScenes.Remove("StartScene.unity");
+			allScenes.Insert(0,"StartScene.unity");
+			string[] buildScenes = allScenes.ToArray;
 			for(int i = 0; i < buildScenes.Length; i++){
-				buildScenes[i] = "Assets/Scenes/Building/" + scenes[i]; // Add the required path to each file name
+				buildScenes[i] = "Assets/Scenes/Building/" + buildScenes[i];
 			}
-
 
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
 
