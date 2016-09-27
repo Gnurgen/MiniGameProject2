@@ -12,7 +12,7 @@ public class GameManager {
 
     public GameManager()
     {
-        audioManager = new AudioManager(this);
+        //audioManager = new AudioManager(this);
     }
 
     public static GameManager instance
