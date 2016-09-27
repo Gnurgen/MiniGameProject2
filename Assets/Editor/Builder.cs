@@ -15,10 +15,11 @@ public class Builder{
 			PlayerSettings.bundleIdentifier = "com.highfiveproductions.doedetoner";
 			PlayerSettings.bundleVersion = "2.2";
 			// Change something to push again and again and again
-			string[] scenes = { "Assets/Scenes/Tests/WwiseTestScene.unity" };
+			string[] scenes = Directory.GetFiles("C:/workspace/Assets/Scenes/Building/");
 
-			foreach(String s in Directory.GetFiles("C:/workspace/Assets/Scenes/Building")){
-				Debug.Log("TEST PATH: "+s);
+			for(int i = 0; i < scenes.Length; i++){
+				//scenes[i] = trimPath(scenes[i]);
+				print ("TEST PATH: " + scenes[i]);
 			}
 
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
@@ -37,5 +38,11 @@ public class Builder{
 			fil.Write (e.Message);
 			fil.Close ();
 		}
+	}
+
+	static string trimPath(string path){
+		string temp = path.Split ('\\',1000);
+		string file = temp [temp.Length - 1];
+		return "Assets/Scenes/Building/" + file;
 	}
 }
