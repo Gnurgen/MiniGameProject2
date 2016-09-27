@@ -20,6 +20,7 @@ public class Builder{
 			for(int i = 0; i < scenes.Length; i++){
 				//scenes[i] = trimPath(scenes[i]);
 				Debug.Log ("TEST PATH: " + scenes[i]);
+				Debug.Log("TEST FILE: " + extractFile(scenes[i]));
 			}
 
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
@@ -40,9 +41,10 @@ public class Builder{
 		}
 	}
 
-	static string trimPath(string path){
-		string temp = path.Split ('\\',1000);
+	static string extractFile(string path){
+		char[] delim = { '\\', '/' };
+		string[] temp = path.Split (delim);
 		string file = temp [temp.Length - 1];
-		return "Assets/Scenes/Building/" + file;
+		return file;
 	}
 }
