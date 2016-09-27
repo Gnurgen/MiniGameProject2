@@ -28,19 +28,13 @@ public class Builder{
 			if(!allScenes.Contains("StartScene.unity")){
 				throw new UnityException("There is no start scene");
 			}
+			allScenes.RemoveAll(str => str.Contains(".meta"));
 			allScenes.Remove("StartScene.unity");
 			allScenes.Insert(0,"StartScene.unity");
 			string[] buildScenes = allScenes.ToArray();
 			for(int i = 0; i < buildScenes.Length; i++){
 				buildScenes[i] = "Assets/Scenes/Building/" + buildScenes[i];
 			}
-
-			string test = "";
-			foreach(string s in buildScenes){
-				test += "TEST SCENE: '" + s + "'\n";
-			}
-			Debug.Log(test);
-
 			FileUtil.DeleteFileOrDirectory ("C:/Users/dadiu/AppData/LocalUnity/Editor/Editor.log");
 
 			Directory.CreateDirectory (basePath + "/" + buildFolder);
