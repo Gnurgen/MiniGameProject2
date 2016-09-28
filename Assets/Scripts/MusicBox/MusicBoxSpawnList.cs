@@ -1,7 +1,7 @@
-﻿#if UNITY_EDITOR
-
-using UnityEngine;
+﻿using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,13 +37,13 @@ public class MusicBoxSpawnList : ScriptableObject {
         if (b)
             apply();
     }
-
+#if UNITY_EDITOR
     private void apply()
     {
         EditorUtility.SetDirty(this);
         AssetDatabase.SaveAssets();
     }
-
+#endif
     public void Remove(GameObject obj)
     {
         if (list.Contains(obj.name))
@@ -109,7 +109,7 @@ public class MusicBoxSpawnList : ScriptableObject {
         int index = list.IndexOf(obj.name);
         return GameObject.Find(list[index - 1 >= 0 ? index-1 : list.Count-1]);
     }
-
+#if UNITY_EDITOR
     public void SelectAll()
     {
         removeInvalidEntries();
@@ -120,5 +120,5 @@ public class MusicBoxSpawnList : ScriptableObject {
         }
         Selection.objects = objects;
     }
-}
 #endif
+}
