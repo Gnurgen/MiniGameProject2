@@ -100,11 +100,13 @@ public class GameManager {
     public event SpawnAction OnEnemyDespawn;
     public void EnemySpawn()
     {
-        OnEnemySpawn();
+        if(OnEnemySpawn !=null)
+            OnEnemySpawn();
     }
     public void EnemyDespawn()
     {
-        OnEnemyDespawn();
+        if(OnEnemyDespawn!=null)
+            OnEnemyDespawn();
     }
 
     public delegate void StepAction();
@@ -131,7 +133,8 @@ public class GameManager {
     public event EnemyAggroAction OnEnemyAggro;
     public void EnemyAggro()
     {
-        OnEnemyAggro();
+        if(OnEnemyAggro!=null)
+            OnEnemyAggro();
     }
 
 

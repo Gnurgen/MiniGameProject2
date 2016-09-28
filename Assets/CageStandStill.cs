@@ -6,11 +6,14 @@ public class CageStandStill : MonoBehaviour {
 
     void OnEnable()
     {
-        if (GameObject.FindGameObjectWithTag("Cage") != null)
-            GameObject.FindGameObjectWithTag("Cage").SetActive(false);
-        GameManager.instance.EnemySpawn();
-        GameManager.instance.enemy.GetComponent<NavMeshController>().setCage(transform);
-        gameObject.tag = "Cage";
+        if (!(gameObject.tag == "SortedDomeSpawn"))
+        {
+            if (GameObject.FindGameObjectWithTag("Cage") != null)
+                GameObject.FindGameObjectWithTag("Cage").SetActive(false);
+            GameManager.instance.EnemySpawn();
+            GameManager.instance.enemy.GetComponent<NavMeshController>().setCage(transform);
+            gameObject.tag = "Cage";
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -21,6 +24,6 @@ public class CageStandStill : MonoBehaviour {
     void OnDisable()
     {
         GameManager.instance.EnemyDespawn();
-        gameObject.tag = "Untagged";
+        gameObject.tag = "Dome";
     }
 }
