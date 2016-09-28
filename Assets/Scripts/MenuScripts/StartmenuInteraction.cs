@@ -25,7 +25,7 @@ public class StartmenuInteraction : MonoBehaviour {
 
     public void StartGameButton()
     {
-
+        GameManager.instance.StartGame();
     }
 
     public void InstructionsButton()

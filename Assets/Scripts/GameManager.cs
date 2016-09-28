@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager {
+
+    private static int START_SCENE = 0;
+    private static int GAME_SCENE = 1;
 
     private static GameManager _instance;
 
@@ -9,7 +13,7 @@ public class GameManager {
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
-    public int musicBoxCount = 0;
+    private int _musicBoxCount = 0;
 
     public static GameManager instance
     {
@@ -43,10 +47,14 @@ public class GameManager {
 
     public GameObject musicBox
     {
+        
         get
         {
             if (_musicBox == null)
-                _musicBox = GameObject.Find("MusicBox");
+            {
+                Debug.Log("kik");
+                _musicBox = GameObject.FindWithTag("MusicBox");
+            }
             return _musicBox;
         }
     }
@@ -55,10 +63,37 @@ public class GameManager {
     {
         get
         {
-//            if (_audioManager == null)
-//                _audioManager = Object.FindObjectOfType(typeof (AudioManager)) as AudioManager;
+            if (_audioManager == null)
+                _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
             return _audioManager;
         }
+    }
+
+    public int musicBoxCount
+    {
+        get
+        {
+            return _musicBoxCount;
+        }
+    }
+
+    public void LeaveGame()
+    {
+        _instance = null;
+        SceneManager.LoadScene(START_SCENE);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(GAME_SCENE);
+    }
+
+    public void PlayDeathScene_MusicBox()
+    {
+    }
+
+    public void PlayDeathScene_Monster()
+    {
     }
 
     public delegate void SpawnAction();
@@ -92,6 +127,15 @@ public class GameManager {
         OnEnemyAttack();
     }
 
+
+    public delegate void EnemyAggroAction();
+    public event EnemyAggroAction OnEnemyAggro;
+    public void EnemyAggro()
+    {
+        OnEnemyAggro();
+    }
+
+
     public delegate void HitAction(int value);
     public event HitAction OnEnemyAttackHit;
     public void EnemyAttackHit(int i)
@@ -99,14 +143,14 @@ public class GameManager {
         OnEnemyAttackHit(i);
     }
 
-    public delegate void FreezeAction(int value);
+    public delegate void FreezeAction(float value);
     public event FreezeAction OnPlayerFreeze;
     public event FreezeAction OnPlayerUnfreeze;
-    public void PlayerFreeze(int i)
+    public void PlayerFreeze(float i)
     {
         OnPlayerFreeze(i);
     }
-    public void PlayerUnfreeze(int i)
+    public void PlayerUnfreeze(float i)
     {
         OnPlayerFreeze(i);
     }
@@ -126,7 +170,10 @@ public class GameManager {
     public delegate void SprintAction();
     public event SprintAction OnPlayerSprintStart;
     public event SprintAction OnPlayerSprintStop;
-    public event SprintAction OnPlayerFatigue;
+
+    //added Stamina value for Fatigue
+    public delegate void SprintFatigue(int value);
+    public event SprintFatigue OnPlayerFatigue;
     public void PlayerSprintStart()
     {
         OnPlayerSprintStart();
@@ -135,22 +182,70 @@ public class GameManager {
     {
         OnPlayerSprintStop();
     }
-    public void PlayerFatigue()
+    public void PlayerFatigue(int i)
     {
-        OnPlayerFatigue();
+        OnPlayerFatigue(i);
     }
 
     public delegate void MusicBoxAction();
     public event MusicBoxAction OnMusicBoxPlay;
-    public event MusicBoxAction OnMusicBoxStop;
+    public event MusicBoxAction OnMusicBoxMove;
     public event MusicBoxAction OnMusicBoxPause;
     public event MusicBoxAction OnMusicBoxResume;
     public event MusicBoxAction OnMusicBoxRewindStart;
     public event MusicBoxAction OnMusicBoxRewindStop;
-    public event MusicBoxAction OnMusicBoxRewinded;
+    public event MusicBoxAction OnMusicBoxRewindComplete;
     public void MusicBoxPlay()
     {
         OnMusicBoxPlay();
     }
+    public void MusicBoxMove()
+    {
+        OnMusicBoxMove();
+    }
+    public void MusicBoxPause()
+    {
+        OnMusicBoxPause();
+    }
+    public void MusicBoxResume()
+    {
+        OnMusicBoxResume();
+    }
+    public void MusicBoxRewindStart()
+    {
+        OnMusicBoxRewindStart();
+    }
+    public void MusicBoxRewindStop()
+    {
+        OnMusicBoxRewindStop();
+    }
+    public void MusicBoxRewindComplete()
+    {
+        _musicBoxCount++;
+        OnMusicBoxRewindComplete();
+    }
+    public delegate void Graveyard();
+    public event Graveyard OnGateOpen;
+    public event Graveyard OnKnockOnCoffin;
+    public event Graveyard OnGateCreak;
+    public void GateOpen()
+    {
+        OnGateOpen();
+    }
+    public void KnockOnCoffin()
+    {
+        OnKnockOnCoffin();
+    }
+    public void GateCreak()
+    {
+        OnGateOpen();
+    }
+    public delegate void MenuButtons();
+    public event MenuButtons StartButton;
+    public void OnStartButton()
+    {
+        StartButton();
+    }
+
 
 }
