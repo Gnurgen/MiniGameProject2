@@ -19,6 +19,7 @@ public class MusicBoxAnimation : MonoBehaviour {
     private void MB_Move()
     {
         animationComplete = false;
+        anim.ResetTrigger("IsRewinding");
     }
    
     private void MB_Rewind_Complete()

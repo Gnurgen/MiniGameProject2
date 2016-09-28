@@ -8,6 +8,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "SpawnList", menuName = "MusicBox/SpawnList", order = 9999)]
 public class MusicBoxSpawnList : ScriptableObject {
 
+    [SerializeField]
     public List<string> list = new List<string>();
 
     public void Add(GameObject obj)
@@ -37,6 +38,7 @@ public class MusicBoxSpawnList : ScriptableObject {
 
     private void apply()
     {
+        EditorUtility.SetDirty(this);
         AssetDatabase.SaveAssets();
     }
 

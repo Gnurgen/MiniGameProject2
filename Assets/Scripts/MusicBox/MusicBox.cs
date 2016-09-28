@@ -4,7 +4,8 @@ using System.Collections;
 public class MusicBox : MonoBehaviour {
 
 	void Start () {
-        GameManager.instance.OnMusicBoxRewindComplete += MoveToNext;
+        GameManager.instance.MusicBoxPlay();
+        GameManager.instance.OnMusicBoxMove += MoveToNext;
     }
 
     void Update () {
@@ -16,7 +17,6 @@ public class MusicBox : MonoBehaviour {
         if (obj == GameManager.instance.player)
         {
             GameManager.instance.MusicBoxRewindStart();
-            GameManager.instance.MusicBoxRewindComplete();
         }
     }
 
