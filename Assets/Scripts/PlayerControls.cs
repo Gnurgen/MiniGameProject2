@@ -60,6 +60,12 @@ public class PlayerControls : MonoBehaviour {
 
         updatePlayerState();
         updatePlayerStamina();
+
+        
+         
+
+
+
     }
 
     void FixedUpdate()
@@ -75,6 +81,11 @@ public class PlayerControls : MonoBehaviour {
             default:
                 rgd.velocity = Vector3.zero;
                 break;
+        }
+        if (joystickEnable)
+        {
+            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * walkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
         }
     }
 
