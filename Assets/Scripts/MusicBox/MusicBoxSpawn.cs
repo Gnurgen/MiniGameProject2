@@ -10,7 +10,7 @@ public class MusicBoxSpawn : MonoBehaviour {
         if (current == null)
         {
             current = spawnList.First().GetComponent<MusicBoxSpawn>();
-            GameManager.instance.musicBox.MoveTo(current);
+            GameManager.instance.musicBox.transform.position = current.transform.position;
         }
     }
 
@@ -18,8 +18,10 @@ public class MusicBoxSpawn : MonoBehaviour {
 	
 	}
 
-    public static getNext()
+    public static MusicBoxSpawn GetNext()
     {
-        _spawnList.Next();
+        MusicBoxSpawn next = current.spawnList.Next(current.gameObject).GetComponent<MusicBoxSpawn>();
+        current = next;
+        return next;
     }
 }

@@ -5,9 +5,6 @@ using System.Collections;
 [CustomEditor(typeof(MusicBoxSpawn))]
 public class MusicBoxSpawnEditor : Editor {
 
-    public string prevOrder;
-    public string order;
-
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -52,6 +49,11 @@ public class MusicBoxSpawnEditor : Editor {
             if (GUILayout.Button("Move Down"))
             {
                 spawnList.MoveDown(spawnPoint.gameObject);
+            }
+            GUILayout.Space(10);
+            if (GUILayout.Button("Move Music Box here"))
+            {
+                GameManager.instance.musicBox.transform.position = spawnPoint.transform.position;
             }
         }
     }
