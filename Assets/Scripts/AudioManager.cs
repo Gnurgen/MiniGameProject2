@@ -204,6 +204,9 @@ public class AudioManager : MonoBehaviour{
 
     void Start ()
     {
+
+        DontDestroyOnLoad(gameObject);
+
        /*                   TO BE CONTINUED
         if (GameManager.instance.audioManager == null)
             GameManager.instance.audioManager = this;
