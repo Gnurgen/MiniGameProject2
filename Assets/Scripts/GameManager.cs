@@ -47,7 +47,7 @@ public class GameManager {
 
     public GameObject musicBox
     {
-        
+
         get
         {
             if (_musicBox == null)
@@ -100,11 +100,13 @@ public class GameManager {
     public event SpawnAction OnEnemyDespawn;
     public void EnemySpawn()
     {
-        OnEnemySpawn();
+        if (OnEnemySpawn != null)
+            OnEnemySpawn();
     }
     public void EnemyDespawn()
     {
-        OnEnemyDespawn();
+        if (OnEnemyDespawn != null)
+            OnEnemyDespawn();
     }
 
     public delegate void StepAction();
@@ -112,34 +114,37 @@ public class GameManager {
     public event StepAction OnPlayerStep;
     public void EnemyStep()
     {
-        OnEnemyStep();
+        if (OnEnemyStep != null)
+            OnEnemyStep();
     }
     public void PlayerStep()
     {
-        OnPlayerStep();
+        if (OnPlayerStep != null)
+            OnPlayerStep();
     }
 
     public delegate void AttackAction();
     public event AttackAction OnEnemyAttack;
     public void EnemyAttack()
     {
-        OnEnemyAttack();
+        if (OnEnemyAttack != null)
+            OnEnemyAttack();
     }
-
 
     public delegate void EnemyAggroAction();
     public event EnemyAggroAction OnEnemyAggro;
     public void EnemyAggro()
     {
-        OnEnemyAggro();
+        if (OnEnemyAggro != null)
+            OnEnemyAggro();
     }
-
 
     public delegate void HitAction(int value);
     public event HitAction OnEnemyAttackHit;
     public void EnemyAttackHit(int i)
     {
-        OnEnemyAttackHit(i);
+        if (OnEnemyAttackHit != null)
+            OnEnemyAttackHit(i);
     }
 
     public delegate void FreezeAction(float value);
@@ -147,11 +152,13 @@ public class GameManager {
     public event FreezeAction OnPlayerUnfreeze;
     public void PlayerFreeze(float i)
     {
-        OnPlayerFreeze(i);
+        if (OnPlayerFreeze != null)
+            OnPlayerFreeze(i);
     }
     public void PlayerUnfreeze(float i)
     {
-        OnPlayerFreeze(i);
+        if (OnPlayerUnfreeze != null)
+            OnPlayerUnfreeze(i);
     }
 
     public delegate void HealthAction(int value);
@@ -159,11 +166,13 @@ public class GameManager {
     public event HealthAction OnPlayerRecover;
     public void PlayerTakeDamage(int i)
     {
-        OnPlayerTakeDamage(i);
+        if (OnPlayerTakeDamage != null)
+            OnPlayerTakeDamage(i);
     }
     public void PlayerRecover(int i)
     {
-        OnPlayerRecover(i);
+        if (OnPlayerRecover != null)
+            OnPlayerRecover(i);
     }
 
     public delegate void SprintAction();
@@ -172,15 +181,18 @@ public class GameManager {
     public event SprintAction OnPlayerFatigue;
     public void PlayerSprintStart()
     {
-        OnPlayerSprintStart();
+        if (OnPlayerSprintStart != null)
+            OnPlayerSprintStart();
     }
     public void PlayerSprintStop()
     {
-        OnPlayerSprintStop();
+        if (OnPlayerSprintStop != null)
+            OnPlayerSprintStop();
     }
     public void PlayerFatigue()
     {
-        OnPlayerFatigue();
+        if (OnPlayerFatigue != null)
+            OnPlayerFatigue();
     }
 
     public delegate void MusicBoxAction();
@@ -193,32 +205,39 @@ public class GameManager {
     public event MusicBoxAction OnMusicBoxRewindComplete;
     public void MusicBoxPlay()
     {
-        OnMusicBoxPlay();
+        if (OnMusicBoxPlay != null)
+            OnMusicBoxPlay();
     }
     public void MusicBoxMove()
     {
-        OnMusicBoxMove();
+        if (OnMusicBoxMove != null)
+            OnMusicBoxMove();
     }
     public void MusicBoxPause()
     {
-        OnMusicBoxPause();
+        if (OnMusicBoxPause != null)
+            OnMusicBoxPause();
     }
     public void MusicBoxResume()
     {
-        OnMusicBoxResume();
+        if (OnMusicBoxResume != null)
+            OnMusicBoxResume();
     }
     public void MusicBoxRewindStart()
     {
-        OnMusicBoxRewindStart();
+        if (OnMusicBoxRewindStart != null)
+            OnMusicBoxRewindStart();
     }
     public void MusicBoxRewindStop()
     {
-        OnMusicBoxRewindStop();
+        if (OnMusicBoxRewindStop != null)
+            OnMusicBoxRewindStop();
     }
     public void MusicBoxRewindComplete()
     {
         _musicBoxCount++;
-        OnMusicBoxRewindComplete();
+        if (OnMusicBoxRewindComplete != null)
+            OnMusicBoxRewindComplete();
     }
     public delegate void Graveyard();
     public event Graveyard OnGateOpen;
@@ -226,21 +245,25 @@ public class GameManager {
     public event Graveyard OnGateCreak;
     public void GateOpen()
     {
-        OnGateOpen();
+        if (OnGateOpen != null)
+            OnGateOpen();
     }
     public void KnockOnCoffin()
     {
-        OnKnockOnCoffin();
+        if (OnKnockOnCoffin != null)
+            OnKnockOnCoffin();
     }
     public void GateCreak()
     {
-        OnGateOpen();
+        if (OnGateCreak != null)
+            OnGateCreak();
     }
     public delegate void MenuButtons();
-    public event MenuButtons StartButton;
-    public void OnStartButton()
+    public event MenuButtons OnStartButton;
+    public void StartButton()
     {
-        StartButton();
+        if (OnStartButton != null)
+            OnStartButton();
     }
 
 
