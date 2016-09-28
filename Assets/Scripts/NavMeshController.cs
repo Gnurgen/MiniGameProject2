@@ -12,7 +12,8 @@ public class NavMeshController : MonoBehaviour {
     private bool _noMove;
 
     [SerializeField]
-    private float _idleSpeed, _chaseSpeed, _chaseTime;
+    private float _chaseTime;
+    public float _chaseSpeed, _idleSpeed;
 
     void Start () {
 		curState = state.idle;
