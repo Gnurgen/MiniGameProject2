@@ -3,12 +3,54 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{769F202A-4C81-4E71-B192-0D69AA055185}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="PlayJumpSound" ID="{04413AC2-8396-440F-915F-97BB42B0C8A4}">
+				<Event Name="MusicBox_Play" ID="{968EB8CE-EB83-43D0-9849-E1A82DBA5A8E}">
 					<ChildrenList>
-						<Action Name="Play" ID="{6A757404-CC74-4C4F-AAEA-DEA574A8ED27}" ShortID="1036206397" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{AD6614FD-0853-4E57-9764-1D6A90D9D960}" ShortID="275348748" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{A38C6F77-3EC5-4DAA-8A7F-92BE8020CB99}" Global="false">
-									<ObjectRef Name="Fly-By Dagger" ID="{3D44C723-CAA3-405E-A0B8-F38F1D420DA6}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+								<Element ID="{CD0938C8-A743-4B49-AF20-A18C3CF612D8}" Global="false">
+									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Stop" ID="{58C4C3D2-A24C-44FA-A6A0-D7E35313B11D}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{11D10C74-1896-44EC-A0CF-A248AE9E43CD}" ShortID="394366214" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{89B13F34-2D86-415C-AC5F-2B0DE0C864EA}" Global="false">
+									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Pause" ID="{76FA8E00-2523-4D09-A660-0D96E6966FA6}">
+					<ChildrenList>
+						<Action Name="Pause" ID="{64B74DDC-0A67-4770-8CBB-78FD7B9D6E14}" ShortID="973469254" Type="Pause" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{545A0071-005C-4593-B791-CA595D094216}" Global="false">
+									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Resume" ID="{F2DCCA1E-5AEE-4FF2-AD91-138B4CCB093E}">
+					<ChildrenList>
+						<Action Name="Resume" ID="{BE2273A8-5F51-481E-9A1C-5D7FADC2D9C9}" ShortID="945202307" Type="Resume" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{0E8166CD-EFA9-4803-A2C6-2BC5CFC29043}" Global="false">
+									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
