@@ -4,8 +4,8 @@ using System.Collections;
 
 public class GameManager {
 
-    private static int START_SCENE = 0;
-    private static int GAME_SCENE = 1;
+    private static int START_SCENE = 1;
+    private static int GAME_SCENE = 2;
 
     private static GameManager _instance;
 
