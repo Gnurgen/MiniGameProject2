@@ -6,8 +6,11 @@ public class MusicBoxAnimation : MonoBehaviour {
 
     Animator anim;
     bool animationComplete = false;
+    [SerializeField]
+    Transform GrandChild;
+    public GameObject ParticlePuff;
     void Start () {
-
+        GrandChild = transform.GetChild(0).GetChild(0);
         anim = GetComponent<Animator>();
         // Music Box Events
         GameManager.instance.OnMusicBoxRewindComplete += MB_Rewind_Complete;
@@ -18,8 +21,11 @@ public class MusicBoxAnimation : MonoBehaviour {
 
     private void MB_Move()
     {
+        GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, GrandChild.GetChild(0).position + GrandChild.localPosition- GrandChild.GetChild(0).localPosition, transform.rotation);
+        Destroy(particlePuff, 2f);
         animationComplete = false;
         anim.ResetTrigger("IsRewinding");
+  
     }
    
     private void MB_Rewind_Complete()
