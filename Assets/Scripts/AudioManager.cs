@@ -113,7 +113,7 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_PlayerSprintStop, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerFatigue(int value)
+    void PlayerFatigue()
     {
         AkSoundEngine.PostEvent(_PlayerFatigue, GameManager.instance.player);
         AkSoundEngine.RenderAudio();

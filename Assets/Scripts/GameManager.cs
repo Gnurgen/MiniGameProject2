@@ -169,9 +169,7 @@ public class GameManager {
     public delegate void SprintAction();
     public event SprintAction OnPlayerSprintStart;
     public event SprintAction OnPlayerSprintStop;
-
-    public delegate void FatigueAction(int value);
-    public event FatigueAction OnPlayerFatigue;
+    public event SprintAction OnPlayerFatigue;
     public void PlayerSprintStart()
     {
         OnPlayerSprintStart();
@@ -180,9 +178,9 @@ public class GameManager {
     {
         OnPlayerSprintStop();
     }
-    public void PlayerFatigue(int i)
+    public void PlayerFatigue()
     {
-        OnPlayerFatigue(i);
+        OnPlayerFatigue();
     }
 
     public delegate void MusicBoxAction();
