@@ -5,8 +5,6 @@ public class OneShotAnis : MonoBehaviour {
 
     [SerializeField]
     private Transform _startPos, _endPos;
-    [SerializeField]
-    private float _secAniDist, _secAniChaseTime;
     private float _idleSpeed, _chaseSpeed;
     private NavMeshAgent agent;
     private NavMeshController nmc;
