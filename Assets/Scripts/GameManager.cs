@@ -52,7 +52,6 @@ public class GameManager {
         {
             if (_musicBox == null)
             {
-                Debug.Log("kik");
                 _musicBox = GameObject.FindWithTag("MusicBox");
             }
             return _musicBox;
@@ -171,9 +170,8 @@ public class GameManager {
     public event SprintAction OnPlayerSprintStart;
     public event SprintAction OnPlayerSprintStop;
 
-    //added Stamina value for Fatigue
-    public delegate void SprintFatigue(int value);
-    public event SprintFatigue OnPlayerFatigue;
+    public delegate void FatigueAction(int value);
+    public event FatigueAction OnPlayerFatigue;
     public void PlayerSprintStart()
     {
         OnPlayerSprintStart();
