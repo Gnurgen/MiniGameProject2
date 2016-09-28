@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -38,8 +40,10 @@ public class MusicBoxSpawnList : ScriptableObject {
 
     private void apply()
     {
+#if UNITY_EDITOR
         EditorUtility.SetDirty(this);
         AssetDatabase.SaveAssets();
+#endif
     }
 
     public void Remove(GameObject obj)
@@ -110,6 +114,7 @@ public class MusicBoxSpawnList : ScriptableObject {
 
     public void SelectAll()
     {
+#if UNITY_EDITOR
         removeInvalidEntries();
         GameObject[] objects = new GameObject[list.Count];
         for (int i = 0; i < list.Count; i++)
@@ -117,5 +122,7 @@ public class MusicBoxSpawnList : ScriptableObject {
             objects[i] = GameObject.Find(list[i]);
         }
         Selection.objects = objects;
+#endif
     }
+
 }

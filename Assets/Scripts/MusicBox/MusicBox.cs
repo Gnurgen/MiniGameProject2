@@ -14,7 +14,7 @@ public class MusicBox : MonoBehaviour {
 
     void OnTriggerEnter(Collider obj)
     {
-        if (obj == GameManager.instance.player)
+        if (obj.tag == GameManager.instance.player.tag)
         {
             GameManager.instance.MusicBoxRewindStart();
         }
@@ -22,7 +22,7 @@ public class MusicBox : MonoBehaviour {
 
     void OnTriggerExit(Collider obj)
     {
-        if (obj == GameManager.instance.player)
+        if (obj.tag == GameManager.instance.player.tag)
         {
             GameManager.instance.MusicBoxRewindStop();
         }
