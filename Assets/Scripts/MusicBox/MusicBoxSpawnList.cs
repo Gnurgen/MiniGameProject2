@@ -37,13 +37,15 @@ public class MusicBoxSpawnList : ScriptableObject {
         if (b)
             apply();
     }
-#if UNITY_EDITOR
+
     private void apply()
     {
+#if UNITY_EDITOR
         EditorUtility.SetDirty(this);
         AssetDatabase.SaveAssets();
-    }
 #endif
+    }
+
     public void Remove(GameObject obj)
     {
         if (list.Contains(obj.name))
@@ -109,9 +111,10 @@ public class MusicBoxSpawnList : ScriptableObject {
         int index = list.IndexOf(obj.name);
         return GameObject.Find(list[index - 1 >= 0 ? index-1 : list.Count-1]);
     }
-#if UNITY_EDITOR
+
     public void SelectAll()
     {
+#if UNITY_EDITOR
         removeInvalidEntries();
         GameObject[] objects = new GameObject[list.Count];
         for (int i = 0; i < list.Count; i++)
@@ -119,6 +122,7 @@ public class MusicBoxSpawnList : ScriptableObject {
             objects[i] = GameObject.Find(list[i]);
         }
         Selection.objects = objects;
-    }
 #endif
+    }
+
 }
