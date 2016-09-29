@@ -6,11 +6,11 @@ public class MusicBoxAnimation : MonoBehaviour {
 
     Animator anim;
     bool animationComplete = false;
-    [SerializeField]
-    Transform GrandChild;
+    
 
     void Start () {
-        GrandChild = transform.GetChild(0).GetChild(0);
+
+       
         anim = GetComponent<Animator>();
         // Music Box Events
         GameManager.instance.OnMusicBoxRewindComplete += MB_Rewind_Complete;
