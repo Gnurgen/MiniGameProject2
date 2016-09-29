@@ -4,6 +4,7 @@ using System.Collections;
 public class MusicBox : MonoBehaviour {
 
     private int currentSpawn = 0;
+    public GameObject ParticlePuff;
 
     void Start () {
         GameManager.instance.MusicBoxPlay();
@@ -38,6 +39,8 @@ public class MusicBox : MonoBehaviour {
 
     public void MoveToNextSpawn()
     {
+        GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position + transform.GetChild(0).GetChild(0).localPosition - transform.GetChild(0).GetChild(0).GetChild(0).localPosition, transform.rotation);
+        Destroy(particlePuff, 2f);
         MusicBoxSpawn spawnPoint = MusicBoxSpawn.GetNext();
         MusicBoxSpawn.SetCurrent(spawnPoint);
         moveTo(spawnPoint);

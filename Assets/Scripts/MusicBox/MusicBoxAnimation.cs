@@ -8,7 +8,7 @@ public class MusicBoxAnimation : MonoBehaviour {
     bool animationComplete = false;
     [SerializeField]
     Transform GrandChild;
-    public GameObject ParticlePuff;
+
     void Start () {
         GrandChild = transform.GetChild(0).GetChild(0);
         anim = GetComponent<Animator>();
@@ -21,8 +21,6 @@ public class MusicBoxAnimation : MonoBehaviour {
 
     private void MB_Move()
     {
-        GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, GrandChild.GetChild(0).position + GrandChild.localPosition- GrandChild.GetChild(0).localPosition, transform.rotation);
-        Destroy(particlePuff, 2f);
         animationComplete = false;
         anim.ResetTrigger("IsRewinding");
   
@@ -50,9 +48,6 @@ public class MusicBoxAnimation : MonoBehaviour {
         anim.speed = 1;
        
     }
-
-    
-  
 
 	void Update () {
 	
