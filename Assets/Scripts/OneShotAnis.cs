@@ -22,7 +22,7 @@ public class OneShotAnis : MonoBehaviour {
         switch (curState)
         {
             case state.one:
-                if (Vector3.Distance(transform.position, _endPos.position) < 0.2f)
+                if (Vector3.Distance(transform.position, _endPos.position) < 1.2f)
                 {
                     curState = state.none;
                     _despawn();

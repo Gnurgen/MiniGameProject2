@@ -77,7 +77,9 @@ public class NavMeshController : MonoBehaviour {
     void OnTriggerExit(Collider col)
     {
         if (col.transform == cage)
+        {
             Invoke("startIdle", _chaseTime);
+        }
     }
 
     void moveEnemy(Vector3 pos)

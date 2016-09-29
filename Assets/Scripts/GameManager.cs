@@ -4,8 +4,11 @@ using System.Collections;
 
 public class GameManager {
 
-    private static int START_SCENE = 1;
-    private static int GAME_SCENE = 2;
+    private static string START_SCENE = "StartScene";
+    private static string GAME_SCENE = "Game";
+    private static string WIN_SCENE = "WinScene";
+    private static string LOSE_SCENE_TIME = "LoseTimeScene";
+    private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
     private static GameManager _instance;
 
@@ -14,6 +17,7 @@ public class GameManager {
     private GameObject _musicBox;
     private AudioManager _audioManager;
     private int _musicBoxCount = 0;
+    private int lastMusicBox = 5;
 
     public static GameManager instance
     {
@@ -89,11 +93,18 @@ public class GameManager {
 
     public void PlayDeathScene_MusicBox()
     {
+        SceneManager.LoadScene(LOSE_SCENE_TIME);
     }
 
     public void PlayDeathScene_Monster()
     {
+        SceneManager.LoadScene(LOSE_SCENE_DEATH);
     }
+    public void PlayWinScene()
+    {
+        SceneManager.LoadScene(WIN_SCENE);
+    }
+
 
     public delegate void SpawnAction();
     public event SpawnAction OnEnemySpawn;
@@ -216,6 +227,7 @@ public class GameManager {
     }
     public void MusicBoxMove()
     {
+      
         if (OnMusicBoxMove != null)
             OnMusicBoxMove();
     }
@@ -242,6 +254,10 @@ public class GameManager {
     public void MusicBoxRewindComplete()
     {
         _musicBoxCount++;
+        if (musicBoxCount >= lastMusicBox)
+        {
+            PlayWinScene();
+        }
         if (OnMusicBoxRewindComplete != null)
             OnMusicBoxRewindComplete();
     }

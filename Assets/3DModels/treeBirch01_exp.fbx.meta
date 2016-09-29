@@ -1,26 +1,19 @@
 fileFormatVersion: 2
-guid: 24c0c79812109954480221867ee7f48d
-timeCreated: 1475063117
+guid: 9a613c11056d9fd438af33c8dda74d76
+timeCreated: 1475146003
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: musicBox_geo
-    100004: musicBox_geo_grp
-    100006: musicBox_rig_grp
-    100008: musicBoxHandle_geo
-    400000: //RootNode
-    400002: musicBox_geo
-    400004: musicBox_geo_grp
-    400006: musicBox_rig_grp
-    400008: musicBoxHandle_geo
-    2300000: musicBox_geo
-    2300002: musicBoxHandle_geo
-    3300000: musicBox_geo
-    3300002: musicBoxHandle_geo
-    4300000: musicBox_geo
-    4300002: musicBoxHandle_geo
+    100000: tree01_geo
+    100002: tree01_geo_grp
+    100004: //RootNode
+    400000: tree01_geo
+    400002: tree01_geo_grp
+    400004: //RootNode
+    2300000: tree01_geo
+    3300000: tree01_geo
+    4300000: tree01_geo
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,7 +38,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

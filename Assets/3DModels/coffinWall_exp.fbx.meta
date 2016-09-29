@@ -1,26 +1,29 @@
 fileFormatVersion: 2
-guid: 24c0c79812109954480221867ee7f48d
-timeCreated: 1475063117
+guid: 237563141960f104daa9ef67d2c00dce
+timeCreated: 1475145995
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: musicBox_geo
-    100004: musicBox_geo_grp
-    100006: musicBox_rig_grp
-    100008: musicBoxHandle_geo
-    400000: //RootNode
-    400002: musicBox_geo
-    400004: musicBox_geo_grp
-    400006: musicBox_rig_grp
-    400008: musicBoxHandle_geo
-    2300000: musicBox_geo
-    2300002: musicBoxHandle_geo
-    3300000: musicBox_geo
-    3300002: musicBoxHandle_geo
-    4300000: musicBox_geo
-    4300002: musicBoxHandle_geo
+    100000: coffin_geo
+    100002: coffinHatch_geo
+    100004: //RootNode
+    100006: coffinWall_geo_grp
+    100008: wall_geo
+    400000: coffin_geo
+    400002: coffinHatch_geo
+    400004: //RootNode
+    400006: coffinWall_geo_grp
+    400008: wall_geo
+    2300000: coffin_geo
+    2300002: coffinHatch_geo
+    2300004: wall_geo
+    3300000: coffin_geo
+    3300002: coffinHatch_geo
+    3300004: wall_geo
+    4300000: wall_geo
+    4300002: coffin_geo
+    4300004: coffinHatch_geo
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,7 +48,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
