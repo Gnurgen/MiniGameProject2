@@ -3,22 +3,21 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-
-    public GameObject player;
-    public float enemyAttackDist = 1.0f;
-    public float timeBetweenAttack = 5.0f;
+    [SerializeField]
+    float enemyAttackDist = 2.0f;
+    public float timeBetweenAttack = 1.0f;
     public float chanceforSecondAttackHit = 0.5f;
 
     private float currentAttackTime;
     private float playerEnemyDistance;
-    private Rigidbody playerBody;
+    private Transform playerBody;
     private bool playerHit = false;
 
     // Use this for initialization
     void Start()
     {
         currentAttackTime = 0;
-        playerBody = player.GetComponent<Rigidbody>();
+        playerBody = GameManager.instance.player.transform;
 
     }
 
@@ -26,10 +25,9 @@ public class EnemyAttack : MonoBehaviour
     void Update()
     {
         playerEnemyDistance = Vector3.Distance(playerBody.position, transform.position);
-
         if (playerEnemyDistance <= enemyAttackDist)
         {
-           // Debug.Log("Enemy near!");
+            //Debug.Log("Enemy near!");
             if (currentAttackTime <= 0)
             {
                 GameManager.instance.EnemyAttack();
@@ -39,7 +37,7 @@ public class EnemyAttack : MonoBehaviour
             else
             {
                 currentAttackTime -= Time.deltaTime;
-             //   Debug.Log("Preparing attack");
+               //Debug.Log("Preparing attack");
             }
         }
         else { }
@@ -49,7 +47,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (playerHit == false)
         {
-            //Debug.Log("First Hit!");
+            Debug.Log("First Hit!");
             GameManager.instance.EnemyAttackHit(1);
             GameManager.instance.PlayerTakeDamage(1);
             playerHit = true;
@@ -58,7 +56,7 @@ public class EnemyAttack : MonoBehaviour
         {
             if (Random.value <= chanceforSecondAttackHit)
             {
-                //Debug.Log("Second Hit!");
+                Debug.Log("Second Hit!");
                 GameManager.instance.EnemyAttackHit(1);
                 GameManager.instance.PlayerTakeDamage(1);
                 playerHit = false;
@@ -66,7 +64,7 @@ public class EnemyAttack : MonoBehaviour
             else
             {
                 playerHit = false;
-                //Debug.Log("Miss!");
+                Debug.Log("Miss!");
             }
         }
     }

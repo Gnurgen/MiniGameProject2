@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
     void Update() {
         regenerate();
         if (currentHealth == 0)
-            Debug.Log("Player dead");
+            GameManager.instance.PlayDeathScene_Monster();
         //Debug.Log(currentHealth);   
     }
 

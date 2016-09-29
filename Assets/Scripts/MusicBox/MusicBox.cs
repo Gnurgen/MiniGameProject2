@@ -15,7 +15,7 @@ public class MusicBox : MonoBehaviour {
     void Update () {
         if(Count)
             timeToDie += 1 * Time.deltaTime;
-        if (timeToDie >= 10)
+        if (timeToDie >= 90)
             GameManager.instance.PlayDeathScene_MusicBox();
     }
    
