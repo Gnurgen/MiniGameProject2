@@ -15,20 +15,23 @@ public class MusicBoxSpawnEditor : Editor {
         {
             if (GUILayout.Button("Add to list"))
             {
-                spawnList.Add(spawnPoint.gameObject);
+                if (spawnList.Add(spawnPoint.gameObject))
+                    apply(spawnList);
             }
         }
         else
         {
             if (GUILayout.Button("Remove from list"))
             {
-                spawnList.Remove(spawnPoint.gameObject);
+                if (spawnList.Remove(spawnPoint.gameObject))
+                    apply(spawnList);
             }
             GUILayout.Label("Order: " + spawnList.IndexOf(spawnPoint.gameObject));
             GUILayout.Space(10);
             if (GUILayout.Button("Select all"))
             {
-                spawnList.SelectAll();
+                Selection.objects = spawnList.GetAll();
+
             }
             GUILayout.Space(10);
             if (GUILayout.Button("Next"))
@@ -44,11 +47,13 @@ public class MusicBoxSpawnEditor : Editor {
             GUILayout.Space(10);
             if (GUILayout.Button("Move Up"))
             {
-                spawnList.MoveUp(spawnPoint.gameObject);
+                if (spawnList.MoveUp(spawnPoint.gameObject))
+                    apply(spawnList);
             }
             if (GUILayout.Button("Move Down"))
             {
-                spawnList.MoveDown(spawnPoint.gameObject);
+                if (spawnList.MoveDown(spawnPoint.gameObject))
+                    apply(spawnList);
             }
             GUILayout.Space(10);
             if (GUILayout.Button("Move Music Box here"))
@@ -58,4 +63,9 @@ public class MusicBoxSpawnEditor : Editor {
         }
     }
 
+    private void apply(MusicBoxSpawnList spawnList)
+    {
+        EditorUtility.SetDirty(spawnList);
+        AssetDatabase.SaveAssets();
+    }
 }

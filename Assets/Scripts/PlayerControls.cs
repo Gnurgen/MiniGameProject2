@@ -28,6 +28,8 @@ public class PlayerControls : MonoBehaviour {
     private PlayerState playerState = PlayerState.Idle;
     private PlayerState prevPlayerState;
 
+    private Gyroscope gyro;
+
     private bool exhausted = false;
     private bool prevExhausted;
     private float stamina;
@@ -37,11 +39,13 @@ public class PlayerControls : MonoBehaviour {
 
     void Start()
     {
+        gyro = Input.gyro;
+        gyro.enabled = true;
         rgd = GetComponent<Rigidbody>();
-        Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
         stamina = maxStamina;
+
     }
 
     void Update()
@@ -60,16 +64,11 @@ public class PlayerControls : MonoBehaviour {
 
         updatePlayerState();
         updatePlayerStamina();
-
-        
-         
-
-
-
     }
 
     void FixedUpdate()
     {
+        calibrateGyroscope();
         switch (playerState)
         {
             case PlayerState.Walk:
@@ -175,10 +174,15 @@ public class PlayerControls : MonoBehaviour {
 
     private void applyGyroRotation()
     {
-        playerCamera.transform.rotation = Input.gyro.attitude;
+        playerCamera.transform.rotation = gyro.attitude;
         playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self);    // Swap "handedness" of quaternion from gyro.
         playerCamera.transform.Rotate(90f, 0f, 0f, Space.World);    // Rotate to make sense as a camera pointing out the back of your device.
         appliedGyroYAngle = transform.eulerAngles.y;                // Save the angle around y axis for use in calibration.
+    }
+
+    private Quaternion calibrateGyroscope()
+    {
+        return gyro.attitude;
     }
 
     private void applyCalibration()
