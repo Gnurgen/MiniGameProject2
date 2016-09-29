@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAttack : MonoBehaviour {
+public class EnemyAttack : MonoBehaviour
+{
 
     public GameObject player;
     public float enemyAttackDist = 1.0f;
@@ -14,19 +15,21 @@ public class EnemyAttack : MonoBehaviour {
     private bool playerHit = false;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         currentAttackTime = 0;
         playerBody = player.GetComponent<Rigidbody>();
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         playerEnemyDistance = Vector3.Distance(playerBody.position, transform.position);
 
         if (playerEnemyDistance <= enemyAttackDist)
         {
-            Debug.Log("Enemy near!");
+           // Debug.Log("Enemy near!");
             if (currentAttackTime <= 0)
             {
                 GameManager.instance.EnemyAttack();
@@ -36,35 +39,35 @@ public class EnemyAttack : MonoBehaviour {
             else
             {
                 currentAttackTime -= Time.deltaTime;
-                Debug.Log("Preparing attack");
+             //   Debug.Log("Preparing attack");
             }
         }
         else { }
-        Debug.Log("Health: " + currentHealth);
     }
 
     private void rollIfHit()
     {
         if (playerHit == false)
         {
-            Debug.Log("First Hit!");
+            //Debug.Log("First Hit!");
             GameManager.instance.EnemyAttackHit(1);
-            LoseLife(1);
+            GameManager.instance.PlayerTakeDamage(1);
             playerHit = true;
         }
         else
         {
             if (Random.value <= chanceforSecondAttackHit)
             {
-                Debug.Log("Second Hit!");
+                //Debug.Log("Second Hit!");
                 GameManager.instance.EnemyAttackHit(1);
-                LoseLife(1);
+                GameManager.instance.PlayerTakeDamage(1);
                 playerHit = false;
             }
             else
             {
                 playerHit = false;
-                Debug.Log("Miss!");
+                //Debug.Log("Miss!");
             }
         }
     }
+}
