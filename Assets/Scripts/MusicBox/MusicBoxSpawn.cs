@@ -15,13 +15,16 @@ public class MusicBoxSpawn : MonoBehaviour {
     }
 
     void Update () {
-	
-	}
+
+    }
+
+    public static void SetCurrent(MusicBoxSpawn spawnPoint)
+    {
+        current = spawnPoint;
+    }
 
     public static MusicBoxSpawn GetNext()
     {
-        MusicBoxSpawn next = current.spawnList.Next(current.gameObject).GetComponent<MusicBoxSpawn>();
-        current = next;
-        return next;
+        return current.spawnList.Next(current.gameObject).GetComponent<MusicBoxSpawn>();
     }
 }
