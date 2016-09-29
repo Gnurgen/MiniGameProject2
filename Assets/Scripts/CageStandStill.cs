@@ -6,6 +6,8 @@ public class CageStandStill : MonoBehaviour {
 
     void OnEnable()
     {
+        if (gameObject.name == "FirstAggroBox")
+            return;
         if (!(gameObject.tag == "SortedDomeSpawn"))
         {
             if (GameObject.FindGameObjectWithTag("Cage") != null)
@@ -19,11 +21,21 @@ public class CageStandStill : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject == GameManager.instance.player)
+        {
             GameManager.instance.EnemyAggro();
+            GameManager.instance.player.GetComponent<ActivateDome>().spawnDomes = false;
+        }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject == GameManager.instance.player && gameObject.name !="FirstAggroBox")
+        {
+            GameManager.instance.player.GetComponent<ActivateDome>().spawnDomes = true;
+        }
     }
     void OnDisable()
     {
         GameManager.instance.EnemyDespawn();
-        gameObject.tag = "Dome";
     }
 }

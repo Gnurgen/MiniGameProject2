@@ -4,7 +4,7 @@ using System.Collections;
 public class ActivateDome : MonoBehaviour {
 
     private GameObject[] domeTrans;
-    public Vector3[] domePos;
+    private Vector3[] domePos;
     private int activeDome, index;
     private float dist;
     [HideInInspector]
@@ -15,6 +15,7 @@ public class ActivateDome : MonoBehaviour {
         for(int x = 0; x<domeTrans.Length; ++x)
         {
             domePos[x] = domeTrans[x].transform.position;
+            domeTrans[x].tag = "Dome";
             domeTrans[x].SetActive(false);
         }
 	}
@@ -38,4 +39,6 @@ public class ActivateDome : MonoBehaviour {
             index++;
         }
 	}
+
+
 }
