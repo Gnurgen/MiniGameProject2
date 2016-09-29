@@ -13,6 +13,9 @@ public class PlayerControls : MonoBehaviour {
     public float sprintSpeed = 300.00f;
     public float maxStamina = 10.0f;
     public float minimalSprintStamina = 4.0f;
+    public float frozenWalkingSpeed = 50.0f;
+    public float frozenSprintSpeed = 100.0f;
+    public float timeFrozen = 5.0f;
 
     [Header("Joystick")]
     public bool joystickEnable = false;
@@ -28,28 +31,34 @@ public class PlayerControls : MonoBehaviour {
     private PlayerState playerState = PlayerState.Idle;
     private PlayerState prevPlayerState;
 
-    private Gyroscope gyro;
-
     private bool exhausted = false;
     private bool prevExhausted;
     private float stamina;
     private float hori;
     private float verti;
     private float currentJoystickSensitivity;
+    private float currentWalkingSpeed;
+    private float currentSprintSpeed;
+    private float currentFreeze= 0;
+    private bool frozen = false;
 
     void Start()
     {
-        gyro = Input.gyro;
-        gyro.enabled = true;
         rgd = GetComponent<Rigidbody>();
+        Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
         stamina = maxStamina;
+        currentWalkingSpeed = walkingSpeed;
+        currentSprintSpeed = sprintSpeed;
+
+       // GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
 
     void Update()
     {
+        //controls
         if (!joystickEnable)
         {
             joystick.SetActive(false);
@@ -61,21 +70,33 @@ public class PlayerControls : MonoBehaviour {
             joystick.SetActive(true);
             useJoystick();
         }
-
         updatePlayerState();
         updatePlayerStamina();
+        
+        //speed
+     /*   if (currentFreeze > 0) {
+            updatePlayerSpeed();
+            currentFreeze -= Time.deltaTime;
+        }
+        else
+        {
+            currentWalkingSpeed = walkingSpeed;
+            currentSprintSpeed = sprintSpeed;
+        }
+        Debug.Log("Current Sprint Speed: " + currentSprintSpeed);
+        Debug.Log("Current Walking Speed: " + currentWalkingSpeed);
+        Debug.Log("Current reeze: " + currentFreeze); */
     }
 
     void FixedUpdate()
     {
-        calibrateGyroscope();
         switch (playerState)
         {
             case PlayerState.Walk:
-                rgd.velocity = playerCamera.transform.forward * walkingSpeed * Time.deltaTime;
+                rgd.velocity = playerCamera.transform.forward * currentWalkingSpeed * Time.deltaTime;
                 break;
             case PlayerState.Sprint:
-                rgd.velocity = playerCamera.transform.forward * sprintSpeed * Time.deltaTime;
+                rgd.velocity = playerCamera.transform.forward * currentSprintSpeed * Time.deltaTime;
                 break;
             default:
                 rgd.velocity = Vector3.zero;
@@ -83,8 +104,8 @@ public class PlayerControls : MonoBehaviour {
         }
         if (joystickEnable)
         {
-            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * walkingSpeed * Time.deltaTime;
-            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * currentWalkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * currentWalkingSpeed * Time.deltaTime;
         }
     }
 
@@ -159,6 +180,14 @@ public class PlayerControls : MonoBehaviour {
             GameManager.instance.PlayerFatigue();
         }
     }
+    private void PlayerFrozen(int i){
+        currentFreeze = timeFrozen;
+      
+    }
+    private void updatePlayerSpeed() {
+        currentWalkingSpeed = frozenWalkingSpeed + ((currentFreeze / timeFrozen) * (walkingSpeed - frozenWalkingSpeed));
+        currentSprintSpeed = frozenSprintSpeed + ((currentFreeze / timeFrozen) * (sprintSpeed - frozenSprintSpeed));
+    }
 
     private void useJoystick() {
         currentJoystickSensitivity = playerState == PlayerState.Idle ? joystickSensitivityIdle : joystickSensitivity;
@@ -174,15 +203,10 @@ public class PlayerControls : MonoBehaviour {
 
     private void applyGyroRotation()
     {
-        playerCamera.transform.rotation = gyro.attitude;
+        playerCamera.transform.rotation = Input.gyro.attitude;
         playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self);    // Swap "handedness" of quaternion from gyro.
         playerCamera.transform.Rotate(90f, 0f, 0f, Space.World);    // Rotate to make sense as a camera pointing out the back of your device.
         appliedGyroYAngle = transform.eulerAngles.y;                // Save the angle around y axis for use in calibration.
-    }
-
-    private Quaternion calibrateGyroscope()
-    {
-        return gyro.attitude;
     }
 
     private void applyCalibration()
