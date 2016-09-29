@@ -68,6 +68,7 @@ public class NavMeshController : MonoBehaviour {
     }
     private void startIdle()
     {
+        GameManager.instance.EnemyIdle();
         curState = state.idle;
         agent.speed = _idleSpeed;
         idleTar = new Vector3(cage.GetChild(0).position.x, transform.position.y, cage.GetChild(0).position.z);

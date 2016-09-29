@@ -138,7 +138,13 @@ public class GameManager {
         if (OnEnemyAggro != null)
             OnEnemyAggro();
     }
-
+    public delegate void EnemyIdleAction();
+    public event EnemyIdleAction OnEnemyIdle;
+    public void EnemyIdle()
+    {
+        if (OnEnemyIdle != null)
+            OnEnemyIdle();
+    }
     public delegate void HitAction(int value);
     public event HitAction OnEnemyAttackHit;
     public void EnemyAttackHit(int i)
