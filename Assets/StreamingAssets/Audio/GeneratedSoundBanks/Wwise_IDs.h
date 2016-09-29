@@ -13,10 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID MUSICBOX_PAUSE = 2302208614U;
         static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
         static const AkUniqueID MUSICBOX_RESUME = 3719125665U;
         static const AkUniqueID MUSICBOX_STOP = 2820245704U;
+        static const AkUniqueID PANTING = 2086931766U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -31,6 +33,7 @@ namespace AK
         static const AkUniqueID SS_AIR_STORM = 3715662592U;
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
+        static const AkUniqueID STAMINAPAR = 99298381U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

@@ -1,9 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1866025847	FootStep			\Default Work Unit\FootStep	
+	2086931766	Panting			\Default Work Unit\Panting	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	99298381	StaminaPar			\Default Work Unit\StaminaPar	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	107978289	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\PlayerPanting\silence\Wwise Silence	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	213633537	Music Box Melody Temp	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody Temp_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody Temp		8634432
+	573374260	PlayerPanting	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\PlayerPanting_9E69E797.wem		\Actor-Mixer Hierarchy\KrisTempSound\PlayerPanting\PlayerPanting		315456
 

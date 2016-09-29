@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{D3851648-E156-4F4A-91AE-E01DBD9B1560}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="E:\DADIU\MGP-2\Team 2"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\dadiu\Music\KristofferTempSoundFiesta"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Android"></Value>
