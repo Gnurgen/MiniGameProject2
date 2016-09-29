@@ -7,7 +7,7 @@ public class LoadNextSceneFromInitialize : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-		SceneManager.LoadScene("StartScene.unity");
+		SceneManager.LoadScene("StartScene");
 	}
 	
 	// Update is called once per frame
