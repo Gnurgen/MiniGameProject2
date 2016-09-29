@@ -53,19 +53,22 @@ public class StartmenuInteraction : MonoBehaviour {
     public void ToggleMonsterDeath()
     {
         bool b = GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn;
-//        GameManager.instance.debugManager.monsterDeathImmune = b;
+        Debug.Log(b);
+        //        GameManager.instance.debugManager.monsterDeathImmune = b;
     }
 
     public void ToggleMusicBoxDeath()
     {
         bool b = GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn;
-//        GameManager.instance.debugManager.musicBoxDeathImmune = b;
+        Debug.Log(b);
+        //        GameManager.instance.debugManager.musicBoxDeathImmune = b;
     }
 
     public void ToggleBoundryRings()
     {
         bool b = GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn;
-//        GameManager.instance.debugManager.boundryRings = b;
+        Debug.Log(b);
+        //        GameManager.instance.debugManager.boundryRings = b;
     }
 
     public void SoundTestButton()
