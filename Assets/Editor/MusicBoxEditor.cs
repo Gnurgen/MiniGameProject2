@@ -5,14 +5,28 @@ using System.Collections;
 [CustomEditor(typeof(MusicBox))]
 public class MusicBoxEditor : Editor
 {
+
+    private bool prevRewind = false;
+
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
         MusicBox musicBox = target as MusicBox;
 
-        if (GUILayout.Button("Move to next spawn point"))
+        if (Application.isPlaying)
         {
-            musicBox.MoveToNext();
+            if (GUILayout.RepeatButton("Rewind"))
+            {
+                if (!prevRewind)
+                    GameManager.instance.MusicBoxRewindStart();
+                prevRewind = true;
+            }
+            else
+            {
+                if (prevRewind)
+                    GameManager.instance.MusicBoxRewindStop();
+                prevRewind = false;
+            }
         }
     }
 

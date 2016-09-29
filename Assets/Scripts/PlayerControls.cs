@@ -42,6 +42,7 @@ public class PlayerControls : MonoBehaviour {
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
         stamina = maxStamina;
+
     }
 
     void Update()
@@ -60,12 +61,6 @@ public class PlayerControls : MonoBehaviour {
 
         updatePlayerState();
         updatePlayerStamina();
-
-        
-         
-
-
-
     }
 
     void FixedUpdate()
