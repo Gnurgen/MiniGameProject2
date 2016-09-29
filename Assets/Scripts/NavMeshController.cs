@@ -18,6 +18,7 @@ public class NavMeshController : MonoBehaviour {
     void Start () {
 		curState = state.idle;
         GameManager.instance.OnEnemyAggro += startChase;
+        setCage(GameObject.Find("FirstAggroBox").transform);
 	}
 
     void Update() {
@@ -72,7 +73,7 @@ public class NavMeshController : MonoBehaviour {
         idleTar = new Vector3(cage.GetChild(0).position.x, transform.position.y, cage.GetChild(0).position.z);
         agent.destination = idleTar;
     }
-    private void OnTriggerExit(Collider col)
+    void OnTriggerExit(Collider col)
     {
         if (col.transform == cage)
             Invoke("startIdle", _chaseTime);
