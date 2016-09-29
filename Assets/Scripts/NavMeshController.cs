@@ -42,7 +42,7 @@ public class NavMeshController : MonoBehaviour {
 		cage = newCage;
 		bCol = cage.GetChild (0).GetComponent<BoxCollider>();
 		sCol = cage.GetChild (0).GetComponent<SphereCollider>();
-        transform.position = new Vector3(cage.GetChild(0).position.x, transform.position.y, cage.GetChild(0).position.z);
+        moveEnemy(new Vector3(cage.GetChild(0).position.x, transform.position.y, cage.GetChild(0).position.z));
         idleTar = transform.position;
 		agent.destination = idleTar;
         agent.speed = _idleSpeed;
@@ -52,8 +52,8 @@ public class NavMeshController : MonoBehaviour {
 
 	private Vector3 getRndIdle(){
 		if (bCol != null) {
-			return new Vector3 (Random.Range (cage.position.x - bCol.size.x / 2, cage.position.x + bCol.size.x / 2), 
-                                              transform.position.y, Random.Range (cage.position.z - bCol.size.z / 2, cage.position.z + bCol.size.z / 2));
+			return new Vector3 (Random.Range (cage.GetChild(0).position.x - bCol.size.x / 2, cage.GetChild(0).position.x + bCol.size.x / 2), 
+                                              transform.position.y, Random.Range (cage.GetChild(0).position.z - bCol.size.z / 2, cage.GetChild(0).position.z + bCol.size.z / 2));
 		} else {
 			Vector3 temp = Random.insideUnitSphere * sCol.radius + cage.GetChild (0).position;
 			return new Vector3(temp.x,transform.position.y, temp.z);
@@ -76,5 +76,12 @@ public class NavMeshController : MonoBehaviour {
     {
         if (col.transform == cage)
             Invoke("startIdle", _chaseTime);
+    }
+
+    void moveEnemy(Vector3 pos)
+    {
+        agent.enabled = false;
+        transform.position = pos;
+        agent.enabled = true;
     }
 }
