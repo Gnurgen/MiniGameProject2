@@ -10,6 +10,8 @@ public class Builder{
 
 		string basePath = "C:/Users/dadiu/Google Drive/MGP2/Builds";
 		string buildFolder = System.DateTime.Now.ToString ("dd-MM-yy HH.mm.ss");
+		string initScene = "InitializingScene.unity";
+
 
 		try{
 
@@ -25,12 +27,12 @@ public class Builder{
 			}
 
 			List<string> allScenes = new List<string>(scenes); // Make a list holding all the scenes
-			if(!allScenes.Contains("StartScene.unity")){
-				throw new UnityException("There is no start scene");
+			if(!allScenes.Contains(initScene)){
+				throw new UnityException("There is no init scene");
 			}
 			allScenes.RemoveAll(str => str.Contains(".meta"));
-			allScenes.Remove("StartScene.unity");
-			allScenes.Insert(0,"StartScene.unity");
+			allScenes.Remove(initScene);
+			allScenes.Insert(0,initScene);
 			string[] buildScenes = allScenes.ToArray();
 			for(int i = 0; i < buildScenes.Length; i++){
 				buildScenes[i] = "Assets/Scenes/Building/" + buildScenes[i];
