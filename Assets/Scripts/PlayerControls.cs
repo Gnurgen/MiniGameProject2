@@ -6,57 +6,51 @@ public class PlayerControls : MonoBehaviour {
 
     public GameObject playerCamera;
     public GameObject joystick;
-    private Rigidbody rid;
-    [Header("Player")]
-    [SerializeField]
-    float walkingSpeed = 150.0f;
-    [SerializeField]
-    float sprintSpeed = 300.00f;
-    [SerializeField]
-    float maxStamina = 10.0f;
-    [SerializeField]
-    float minimalNeedStamina = 4.0f;
-    [Header("Joystick")]
-    [SerializeField]
-    bool joystickEnable = false;
-    [SerializeField]
-    float joystickSensitivity = 1;
-    [SerializeField]
-    float joystickSensitivityIdle = 1;
-    [SerializeField]
-    float joystickDeadZone= 0.2f;
+    private Rigidbody rgd;
 
+    [Header("Player")]
+    public float walkingSpeed = 150.0f;
+    public float sprintSpeed = 300.00f;
+    public float maxStamina = 10.0f;
+    public float minimalSprintStamina = 4.0f;
+
+    [Header("Joystick")]
+    public bool joystickEnable = false;
+    public float joystickSensitivity = 1;
+    public float joystickSensitivityIdle = 1;
+    public float joystickDeadZone= 0.2f;
 
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
     private float calibrationYAngle = 0f;
-    enum PlayerState { idle, walk, sprint };
-    private PlayerState myPlayerState = PlayerState.idle;
-    private float currentStamina;
+
+    enum PlayerState { Idle, Walk, Sprint };
+    private PlayerState playerState = PlayerState.Idle;
+    private PlayerState prevPlayerState;
+
     private bool exhausted = false;
+    private bool prevExhausted;
+    private float stamina;
     private float hori;
     private float verti;
-    private float currentJoystickSensitivity; 
-
-
-
+    private float currentJoystickSensitivity;
 
     void Start()
     {
-        rid = GetComponent<Rigidbody>();
+        rgd = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
-        currentStamina = maxStamina;
+        stamina = maxStamina;
     }
 
     void Update()
     {
-        if (joystickEnable == false)
+        if (!joystickEnable)
         {
             joystick.SetActive(false);
-            ApplyGyroRotation();
-            ApplyCalibration();
+            applyGyroRotation();
+            applyCalibration();
         }
         else
         {
@@ -64,107 +58,130 @@ public class PlayerControls : MonoBehaviour {
             useJoystick();
         }
 
-        UpdatePlayerState();
-        UpdatePlayerStamina();
+        updatePlayerState();
+        updatePlayerStamina();
+
+        
+         
+
+
+
     }
 
     void FixedUpdate()
     {
-
-        if (myPlayerState == PlayerState.walk)        
-            rid.velocity = playerCamera.transform.forward * walkingSpeed * Time.deltaTime;
-        else if (myPlayerState == PlayerState.sprint)
-            rid.velocity = playerCamera.transform.forward * sprintSpeed *Time.deltaTime;
-        else if (myPlayerState == PlayerState.idle)
-            rid.velocity = Vector3.zero;
-        
-
-     
+        switch (playerState)
+        {
+            case PlayerState.Walk:
+                rgd.velocity = playerCamera.transform.forward * walkingSpeed * Time.deltaTime;
+                break;
+            case PlayerState.Sprint:
+                rgd.velocity = playerCamera.transform.forward * sprintSpeed * Time.deltaTime;
+                break;
+            default:
+                rgd.velocity = Vector3.zero;
+                break;
+        }
+        if (joystickEnable)
+        {
+            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * walkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
+        }
     }
 
-    private void UpdatePlayerState() {
-        if (joystickEnable == false)
+    private void updatePlayerState() {
+        prevPlayerState = playerState;
+
+        if (!joystickEnable)
         {
-            if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted == true)
-                myPlayerState = PlayerState.walk;
+            if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted)
+                playerState = PlayerState.Walk;
             else if (Input.touchCount > 1)
-                myPlayerState = PlayerState.sprint;
+                playerState = PlayerState.Sprint;
             else
-                myPlayerState = PlayerState.idle;
+                playerState = PlayerState.Idle;
         }
         else
         {
-            if (Input.touchCount == 2 || Input.touchCount > 2 && exhausted == true)
-                myPlayerState = PlayerState.walk;
+            if (Input.touchCount == 2 || Input.touchCount > 2 && exhausted)
+                playerState = PlayerState.Walk;
             else if (Input.touchCount > 2)
-                myPlayerState = PlayerState.sprint;
+                playerState = PlayerState.Sprint;
             else
-                myPlayerState = PlayerState.idle;
+                playerState = PlayerState.Idle;
+        }
+
+        if (prevPlayerState != playerState)
+        {
+            if (prevPlayerState == PlayerState.Sprint)
+            {
+                GameManager.instance.PlayerSprintStart();
+            }
+            else if (playerState == PlayerState.Sprint)
+            {
+                GameManager.instance.PlayerSprintStop();
+
+            }
         }
     }
 
-    private void UpdatePlayerStamina() {
-        if (exhausted == true) {
-            if (currentStamina <= minimalNeedStamina)
-                currentStamina += Time.deltaTime;
+    private void updatePlayerStamina() {
+        prevExhausted = exhausted;
+
+        if (exhausted) {
+            if (stamina <= minimalSprintStamina)
+                stamina += Time.deltaTime;
             else
                 exhausted = false;
         }
-        else if (exhausted == false)
+        else
         {
-            if (myPlayerState == PlayerState.idle || myPlayerState == PlayerState.walk)
+            if (playerState == PlayerState.Idle || playerState == PlayerState.Walk)
             {
-                if (currentStamina >= maxStamina)
-                    currentStamina = maxStamina;
+                if (stamina >= maxStamina)
+                    stamina = maxStamina;
                 else
-                    currentStamina += Time.deltaTime;
+                    stamina += Time.deltaTime;
             }
-            else if (myPlayerState == PlayerState.sprint)
+            else
             {
-                if (currentStamina <= 0)
+                if (stamina <= 0)
                 {
-                    currentStamina = 0;
+                    stamina = 0;
                     exhausted = true;
                 }
                 else
-                    currentStamina -= Time.deltaTime;
+                    stamina -= Time.deltaTime;
             }
         }
+
+        if (prevExhausted != exhausted && exhausted)
+        {
+            GameManager.instance.PlayerFatigue();
+        }
     }
-    public void useJoystick() {
 
-        if (myPlayerState == PlayerState.idle)
-            currentJoystickSensitivity = joystickSensitivityIdle;
-        else
-            currentJoystickSensitivity = joystickSensitivity;
-
-        if (CrossPlatformInputManager.GetAxis("Horizontal") <= joystickDeadZone && CrossPlatformInputManager.GetAxis("Horizontal") >= -joystickDeadZone)
-            hori = 0;
-        else 
-            hori = CrossPlatformInputManager.GetAxis("Horizontal") * currentJoystickSensitivity;        
-
-        if (CrossPlatformInputManager.GetAxis("Vertical") <= joystickDeadZone && CrossPlatformInputManager.GetAxis("Vertical") >= -joystickDeadZone)
-            verti = 0;
-        else
-            verti = CrossPlatformInputManager.GetAxis("Vertical") * currentJoystickSensitivity;
-        
+    private void useJoystick() {
+        currentJoystickSensitivity = playerState == PlayerState.Idle ? joystickSensitivityIdle : joystickSensitivity;
+        hori = CrossPlatformInputManager.GetAxis("Horizontal") <= joystickDeadZone && CrossPlatformInputManager.GetAxis("Horizontal") >= -joystickDeadZone ? 0 : CrossPlatformInputManager.GetAxis("Horizontal") * currentJoystickSensitivity;
+        verti = CrossPlatformInputManager.GetAxis("Vertical") <= joystickDeadZone && CrossPlatformInputManager.GetAxis("Vertical") >= -joystickDeadZone ? 0 : CrossPlatformInputManager.GetAxis("Vertical") * currentJoystickSensitivity;
         playerCamera.transform.eulerAngles += new Vector3(-verti, hori, 0);
     }
 
-    public void CalibrateYAngle()
+    private void calibrateYAngle()
     {
         calibrationYAngle = appliedGyroYAngle - initialYAngle; // Offsets the y angle in case it wasn't 0 at edit time.
     }
 
-    void ApplyGyroRotation()
+    private void applyGyroRotation()
     {
         playerCamera.transform.rotation = Input.gyro.attitude;
-        playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
-        playerCamera.transform.Rotate(90f, 0f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
-        appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
+        playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self);    // Swap "handedness" of quaternion from gyro.
+        playerCamera.transform.Rotate(90f, 0f, 0f, Space.World);    // Rotate to make sense as a camera pointing out the back of your device.
+        appliedGyroYAngle = transform.eulerAngles.y;                // Save the angle around y axis for use in calibration.
     }
 
-    void ApplyCalibration()
+    private void applyCalibration()
     {
         playerCamera.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World); // Rotates y angle back however much it deviated when calibrationYAngle was saved.
     }

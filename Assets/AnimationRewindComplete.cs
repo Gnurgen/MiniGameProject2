@@ -3,13 +3,14 @@ using System.Collections;
 
 public class AnimationRewindComplete : StateMachineBehaviour {
 
-	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //
+    //}
     public void OnStateEnter()
     {
         GameManager.instance.MusicBoxRewindComplete();
+
     }
     public void OnStateExit()
     {
