@@ -95,12 +95,14 @@ public class GameManager {
 
     public void PlayDeathScene_MusicBox()
     {
-        SceneManager.LoadScene(LOSE_SCENE_TIME);
+        if (!debug.musicBoxDeathImmune)
+            SceneManager.LoadScene(LOSE_SCENE_TIME);
     }
 
     public void PlayDeathScene_Monster()
     {
-        SceneManager.LoadScene(LOSE_SCENE_DEATH);
+        if (!debug.monsterDeathImmune)
+            SceneManager.LoadScene(LOSE_SCENE_DEATH);
     }
     public void PlayWinScene()
     {
