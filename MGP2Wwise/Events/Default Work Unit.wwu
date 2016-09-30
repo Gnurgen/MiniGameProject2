@@ -8,7 +8,7 @@
 						<Action Name="Play" ID="{AD6614FD-0853-4E57-9764-1D6A90D9D960}" ShortID="275348748" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{CD0938C8-A743-4B49-AF20-A18C3CF612D8}" Global="false">
-									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -22,7 +22,7 @@
 							</PropertyList>
 							<ElementList>
 								<Element ID="{89B13F34-2D86-415C-AC5F-2B0DE0C864EA}" Global="false">
-									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -36,7 +36,7 @@
 							</PropertyList>
 							<ElementList>
 								<Element ID="{545A0071-005C-4593-B791-CA595D094216}" Global="false">
-									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -50,7 +50,54 @@
 							</PropertyList>
 							<ElementList>
 								<Element ID="{0E8166CD-EFA9-4803-A2C6-2BC5CFC29043}" Global="false">
-									<ObjectRef Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menu_Button" ID="{EFC112DB-A9B0-43CB-8B81-C89FAE67C755}">
+					<ChildrenList>
+						<Action Name="Play" ID="{435EE963-4515-4A25-A01B-CD0C31D1C814}" ShortID="693187044" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{2291F499-0157-464B-8EE5-7A14A0528186}" Global="false">
+									<ObjectRef Name="Menu Button" ID="{D154C260-DE1D-45A4-B8D0-D7237DFF7C5B}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambience_Play" ID="{311ABDB1-B9DE-4446-A96B-8AF15737CE5E}">
+					<ChildrenList>
+						<Action Name="Play" ID="{A117E76D-C9F2-4356-AB8A-619C83D9F14A}" ShortID="484454986" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{7366F810-16D7-4BEB-B66C-049693365749}" Global="false">
+									<ObjectRef Name="Polar Winds" ID="{C2898F7A-8CD5-4313-9FBB-0720CF7C7051}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{F0BE2F74-3295-4D94-AE34-329C4B900763}" ShortID="736132561" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{8F7DDD9C-9DC4-4B59-81C7-591F2CC878EC}" Global="false">
+									<ObjectRef Name="Weeping Willows" ID="{FD2C61FD-A48E-48EE-801D-414A6ACE5B53}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambience_Stop" ID="{A18B92FF-1C2F-4DDB-B430-1AA40A7A43AD}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{CF03B059-0D5C-4CCD-9A4F-8C7E9FF5E4C8}" ShortID="785005265" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B8BC20D1-B4F4-4A7F-A4F1-7FE2FD5290CB}" Global="false">
+									<ObjectRef Name="Polar Winds" ID="{C2898F7A-8CD5-4313-9FBB-0720CF7C7051}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{48AFF6D5-CA05-4DB0-BF01-9131A1BBD57A}" ShortID="415694230" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{C5D52A19-DD1A-4620-B0B3-33EA008DC8D8}" Global="false">
+									<ObjectRef Name="Weeping Willows" ID="{FD2C61FD-A48E-48EE-801D-414A6ACE5B53}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>

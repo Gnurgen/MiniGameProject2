@@ -3,11 +3,10 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{81E2E713-133D-426E-B9C2-023106367766}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="FootSteps" ID="{3F0B8787-1ED7-43F8-8EAF-A6E1740B0724}">
+				<SwitchGroup Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}">
 					<ChildrenList>
-						<Switch Name="Run" ID="{4E38E74E-FA75-4C2D-BF55-9D6DCCDC6FCD}"/>
-						<Switch Name="Walk" ID="{63AC05C8-D6B0-4729-8F2A-FC34CB0ABD0A}"/>
-						<Switch Name="Idle" ID="{0B5B4CA2-E11F-46F9-AA15-B7D5816B8983}"/>
+						<Switch Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
+						<Switch Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
