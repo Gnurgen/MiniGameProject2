@@ -409,8 +409,8 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 					<GroupingInfo>
-						<GroupRef Name="FootSteps" ID="{3F0B8787-1ED7-43F8-8EAF-A6E1740B0724}"/>
-						<DefaultSwitchRef Name="Walk" ID="{63AC05C8-D6B0-4729-8F2A-FC34CB0ABD0A}"/>
+						<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+						<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
 								<ItemRef Name="FootSteps_Walk" ID="{4B3FE94F-7AFA-41A4-A0EE-8A127AE0DA82}"/>
@@ -425,26 +425,41 @@
 								</PropertyList>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
-						<GroupingList>
-							<Grouping>
-								<SwitchRef Name="Run" ID="{4E38E74E-FA75-4C2D-BF55-9D6DCCDC6FCD}"/>
-								<ItemList>
-									<ItemRef Name="FootSteps_Run" ID="{38E936C3-FC87-4F88-A923-4471139AC561}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="Walk" ID="{63AC05C8-D6B0-4729-8F2A-FC34CB0ABD0A}"/>
-								<ItemList>
-									<ItemRef Name="FootSteps_Walk" ID="{4B3FE94F-7AFA-41A4-A0EE-8A127AE0DA82}"/>
-								</ItemList>
-							</Grouping>
-						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
 				<RandomSequenceContainer Name="New Random Container" ID="{6CE5B6DA-60B0-4C64-B317-4C43EF36FAD9}" ShortID="1026063827">
 					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{12F0F758-B9E3-422A-9FF4-CDAD9DC0ED54}" ShortID="908957140">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}" WorkUnitID="{D9690434-CB22-465E-B1CF-CBCA6332D8CC}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{2361BF10-647D-40B6-9FDF-B92E6CA62654}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>3</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
@@ -464,35 +479,6 @@
 										<Value>25</Value>
 									</ValueList>
 								</Property>
-								<Property Name="InitialDelay" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{9BB4A092-C397-4350-97AD-D5CA05061F0E}" ShortID="77014094">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}" WorkUnitID="{D9690434-CB22-465E-B1CF-CBCA6332D8CC}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{E4DDF767-2564-42B0-98B8-7EAFD2EE90AD}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="1"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>0</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>3</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="PreFetchLength" Type="int16">
 									<ValueList>
 										<Value>1000</Value>
@@ -562,6 +548,17 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{7B1A68BF-EFD0-4739-AB4A-56211E78AC22}" ShortID="196075525" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.01"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{7B1A68BF-EFD0-4739-AB4A-56211E78AC22}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
