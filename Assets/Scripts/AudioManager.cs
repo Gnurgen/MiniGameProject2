@@ -14,7 +14,10 @@ public class AudioManager : MonoBehaviour{
         _MusicBoxRewindPlay, 
         _MusicBoxRewindStop, 
         _MusicBoxPuff,
-        _MusicBoxStateGroup;
+        _MusicBoxStateGroup,
+        _MusicBoxSwitchGroup,
+        _MusicBoxBrokenSwitch,
+        _MusicBoxUnBrokenSwitch;
 
     [Header("Player")]
     [SerializeField]
@@ -27,7 +30,7 @@ public class AudioManager : MonoBehaviour{
         _PlayerUnfreeze,
         _PlayerTakeDamage,
         _PlayerRecover;
-
+    public string Stamina_Par;
     [Header("Monster")]
     [SerializeField]
     private string _MonsterStep;
@@ -59,10 +62,7 @@ public class AudioManager : MonoBehaviour{
     void MB_Stop()
     {
         AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
-        MB_State();
-        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
-        AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
-        AkSoundEngine.RenderAudio();
+      
     }
     void MB_Pause()
     {
@@ -85,15 +85,24 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.PostEvent(_MusicBoxRewindStop, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
+        MB_SwitchUnBroken();
     }
     void MB_State()
     {
        AkSoundEngine.SetState(_MusicBoxStateGroup,GameManager.instance.musicBoxCount.ToString());
-
+    }
+    void MB_SwitchBroken()
+    {
+        AkSoundEngine.SetSwitch(_MusicBoxSwitchGroup,_MusicBoxBrokenSwitch, GameManager.instance.musicBox);
+    }
+    void MB_SwitchUnBroken()
+    {
+        AkSoundEngine.SetSwitch(_MusicBoxSwitchGroup, _MusicBoxUnBrokenSwitch, GameManager.instance.musicBox);
     }
     void MB_Move()
     {
         AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }
 

@@ -7,6 +7,7 @@
 					<ChildrenList>
 						<Switch Name="Run" ID="{4E38E74E-FA75-4C2D-BF55-9D6DCCDC6FCD}"/>
 						<Switch Name="Walk" ID="{63AC05C8-D6B0-4729-8F2A-FC34CB0ABD0A}"/>
+						<Switch Name="Idle" ID="{0B5B4CA2-E11F-46F9-AA15-B7D5816B8983}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
