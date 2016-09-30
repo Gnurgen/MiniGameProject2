@@ -4,16 +4,21 @@ using System.Collections;
 
 public class GameManager {
 
-    private static int START_SCENE = 1;
-    private static int GAME_SCENE = 2;
+    private static string START_SCENE = "StartScene";
+    private static string GAME_SCENE = "Game";
+    private static string WIN_SCENE = "WinScene";
+    private static string LOSE_SCENE_TIME = "LoseTimeScene";
+    private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
     private static GameManager _instance;
+    private static int _musicBoxCount;
+
+    public readonly DebugManager debug = new DebugManager();
 
     private GameObject _player;
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
-    private int _musicBoxCount = 0;
 
     public static GameManager instance
     {
@@ -78,21 +83,30 @@ public class GameManager {
 
     public void LeaveGame()
     {
-        _instance = null;
         SceneManager.LoadScene(START_SCENE);
     }
 
     public void StartGame()
     {
+        _musicBoxCount = 0;
+        _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
     }
 
     public void PlayDeathScene_MusicBox()
     {
+        if (!debug.musicBoxDeathImmune)
+            SceneManager.LoadScene(LOSE_SCENE_TIME);
     }
 
     public void PlayDeathScene_Monster()
     {
+        if (!debug.monsterDeathImmune)
+            SceneManager.LoadScene(LOSE_SCENE_DEATH);
+    }
+    public void PlayWinScene()
+    {
+        SceneManager.LoadScene(WIN_SCENE);
     }
 
     public delegate void SpawnAction();
@@ -138,7 +152,13 @@ public class GameManager {
         if (OnEnemyAggro != null)
             OnEnemyAggro();
     }
-
+    public delegate void EnemyIdleAction();
+    public event EnemyIdleAction OnEnemyIdle;
+    public void EnemyIdle()
+    {
+        if (OnEnemyIdle != null)
+            OnEnemyIdle();
+    }
     public delegate void HitAction(int value);
     public event HitAction OnEnemyAttackHit;
     public void EnemyAttackHit(int i)
@@ -210,6 +230,7 @@ public class GameManager {
     }
     public void MusicBoxMove()
     {
+      
         if (OnMusicBoxMove != null)
             OnMusicBoxMove();
     }
@@ -236,6 +257,10 @@ public class GameManager {
     public void MusicBoxRewindComplete()
     {
         _musicBoxCount++;
+        if (_musicBoxCount >= MusicBoxSpawn.GetCount())
+        {
+//            PlayWinScene();
+        }
         if (OnMusicBoxRewindComplete != null)
             OnMusicBoxRewindComplete();
     }

@@ -15,18 +15,14 @@ public class OneShotAnis : MonoBehaviour {
         nmc = GetComponent<NavMeshController>();
         _idleSpeed = nmc._idleSpeed;
         _chaseSpeed = nmc._chaseSpeed;
-        nmc.enabled = false;
-        agent = GetComponent<NavMeshAgent>();
-        transform.position = _startPos.position;
-        curState = state.none;
-        agent.destination = transform.position;
+        enabled = false;
 	}
     void Update()
     {
         switch (curState)
         {
             case state.one:
-                if (Vector3.Distance(transform.position, _endPos.position) < 0.2f)
+                if (Vector3.Distance(transform.position, _endPos.position) < 1.2f)
                 {
                     curState = state.none;
                     _despawn();
@@ -39,6 +35,10 @@ public class OneShotAnis : MonoBehaviour {
 	
     public void playOneShot()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.enabled = false;
+        transform.position = _startPos.position;
+        agent.enabled = true;
         curState = state.one;
         agent.speed = _idleSpeed;
         agent.destination = _endPos.position;

@@ -9,7 +9,8 @@ public class NavMeshController : MonoBehaviour {
 	private BoxCollider bCol;
 	private SphereCollider sCol;
 	private Vector3 idleTar, _dir;
-    private bool _noMove;
+    private bool _noMove, _stagger = false;
+    private float _staggerTime, _staggerCD = 0;
 
     [SerializeField]
     private float _chaseTime;
@@ -17,10 +18,27 @@ public class NavMeshController : MonoBehaviour {
 
     void Start () {
 		curState = state.idle;
+        _staggerTime = GetComponent<EnemyAttack>().timeBetweenAttack;
         GameManager.instance.OnEnemyAggro += startChase;
+        GameManager.instance.OnEnemyAttackHit += doStagger;
+        setCage(GameObject.Find("FirstAggroBox").transform);
 	}
 
     void Update() {
+        if (_stagger)
+        {
+            _staggerCD += Time.deltaTime;
+            agent.Stop();
+            GameManager.instance.EnemyIdle();
+            if (_staggerCD >= _staggerTime)
+            {
+                agent.Resume();
+                GameManager.instance.EnemyAggro();
+                _stagger = false;
+                _staggerCD = 0;
+            }
+            return;
+        }
         switch (curState)
         { 
             case state.idle:
@@ -67,15 +85,18 @@ public class NavMeshController : MonoBehaviour {
     }
     private void startIdle()
     {
+        GameManager.instance.EnemyIdle();
         curState = state.idle;
         agent.speed = _idleSpeed;
         idleTar = new Vector3(cage.GetChild(0).position.x, transform.position.y, cage.GetChild(0).position.z);
         agent.destination = idleTar;
     }
-    private void OnTriggerExit(Collider col)
+    void OnTriggerExit(Collider col)
     {
         if (col.transform == cage)
+        {
             Invoke("startIdle", _chaseTime);
+        }
     }
 
     void moveEnemy(Vector3 pos)
@@ -83,5 +104,10 @@ public class NavMeshController : MonoBehaviour {
         agent.enabled = false;
         transform.position = pos;
         agent.enabled = true;
+    }
+
+    private void doStagger(int dmg)
+    {
+        _stagger = true;
     }
 }

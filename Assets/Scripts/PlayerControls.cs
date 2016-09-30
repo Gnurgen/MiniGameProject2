@@ -11,8 +11,16 @@ public class PlayerControls : MonoBehaviour {
     [Header("Player")]
     public float walkingSpeed = 150.0f;
     public float sprintSpeed = 300.00f;
-    public float maxStamina = 10.0f;
-    public float minimalSprintStamina = 4.0f;
+  //  public float maxStamina = 10.0f; //Old stam
+  //  public float minimalSprintStamina = 4.0f; //Old stam
+
+    public float maxSprintTime = 10.0f; //new stam
+    public float minSprintTime = 4.0f; //new stam
+    public float fullSprintRechargeTime = 20.0f; //new stam
+
+    public float frozenWalkingSpeed = 50.0f;
+    public float frozenSprintSpeed = 100.0f;
+    public float timeFrozen = 5.0f;
 
     [Header("Joystick")]
     public bool joystickEnable = false;
@@ -28,12 +36,16 @@ public class PlayerControls : MonoBehaviour {
     private PlayerState playerState = PlayerState.Idle;
     private PlayerState prevPlayerState;
 
-    private bool exhausted = false;
+    private bool exhausted = false, _isSprinting = false;
     private bool prevExhausted;
-    private float stamina;
+    private float stamina, stamNormalization;
     private float hori;
     private float verti;
     private float currentJoystickSensitivity;
+    private float currentWalkingSpeed;
+    private float currentSprintSpeed;
+    private float currentFreeze;
+    private bool frozen = false;
 
     void Start()
     {
@@ -41,11 +53,19 @@ public class PlayerControls : MonoBehaviour {
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
-        stamina = maxStamina;
+       // stamina = maxStamina; //Old stam
+        stamina = 100; //New stam
+        stamNormalization = 100.0f / maxSprintTime;
+        currentWalkingSpeed = walkingSpeed;
+        currentSprintSpeed = sprintSpeed;
+
+        GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
+
     }
 
     void Update()
     {
+        //controls
         if (!joystickEnable)
         {
             joystick.SetActive(false);
@@ -57,15 +77,22 @@ public class PlayerControls : MonoBehaviour {
             joystick.SetActive(true);
             useJoystick();
         }
-
         updatePlayerState();
-        updatePlayerStamina();
-
+       // updatePlayerStamina();
+        newStamina();
         
-         
-
-
-
+        //speed
+        if (currentFreeze > 0) {
+            updatePlayerSpeed();
+            currentFreeze -= Time.deltaTime;
+         //   Debug.Log("Current Freeze: " + currentFreeze + "Current Speed" + currentWalkingSpeed);
+        }
+        else
+        {
+            currentWalkingSpeed = walkingSpeed;
+            currentSprintSpeed = sprintSpeed;
+        }
+       
     }
 
     void FixedUpdate()
@@ -73,10 +100,10 @@ public class PlayerControls : MonoBehaviour {
         switch (playerState)
         {
             case PlayerState.Walk:
-                rgd.velocity = playerCamera.transform.forward * walkingSpeed * Time.deltaTime;
+                rgd.velocity = playerCamera.transform.forward * currentWalkingSpeed * Time.deltaTime;
                 break;
             case PlayerState.Sprint:
-                rgd.velocity = playerCamera.transform.forward * sprintSpeed * Time.deltaTime;
+                rgd.velocity = playerCamera.transform.forward * currentSprintSpeed * Time.deltaTime;
                 break;
             default:
                 rgd.velocity = Vector3.zero;
@@ -84,8 +111,8 @@ public class PlayerControls : MonoBehaviour {
         }
         if (joystickEnable)
         {
-            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * walkingSpeed * Time.deltaTime;
-            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * currentWalkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * currentWalkingSpeed * Time.deltaTime;
         }
     }
 
@@ -125,7 +152,28 @@ public class PlayerControls : MonoBehaviour {
         }
     }
 
-    private void updatePlayerStamina() {
+    private void newStamina()
+    {
+        _isSprinting = (playerState == PlayerState.Sprint);
+        if (stamina >= 100.0f)
+            stamina = 100.0f;
+        if(!_isSprinting && stamina<=100.0f)
+            stamina += Time.deltaTime * (100 / fullSprintRechargeTime);
+        else
+        {
+            stamina -= Time.deltaTime*stamNormalization;
+            if (stamina >= 100/minSprintTime)
+                exhausted = false;
+            if (stamina <= 0)
+            {
+                GameManager.instance.PlayerFatigue(); 
+                exhausted = true;
+                stamina = 0;
+            }
+        }
+    }
+
+   /* private void updatePlayerStamina() {
         prevExhausted = exhausted;
 
         if (exhausted) {
@@ -159,6 +207,15 @@ public class PlayerControls : MonoBehaviour {
         {
             GameManager.instance.PlayerFatigue();
         }
+    }*/
+    private void PlayerFrozen(int i){
+        currentFreeze = timeFrozen;
+      
+    }
+    private void updatePlayerSpeed() {
+        currentWalkingSpeed = walkingSpeed - ((currentFreeze / timeFrozen) * (walkingSpeed - frozenWalkingSpeed));
+        currentSprintSpeed = sprintSpeed - ((currentFreeze / timeFrozen) * (sprintSpeed - frozenSprintSpeed));
+        //Debug.Log("Current Sprint Speed: " + currentSprintSpeed + "Current Walking Speed: " + currentWalkingSpeed);
     }
 
     private void useJoystick() {

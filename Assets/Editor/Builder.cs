@@ -16,7 +16,7 @@ public class Builder{
 		try{
 
 			PlayerSettings.bundleIdentifier = "com.highfiveproductions.doedetoner";
-			PlayerSettings.bundleVersion = "2.2";
+			PlayerSettings.bundleVersion = "2.2"; 
 
 			// All of this is to find every scene in the build folder, put the StartScene
 			// as the first scene, and add the rest.
