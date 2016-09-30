@@ -2,4 +2,5 @@
     public bool monsterDeathImmune;
     public bool musicBoxDeathImmune;
     public bool boundryRings;
+    public bool usingJoystick;
 }

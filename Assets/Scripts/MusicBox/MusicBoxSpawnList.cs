@@ -30,6 +30,11 @@ public class MusicBoxSpawnList : ScriptableObject {
         return false;
     }
 
+    public int Count()
+    {
+        return list.Count;
+    }
+
     public bool Contains(GameObject obj)
     {
         return list.Contains(obj.name);
