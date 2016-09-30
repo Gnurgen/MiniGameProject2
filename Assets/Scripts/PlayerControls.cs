@@ -39,7 +39,7 @@ public class PlayerControls : MonoBehaviour {
     private float currentJoystickSensitivity;
     private float currentWalkingSpeed;
     private float currentSprintSpeed;
-    private float currentFreeze= 0;
+    private float currentFreeze;
     private bool frozen = false;
 
     void Start()
@@ -52,7 +52,7 @@ public class PlayerControls : MonoBehaviour {
         currentWalkingSpeed = walkingSpeed;
         currentSprintSpeed = sprintSpeed;
 
-       // GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
+        GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
 
@@ -74,18 +74,17 @@ public class PlayerControls : MonoBehaviour {
         updatePlayerStamina();
         
         //speed
-     /*   if (currentFreeze > 0) {
+        if (currentFreeze > 0) {
             updatePlayerSpeed();
             currentFreeze -= Time.deltaTime;
+         //   Debug.Log("Current Freeze: " + currentFreeze + "Current Speed" + currentWalkingSpeed);
         }
         else
         {
             currentWalkingSpeed = walkingSpeed;
             currentSprintSpeed = sprintSpeed;
         }
-        Debug.Log("Current Sprint Speed: " + currentSprintSpeed);
-        Debug.Log("Current Walking Speed: " + currentWalkingSpeed);
-        Debug.Log("Current reeze: " + currentFreeze); */
+       
     }
 
     void FixedUpdate()
@@ -185,8 +184,9 @@ public class PlayerControls : MonoBehaviour {
       
     }
     private void updatePlayerSpeed() {
-        currentWalkingSpeed = frozenWalkingSpeed + ((currentFreeze / timeFrozen) * (walkingSpeed - frozenWalkingSpeed));
-        currentSprintSpeed = frozenSprintSpeed + ((currentFreeze / timeFrozen) * (sprintSpeed - frozenSprintSpeed));
+        currentWalkingSpeed = walkingSpeed - ((currentFreeze / timeFrozen) * (walkingSpeed - frozenWalkingSpeed));
+        currentSprintSpeed = sprintSpeed - ((currentFreeze / timeFrozen) * (sprintSpeed - frozenSprintSpeed));
+        //Debug.Log("Current Sprint Speed: " + currentSprintSpeed + "Current Walking Speed: " + currentWalkingSpeed);
     }
 
     private void useJoystick() {
