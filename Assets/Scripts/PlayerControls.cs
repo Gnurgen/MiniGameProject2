@@ -77,7 +77,7 @@ public class PlayerControls : MonoBehaviour {
         if (currentFreeze > 0) {
             updatePlayerSpeed();
             currentFreeze -= Time.deltaTime;
-            Debug.Log("Current Freeze: " + currentFreeze + "Current Speed" + currentWalkingSpeed);
+         //   Debug.Log("Current Freeze: " + currentFreeze + "Current Speed" + currentWalkingSpeed);
         }
         else
         {
