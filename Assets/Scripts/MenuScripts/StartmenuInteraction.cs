@@ -25,7 +25,7 @@ public class StartmenuInteraction : MonoBehaviour {
         print("NOTE: Left/Right audio and Left/Right images are dummies - REPLACE WITH REAL OBJECTS IN RESOURCES FOLDER");
         GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.instance.debug.monsterDeathImmune;
         GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.instance.debug.musicBoxDeathImmune;
-        GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn = GameManager.instance.debug.boundryRings;
+//        GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn = GameManager.instance.debug.boundryRings;
         GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.instance.debug.usingJoystick;
     }
 
