@@ -139,13 +139,19 @@ public class PlayerControls : MonoBehaviour {
             { 
                 case PlayerState.Idle:
                     GameManager.instance.PlayerIdle();
-                break;
+                    AkSoundEngine.PostEvent("Idle", GameManager.instance.player);
+                    AkSoundEngine.RenderAudio();
+                    break;
                 case PlayerState.Walk:
                     GameManager.instance.PlayerWalk();
-                break;
+                    AkSoundEngine.PostEvent("Walk", GameManager.instance.player);
+                    AkSoundEngine.RenderAudio();
+                    break;
                 case PlayerState.Sprint:
                     GameManager.instance.PlayerSprint();
-                break;
+                    AkSoundEngine.PostEvent("Run", GameManager.instance.player);
+                    AkSoundEngine.RenderAudio();
+                    break;
             }
         }
     }

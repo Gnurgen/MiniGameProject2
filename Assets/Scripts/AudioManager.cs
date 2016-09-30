@@ -29,7 +29,8 @@ public class AudioManager : MonoBehaviour{
         _PlayerFreeze,
         _PlayerUnfreeze,
         _PlayerTakeDamage,
-        _PlayerRecover;
+        _PlayerRecover,
+        _PlayerStepStart;
     public string Stamina_Par;
     [Header("Monster")]
     [SerializeField]
@@ -43,15 +44,37 @@ public class AudioManager : MonoBehaviour{
    
     [Header("Ambience")]
     [SerializeField]
-    private string _Ambience;
+    private string _AmbienceStart;
     [SerializeField]
-    private string _KnockOnCoffin,
+    private string _AmbienceStop,
+        _KnockOnCoffin,
         _GateCreak,
         _GateOpen,
         _Lake;
     [Header("Menu")]
     [SerializeField]
     private string _StartButton;
+
+
+    // MISC VOIDS FOR GAME MANAGER
+    public void FootStepStart()
+    {
+        AkSoundEngine.PostEvent(_PlayerStepStart, GameManager.instance.musicBox);
+        AkSoundEngine.RenderAudio();
+    }
+    public void AmbienceStart()
+    {
+        AkSoundEngine.PostEvent(_AmbienceStart, GameManager.instance.musicBox);
+        AkSoundEngine.RenderAudio();
+    }
+    public void AmbienceStop()
+    {
+        AkSoundEngine.PostEvent(_AmbienceStop, GameManager.instance.musicBox);
+        AkSoundEngine.RenderAudio();
+    }
+
+
+
 
     // Music Box Events
     void MB_Play()
@@ -188,7 +211,7 @@ public class AudioManager : MonoBehaviour{
     //Ambience Sound
     void Ambience()
     {
-        AkSoundEngine.PostEvent(_Ambience, GameManager.instance.enemy);
+        AkSoundEngine.PostEvent(_AmbienceStart, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
     }
     void KnockOnCoffin()
