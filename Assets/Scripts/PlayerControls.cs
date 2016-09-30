@@ -7,7 +7,7 @@ public class PlayerControls : MonoBehaviour {
     public GameObject playerCamera;
     public GameObject joystick;
     private Rigidbody rgd;
-  //  private string PAR_STAMINA;
+    private string PAR_STAMINA;
 
     [Header("Player")]
     public float walkingSpeed = 150.0f;
@@ -35,6 +35,7 @@ public class PlayerControls : MonoBehaviour {
 
     private bool exhausted = false, _isSprinting = false;
     private bool prevExhausted;
+    [SerializeField]
     private float stamina, stamNormalization;
     private float hori;
     private float verti;
@@ -56,13 +57,15 @@ public class PlayerControls : MonoBehaviour {
         stamNormalization = 100.0f / maxSprintTime;
         currentWalkingSpeed = walkingSpeed;
         currentSprintSpeed = sprintSpeed;
-        //PAR_STAMINA = GameManager.instance.audioManager.Stamina_Par;
+ 
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
 
     void Update()
     {
+        //SET STAMINA EVERY FUCKING FRAME BRO!
+        GameManager.instance.audioManager.StaminaChange(stamina);
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);
@@ -138,14 +141,20 @@ public class PlayerControls : MonoBehaviour {
             switch (playerState)
             { 
                 case PlayerState.Idle:
-               //     GameManager.instance.PlayerIdle();
-                break;
+                    GameManager.instance.PlayerIdle();
+                    AkSoundEngine.PostEvent("Idle", GameManager.instance.player);
+                    AkSoundEngine.RenderAudio();
+                    break;
                 case PlayerState.Walk:
-                //   GameManager.instance.PlayerWalk();
-                break;
+                    GameManager.instance.PlayerWalk();
+                    AkSoundEngine.PostEvent("Walk", GameManager.instance.player);
+                    AkSoundEngine.RenderAudio();
+                    break;
                 case PlayerState.Sprint:
-                //    GameManager.instance.PlayerSprint();
-                break;
+                    GameManager.instance.PlayerSprint();
+                    AkSoundEngine.PostEvent("Run", GameManager.instance.player);
+                    AkSoundEngine.RenderAudio();
+                    break;
             }
         }
     }
@@ -153,8 +162,7 @@ public class PlayerControls : MonoBehaviour {
     private void newStamina()
     {
         _isSprinting = (playerState == PlayerState.Sprint);
-        if (stamina >= 100.0f)
-            stamina = 100.0f;
+      
         if(!_isSprinting && stamina<=100.0f)
             stamina += Time.deltaTime * (100 / fullSprintRechargeTime);
         else
@@ -167,9 +175,11 @@ public class PlayerControls : MonoBehaviour {
                 stamina = 0;
             }
         }
+        if (stamina >= 100.0f)
+            stamina = 100.0f;
         if (stamina >= 100 / minSprintTime)
             exhausted = false;
-        //AkSoundEngine.SetRTPCValue(PAR_STAMINA, stamina);
+      
     }
 
 
