@@ -35,7 +35,11 @@
 				</File>
 				<File Id="573374260" Language="SFX">
 					<ShortName>PlayerPanting.wav</ShortName>
-					<Path>SFX\PlayerPanting_9E69E797.wem</Path>
+					<Path>SFX\PlayerPanting_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="978225663" Language="SFX">
+					<ShortName>Footprint.wav</ShortName>
+					<Path>SFX\Footprint_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

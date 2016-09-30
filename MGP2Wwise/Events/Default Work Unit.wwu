@@ -58,9 +58,9 @@
 				</Event>
 				<Event Name="FootStep" ID="{97179A19-C2A6-4860-BC12-176195FC53BA}">
 					<ChildrenList>
-						<Action Name="Play" ID="{39849EE9-1DC7-4AE7-87A1-D9752B674AE8}" ShortID="103574831" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{4BBCBE3F-DC8C-4C43-9BB0-312A3DCF55ED}" ShortID="910493032" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{3D721ED3-69E4-466A-828F-F160A4EB407E}" Global="false">
+								<Element ID="{6712EB51-C121-4DD5-87CE-13BD92432D5E}" Global="false">
 									<ObjectRef Name="FootSteps" ID="{B896BBB1-7EB3-4C66-8327-80D72D93810F}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
 								</Element>
 							</ElementList>
