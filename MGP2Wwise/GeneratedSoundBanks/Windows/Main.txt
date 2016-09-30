@@ -6,11 +6,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
 	1874288895	Idle			\Default Work Unit\Idle	
+	2015956512	MonsterAttackHit			\Default Work Unit\MonsterAttackHit	
 	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
 	2076776060	Puff			\Default Work Unit\Puff	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
 	2108779966	Walk			\Default Work Unit\Walk	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
+	2621508965	MonsterAttack			\Default Work Unit\MonsterAttack	
+	2653952097	MonsterAggro			\Default Work Unit\MonsterAggro	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
 	3166394572	Ambience_Stop			\Default Work Unit\Ambience_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
@@ -107,10 +110,13 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	970241952	CONFIRM 01	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\UI Sounds\CONFIRM 01\CONFIRM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	222373072	MonsterAttackHit	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\MonsterAttackHit_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttackHit		92224
 	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
 	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
 	573374260	PlayerPanting	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\PlayerPanting_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\PlayerPanting		315456
 	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
+	751439041	MonsterAttack	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\MonsterAttacj_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttack		131136
+	827816364	MonsterAggro	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\MonsterAggro_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAggro		188480
 	835297814	Music Box Windup	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Windup_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		195288
 	978225663	Foot2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot2		59456
 

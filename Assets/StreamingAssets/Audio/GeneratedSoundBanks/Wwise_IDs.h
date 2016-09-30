@@ -19,6 +19,9 @@ namespace AK
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID IDLE = 1874288895U;
         static const AkUniqueID MENU_BUTTON = 938529747U;
+        static const AkUniqueID MONSTERAGGRO = 2653952097U;
+        static const AkUniqueID MONSTERATTACK = 2621508965U;
+        static const AkUniqueID MONSTERATTACKHIT = 2015956512U;
         static const AkUniqueID MUSICBOX_PAUSE = 2302208614U;
         static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
         static const AkUniqueID MUSICBOX_RESUME = 3719125665U;

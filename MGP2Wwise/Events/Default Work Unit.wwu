@@ -191,6 +191,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="MonsterAttack" ID="{24702129-057E-47B2-936D-DFD8D0E91D69}">
+					<ChildrenList>
+						<Action Name="Play" ID="{434C8923-1CAC-447B-9768-9E40E4D1B6EF}" ShortID="724695863" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{7024AB43-7C45-4133-A743-31234634982D}" Global="false">
+									<ObjectRef Name="MonsterAttack" ID="{6129A60B-BA8A-4446-AD05-FFF5A810B65F}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MonsterAggro" ID="{6E65918B-38E8-4CC1-9277-7E3CFFE73527}">
+					<ChildrenList>
+						<Action Name="Play" ID="{3E19E918-D5FB-4339-8EDD-9F59D00E0B08}" ShortID="460208252" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B99B18CB-9223-4DA1-9D84-5E8E09A869F3}" Global="false">
+									<ObjectRef Name="MonsterAggro" ID="{CB1D0767-45B2-43A3-8D78-95233CA94E91}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MonsterAttackHit" ID="{E228458C-A6F9-41C1-997F-23A1EDA10F17}">
+					<ChildrenList>
+						<Action Name="Play" ID="{8A4D8D44-52C8-4C10-BE44-044C915574DD}" ShortID="913223471" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AAF40DD7-30B0-4E7D-A1D4-5768D8212685}" Global="false">
+									<ObjectRef Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

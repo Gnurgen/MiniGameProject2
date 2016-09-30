@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{CB78265F-883B-4B12-8DEE-A8D690B43F2B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="MonsterAttackHit" ID="{E228458C-A6F9-41C1-997F-23A1EDA10F17}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Factory Altiverb - Outdoor and More" ID="{C0E78DAA-768A-438F-8F7B-3701395185C3}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu_Button" ID="{EFC112DB-A9B0-43CB-8B81-C89FAE67C755}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Play" ID="{968EB8CE-EB83-43D0-9849-E1A82DBA5A8E}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
@@ -12,11 +13,13 @@
 						<ObjectRef Name="Ambience_Play" ID="{311ABDB1-B9DE-4446-A96B-8AF15737CE5E}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Stop" ID="{58C4C3D2-A24C-44FA-A6A0-D7E35313B11D}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Puff" ID="{35223F09-3C0D-47AE-A633-0ABA4B1E7397}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MonsterAttack" ID="{24702129-057E-47B2-936D-DFD8D0E91D69}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Idle" ID="{0417C20C-9273-4985-8D5A-29538E331D2A}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Walk" ID="{1B9484BE-E95E-4A16-86C0-90CEB1B9230A}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Rewind_Stop" ID="{444AE99F-7E8F-4A98-BD06-D0B4CCA1E503}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Breath" ID="{6E80E11A-672F-4B06-80FF-1F1BC55C22B1}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Rewind_Play" ID="{05E04D71-29B3-4B71-B2B0-C990AF701F3F}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MonsterAggro" ID="{6E65918B-38E8-4CC1-9277-7E3CFFE73527}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Pause" ID="{76FA8E00-2523-4D09-A660-0D96E6966FA6}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ambience_Stop" ID="{A18B92FF-1C2F-4DDB-B430-1AA40A7A43AD}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Run" ID="{B049EE56-917D-4F7D-A6BF-04D4ED0093B5}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
