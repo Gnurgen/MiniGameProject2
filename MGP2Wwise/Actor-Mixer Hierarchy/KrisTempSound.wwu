@@ -24,8 +24,7 @@
 											<Modifier Name="" ID="{B0624BFF-2253-451D-B57C-537BE3A3F6BE}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="500"/>
-													<Property Name="Min" Type="Real64" Value="-500"/>
+													<Property Name="Min" Type="Real64" Value="-400"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -226,6 +225,16 @@
 									<ValueList>
 										<Value>200</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AED63F64-A639-4186-9C51-F64DDB6C724D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -243,6 +252,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Foot2" ID="{C6B68515-7368-4163-A3E4-46656F39117D}" ShortID="337079270" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -304,6 +316,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Foot3" ID="{9B774BDB-CB7F-4C96-ADA0-C36A93FD8136}" ShortID="1048545536" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -338,6 +353,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Foot4" ID="{3D570AA0-34A8-4A07-B691-C6B0E8CCCAA8}" ShortID="638201612" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -372,6 +390,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Foot5" ID="{1001B795-10E2-4D66-B3C9-09892C6F530A}" ShortID="1046415316" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -407,10 +428,28 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}" ShortID="802448312" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Wwise Silence" ID="{B662B350-DCE8-4367-A88D-6A59F56E0395}" ShortID="566495866" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wwise Silence" ID="{B662B350-DCE8-4367-A88D-6A59F56E0395}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
-						<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-						<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+						<GroupRef Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+						<DefaultSwitchRef Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
 								<ItemRef Name="FootSteps_Walk" ID="{4B3FE94F-7AFA-41A4-A0EE-8A127AE0DA82}"/>
@@ -424,7 +463,30 @@
 									<Property Name="ContinuePlay" Type="bool" Value="True"/>
 								</PropertyList>
 							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}"/>
+							</GroupingBehavior>
 						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
+								<ItemList>
+									<ItemRef Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
+								<ItemList>
+									<ItemRef Name="FootSteps_Run" ID="{38E936C3-FC87-4F88-A923-4471139AC561}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+								<ItemList>
+									<ItemRef Name="FootSteps_Walk" ID="{4B3FE94F-7AFA-41A4-A0EE-8A127AE0DA82}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
 				<RandomSequenceContainer Name="New Random Container" ID="{6CE5B6DA-60B0-4C64-B317-4C43EF36FAD9}" ShortID="1026063827">

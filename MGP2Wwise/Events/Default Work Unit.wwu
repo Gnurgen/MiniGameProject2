@@ -114,6 +114,36 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Idle" ID="{0417C20C-9273-4985-8D5A-29538E331D2A}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{128594A2-1826-4362-B6AE-8930B939A0FE}" ShortID="726258260" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+								<GroupItem Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Walk" ID="{1B9484BE-E95E-4A16-86C0-90CEB1B9230A}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{4CAD4093-9577-494F-933E-ABBE500A2557}" ShortID="245586992" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+								<GroupItem Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Run" ID="{B049EE56-917D-4F7D-A6BF-04D4ED0093B5}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{E7899984-AC68-437D-ABDC-C18B5346D959}" ShortID="392796455" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+								<GroupItem Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -29,11 +29,15 @@
 			<IncludedEvents>
 				<Event Id="1496310610" Name="Ambience_Play" ObjectPath="\Events\Default Work Unit\Ambience_Play"/>
 				<Event Id="3166394572" Name="Ambience_Stop" ObjectPath="\Events\Default Work Unit\Ambience_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
+				<Event Id="1874288895" Name="Idle" ObjectPath="\Events\Default Work Unit\Idle" MaxAttenuation="0.000000"/>
 				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
 				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
 				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="80.000000"/>
 				<Event Id="3719125665" Name="MusicBox_Resume" ObjectPath="\Events\Default Work Unit\MusicBox_Resume" MaxAttenuation="0.000000"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Run" MaxAttenuation="0.000000"/>
+				<Event Id="2108779966" Name="Walk" ObjectPath="\Events\Default Work Unit\Walk" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="13019290" Language="SFX">
@@ -94,7 +98,7 @@
 				</File>
 				<File Id="304171733" Language="SFX">
 					<ShortName>Menu Button.wav</ShortName>
-					<Path>SFX\Menu Button_9E69E797.wem</Path>
+					<Path>SFX\Menu Button_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="335771893" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bathroom.wav</ShortName>
@@ -102,7 +106,7 @@
 				</File>
 				<File Id="343009413" Language="SFX">
 					<ShortName>Music Box Melody.wav</ShortName>
-					<Path>SFX\Music Box Melody_9E69E797.wem</Path>
+					<Path>SFX\Music Box Melody_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="364607080" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongAndComplex.wav</ShortName>
@@ -174,7 +178,7 @@
 				</File>
 				<File Id="716604440" Language="SFX">
 					<ShortName>Music Box Melody Broken.wav</ShortName>
-					<Path>SFX\Music Box Melody Broken_9E69E797.wem</Path>
+					<Path>SFX\Music Box Melody Broken_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="726190851" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexEcho.wav</ShortName>
@@ -227,6 +231,10 @@
 				<File Id="941961704" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar_A82D434C.wem</Path>
+				</File>
+				<File Id="978225663" Language="SFX">
+					<ShortName>Footprint.wav</ShortName>
+					<Path>SFX\Footprint_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="1036982009" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_01.wav</ShortName>

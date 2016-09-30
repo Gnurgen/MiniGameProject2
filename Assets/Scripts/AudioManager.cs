@@ -66,7 +66,6 @@ public class AudioManager : MonoBehaviour{
     }
     void MB_Pause()
     {
-        
         AkSoundEngine.PostEvent(_MusicBoxPause, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
         print(GameManager.instance.musicBox);
@@ -109,16 +108,19 @@ public class AudioManager : MonoBehaviour{
     //Player Events
     void PlayerIdle()
     {
+        print("idle");
         AkSoundEngine.PostEvent(_PlayerIdle, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
     void PlayerSprint()
     {
+        print("run");
         AkSoundEngine.PostEvent(_PlayerSprint, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
     void PlayerWalk()
     {
+        print("walk");
         AkSoundEngine.PostEvent(_PlayerWalk, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }

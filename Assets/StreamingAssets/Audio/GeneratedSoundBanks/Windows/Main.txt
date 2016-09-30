@@ -1,16 +1,24 @@
 Event	ID	Name			Wwise Object Path	Notes
+	712161704	Run			\Default Work Unit\Run	
 	938529747	Menu_Button			\Default Work Unit\Menu_Button	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
+	1866025847	FootStep			\Default Work Unit\FootStep	
+	1874288895	Idle			\Default Work Unit\Idle	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
+	2108779966	Walk			\Default Work Unit\Walk	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
 	3166394572	Ambience_Stop			\Default Work Unit\Ambience_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	2287157699	StepSwitch			\Default Work Unit\StepSwitch	
 	3940572963	Music_Box_Melody			\Default Work Unit\Music_Box_Melody	
 
 Switch	ID	Name	Switch Group			Notes
+	712161704	Run	StepSwitch			
+	1874288895	Idle	StepSwitch			
+	2108779966	Walk	StepSwitch			
 	231230354	Broken	Music_Box_Melody			
 	2997862023	Unbroken	Music_Box_Melody			
 
@@ -83,12 +91,14 @@ Effect plug-ins	ID	Name	Type				Notes
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	504140941	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows\SoundSeed Air Wind	
+	566495866	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\New Sound SFX\Wwise Silence	
 	638668611	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds\SoundSeed Air Wind	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Menu Button_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
-	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
-	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody Broken_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
+	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
+	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
+	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
+	978225663	Foot2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot2		59456
 
 Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
 	13019290	Ford_TransitVanRear	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear_BFA7EF96.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Ford_TransitVanRear	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	246768
