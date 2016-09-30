@@ -11,8 +11,13 @@ public class PlayerControls : MonoBehaviour {
     [Header("Player")]
     public float walkingSpeed = 150.0f;
     public float sprintSpeed = 300.00f;
-    public float maxStamina = 10.0f;
-    public float minimalSprintStamina = 4.0f;
+  //  public float maxStamina = 10.0f; //Old stam
+  //  public float minimalSprintStamina = 4.0f; //Old stam
+
+    public float maxSprintTime = 10.0f; //new stam
+    public float minSprintTime = 4.0f; //new stam
+    public float fullSprintRechargeTime = 20.0f; //new stam
+
     public float frozenWalkingSpeed = 50.0f;
     public float frozenSprintSpeed = 100.0f;
     public float timeFrozen = 5.0f;
@@ -31,9 +36,9 @@ public class PlayerControls : MonoBehaviour {
     private PlayerState playerState = PlayerState.Idle;
     private PlayerState prevPlayerState;
 
-    private bool exhausted = false;
+    private bool exhausted = false, _isSprinting = false;
     private bool prevExhausted;
-    private float stamina;
+    private float stamina, stamNormalization;
     private float hori;
     private float verti;
     private float currentJoystickSensitivity;
@@ -48,7 +53,9 @@ public class PlayerControls : MonoBehaviour {
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
-        stamina = maxStamina;
+       // stamina = maxStamina; //Old stam
+        stamina = 100; //New stam
+        stamNormalization = 100.0f / maxSprintTime;
         currentWalkingSpeed = walkingSpeed;
         currentSprintSpeed = sprintSpeed;
 
@@ -71,7 +78,8 @@ public class PlayerControls : MonoBehaviour {
             useJoystick();
         }
         updatePlayerState();
-        updatePlayerStamina();
+       // updatePlayerStamina();
+        newStamina();
         
         //speed
         if (currentFreeze > 0) {
@@ -144,7 +152,28 @@ public class PlayerControls : MonoBehaviour {
         }
     }
 
-    private void updatePlayerStamina() {
+    private void newStamina()
+    {
+        _isSprinting = (playerState == PlayerState.Sprint);
+        if (stamina >= 100.0f)
+            stamina = 100.0f;
+        if(!_isSprinting && stamina<=100.0f)
+            stamina += Time.deltaTime * (100 / fullSprintRechargeTime);
+        else
+        {
+            stamina -= Time.deltaTime*stamNormalization;
+            if (stamina >= 100/minSprintTime)
+                exhausted = false;
+            if (stamina <= 0)
+            {
+                GameManager.instance.PlayerFatigue(); 
+                exhausted = true;
+                stamina = 0;
+            }
+        }
+    }
+
+   /* private void updatePlayerStamina() {
         prevExhausted = exhausted;
 
         if (exhausted) {
@@ -178,7 +207,7 @@ public class PlayerControls : MonoBehaviour {
         {
             GameManager.instance.PlayerFatigue();
         }
-    }
+    }*/
     private void PlayerFrozen(int i){
         currentFreeze = timeFrozen;
       
