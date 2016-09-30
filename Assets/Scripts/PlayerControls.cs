@@ -7,12 +7,17 @@ public class PlayerControls : MonoBehaviour {
     public GameObject playerCamera;
     public GameObject joystick;
     private Rigidbody rgd;
+  //  private string PAR_STAMINA;
 
     [Header("Player")]
     public float walkingSpeed = 150.0f;
     public float sprintSpeed = 300.00f;
-    public float maxStamina = 10.0f;
-    public float minimalSprintStamina = 4.0f;
+    public float maxSprintTime = 10.0f;
+    public float minSprintTime = 4.0f; 
+    public float fullSprintRechargeTime = 20.0f; 
+    public float frozenWalkingSpeed = 50.0f;
+    public float frozenSprintSpeed = 100.0f;
+    public float timeFrozen = 5.0f;
 
     [Header("Joystick")]
     public bool joystickEnable = false;
@@ -28,30 +33,38 @@ public class PlayerControls : MonoBehaviour {
     private PlayerState playerState = PlayerState.Idle;
     private PlayerState prevPlayerState;
 
-    private Gyroscope gyro;
-
-    private bool exhausted = false;
+    private bool exhausted = false, _isSprinting = false;
     private bool prevExhausted;
-    private float stamina;
+    private float stamina, stamNormalization;
     private float hori;
     private float verti;
     private float currentJoystickSensitivity;
+    private float currentWalkingSpeed;
+    private float currentSprintSpeed;
+    private float currentFreeze;
+    private bool frozen = false;
 
     void Start()
     {
-        gyro = Input.gyro;
-        gyro.enabled = true;
+        if (!Application.isEditor)
+            joystickEnable = GameManager.instance.debug.usingJoystick;
         rgd = GetComponent<Rigidbody>();
+        Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
-        stamina = maxStamina;
+        stamina = 100;
+        stamNormalization = 100.0f / maxSprintTime;
+        currentWalkingSpeed = walkingSpeed;
+        currentSprintSpeed = sprintSpeed;
+        //PAR_STAMINA = GameManager.instance.audioManager.Stamina_Par;
+        GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
 
     void Update()
     {
-        if (!joystickEnable)
-        {
+        //controls
+        if (!joystickEnable) {
             joystick.SetActive(false);
             applyGyroRotation();
             applyCalibration();
@@ -61,21 +74,31 @@ public class PlayerControls : MonoBehaviour {
             joystick.SetActive(true);
             useJoystick();
         }
-
         updatePlayerState();
-        updatePlayerStamina();
+        newStamina();
+        
+        //speed
+        if (currentFreeze > 0) {
+            updatePlayerSpeed();
+            currentFreeze -= Time.deltaTime;
+        }
+        else
+        {
+            currentWalkingSpeed = walkingSpeed;
+            currentSprintSpeed = sprintSpeed;
+        }
+       
     }
 
     void FixedUpdate()
     {
-        calibrateGyroscope();
         switch (playerState)
         {
             case PlayerState.Walk:
-                rgd.velocity = playerCamera.transform.forward * walkingSpeed * Time.deltaTime;
+                rgd.velocity = playerCamera.transform.forward * currentWalkingSpeed * Time.deltaTime;
                 break;
             case PlayerState.Sprint:
-                rgd.velocity = playerCamera.transform.forward * sprintSpeed * Time.deltaTime;
+                rgd.velocity = playerCamera.transform.forward * currentSprintSpeed * Time.deltaTime;
                 break;
             default:
                 rgd.velocity = Vector3.zero;
@@ -83,8 +106,8 @@ public class PlayerControls : MonoBehaviour {
         }
         if (joystickEnable)
         {
-            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * walkingSpeed * Time.deltaTime;
-            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * currentWalkingSpeed * Time.deltaTime;
+            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * currentWalkingSpeed * Time.deltaTime;
         }
     }
 
@@ -112,52 +135,51 @@ public class PlayerControls : MonoBehaviour {
 
         if (prevPlayerState != playerState)
         {
-            if (prevPlayerState == PlayerState.Sprint)
-            {
-                GameManager.instance.PlayerSprintStart();
-            }
-            else if (playerState == PlayerState.Sprint)
-            {
-                GameManager.instance.PlayerSprintStop();
-
+            switch (playerState)
+            { 
+                case PlayerState.Idle:
+               //     GameManager.instance.PlayerIdle();
+                break;
+                case PlayerState.Walk:
+                //   GameManager.instance.PlayerWalk();
+                break;
+                case PlayerState.Sprint:
+                //    GameManager.instance.PlayerSprint();
+                break;
             }
         }
     }
 
-    private void updatePlayerStamina() {
-        prevExhausted = exhausted;
-
-        if (exhausted) {
-            if (stamina <= minimalSprintStamina)
-                stamina += Time.deltaTime;
-            else
-                exhausted = false;
-        }
+    private void newStamina()
+    {
+        _isSprinting = (playerState == PlayerState.Sprint);
+        if (stamina >= 100.0f)
+            stamina = 100.0f;
+        if(!_isSprinting && stamina<=100.0f)
+            stamina += Time.deltaTime * (100 / fullSprintRechargeTime);
         else
         {
-            if (playerState == PlayerState.Idle || playerState == PlayerState.Walk)
+            stamina -= Time.deltaTime*stamNormalization;
+            if (stamina <= 0)
             {
-                if (stamina >= maxStamina)
-                    stamina = maxStamina;
-                else
-                    stamina += Time.deltaTime;
-            }
-            else
-            {
-                if (stamina <= 0)
-                {
-                    stamina = 0;
-                    exhausted = true;
-                }
-                else
-                    stamina -= Time.deltaTime;
+                GameManager.instance.PlayerFatigue(); 
+                exhausted = true;
+                stamina = 0;
             }
         }
+        if (stamina >= 100 / minSprintTime)
+            exhausted = false;
+        //AkSoundEngine.SetRTPCValue(PAR_STAMINA, stamina);
+    }
 
-        if (prevExhausted != exhausted && exhausted)
-        {
-            GameManager.instance.PlayerFatigue();
-        }
+
+    private void PlayerFrozen(int i){
+        currentFreeze = timeFrozen;
+      
+    }
+    private void updatePlayerSpeed() {
+        currentWalkingSpeed = walkingSpeed - ((currentFreeze / timeFrozen) * (walkingSpeed - frozenWalkingSpeed));
+        currentSprintSpeed = sprintSpeed - ((currentFreeze / timeFrozen) * (sprintSpeed - frozenSprintSpeed));
     }
 
     private void useJoystick() {
@@ -174,15 +196,10 @@ public class PlayerControls : MonoBehaviour {
 
     private void applyGyroRotation()
     {
-        playerCamera.transform.rotation = gyro.attitude;
+        playerCamera.transform.rotation = Input.gyro.attitude;
         playerCamera.transform.Rotate(0f, 0f, 180f, Space.Self);    // Swap "handedness" of quaternion from gyro.
         playerCamera.transform.Rotate(90f, 0f, 0f, Space.World);    // Rotate to make sense as a camera pointing out the back of your device.
         appliedGyroYAngle = transform.eulerAngles.y;                // Save the angle around y axis for use in calibration.
-    }
-
-    private Quaternion calibrateGyroscope()
-    {
-        return gyro.attitude;
     }
 
     private void applyCalibration()

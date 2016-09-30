@@ -3,9 +3,11 @@ using System.Collections;
 
 public class CageStandStill : MonoBehaviour {
     public bool StandStill;
+    private ActivateDome AD;
 
     void OnEnable()
     {
+        AD = GameManager.instance.player.GetComponent<ActivateDome>();
         if (gameObject.name == "FirstAggroBox")
             return;
         if (!(gameObject.tag == "SortedDomeSpawn"))
@@ -23,7 +25,9 @@ public class CageStandStill : MonoBehaviour {
         if (col.gameObject == GameManager.instance.player)
         {
             GameManager.instance.EnemyAggro();
-            GameManager.instance.player.GetComponent<ActivateDome>().spawnDomes = false;
+            AD.spawnDomes = false;
+            if (gameObject.name != "FirstAggroBox")
+                AD.SprintTutorial();
         }
     }
 

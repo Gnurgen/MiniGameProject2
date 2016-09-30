@@ -4,13 +4,19 @@ using System.Collections;
 public class ActivateDome : MonoBehaviour {
 
     private GameObject[] domeTrans;
+    private ThumbSprintController sprintCanvas;
     private Vector3[] domePos;
     private int activeDome, index;
     private float dist;
     [HideInInspector]
     public bool spawnDomes = false;
+
+    private bool _hasSprinted = false;
+
 	void Start () {
+        GameManager.instance.OnPlayerSprintStart += setSprinted;
         domeTrans = GameObject.FindGameObjectsWithTag("SortedDomeSpawn");
+        sprintCanvas = GameObject.Find("ThumbPrint").GetComponent<ThumbSprintController>();
         domePos = new Vector3[domeTrans.Length];
         for(int x = 0; x<domeTrans.Length; ++x)
         {
@@ -39,6 +45,14 @@ public class ActivateDome : MonoBehaviour {
             index++;
         }
 	}
-
-
+    
+    public void SprintTutorial()
+    {
+        if (!_hasSprinted)
+            sprintCanvas.ShowThumbs();
+    }
+    private void setSprinted()
+    {
+        _hasSprinted = true;
+    }
 }
