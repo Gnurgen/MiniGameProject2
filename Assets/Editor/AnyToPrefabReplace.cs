@@ -2,10 +2,8 @@
 using UnityEditor;
 using System.Collections;
 
-[System.Serializable]
 public class AnyToPrefabReplace : EditorWindow {
 
-    [SerializeField]
     public static Object replacement;
 
     [MenuItem("Tools/Replace with Prefab")]
