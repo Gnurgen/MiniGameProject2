@@ -23,6 +23,10 @@ public class MusicBoxSpawn : MonoBehaviour {
         current = spawnPoint;
     }
 
+    public static int GetCount() {
+        return current.spawnList.Count();
+    }
+
     public static MusicBoxSpawn GetNext()
     {
         return current.spawnList.Next(current.gameObject).GetComponent<MusicBoxSpawn>();

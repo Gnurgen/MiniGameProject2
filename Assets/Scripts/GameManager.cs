@@ -11,13 +11,14 @@ public class GameManager {
     private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
     private static GameManager _instance;
-    private static int _musicBoxCount = 0;
+    private static int _musicBoxCount;
+
+    public readonly DebugManager debug = new DebugManager();
 
     private GameObject _player;
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
-    private int lastMusicBox = 5;
 
     public static GameManager instance
     {
@@ -82,33 +83,29 @@ public class GameManager {
 
     public void LeaveGame()
     {
-        _instance = null;
         SceneManager.LoadScene(START_SCENE);
     }
 
     public void StartGame()
     {
+        _musicBoxCount = 0;
+        _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
     }
 
     public void PlayDeathScene_MusicBox()
     {
-        _instance = null;
         SceneManager.LoadScene(LOSE_SCENE_TIME);
     }
 
     public void PlayDeathScene_Monster()
     {
-        _instance = null;
         SceneManager.LoadScene(LOSE_SCENE_DEATH);
     }
     public void PlayWinScene()
     {
-        _instance = null;
-        _musicBoxCount = 0;
         SceneManager.LoadScene(WIN_SCENE);
     }
-
 
     public delegate void SpawnAction();
     public event SpawnAction OnEnemySpawn;
@@ -258,9 +255,9 @@ public class GameManager {
     public void MusicBoxRewindComplete()
     {
         _musicBoxCount++;
-        if (musicBoxCount >= lastMusicBox)
+        if (_musicBoxCount >= MusicBoxSpawn.GetCount())
         {
-            PlayWinScene();
+//            PlayWinScene();
         }
         if (OnMusicBoxRewindComplete != null)
             OnMusicBoxRewindComplete();
