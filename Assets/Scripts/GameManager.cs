@@ -91,6 +91,9 @@ public class GameManager {
         _musicBoxCount = 0;
         _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
+        OnMusicBoxPlay();
+        audioManager.AmbienceStart();
+        audioManager.FootStepStart();
     }
 
     public void PlayDeathScene_MusicBox()
