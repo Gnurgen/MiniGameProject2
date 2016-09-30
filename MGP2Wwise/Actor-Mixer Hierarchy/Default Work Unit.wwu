@@ -920,6 +920,56 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</CustomStateList>
 					</StateInfo>
 				</ActorMixer>
+				<Sound Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" ShortID="927362461" Type="SoundFX">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="SFX_Distance" ID="{C9D8B98B-D8FC-4DCA-8C82-B21C8C9F369B}" WorkUnitID="{99C17FF4-66F0-4F6B-A73B-98695604D910}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Music Box Windup" ID="{65B48D6A-82C8-48BA-9E51-4DE55FD14BBE}" ShortID="835297814">
+							<Language>SFX</Language>
+							<AudioFile>Music Box Windup.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+								<State Name="Custom State" ID="{78C28D36-5E23-420D-9FA2-4F0BFB31F201}" ShortID="348854283">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Music Box Windup" ID="{65B48D6A-82C8-48BA-9E51-4DE55FD14BBE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

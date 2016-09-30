@@ -52,6 +52,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
 						<CurrentSwitchRef Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

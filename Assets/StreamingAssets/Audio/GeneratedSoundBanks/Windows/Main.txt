@@ -1,9 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
+	672851034	MusicBox_Rewind_Play			\Default Work Unit\MusicBox_Rewind_Play	
 	712161704	Run			\Default Work Unit\Run	
 	938529747	Menu_Button			\Default Work Unit\Menu_Button	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
 	1874288895	Idle			\Default Work Unit\Idle	
+	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
 	2108779966	Walk			\Default Work Unit\Walk	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
@@ -32,6 +34,7 @@ State	ID	Name	State Group			Notes
 
 Custom State	ID	Name	State Group	Owner		Notes
 	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
+	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1351367891	SS_Air_Fear			\Factory SoundSeed Air Game Syncs\SS_Air_Fear	
@@ -98,6 +101,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
 	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
 	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
+	835297814	Music Box Windup	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Windup_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		195288
 	978225663	Foot2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot2		59456
 
 Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size

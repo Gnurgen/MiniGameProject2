@@ -21,6 +21,8 @@ namespace AK
         static const AkUniqueID MUSICBOX_PAUSE = 2302208614U;
         static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
         static const AkUniqueID MUSICBOX_RESUME = 3719125665U;
+        static const AkUniqueID MUSICBOX_REWIND_PLAY = 672851034U;
+        static const AkUniqueID MUSICBOX_REWIND_STOP = 2071830116U;
         static const AkUniqueID MUSICBOX_STOP = 2820245704U;
         static const AkUniqueID RUN = 712161704U;
         static const AkUniqueID WALK = 2108779966U;

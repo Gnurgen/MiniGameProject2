@@ -35,6 +35,8 @@
 				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
 				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="80.000000"/>
 				<Event Id="3719125665" Name="MusicBox_Resume" ObjectPath="\Events\Default Work Unit\MusicBox_Resume" MaxAttenuation="0.000000"/>
+				<Event Id="672851034" Name="MusicBox_Rewind_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Play" MaxAttenuation="80.000000"/>
+				<Event Id="2071830116" Name="MusicBox_Rewind_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Run" MaxAttenuation="0.000000"/>
 				<Event Id="2108779966" Name="Walk" ObjectPath="\Events\Default Work Unit\Walk" MaxAttenuation="0.000000"/>
@@ -211,6 +213,10 @@
 				<File Id="832296042" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho_EE58611F.wem</Path>
+				</File>
+				<File Id="835297814" Language="SFX">
+					<ShortName>Music Box Windup.wav</ShortName>
+					<Path>SFX\Music Box Windup_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="847080287" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexDistantEcho.wav</ShortName>

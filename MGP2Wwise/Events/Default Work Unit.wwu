@@ -144,6 +144,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="MusicBox_Rewind_Play" ID="{05E04D71-29B3-4B71-B2B0-C990AF701F3F}">
+					<ChildrenList>
+						<Action Name="Play" ID="{BE18FD31-1456-40F8-9D1C-AFE8B9091F9F}" ShortID="455032839" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{E865936C-4B7B-47C5-A315-EC54241F7A11}" Global="false">
+									<ObjectRef Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Rewind_Stop" ID="{444AE99F-7E8F-4A98-BD06-D0B4CCA1E503}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{AE4061A1-D427-4C08-AECE-69177FBA19BF}" ShortID="761791539" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{9FB6A0B6-6BE7-44A0-A6DD-072678921EF8}" Global="false">
+									<ObjectRef Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
