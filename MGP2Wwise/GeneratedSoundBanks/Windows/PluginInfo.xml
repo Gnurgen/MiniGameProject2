@@ -4,5 +4,6 @@
 		<Plugin Name="Wwise Silence" ID="6619138" DLL="SilenceGenerator"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Wind" ID="7798786" DLL="AkSoundSeedAir"/>
 		<Plugin Name="Wwise Convolution Reverb" ID="8323075" DLL="AkConvolutionReverb"/>
+		<Plugin Name="Wwise Synth One" ID="9699330" DLL="SynthOne"/>
 	</Plugins>
 </PluginInfo>

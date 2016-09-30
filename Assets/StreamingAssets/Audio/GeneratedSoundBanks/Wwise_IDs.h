@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID AMBIENCE_PLAY = 1496310610U;
         static const AkUniqueID AMBIENCE_STOP = 3166394572U;
+        static const AkUniqueID BREATH = 1326786195U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID IDLE = 1874288895U;
         static const AkUniqueID MENU_BUTTON = 938529747U;
@@ -24,6 +25,7 @@ namespace AK
         static const AkUniqueID MUSICBOX_REWIND_PLAY = 672851034U;
         static const AkUniqueID MUSICBOX_REWIND_STOP = 2071830116U;
         static const AkUniqueID MUSICBOX_STOP = 2820245704U;
+        static const AkUniqueID PUFF = 2076776060U;
         static const AkUniqueID RUN = 712161704U;
         static const AkUniqueID WALK = 2108779966U;
     } // namespace EVENTS

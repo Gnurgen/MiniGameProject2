@@ -29,6 +29,7 @@
 			<IncludedEvents>
 				<Event Id="1496310610" Name="Ambience_Play" ObjectPath="\Events\Default Work Unit\Ambience_Play"/>
 				<Event Id="3166394572" Name="Ambience_Stop" ObjectPath="\Events\Default Work Unit\Ambience_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
 				<Event Id="1874288895" Name="Idle" ObjectPath="\Events\Default Work Unit\Idle" MaxAttenuation="0.000000"/>
 				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
@@ -38,6 +39,7 @@
 				<Event Id="672851034" Name="MusicBox_Rewind_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Play" MaxAttenuation="80.000000"/>
 				<Event Id="2071830116" Name="MusicBox_Rewind_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="2076776060" Name="Puff" ObjectPath="\Events\Default Work Unit\Puff"/>
 				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Run" MaxAttenuation="0.000000"/>
 				<Event Id="2108779966" Name="Walk" ObjectPath="\Events\Default Work Unit\Walk" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
@@ -153,6 +155,10 @@
 				<File Id="569393832" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerFront.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerFront_961825FF.wem</Path>
+				</File>
+				<File Id="573374260" Language="SFX">
+					<ShortName>PlayerPanting.wav</ShortName>
+					<Path>SFX\PlayerPanting_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="584011173" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerBackClosed.wav</ShortName>

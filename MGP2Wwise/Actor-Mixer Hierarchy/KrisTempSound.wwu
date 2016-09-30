@@ -449,7 +449,7 @@
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupRef Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
-						<DefaultSwitchRef Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
+						<DefaultSwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
 								<ItemRef Name="FootSteps_Walk" ID="{4B3FE94F-7AFA-41A4-A0EE-8A127AE0DA82}"/>
@@ -509,12 +509,13 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>-0</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
+												<SegmentShape>Log3</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>100</XPos>
-												<YPos>3</YPos>
+												<YPos>2</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -563,6 +564,7 @@
 														<XPos>0</XPos>
 														<YPos>20</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Exp3</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>

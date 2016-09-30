@@ -68,7 +68,10 @@ public class GameManager {
         get
         {
             if (_audioManager == null)
+            {
                 _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
+                _audioManager.Subscribe2GameManager();
+            }
             return _audioManager;
         }
     }
@@ -83,32 +86,36 @@ public class GameManager {
 
     public void LeaveGame()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(START_SCENE);
     }
 
     public void StartGame()
     {
+        AkSoundEngine.StopAll();
         _musicBoxCount = 0;
         _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
-        OnMusicBoxPlay();
-        audioManager.AmbienceStart();
-        audioManager.FootStepStart();
+       
+       
     }
 
     public void PlayDeathScene_MusicBox()
     {
+        AkSoundEngine.StopAll();
         if (!debug.musicBoxDeathImmune)
             SceneManager.LoadScene(LOSE_SCENE_TIME);
     }
 
     public void PlayDeathScene_Monster()
     {
+        AkSoundEngine.StopAll();
         if (!debug.monsterDeathImmune)
             SceneManager.LoadScene(LOSE_SCENE_DEATH);
     }
     public void PlayWinScene()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(WIN_SCENE);
     }
 
@@ -233,32 +240,41 @@ public class GameManager {
     }
     public void MusicBoxMove()
     {
-      
+        Debug.Log("MusicboxMove");
         if (OnMusicBoxMove != null)
             OnMusicBoxMove();
     }
     public void MusicBoxPause()
     {
+        Debug.Log("MusicboxPause");
         if (OnMusicBoxPause != null)
             OnMusicBoxPause();
     }
     public void MusicBoxResume()
     {
+        Debug.Log("MusicboxResume");
         if (OnMusicBoxResume != null)
             OnMusicBoxResume();
     }
     public void MusicBoxRewindStart()
     {
+        Debug.Log("MusicboxRewindStart");
+
+
         if (OnMusicBoxRewindStart != null)
             OnMusicBoxRewindStart();
     }
     public void MusicBoxRewindStop()
     {
+        Debug.Log("MusicboxRewindStop");
+
         if (OnMusicBoxRewindStop != null)
             OnMusicBoxRewindStop();
     }
     public void MusicBoxRewindComplete()
     {
+        Debug.Log("MusicboxRewindComplete");
+
         _musicBoxCount++;
         if (_musicBoxCount >= MusicBoxSpawn.GetCount())
         {

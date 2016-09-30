@@ -11,7 +11,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}"/>
-							<Value>0</Value>
+							<Value>20.1220268872803</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>

@@ -30,8 +30,9 @@ public class AudioManager : MonoBehaviour{
         _PlayerUnfreeze,
         _PlayerTakeDamage,
         _PlayerRecover,
-        _PlayerStepStart;
-    public string Stamina_Par;
+        _PlayerStepStart,
+        _PlayerBreath,
+        _Stamina_Par;
     [Header("Monster")]
     [SerializeField]
     private string _MonsterStep;
@@ -59,20 +60,33 @@ public class AudioManager : MonoBehaviour{
     // MISC VOIDS FOR GAME MANAGER
     public void FootStepStart()
     {
-        AkSoundEngine.PostEvent(_PlayerStepStart, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_PlayerStepStart, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
     public void AmbienceStart()
     {
-        AkSoundEngine.PostEvent(_AmbienceStart, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_AmbienceStart, gameObject);
         AkSoundEngine.RenderAudio();
     }
     public void AmbienceStop()
     {
-        AkSoundEngine.PostEvent(_AmbienceStop, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_AmbienceStop, gameObject);
         AkSoundEngine.RenderAudio();
     }
-
+    public void MusicBoxStart()
+    {
+        MB_Play();
+    }
+    public void BreathStart()
+    {
+        AkSoundEngine.PostEvent(_PlayerBreath, GameManager.instance.player);
+        AkSoundEngine.RenderAudio();
+    }
+    public void StaminaChange(float stamina)
+    {
+        print(stamina);
+        AkSoundEngine.SetRTPCValue(_Stamina_Par, stamina);
+    }
 
 
 
@@ -85,7 +99,7 @@ public class AudioManager : MonoBehaviour{
     void MB_Stop()
     {
         AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
-      
+        AkSoundEngine.RenderAudio();
     }
     void MB_Pause()
     {
@@ -111,7 +125,7 @@ public class AudioManager : MonoBehaviour{
     }
     void MB_State()
     {
-       AkSoundEngine.SetState(_MusicBoxStateGroup,GameManager.instance.musicBoxCount.ToString());
+        AkSoundEngine.SetState(_MusicBoxStateGroup,GameManager.instance.musicBoxCount.ToString());
     }
     void MB_SwitchBroken()
     {
@@ -123,6 +137,8 @@ public class AudioManager : MonoBehaviour{
     }
     void MB_Move()
     {
+        AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
+        AkSoundEngine.RenderAudio();
         AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
         AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
@@ -131,19 +147,16 @@ public class AudioManager : MonoBehaviour{
     //Player Events
     void PlayerIdle()
     {
-        print("idle");
         AkSoundEngine.PostEvent(_PlayerIdle, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
     void PlayerSprint()
     {
-        print("run");
         AkSoundEngine.PostEvent(_PlayerSprint, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
     void PlayerWalk()
     {
-        print("walk");
         AkSoundEngine.PostEvent(_PlayerWalk, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
@@ -241,14 +254,19 @@ public class AudioManager : MonoBehaviour{
 
         DontDestroyOnLoad(gameObject);
 
-       /*                   TO BE CONTINUED
-        if (GameManager.instance.audioManager == null)
-            GameManager.instance.audioManager = this;
-        else
-            Destroy(this);
-       */
+        /*                   TO BE CONTINUED
+         if (GameManager.instance.audioManager == null)
+             GameManager.instance.audioManager = this;
+         else
+             Destroy(this);
+        */
 
+        Subscribe2GameManager();
+         
+    }
 
+    public void Subscribe2GameManager()
+    {
         // Music Box Events
         GameManager.instance.OnMusicBoxPlay += MB_Play;
         GameManager.instance.OnMusicBoxRewindComplete += MB_Stop;
@@ -267,11 +285,11 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnPlayerUnfreeze += PlayerUnfreeze;
         GameManager.instance.OnPlayerTakeDamage += PlayerTakeDamage;
         GameManager.instance.OnPlayerRecover += PlayerRecover;
-        
+
         // Monster Events
         GameManager.instance.OnEnemyAttack += EnemyAttack;
         GameManager.instance.OnEnemyStep += EnemyStep;
-        GameManager.instance.OnEnemyAttackHit += EnemyAttackHit; 
+        GameManager.instance.OnEnemyAttackHit += EnemyAttackHit;
         GameManager.instance.OnEnemySpawn += EnemySpawn;
         GameManager.instance.OnEnemyDespawn += EnemyDespawn;
         GameManager.instance.OnEnemyAggro += EnemyAggro;
@@ -279,11 +297,11 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnKnockOnCoffin += KnockOnCoffin;
         GameManager.instance.OnGateCreak += GateCreak;
         GameManager.instance.OnGateOpen += GateOpen;
-         
-         
+        
     }
 
-   
+
+
 
     // Update is called once per frame
     void Update () {

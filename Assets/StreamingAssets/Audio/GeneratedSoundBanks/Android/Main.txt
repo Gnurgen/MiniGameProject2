@@ -2,10 +2,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	672851034	MusicBox_Rewind_Play			\Default Work Unit\MusicBox_Rewind_Play	
 	712161704	Run			\Default Work Unit\Run	
 	938529747	Menu_Button			\Default Work Unit\Menu_Button	
+	1326786195	Breath			\Default Work Unit\Breath	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
 	1874288895	Idle			\Default Work Unit\Idle	
 	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
+	2076776060	Puff			\Default Work Unit\Puff	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
 	2108779966	Walk			\Default Work Unit\Walk	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
@@ -37,9 +39,14 @@ Custom State	ID	Name	State Group	Owner		Notes
 	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	129	MIDI note velocity			\MIDI note velocity	
+	99298381	staminaPar			\Default Work Unit\staminaPar	
 	1351367891	SS_Air_Fear			\Factory SoundSeed Air Game Syncs\SS_Air_Fear	
 	2648548617	SS_Air_Month			\Factory SoundSeed Air Game Syncs\SS_Air_Month	
 	3203397129	SS_Air_TimeOfDay			\Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	773663610	Modulator Envelope (Custom)				
 
 Effect plug-ins	ID	Name	Type				Notes
 	147717240	LongDeepAlley	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
@@ -93,13 +100,16 @@ Effect plug-ins	ID	Name	Type				Notes
 	4273684962	ForestAuterlitz_BetweenTrees	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	196075525	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\New Sound SFX\Wwise Silence	
 	504140941	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows\SoundSeed Air Wind	
 	566495866	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\New Sound SFX\Wwise Silence	
 	638668611	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds\SoundSeed Air Wind	
+	970241952	CONFIRM 01	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\UI Sounds\CONFIRM 01\CONFIRM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
 	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
+	573374260	PlayerPanting	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\PlayerPanting_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\PlayerPanting		315456
 	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
 	835297814	Music Box Windup	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Windup_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		195288
 	978225663	Foot	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot		59456

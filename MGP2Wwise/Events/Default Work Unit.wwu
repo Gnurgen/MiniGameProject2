@@ -169,6 +169,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Breath" ID="{6E80E11A-672F-4B06-80FF-1F1BC55C22B1}">
+					<ChildrenList>
+						<Action Name="Play" ID="{CBB0EBA1-9AB5-4621-BEE9-2090C2FC1A14}" ShortID="197403852" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{61EC998A-8C47-4892-992B-E90CEF6335C1}" Global="false">
+									<ObjectRef Name="New Random Container" ID="{6CE5B6DA-60B0-4C64-B317-4C43EF36FAD9}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puff" ID="{35223F09-3C0D-47AE-A633-0ABA4B1E7397}">
+					<ChildrenList>
+						<Action Name="Play" ID="{DB0BD6BA-3CF7-48C4-9426-1F87742EDE91}" ShortID="916045208" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{91E73EE4-D7B2-4E97-9100-15351BAE0257}" Global="false">
+									<ObjectRef Name="CONFIRM 01" ID="{0140E852-B3C6-4BC7-9A6C-119EB61BC4E9}" WorkUnitID="{D9329DB3-E4D7-45AA-BD40-6EB28C6C4D39}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

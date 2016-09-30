@@ -35,6 +35,7 @@ public class PlayerControls : MonoBehaviour {
 
     private bool exhausted = false, _isSprinting = false;
     private bool prevExhausted;
+    [SerializeField]
     private float stamina, stamNormalization;
     private float hori;
     private float verti;
@@ -56,13 +57,15 @@ public class PlayerControls : MonoBehaviour {
         stamNormalization = 100.0f / maxSprintTime;
         currentWalkingSpeed = walkingSpeed;
         currentSprintSpeed = sprintSpeed;
-        PAR_STAMINA = GameManager.instance.audioManager.Stamina_Par;
+ 
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
 
     void Update()
     {
+        //SET STAMINA EVERY FUCKING FRAME BRO!
+        GameManager.instance.audioManager.StaminaChange(stamina);
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);
@@ -159,8 +162,7 @@ public class PlayerControls : MonoBehaviour {
     private void newStamina()
     {
         _isSprinting = (playerState == PlayerState.Sprint);
-        if (stamina >= 100.0f)
-            stamina = 100.0f;
+      
         if(!_isSprinting && stamina<=100.0f)
             stamina += Time.deltaTime * (100 / fullSprintRechargeTime);
         else
@@ -173,9 +175,11 @@ public class PlayerControls : MonoBehaviour {
                 stamina = 0;
             }
         }
+        if (stamina >= 100.0f)
+            stamina = 100.0f;
         if (stamina >= 100 / minSprintTime)
             exhausted = false;
-        AkSoundEngine.SetRTPCValue(PAR_STAMINA, stamina);
+      
     }
 
 
