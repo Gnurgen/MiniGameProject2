@@ -125,16 +125,16 @@ public class GameManager {
 
     public delegate void StepAction();
     public event StepAction OnEnemyStep;
-    public event StepAction OnPlayerStep;
+    public event StepAction OnPlayerIdle;
     public void EnemyStep()
     {
         if (OnEnemyStep != null)
             OnEnemyStep();
     }
-    public void PlayerStep()
+    public void PlayerIdle()
     {
-        if (OnPlayerStep != null)
-            OnPlayerStep();
+        if (OnPlayerIdle != null)
+            OnPlayerIdle();
     }
 
     public delegate void AttackAction();
@@ -196,18 +196,18 @@ public class GameManager {
     }
 
     public delegate void SprintAction();
-    public event SprintAction OnPlayerSprintStart;
-    public event SprintAction OnPlayerSprintStop;
+    public event SprintAction OnPlayerSprint;
+    public event SprintAction OnPlayerWalk;
     public event SprintAction OnPlayerFatigue;
-    public void PlayerSprintStart()
+    public void PlayerSprint()
     {
-        if (OnPlayerSprintStart != null)
-            OnPlayerSprintStart();
+        if (OnPlayerSprint != null)
+            OnPlayerSprint();
     }
-    public void PlayerSprintStop()
+    public void PlayerWalk()
     {
-        if (OnPlayerSprintStop != null)
-            OnPlayerSprintStop();
+        if (OnPlayerWalk != null)
+            OnPlayerWalk();
     }
     public void PlayerFatigue()
     {

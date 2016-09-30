@@ -21,10 +21,10 @@ public class AudioManager : MonoBehaviour{
 
     [Header("Player")]
     [SerializeField]
-    private string _PlayerStep;
+    private string _PlayerIdle;
     [SerializeField]
-    private string _PlayerSprintStart,
-        _PlayerSprintStop,
+    private string _PlayerSprint,
+        _PlayerWalk,
         _PlayerFatigue,
         _PlayerFreeze,
         _PlayerUnfreeze,
@@ -107,19 +107,19 @@ public class AudioManager : MonoBehaviour{
     }
 
     //Player Events
-    void PlayerStep()
+    void PlayerIdle()
     {
-        AkSoundEngine.PostEvent(_PlayerStep, GameManager.instance.player);
+        AkSoundEngine.PostEvent(_PlayerIdle, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerSprintStart()
+    void PlayerSprint()
     {
-        AkSoundEngine.PostEvent(_PlayerSprintStart, GameManager.instance.player);
+        AkSoundEngine.PostEvent(_PlayerSprint, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
-    void PlayerSprintStop()
+    void PlayerWalk()
     {
-        AkSoundEngine.PostEvent(_PlayerSprintStop, GameManager.instance.player);
+        AkSoundEngine.PostEvent(_PlayerWalk, GameManager.instance.player);
         AkSoundEngine.RenderAudio();
     }
     void PlayerFatigue()
@@ -234,9 +234,9 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnMusicBoxMove += MB_Move;
 
         // Player Events
-        GameManager.instance.OnPlayerStep += PlayerStep;
-        GameManager.instance.OnPlayerSprintStart += PlayerSprintStart;
-        GameManager.instance.OnPlayerSprintStop += PlayerSprintStop;
+        GameManager.instance.OnPlayerIdle += PlayerIdle;
+        GameManager.instance.OnPlayerSprint += PlayerSprint;
+        GameManager.instance.OnPlayerWalk += PlayerWalk;
         GameManager.instance.OnPlayerFatigue += PlayerFatigue;
         GameManager.instance.OnPlayerFreeze += PlayerFreeze;
         GameManager.instance.OnPlayerUnfreeze += PlayerUnfreeze;
