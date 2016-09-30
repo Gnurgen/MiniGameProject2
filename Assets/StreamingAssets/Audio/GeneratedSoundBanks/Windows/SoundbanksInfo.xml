@@ -21,12 +21,15 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3496604524" Name="PlayJumpSound" ObjectPath="\Events\Default Work Unit\PlayJumpSound"/>
+				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
+				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="100.000000"/>
+				<Event Id="3719125665" Name="MusicBox_Resume" ObjectPath="\Events\Default Work Unit\MusicBox_Resume" MaxAttenuation="0.000000"/>
+				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="663881042" Language="SFX">
-					<ShortName>Jump - Sound Effect.wav</ShortName>
-					<Path>SFX\Jump - Sound Effect_9E69E797.wem</Path>
+				<File Id="213633537" Language="SFX">
+					<ShortName>Music Box Melody Temp.wav</ShortName>
+					<Path>SFX\Music Box Melody Temp_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

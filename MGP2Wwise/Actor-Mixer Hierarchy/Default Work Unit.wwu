@@ -3,8 +3,14 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{5479FAAF-EF4A-4F70-81FE-59985C302091}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Jump - Sound Effect" ID="{95BA2BF9-BBDB-45AF-8CA8-9E6E6BD7151B}" ShortID="107442406" Type="SoundFX">
+				<Sound Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" ShortID="111598135" Type="SoundFX">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="MusicBox_Distance" ID="{0F3F284E-DCBA-4851-82A0-05D682522EF8}" WorkUnitID="{99C17FF4-66F0-4F6B-A73B-98695604D910}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
 						</Reference>
@@ -13,13 +19,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Jump - Sound Effect" ID="{A0F4223C-E167-4D80-9FFD-3DF7791F792F}" ShortID="663881042">
+						<AudioFileSource Name="Music Box Melody Temp" ID="{36CB79F0-685A-4C39-AF6B-DEDCEBF7DBBE}" ShortID="213633537">
 							<Language>SFX</Language>
-							<AudioFile>Jump - Sound Effect.wav</AudioFile>
+							<AudioFile>Music Box Melody Temp.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Jump - Sound Effect" ID="{A0F4223C-E167-4D80-9FFD-3DF7791F792F}" Platform="Linked"/>
+						<ActiveSource Name="Music Box Melody Temp" ID="{36CB79F0-685A-4C39-AF6B-DEDCEBF7DBBE}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

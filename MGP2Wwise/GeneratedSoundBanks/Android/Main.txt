@@ -1,6 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	3496604524	PlayJumpSound			\Default Work Unit\PlayJumpSound	
+	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
+	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
+	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
+	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	663881042	Jump - Sound Effect	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Jump - Sound Effect_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump - Sound Effect		198208
+	213633537	Music Box Melody Temp	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody Temp_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody Temp		8634432
 
