@@ -7,17 +7,14 @@ public class PlayerControls : MonoBehaviour {
     public GameObject playerCamera;
     public GameObject joystick;
     private Rigidbody rgd;
+  //  private string PAR_STAMINA;
 
     [Header("Player")]
     public float walkingSpeed = 150.0f;
     public float sprintSpeed = 300.00f;
-  //  public float maxStamina = 10.0f; //Old stam
-  //  public float minimalSprintStamina = 4.0f; //Old stam
-
-    public float maxSprintTime = 10.0f; //new stam
-    public float minSprintTime = 4.0f; //new stam
-    public float fullSprintRechargeTime = 20.0f; //new stam
-
+    public float maxSprintTime = 10.0f;
+    public float minSprintTime = 4.0f; 
+    public float fullSprintRechargeTime = 20.0f; 
     public float frozenWalkingSpeed = 50.0f;
     public float frozenSprintSpeed = 100.0f;
     public float timeFrozen = 5.0f;
@@ -53,12 +50,11 @@ public class PlayerControls : MonoBehaviour {
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
-       // stamina = maxStamina; //Old stam
-        stamina = 100; //New stam
+        stamina = 100;
         stamNormalization = 100.0f / maxSprintTime;
         currentWalkingSpeed = walkingSpeed;
         currentSprintSpeed = sprintSpeed;
-
+        //PAR_STAMINA = GameManager.instance.audioManager.Stamina_Par;
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
@@ -78,14 +74,12 @@ public class PlayerControls : MonoBehaviour {
             useJoystick();
         }
         updatePlayerState();
-       // updatePlayerStamina();
         newStamina();
         
         //speed
         if (currentFreeze > 0) {
             updatePlayerSpeed();
             currentFreeze -= Time.deltaTime;
-         //   Debug.Log("Current Freeze: " + currentFreeze + "Current Speed" + currentWalkingSpeed);
         }
         else
         {
@@ -140,14 +134,17 @@ public class PlayerControls : MonoBehaviour {
 
         if (prevPlayerState != playerState)
         {
-            if (prevPlayerState == PlayerState.Sprint)
-            {
-                GameManager.instance.PlayerSprintStart();
-            }
-            else if (playerState == PlayerState.Sprint)
-            {
-                GameManager.instance.PlayerSprintStop();
-
+            switch (playerState)
+            { 
+                case PlayerState.Idle:
+               //     GameManager.instance.PlayerIdle();
+                break;
+                case PlayerState.Walk:
+                //   GameManager.instance.PlayerWalk();
+                break;
+                case PlayerState.Sprint:
+                //    GameManager.instance.PlayerSprint();
+                break;
             }
         }
     }
@@ -162,8 +159,6 @@ public class PlayerControls : MonoBehaviour {
         else
         {
             stamina -= Time.deltaTime*stamNormalization;
-            if (stamina >= 100/minSprintTime)
-                exhausted = false;
             if (stamina <= 0)
             {
                 GameManager.instance.PlayerFatigue(); 
@@ -171,43 +166,12 @@ public class PlayerControls : MonoBehaviour {
                 stamina = 0;
             }
         }
+        if (stamina >= 100 / minSprintTime)
+            exhausted = false;
+        //AkSoundEngine.SetRTPCValue(PAR_STAMINA, stamina);
     }
 
-   /* private void updatePlayerStamina() {
-        prevExhausted = exhausted;
 
-        if (exhausted) {
-            if (stamina <= minimalSprintStamina)
-                stamina += Time.deltaTime;
-            else
-                exhausted = false;
-        }
-        else
-        {
-            if (playerState == PlayerState.Idle || playerState == PlayerState.Walk)
-            {
-                if (stamina >= maxStamina)
-                    stamina = maxStamina;
-                else
-                    stamina += Time.deltaTime;
-            }
-            else
-            {
-                if (stamina <= 0)
-                {
-                    stamina = 0;
-                    exhausted = true;
-                }
-                else
-                    stamina -= Time.deltaTime;
-            }
-        }
-
-        if (prevExhausted != exhausted && exhausted)
-        {
-            GameManager.instance.PlayerFatigue();
-        }
-    }*/
     private void PlayerFrozen(int i){
         currentFreeze = timeFrozen;
       
@@ -215,7 +179,6 @@ public class PlayerControls : MonoBehaviour {
     private void updatePlayerSpeed() {
         currentWalkingSpeed = walkingSpeed - ((currentFreeze / timeFrozen) * (walkingSpeed - frozenWalkingSpeed));
         currentSprintSpeed = sprintSpeed - ((currentFreeze / timeFrozen) * (sprintSpeed - frozenSprintSpeed));
-        //Debug.Log("Current Sprint Speed: " + currentSprintSpeed + "Current Walking Speed: " + currentWalkingSpeed);
     }
 
     private void useJoystick() {
