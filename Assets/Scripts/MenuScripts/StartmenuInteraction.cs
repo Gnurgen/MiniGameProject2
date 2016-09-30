@@ -23,6 +23,10 @@ public class StartmenuInteraction : MonoBehaviour {
         _AS = GetComponent<AudioSource>();
         _AS.clip = Resources.Load<AudioClip>("StartMenu/leftRightAudio");
         print("NOTE: Left/Right audio and Left/Right images are dummies - REPLACE WITH REAL OBJECTS IN RESOURCES FOLDER");
+        GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.instance.debug.monsterDeathImmune;
+        GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.instance.debug.musicBoxDeathImmune;
+        GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn = GameManager.instance.debug.boundryRings;
+        GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.instance.debug.usingJoystick;
     }
 
     public void StartGameButton()
@@ -69,6 +73,13 @@ public class StartmenuInteraction : MonoBehaviour {
         bool b = GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn;
         Debug.Log(b);
         //        GameManager.instance.debugManager.boundryRings = b;
+    }
+
+    public void ToggleJoystick()
+    {
+        bool b = GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn;
+        Debug.Log(b);
+        //        GameManager.instance.debugManager.monsterDeathImmune = b;
     }
 
     public void SoundTestButton()
