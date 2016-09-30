@@ -25,7 +25,6 @@ public class GameManager {
         {
             if (_instance == null)
                 _instance = new GameManager();
-            Debug.Log(_musicBoxCount);
             return _instance;
         }
     }
