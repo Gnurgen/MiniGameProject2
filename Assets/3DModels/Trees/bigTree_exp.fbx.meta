@@ -1,29 +1,19 @@
 fileFormatVersion: 2
-guid: 27fee1ecb81b45140b5d1d890fd459d5
-timeCreated: 1475147635
+guid: c200b0c52b6a7e6479a32615c8819e50
+timeCreated: 1475234851
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: coffin_geo
-    100002: coffinHatch_geo
-    100004: //RootNode
-    100006: coffinWall_geo_grp
-    100008: wall_geo
-    400000: coffin_geo
-    400002: coffinHatch_geo
-    400004: //RootNode
-    400006: coffinWall_geo_grp
-    400008: wall_geo
-    2300000: coffin_geo
-    2300002: coffinHatch_geo
-    2300004: wall_geo
-    3300000: coffin_geo
-    3300002: coffinHatch_geo
-    3300004: wall_geo
-    4300000: wall_geo
-    4300002: coffin_geo
-    4300004: coffinHatch_geo
+    100000: bigTree
+    100002: //RootNode
+    100004: bigTree_geo_grp
+    400000: bigTree
+    400002: //RootNode
+    400004: bigTree_geo_grp
+    2300000: bigTree
+    3300000: bigTree
+    4300000: bigTree
   materials:
     importMaterials: 1
     materialName: 0
