@@ -18,6 +18,7 @@
 						<ObjectRef Name="Puff" ID="{35223F09-3C0D-47AE-A633-0ABA4B1E7397}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MonsterAttack" ID="{24702129-057E-47B2-936D-DFD8D0E91D69}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Idle_Switch" ID="{0417C20C-9273-4985-8D5A-29538E331D2A}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MonsterStep" ID="{04DC20FF-3DAA-49E5-99D9-052E8197EC14}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Walk_Switch" ID="{1B9484BE-E95E-4A16-86C0-90CEB1B9230A}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MusicBox_Rewind_Stop" ID="{444AE99F-7E8F-4A98-BD06-D0B4CCA1E503}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Breath" ID="{6E80E11A-672F-4B06-80FF-1F1BC55C22B1}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>

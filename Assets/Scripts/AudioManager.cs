@@ -39,7 +39,6 @@ public class AudioManager : MonoBehaviour{
     [SerializeField]
     private string _MonsterAttack,
         _MonsterAttackHit,
- //       _MonsterSpawn,
         _MonsterDespawn,
         _MonsterAggro,
         _MonsterGrowl_Play,
@@ -57,6 +56,9 @@ public class AudioManager : MonoBehaviour{
     [Header("Menu")]
     [SerializeField]
     private string _StartButton;
+    [SerializeField]
+    private string _Set_State_Menu,
+        _Set_State_Game;
 
 
     // MISC VOIDS FOR GAME MANAGER
@@ -86,7 +88,6 @@ public class AudioManager : MonoBehaviour{
     }
     public void StaminaChange(float stamina)
     {
-        print(stamina);
         AkSoundEngine.SetRTPCValue(_Stamina_Par, stamina);
     }
 
@@ -107,7 +108,6 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.PostEvent(_MusicBoxPause, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
-        print(GameManager.instance.musicBox);
     }
     void MB_Resume()
     {
@@ -123,7 +123,6 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.PostEvent(_MusicBoxRewindStop, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
-        MB_SwitchUnBroken();
     }
     void MB_State()
     {
@@ -141,7 +140,7 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
-        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.musicBox);
+        AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.player);
         AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
     }

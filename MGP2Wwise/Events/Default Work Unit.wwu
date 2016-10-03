@@ -6,6 +6,10 @@
 				<Event Name="MusicBox_Play" ID="{968EB8CE-EB83-43D0-9849-E1A82DBA5A8E}">
 					<ChildrenList>
 						<Action Name="Play" ID="{AD6614FD-0853-4E57-9764-1D6A90D9D960}" ShortID="275348748" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
 							<ElementList>
 								<Element ID="{CD0938C8-A743-4B49-AF20-A18C3CF612D8}" Global="false">
 									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
@@ -284,6 +288,17 @@
 							<ElementList>
 								<Element ID="{CEC79322-9811-4D68-8A10-50C015B904F4}" Global="false">
 									<ObjectRef Name="Monster Growl" ID="{008E3480-21F0-407C-B947-D55F3B802508}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MonsterStep" ID="{04DC20FF-3DAA-49E5-99D9-052E8197EC14}">
+					<ChildrenList>
+						<Action Name="Play" ID="{8B04DEF7-917E-445D-A8DE-E2B8F988630D}" ShortID="1018525978" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{C3EB9333-F496-42E9-9871-3DE6184B299B}" Global="false">
+									<ObjectRef Name="MonsterStep" ID="{48E30C42-1353-4FCC-A44C-FC757963CADE}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
 								</Element>
 							</ElementList>
 						</Action>

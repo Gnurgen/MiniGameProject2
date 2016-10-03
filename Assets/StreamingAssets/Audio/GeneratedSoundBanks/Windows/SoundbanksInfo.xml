@@ -38,6 +38,7 @@
 				<Event Id="2653952097" Name="MonsterAggro" ObjectPath="\Events\Default Work Unit\MonsterAggro" MaxAttenuation="80.000000"/>
 				<Event Id="2621508965" Name="MonsterAttack" ObjectPath="\Events\Default Work Unit\MonsterAttack" MaxAttenuation="80.000000"/>
 				<Event Id="2015956512" Name="MonsterAttackHit" ObjectPath="\Events\Default Work Unit\MonsterAttackHit"/>
+				<Event Id="1363742247" Name="MonsterStep" ObjectPath="\Events\Default Work Unit\MonsterStep" MaxAttenuation="80.000000"/>
 				<Event Id="2451362146" Name="MusicBox_Broken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Broken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
 				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="80.000000"/>
