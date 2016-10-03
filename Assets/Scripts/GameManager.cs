@@ -7,6 +7,7 @@ public class GameManager {
     private static string START_SCENE = "StartScene";
     private static string GAME_SCENE = "Game";
     private static string WIN_SCENE = "WinScene";
+    private static string INBETWEEN = "BetweenScreens";
     private static string LOSE_SCENE_TIME = "LoseTimeScene";
     private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
@@ -96,8 +97,12 @@ public class GameManager {
         _musicBoxCount = 0;
         _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
-       
-       
+    }
+
+    public void InBetweenScreen()
+    {
+        _instance = null;
+        SceneManager.LoadScene(INBETWEEN);
     }
 
     public void PlayDeathScene_MusicBox()

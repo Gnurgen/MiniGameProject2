@@ -31,7 +31,7 @@ public class StartmenuInteraction : MonoBehaviour {
 
     public void StartGameButton()
     {
-        GameManager.instance.StartGame();
+        GameManager.instance.InBetweenScreen();
     }
 
     public void InstructionsButton()

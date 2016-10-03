@@ -61,6 +61,6 @@ public class TextFader : MonoBehaviour {
         startFadingOut = true;
         yield return new WaitForSeconds(fadeOutDuration);
 
-        //change scene to game scene!
+        GameManager.instance.StartGame();
     }
 }
