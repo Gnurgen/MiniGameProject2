@@ -14,7 +14,7 @@ public class ActivateDome : MonoBehaviour {
     private bool _hasSprinted = false;
 
 	void Start () {
-        GameManager.instance.OnPlayerSprintStart += setSprinted;
+        GameManager.instance.OnPlayerSprint += setSprinted;
         domeTrans = GameObject.FindGameObjectsWithTag("SortedDomeSpawn");
         sprintCanvas = GameObject.Find("ThumbPrint").GetComponent<ThumbSprintController>();
         domePos = new Vector3[domeTrans.Length];
