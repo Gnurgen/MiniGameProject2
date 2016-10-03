@@ -1,20 +1,22 @@
 Event	ID	Name			Wwise Object Path	Notes
+	156883962	Monster_Growl_Stop			\Default Work Unit\Monster_Growl_Stop	
 	672851034	MusicBox_Rewind_Play			\Default Work Unit\MusicBox_Rewind_Play	
-	712161704	Run			\Default Work Unit\Run	
+	899311691	Run_Switch			\Default Work Unit\Run_Switch	
 	938529747	Menu_Button			\Default Work Unit\Menu_Button	
 	1326786195	Breath			\Default Work Unit\Breath	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
-	1874288895	Idle			\Default Work Unit\Idle	
 	2015956512	MonsterAttackHit			\Default Work Unit\MonsterAttackHit	
 	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
+	2074283912	Monster_Growl_Play			\Default Work Unit\Monster_Growl_Play	
 	2076776060	Puff			\Default Work Unit\Puff	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
-	2108779966	Walk			\Default Work Unit\Walk	
+	2274660714	Idle_Switch			\Default Work Unit\Idle_Switch	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
 	2621508965	MonsterAttack			\Default Work Unit\MonsterAttack	
 	2653952097	MonsterAggro			\Default Work Unit\MonsterAggro	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
+	2857728357	Walk_Switch			\Default Work Unit\Walk_Switch	
 	3166394572	Ambience_Stop			\Default Work Unit\Ambience_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
 
@@ -40,6 +42,7 @@ State	ID	Name	State Group			Notes
 Custom State	ID	Name	State Group	Owner		Notes
 	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
 	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
+	1021065351	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	129	MIDI note velocity			\MIDI note velocity	
@@ -110,15 +113,38 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	970241952	CONFIRM 01	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\UI Sounds\CONFIRM 01\CONFIRM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	568260	Monster Growl_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_7		153210
+	124522040	Monster Attack_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_3		128684
+	149296895	Monster Aggro_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_5		202268
+	197099714	Monster Aggro_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_6		173552
+	200284886	Monster Aggro_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_1		175946
 	222373072	MonsterAttackHit	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\MonsterAttackHit_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttackHit		92224
+	275836293	Monster Growl_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_3		168766
 	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
 	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
+	357688293	Monster Attack_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_7		113728
+	400159443	Monster Attack	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack		93388
+	449257680	Monster Growl_8	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_8_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_8		155006
+	508863754	Monster Attack_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_6		110738
+	519676561	Monster Growl_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_6		156800
+	531680628	Monster Growl_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_4		156800
+	553591350	Monster Attack_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_5		110736
+	555088963	Monster Aggro_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_2		167568
 	573374260	PlayerPanting	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\PlayerPanting_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\PlayerPanting		315456
+	642122524	Monster Growl	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl		162782
+	649080794	Monster Attack_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_4		112532
+	664935711	Monster Attack_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_1		108942
+	671540240	Monster Aggro	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro		171756
+	689376295	Monster Aggro_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_4		183720
+	690696477	Monster Growl_9	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_9_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_9		188508
 	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
-	751439041	MonsterAttack	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\MonsterAttacj_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttack		131136
-	827816364	MonsterAggro	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\MonsterAggro_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAggro		188480
 	835297814	Music Box Windup	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Windup_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		195288
+	863875936	Monster Aggro_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Aggro_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_3		184320
+	889558223	Monster Growl_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_1		197480
+	977402937	Monster Growl_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_2		181926
 	978225663	Foot	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot		59456
+	982355987	Monster Growl_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_5		126292
+	1010525196	Monster Attack_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Attack_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_2		130478
 
 Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
 	13019290	Ford_TransitVanRear	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear_BFA7EF96.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Ford_TransitVanRear	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	246768

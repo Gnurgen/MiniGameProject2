@@ -626,56 +626,6 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<Sound Name="MonsterAggro" ID="{CB1D0767-45B2-43A3-8D78-95233CA94E91}" ShortID="379982386" Type="SoundFX">
-					<PropertyList>
-						<Property Name="PositioningType" Type="int16" Value="1"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="SFX_Distance" ID="{C9D8B98B-D8FC-4DCA-8C82-B21C8C9F369B}" WorkUnitID="{99C17FF4-66F0-4F6B-A73B-98695604D910}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="MonsterAggro" ID="{717AC5D3-CAB3-45DA-B802-AC14463663AB}" ShortID="827816364">
-							<Language>SFX</Language>
-							<AudioFile>MonsterAggro.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="MonsterAggro" ID="{717AC5D3-CAB3-45DA-B802-AC14463663AB}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="MonsterAttack" ID="{6129A60B-BA8A-4446-AD05-FFF5A810B65F}" ShortID="157317596" Type="SoundFX">
-					<PropertyList>
-						<Property Name="PositioningType" Type="int16" Value="1"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="SFX_Distance" ID="{C9D8B98B-D8FC-4DCA-8C82-B21C8C9F369B}" WorkUnitID="{99C17FF4-66F0-4F6B-A73B-98695604D910}"/>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="MonsterAttacj" ID="{82C701DB-BF87-492C-B5A3-E90AF2AC2054}" ShortID="751439041">
-							<Language>SFX</Language>
-							<AudioFile>MonsterAttacj.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="MonsterAttacj" ID="{82C701DB-BF87-492C-B5A3-E90AF2AC2054}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" ShortID="964430699" Type="SoundFX">
 					<PropertyList>
 						<Property Name="InitialDelay" Type="Real64">
