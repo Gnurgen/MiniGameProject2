@@ -62,7 +62,7 @@ public class FroztVignette : MonoBehaviour
             fadeVal = 1 - playerEnemyDistance / (frostDistance - frostDistance * ( (float)x / frost.Length));
             if (x == 0)
                 vignette.color = new Vector4(fadeVal * _fadeWithFrostImg, fadeVal * _fadeWithFrostImg, fadeVal * _fadeWithFrostImg, 1);
-            print((playerEnemyDistance <= frostDistance - (frostDistance * ((float)x / frost.Length))));
+
             if (playerEnemyDistance <= frostDistance - (frostDistance * ((float)x / frost.Length)))
                 frost[x].color = new Vector4(255, 255, 255, fadeVal);
             else
