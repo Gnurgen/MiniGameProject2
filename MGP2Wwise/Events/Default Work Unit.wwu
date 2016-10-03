@@ -196,7 +196,7 @@
 						<Action Name="Play" ID="{434C8923-1CAC-447B-9768-9E40E4D1B6EF}" ShortID="724695863" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{7024AB43-7C45-4133-A743-31234634982D}" Global="false">
-									<ObjectRef Name="MonsterAttack" ID="{6129A60B-BA8A-4446-AD05-FFF5A810B65F}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+									<ObjectRef Name="Monster Attack" ID="{6957A0FC-6B58-4F44-A430-36118CA6883F}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -207,7 +207,7 @@
 						<Action Name="Play" ID="{3E19E918-D5FB-4339-8EDD-9F59D00E0B08}" ShortID="460208252" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{B99B18CB-9223-4DA1-9D84-5E8E09A869F3}" Global="false">
-									<ObjectRef Name="MonsterAggro" ID="{CB1D0767-45B2-43A3-8D78-95233CA94E91}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+									<ObjectRef Name="Monster Aggro" ID="{09F54AB2-5842-4E91-8257-33E6EE49EEB1}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -261,6 +261,31 @@
 								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
 								<GroupItem Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
 							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Monster_Growl_Play" ID="{BEBF89B5-B8AA-4507-A6D3-25BEB1405F34}">
+					<ChildrenList>
+						<Action Name="Play" ID="{5398FE8E-366A-44B5-A6AA-6EBB17BD5345}" ShortID="849692094" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6ADE5A7F-2EE4-48B7-B910-FD6D0BF5C9C5}" Global="false">
+									<ObjectRef Name="Monster Growl" ID="{008E3480-21F0-407C-B947-D55F3B802508}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Monster_Growl_Stop" ID="{E5450FA5-5964-4DF7-BC7A-86E36D37722F}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{E757E4D9-BC08-4E7B-A6E8-6F4205863C1B}" ShortID="119351465" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{CEC79322-9811-4D68-8A10-50C015B904F4}" Global="false">
+									<ObjectRef Name="Monster Growl" ID="{008E3480-21F0-407C-B947-D55F3B802508}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
