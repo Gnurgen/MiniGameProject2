@@ -17,7 +17,6 @@ public class ReplaceAnything : EditorWindow {
 
     void OnGUI()
     {
-
         _replacement = EditorGUILayout.ObjectField("Prefab:", _replacement, typeof(GameObject), false) as GameObject;
 
         GUI.enabled = _replacement != null;
