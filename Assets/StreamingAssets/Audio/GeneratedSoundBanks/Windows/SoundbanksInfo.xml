@@ -15,14 +15,271 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<ExcludedMemoryFiles>
+				<File Id="507160656" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem</Path>
+				</File>
+			</ExcludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3496604524" Name="PlayJumpSound" ObjectPath="\Events\Default Work Unit\PlayJumpSound"/>
+				<Event Id="1496310610" Name="Ambience_Play" ObjectPath="\Events\Default Work Unit\Ambience_Play"/>
+				<Event Id="3166394572" Name="Ambience_Stop" ObjectPath="\Events\Default Work Unit\Ambience_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
+				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
+				<Event Id="1874288895" Name="Idle" ObjectPath="\Events\Default Work Unit\Idle" MaxAttenuation="0.000000"/>
+				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
+				<Event Id="2653952097" Name="MonsterAggro" ObjectPath="\Events\Default Work Unit\MonsterAggro" MaxAttenuation="80.000000"/>
+				<Event Id="2621508965" Name="MonsterAttack" ObjectPath="\Events\Default Work Unit\MonsterAttack" MaxAttenuation="80.000000"/>
+				<Event Id="2015956512" Name="MonsterAttackHit" ObjectPath="\Events\Default Work Unit\MonsterAttackHit"/>
+				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
+				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="80.000000"/>
+				<Event Id="3719125665" Name="MusicBox_Resume" ObjectPath="\Events\Default Work Unit\MusicBox_Resume" MaxAttenuation="0.000000"/>
+				<Event Id="672851034" Name="MusicBox_Rewind_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Play" MaxAttenuation="80.000000"/>
+				<Event Id="2071830116" Name="MusicBox_Rewind_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="2076776060" Name="Puff" ObjectPath="\Events\Default Work Unit\Puff"/>
+				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Run" MaxAttenuation="0.000000"/>
+				<Event Id="2108779966" Name="Walk" ObjectPath="\Events\Default Work Unit\Walk" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="13019290" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear_BFA7EF96.wem</Path>
+				</File>
+				<File Id="13682022" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Train_BlueAngel.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Train_BlueAngel_059E2C69.wem</Path>
+				</File>
+				<File Id="30489455" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_WideOpen.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_WideOpen_4FFD1EFC.wem</Path>
+				</File>
+				<File Id="31744546" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_Element.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_Element_8EB39D0C.wem</Path>
+				</File>
+				<File Id="42240585" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongSixWideEchoes.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongSixWideEchoes_53D675AB.wem</Path>
+				</File>
+				<File Id="58924823" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_AlleyIntimate.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_AlleyIntimate_74EB92A2.wem</Path>
+				</File>
+				<File Id="60907913" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_02.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_02_325FEBFD.wem</Path>
+				</File>
+				<File Id="92795692" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongNoEchoes.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongNoEchoes_C8CD3B55.wem</Path>
+				</File>
+				<File Id="145606015" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bedroom.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bedroom_8D55EA30.wem</Path>
+				</File>
+				<File Id="198373678" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_LongDeepAlley.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_LongDeepAlley_6924079C.wem</Path>
+				</File>
+				<File Id="209885183" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_02.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_02_5C7714D4.wem</Path>
+				</File>
+				<File Id="217396452" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_ElementRear.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_ElementRear_C9397C52.wem</Path>
+				</File>
+				<File Id="222373072" Language="SFX">
+					<ShortName>MonsterAttackHit.wav</ShortName>
+					<Path>SFX\MonsterAttackHit_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="240375163" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_BetweenTrees.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_BetweenTrees_6B4B846A.wem</Path>
+				</File>
+				<File Id="294815814" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SmoothIntimate.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SmoothIntimate_88048682.wem</Path>
+				</File>
+				<File Id="304171733" Language="SFX">
+					<ShortName>Menu Button.wav</ShortName>
+					<Path>SFX\Menu Button_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="335771893" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bathroom.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bathroom_88C295C4.wem</Path>
+				</File>
+				<File Id="343009413" Language="SFX">
+					<ShortName>Music Box Melody.wav</ShortName>
+					<Path>SFX\Music Box Melody_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="364607080" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongAndComplex.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongAndComplex_831FC57E.wem</Path>
+				</File>
+				<File Id="427082242" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_EquallySpacedEchoes.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_EquallySpacedEchoes_C7CFD9C1.wem</Path>
+				</File>
+				<File Id="432605131" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenShortTwoEchoes.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenShortTwoEchoes_CE9766C7.wem</Path>
+				</File>
+				<File Id="435591620" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_01.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_01_1AAEF490.wem</Path>
+				</File>
+				<File Id="480496863" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Hallway.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Hallway_81B22F9F.wem</Path>
+				</File>
+				<File Id="507160656" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem</Path>
+				</File>
+				<File Id="512867118" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideWithCars.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideWithCars_F1FC1A6B.wem</Path>
+				</File>
+				<File Id="522077337" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall_CFA92CA0.wem</Path>
+				</File>
+				<File Id="536838777" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SlapsEchoClose.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SlapsEchoClose_7EBC80F1.wem</Path>
+				</File>
+				<File Id="569254387" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel_B1340162.wem</Path>
+				</File>
+				<File Id="569393832" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerFront.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerFront_961825FF.wem</Path>
+				</File>
+				<File Id="573374260" Language="SFX">
+					<ShortName>PlayerPanting.wav</ShortName>
+					<Path>SFX\PlayerPanting_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="584011173" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerBackClosed.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerBackClosed_555B9C55.wem</Path>
+				</File>
+				<File Id="596456986" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_TwoFarBuildings.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_TwoFarBuildings_EC14BD0F.wem</Path>
+				</File>
+				<File Id="602284699" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment_EE5F7440.wem</Path>
+				</File>
+				<File Id="647831537" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Corridor.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Corridor_AA3A462D.wem</Path>
+				</File>
+				<File Id="685400320" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski_86DC0B1E.wem</Path>
+				</File>
+				<File Id="702837950" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_NarrowShortAlley.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_NarrowShortAlley_B1BAF16B.wem</Path>
+				</File>
+				<File Id="716604440" Language="SFX">
+					<ShortName>Music Box Melody Broken.wav</ShortName>
+					<Path>SFX\Music Box Melody Broken_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="726190851" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexEcho.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexEcho_DB321E75.wem</Path>
+				</File>
+				<File Id="751439041" Language="SFX">
+					<ShortName>MonsterAttacj.wav</ShortName>
+					<Path>SFX\MonsterAttacj_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="757112749" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantSlaps.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantSlaps_9EC31AF6.wem</Path>
+				</File>
+				<File Id="766552005" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase_3B6A6FB8.wem</Path>
+				</File>
+				<File Id="783448466" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_01.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_01_09E5A9BE.wem</Path>
+				</File>
+				<File Id="784884764" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideEcho.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideEcho_571F153C.wem</Path>
+				</File>
+				<File Id="789847363" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantEcho.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantEcho_152A83EC.wem</Path>
+				</File>
+				<File Id="803100438" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes_BE2C0E27.wem</Path>
+				</File>
+				<File Id="827816364" Language="SFX">
+					<ShortName>MonsterAggro.wav</ShortName>
+					<Path>SFX\MonsterAggro_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="832296042" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho_EE58611F.wem</Path>
+				</File>
+				<File Id="835297814" Language="SFX">
+					<ShortName>Music Box Windup.wav</ShortName>
+					<Path>SFX\Music Box Windup_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="847080287" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexDistantEcho.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexDistantEcho_639F37E9.wem</Path>
+				</File>
+				<File Id="867122333" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_02.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_02_531CB7A8.wem</Path>
+				</File>
+				<File Id="873684731" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose_D1FD5366.wem</Path>
+				</File>
+				<File Id="932825353" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose_DFB7B606.wem</Path>
+				</File>
+				<File Id="941961704" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar_A82D434C.wem</Path>
+				</File>
+				<File Id="978225663" Language="SFX">
+					<ShortName>Footprint.wav</ShortName>
+					<Path>SFX\Footprint_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="1036982009" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_01.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_01_E4E08886.wem</Path>
+				</File>
+				<File Id="1037099072" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LoudEcho.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LoudEcho_DB84FF12.wem</Path>
+				</File>
+				<File Id="1054055703" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Beetle.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Beetle_2339C574.wem</Path>
+				</File>
+				<File Id="1065017050" Language="SFX">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Classroom.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Classroom_2A3FA59E.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

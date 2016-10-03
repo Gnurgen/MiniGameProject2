@@ -4,16 +4,21 @@ using System.Collections;
 
 public class GameManager {
 
-    private static int START_SCENE = 0;
-    private static int GAME_SCENE = 1;
+    private static string START_SCENE = "StartScene";
+    private static string GAME_SCENE = "Game";
+    private static string WIN_SCENE = "WinScene";
+    private static string LOSE_SCENE_TIME = "LoseTimeScene";
+    private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
     private static GameManager _instance;
+    private static int _musicBoxCount;
+
+    public readonly DebugManager debug = new DebugManager();
 
     private GameObject _player;
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
-    private int _musicBoxCount = 0;
 
     public static GameManager instance
     {
@@ -47,10 +52,13 @@ public class GameManager {
 
     public GameObject musicBox
     {
+
         get
         {
             if (_musicBox == null)
-                _musicBox = GameObject.Find("MusicBox");
+            {
+                _musicBox = GameObject.FindWithTag("MusicBox");
+            }
             return _musicBox;
         }
     }
@@ -60,7 +68,10 @@ public class GameManager {
         get
         {
             if (_audioManager == null)
+            {
                 _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
+                _audioManager.Subscribe2GameManager();
+            }
             return _audioManager;
         }
     }
@@ -75,21 +86,37 @@ public class GameManager {
 
     public void LeaveGame()
     {
-        _instance = null;
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(START_SCENE);
     }
 
     public void StartGame()
     {
+        AkSoundEngine.StopAll();
+        _musicBoxCount = 0;
+        _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
+       
+       
     }
 
     public void PlayDeathScene_MusicBox()
     {
+        AkSoundEngine.StopAll();
+        if (!debug.musicBoxDeathImmune)
+            SceneManager.LoadScene(LOSE_SCENE_TIME);
     }
 
     public void PlayDeathScene_Monster()
     {
+        AkSoundEngine.StopAll();
+        if (!debug.monsterDeathImmune)
+            SceneManager.LoadScene(LOSE_SCENE_DEATH);
+    }
+    public void PlayWinScene()
+    {
+        AkSoundEngine.StopAll();
+        SceneManager.LoadScene(WIN_SCENE);
     }
 
     public delegate void SpawnAction();
@@ -97,46 +124,57 @@ public class GameManager {
     public event SpawnAction OnEnemyDespawn;
     public void EnemySpawn()
     {
-        OnEnemySpawn();
+        if (OnEnemySpawn != null)
+            OnEnemySpawn();
     }
     public void EnemyDespawn()
     {
-        OnEnemyDespawn();
+        if (OnEnemyDespawn != null)
+            OnEnemyDespawn();
     }
 
     public delegate void StepAction();
     public event StepAction OnEnemyStep;
-    public event StepAction OnPlayerStep;
+    public event StepAction OnPlayerIdle;
     public void EnemyStep()
     {
-        OnEnemyStep();
+        if (OnEnemyStep != null)
+            OnEnemyStep();
     }
-    public void PlayerStep()
+    public void PlayerIdle()
     {
-        OnPlayerStep();
+        if (OnPlayerIdle != null)
+            OnPlayerIdle();
     }
 
     public delegate void AttackAction();
     public event AttackAction OnEnemyAttack;
     public void EnemyAttack()
     {
-        OnEnemyAttack();
+        if (OnEnemyAttack != null)
+            OnEnemyAttack();
     }
-
 
     public delegate void EnemyAggroAction();
     public event EnemyAggroAction OnEnemyAggro;
     public void EnemyAggro()
     {
-        OnEnemyAggro();
+        if (OnEnemyAggro != null)
+            OnEnemyAggro();
     }
-
-
+    public delegate void EnemyIdleAction();
+    public event EnemyIdleAction OnEnemyIdle;
+    public void EnemyIdle()
+    {
+        if (OnEnemyIdle != null)
+            OnEnemyIdle();
+    }
     public delegate void HitAction(int value);
     public event HitAction OnEnemyAttackHit;
     public void EnemyAttackHit(int i)
     {
-        OnEnemyAttackHit(i);
+        if (OnEnemyAttackHit != null)
+            OnEnemyAttackHit(i);
     }
 
     public delegate void FreezeAction(float value);
@@ -144,11 +182,13 @@ public class GameManager {
     public event FreezeAction OnPlayerUnfreeze;
     public void PlayerFreeze(float i)
     {
-        OnPlayerFreeze(i);
+        if (OnPlayerFreeze != null)
+            OnPlayerFreeze(i);
     }
     public void PlayerUnfreeze(float i)
     {
-        OnPlayerFreeze(i);
+        if (OnPlayerUnfreeze != null)
+            OnPlayerUnfreeze(i);
     }
 
     public delegate void HealthAction(int value);
@@ -156,31 +196,33 @@ public class GameManager {
     public event HealthAction OnPlayerRecover;
     public void PlayerTakeDamage(int i)
     {
-        OnPlayerTakeDamage(i);
+        if (OnPlayerTakeDamage != null)
+            OnPlayerTakeDamage(i);
     }
     public void PlayerRecover(int i)
     {
-        OnPlayerRecover(i);
+        if (OnPlayerRecover != null)
+            OnPlayerRecover(i);
     }
 
     public delegate void SprintAction();
-    public event SprintAction OnPlayerSprintStart;
-    public event SprintAction OnPlayerSprintStop;
-
-    //added Stamina value for Fatigue
-    public delegate void SprintFatigue(int value);
-    public event SprintFatigue OnPlayerFatigue;
-    public void PlayerSprintStart()
+    public event SprintAction OnPlayerSprint;
+    public event SprintAction OnPlayerWalk;
+    public event SprintAction OnPlayerFatigue;
+    public void PlayerSprint()
     {
-        OnPlayerSprintStart();
+        if (OnPlayerSprint != null)
+            OnPlayerSprint();
     }
-    public void PlayerSprintStop()
+    public void PlayerWalk()
     {
-        OnPlayerSprintStop();
+        if (OnPlayerWalk != null)
+            OnPlayerWalk();
     }
-    public void PlayerFatigue(int i)
+    public void PlayerFatigue()
     {
-        OnPlayerFatigue(i);
+        if (OnPlayerFatigue != null)
+            OnPlayerFatigue();
     }
 
     public delegate void MusicBoxAction();
@@ -193,32 +235,53 @@ public class GameManager {
     public event MusicBoxAction OnMusicBoxRewindComplete;
     public void MusicBoxPlay()
     {
-        OnMusicBoxPlay();
+        if (OnMusicBoxPlay != null)
+            OnMusicBoxPlay();
     }
     public void MusicBoxMove()
     {
-        OnMusicBoxMove();
+        Debug.Log("MusicboxMove");
+        if (OnMusicBoxMove != null)
+            OnMusicBoxMove();
     }
     public void MusicBoxPause()
     {
-        OnMusicBoxPause();
+        Debug.Log("MusicboxPause");
+        if (OnMusicBoxPause != null)
+            OnMusicBoxPause();
     }
     public void MusicBoxResume()
     {
-        OnMusicBoxResume();
+        Debug.Log("MusicboxResume");
+        if (OnMusicBoxResume != null)
+            OnMusicBoxResume();
     }
     public void MusicBoxRewindStart()
     {
-        OnMusicBoxRewindStart();
+        Debug.Log("MusicboxRewindStart");
+
+
+        if (OnMusicBoxRewindStart != null)
+            OnMusicBoxRewindStart();
     }
     public void MusicBoxRewindStop()
     {
-        OnMusicBoxRewindStop();
+        Debug.Log("MusicboxRewindStop");
+
+        if (OnMusicBoxRewindStop != null)
+            OnMusicBoxRewindStop();
     }
     public void MusicBoxRewindComplete()
     {
+        Debug.Log("MusicboxRewindComplete");
+
         _musicBoxCount++;
-        OnMusicBoxRewindComplete();
+        if (_musicBoxCount >= MusicBoxSpawn.GetCount())
+        {
+//            PlayWinScene();
+        }
+        if (OnMusicBoxRewindComplete != null)
+            OnMusicBoxRewindComplete();
     }
     public delegate void Graveyard();
     public event Graveyard OnGateOpen;
@@ -226,21 +289,25 @@ public class GameManager {
     public event Graveyard OnGateCreak;
     public void GateOpen()
     {
-        OnGateOpen();
+        if (OnGateOpen != null)
+            OnGateOpen();
     }
     public void KnockOnCoffin()
     {
-        OnKnockOnCoffin();
+        if (OnKnockOnCoffin != null)
+            OnKnockOnCoffin();
     }
     public void GateCreak()
     {
-        OnGateOpen();
+        if (OnGateCreak != null)
+            OnGateCreak();
     }
     public delegate void MenuButtons();
-    public event MenuButtons StartButton;
-    public void OnStartButton()
+    public event MenuButtons OnStartButton;
+    public void StartButton()
     {
-        StartButton();
+        if (OnStartButton != null)
+            OnStartButton();
     }
 
 

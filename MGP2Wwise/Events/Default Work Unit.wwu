@@ -3,14 +3,264 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{769F202A-4C81-4E71-B192-0D69AA055185}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="PlayJumpSound" ID="{04413AC2-8396-440F-915F-97BB42B0C8A4}">
+				<Event Name="MusicBox_Play" ID="{968EB8CE-EB83-43D0-9849-E1A82DBA5A8E}">
 					<ChildrenList>
-						<Action Name="Play" ID="{6A757404-CC74-4C4F-AAEA-DEA574A8ED27}" ShortID="1036206397" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{AD6614FD-0853-4E57-9764-1D6A90D9D960}" ShortID="275348748" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{A38C6F77-3EC5-4DAA-8A7F-92BE8020CB99}" Global="false">
-									<ObjectRef Name="Fly-By Dagger" ID="{3D44C723-CAA3-405E-A0B8-F38F1D420DA6}" WorkUnitID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}"/>
+								<Element ID="{CD0938C8-A743-4B49-AF20-A18C3CF612D8}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Stop" ID="{58C4C3D2-A24C-44FA-A6A0-D7E35313B11D}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{11D10C74-1896-44EC-A0CF-A248AE9E43CD}" ShortID="394366214" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{89B13F34-2D86-415C-AC5F-2B0DE0C864EA}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Pause" ID="{76FA8E00-2523-4D09-A660-0D96E6966FA6}">
+					<ChildrenList>
+						<Action Name="Pause" ID="{64B74DDC-0A67-4770-8CBB-78FD7B9D6E14}" ShortID="973469254" Type="Pause" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{545A0071-005C-4593-B791-CA595D094216}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Resume" ID="{F2DCCA1E-5AEE-4FF2-AD91-138B4CCB093E}">
+					<ChildrenList>
+						<Action Name="Resume" ID="{BE2273A8-5F51-481E-9A1C-5D7FADC2D9C9}" ShortID="945202307" Type="Resume" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{0E8166CD-EFA9-4803-A2C6-2BC5CFC29043}" Global="false">
+									<ObjectRef Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menu_Button" ID="{EFC112DB-A9B0-43CB-8B81-C89FAE67C755}">
+					<ChildrenList>
+						<Action Name="Play" ID="{435EE963-4515-4A25-A01B-CD0C31D1C814}" ShortID="693187044" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{2291F499-0157-464B-8EE5-7A14A0528186}" Global="false">
+									<ObjectRef Name="Menu Button" ID="{D154C260-DE1D-45A4-B8D0-D7237DFF7C5B}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambience_Play" ID="{311ABDB1-B9DE-4446-A96B-8AF15737CE5E}">
+					<ChildrenList>
+						<Action Name="Play" ID="{A117E76D-C9F2-4356-AB8A-619C83D9F14A}" ShortID="484454986" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{7366F810-16D7-4BEB-B66C-049693365749}" Global="false">
+									<ObjectRef Name="Polar Winds" ID="{C2898F7A-8CD5-4313-9FBB-0720CF7C7051}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{F0BE2F74-3295-4D94-AE34-329C4B900763}" ShortID="736132561" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{8F7DDD9C-9DC4-4B59-81C7-591F2CC878EC}" Global="false">
+									<ObjectRef Name="Weeping Willows" ID="{FD2C61FD-A48E-48EE-801D-414A6ACE5B53}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambience_Stop" ID="{A18B92FF-1C2F-4DDB-B430-1AA40A7A43AD}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{CF03B059-0D5C-4CCD-9A4F-8C7E9FF5E4C8}" ShortID="785005265" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B8BC20D1-B4F4-4A7F-A4F1-7FE2FD5290CB}" Global="false">
+									<ObjectRef Name="Polar Winds" ID="{C2898F7A-8CD5-4313-9FBB-0720CF7C7051}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Stop" ID="{48AFF6D5-CA05-4DB0-BF01-9131A1BBD57A}" ShortID="415694230" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{C5D52A19-DD1A-4620-B0B3-33EA008DC8D8}" Global="false">
+									<ObjectRef Name="Weeping Willows" ID="{FD2C61FD-A48E-48EE-801D-414A6ACE5B53}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FootStep" ID="{3BF4AF2F-6B9B-43E5-8705-7B9E51CF25B0}">
+					<ChildrenList>
+						<Action Name="Play" ID="{B1FB0825-8C2F-46AC-A8EA-DD1A757A5C9F}" ShortID="419354490" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{8D4F86DF-F7B5-40A9-B284-CCCC8BC69CE5}" Global="false">
+									<ObjectRef Name="FootSteps" ID="{B896BBB1-7EB3-4C66-8327-80D72D93810F}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Idle_Switch" ID="{0417C20C-9273-4985-8D5A-29538E331D2A}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{128594A2-1826-4362-B6AE-8930B939A0FE}" ShortID="726258260" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+								<GroupItem Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Walk_Switch" ID="{1B9484BE-E95E-4A16-86C0-90CEB1B9230A}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{4CAD4093-9577-494F-933E-ABBE500A2557}" ShortID="245586992" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+								<GroupItem Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Run_Switch" ID="{B049EE56-917D-4F7D-A6BF-04D4ED0093B5}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{E7899984-AC68-437D-ABDC-C18B5346D959}" ShortID="392796455" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
+								<GroupItem Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Rewind_Play" ID="{05E04D71-29B3-4B71-B2B0-C990AF701F3F}">
+					<ChildrenList>
+						<Action Name="Play" ID="{BE18FD31-1456-40F8-9D1C-AFE8B9091F9F}" ShortID="455032839" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{E865936C-4B7B-47C5-A315-EC54241F7A11}" Global="false">
+									<ObjectRef Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Rewind_Stop" ID="{444AE99F-7E8F-4A98-BD06-D0B4CCA1E503}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{AE4061A1-D427-4C08-AECE-69177FBA19BF}" ShortID="761791539" Type="Stop" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{9FB6A0B6-6BE7-44A0-A6DD-072678921EF8}" Global="false">
+									<ObjectRef Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Breath" ID="{6E80E11A-672F-4B06-80FF-1F1BC55C22B1}">
+					<ChildrenList>
+						<Action Name="Play" ID="{CBB0EBA1-9AB5-4621-BEE9-2090C2FC1A14}" ShortID="197403852" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{61EC998A-8C47-4892-992B-E90CEF6335C1}" Global="false">
+									<ObjectRef Name="New Random Container" ID="{6CE5B6DA-60B0-4C64-B317-4C43EF36FAD9}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Puff" ID="{35223F09-3C0D-47AE-A633-0ABA4B1E7397}">
+					<ChildrenList>
+						<Action Name="Play" ID="{DB0BD6BA-3CF7-48C4-9426-1F87742EDE91}" ShortID="916045208" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{91E73EE4-D7B2-4E97-9100-15351BAE0257}" Global="false">
+									<ObjectRef Name="CONFIRM 01" ID="{0140E852-B3C6-4BC7-9A6C-119EB61BC4E9}" WorkUnitID="{D9329DB3-E4D7-45AA-BD40-6EB28C6C4D39}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MonsterAttack" ID="{24702129-057E-47B2-936D-DFD8D0E91D69}">
+					<ChildrenList>
+						<Action Name="Play" ID="{434C8923-1CAC-447B-9768-9E40E4D1B6EF}" ShortID="724695863" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{7024AB43-7C45-4133-A743-31234634982D}" Global="false">
+									<ObjectRef Name="MonsterAttack" ID="{6129A60B-BA8A-4446-AD05-FFF5A810B65F}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MonsterAggro" ID="{6E65918B-38E8-4CC1-9277-7E3CFFE73527}">
+					<ChildrenList>
+						<Action Name="Play" ID="{3E19E918-D5FB-4339-8EDD-9F59D00E0B08}" ShortID="460208252" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B99B18CB-9223-4DA1-9D84-5E8E09A869F3}" Global="false">
+									<ObjectRef Name="MonsterAggro" ID="{CB1D0767-45B2-43A3-8D78-95233CA94E91}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MonsterAttackHit" ID="{E228458C-A6F9-41C1-997F-23A1EDA10F17}">
+					<ChildrenList>
+						<Action Name="Play" ID="{8A4D8D44-52C8-4C10-BE44-044C915574DD}" ShortID="913223471" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{AAF40DD7-30B0-4E7D-A1D4-5768D8212685}" Global="false">
+									<ObjectRef Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Broken_Switch" ID="{98DFADC2-C117-406B-A70C-52B2E84C926F}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{8A4394F5-CDB2-477D-86E8-E4437FE6235E}" ShortID="697714984" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}"/>
+								<GroupItem Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Unbroken_Switch" ID="{5A317EBE-444A-4B1E-A87C-4F1493DAEFF4}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{B6840744-9F5C-473E-820D-5BB088B6AE23}" ShortID="1030127657" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}"/>
+								<GroupItem Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Menu" ID="{484CA053-7CCE-4E1F-BA73-50E2BC8A9BAB}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{E9913742-CA52-43D1-BA4C-BAFA06EEFB96}" ShortID="358119772" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+								<GroupItem Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Game" ID="{AC0733CB-3043-4329-843E-032AD4D0740A}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{9D127A91-D422-4F3C-850E-14C5CB961DD3}" ShortID="311133770" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+								<GroupItem Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
+							</SetItemParam>
 						</Action>
 					</ChildrenList>
 				</Event>

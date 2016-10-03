@@ -14,5 +14,13 @@ public class InputForTestingDelegates : MonoBehaviour {
             GameManager.instance.MusicBoxRewindStart();
         if (Input.GetKeyDown(KeyCode.RightArrow))
             GameManager.instance.MusicBoxRewindStop();
-	}
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+            GameManager.instance.MusicBoxPlay();
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+            GameManager.instance.MusicBoxRewindComplete();
+        if (Input.GetKeyDown(KeyCode.A))
+            GameManager.instance.MusicBoxPause();
+        if (Input.GetKeyDown(KeyCode.D))
+            GameManager.instance.MusicBoxResume();
+    }
 }
