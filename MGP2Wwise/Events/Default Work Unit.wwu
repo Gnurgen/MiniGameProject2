@@ -114,7 +114,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Idle" ID="{0417C20C-9273-4985-8D5A-29538E331D2A}">
+				<Event Name="Idle_Switch" ID="{0417C20C-9273-4985-8D5A-29538E331D2A}">
 					<ChildrenList>
 						<Action Name="Set Switch" ID="{128594A2-1826-4362-B6AE-8930B939A0FE}" ShortID="726258260" Type="SetSwitch" Scope="All" Global="false">
 							<SetItemParam>
@@ -124,7 +124,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Walk" ID="{1B9484BE-E95E-4A16-86C0-90CEB1B9230A}">
+				<Event Name="Walk_Switch" ID="{1B9484BE-E95E-4A16-86C0-90CEB1B9230A}">
 					<ChildrenList>
 						<Action Name="Set Switch" ID="{4CAD4093-9577-494F-933E-ABBE500A2557}" ShortID="245586992" Type="SetSwitch" Scope="All" Global="false">
 							<SetItemParam>
@@ -134,7 +134,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Run" ID="{B049EE56-917D-4F7D-A6BF-04D4ED0093B5}">
+				<Event Name="Run_Switch" ID="{B049EE56-917D-4F7D-A6BF-04D4ED0093B5}">
 					<ChildrenList>
 						<Action Name="Set Switch" ID="{E7899984-AC68-437D-ABDC-C18B5346D959}" ShortID="392796455" Type="SetSwitch" Scope="All" Global="false">
 							<SetItemParam>
@@ -221,6 +221,46 @@
 									<ObjectRef Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
 								</Element>
 							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Broken_Switch" ID="{98DFADC2-C117-406B-A70C-52B2E84C926F}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{8A4394F5-CDB2-477D-86E8-E4437FE6235E}" ShortID="697714984" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}"/>
+								<GroupItem Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MusicBox_Unbroken_Switch" ID="{5A317EBE-444A-4B1E-A87C-4F1493DAEFF4}">
+					<ChildrenList>
+						<Action Name="Set Switch" ID="{B6840744-9F5C-473E-820D-5BB088B6AE23}" ShortID="1030127657" Type="SetSwitch" Scope="All" Global="false">
+							<SetItemParam>
+								<Group Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}"/>
+								<GroupItem Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Menu" ID="{484CA053-7CCE-4E1F-BA73-50E2BC8A9BAB}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{E9913742-CA52-43D1-BA4C-BAFA06EEFB96}" ShortID="358119772" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+								<GroupItem Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Game" ID="{AC0733CB-3043-4329-843E-032AD4D0740A}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{9D127A91-D422-4F3C-850E-14C5CB961DD3}" ShortID="311133770" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+								<GroupItem Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
+							</SetItemParam>
 						</Action>
 					</ChildrenList>
 				</Event>
