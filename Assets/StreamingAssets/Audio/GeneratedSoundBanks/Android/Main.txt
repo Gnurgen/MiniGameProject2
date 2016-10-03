@@ -1,9 +1,173 @@
 Event	ID	Name			Wwise Object Path	Notes
+	672851034	MusicBox_Rewind_Play			\Default Work Unit\MusicBox_Rewind_Play	
+	712161704	Run			\Default Work Unit\Run	
+	938529747	Menu_Button			\Default Work Unit\Menu_Button	
+	1326786195	Breath			\Default Work Unit\Breath	
+	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
+	1866025847	FootStep			\Default Work Unit\FootStep	
+	1874288895	Idle			\Default Work Unit\Idle	
+	2015956512	MonsterAttackHit			\Default Work Unit\MonsterAttackHit	
+	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
+	2076776060	Puff			\Default Work Unit\Puff	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
+	2108779966	Walk			\Default Work Unit\Walk	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
+	2621508965	MonsterAttack			\Default Work Unit\MonsterAttack	
+	2653952097	MonsterAggro			\Default Work Unit\MonsterAggro	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
+	3166394572	Ambience_Stop			\Default Work Unit\Ambience_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2287157699	StepSwitch			\Default Work Unit\StepSwitch	
+	3940572963	Music_Box_Melody			\Default Work Unit\Music_Box_Melody	
+
+Switch	ID	Name	Switch Group			Notes
+	712161704	Run	StepSwitch			
+	1874288895	Idle	StepSwitch			
+	2108779966	Walk	StepSwitch			
+	231230354	Broken	Music_Box_Melody			
+	2997862023	Unbroken	Music_Box_Melody			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2604644515	Menus			\Default Work Unit\Menus	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Menus			
+	1631528850	In_Menu	Menus			
+	2967546505	In_Game	Menus			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
+	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	129	MIDI note velocity			\MIDI note velocity	
+	99298381	staminaPar			\Default Work Unit\staminaPar	
+	1351367891	SS_Air_Fear			\Factory SoundSeed Air Game Syncs\SS_Air_Fear	
+	2648548617	SS_Air_Month			\Factory SoundSeed Air Game Syncs\SS_Air_Month	
+	3203397129	SS_Air_TimeOfDay			\Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	773663610	Modulator Envelope (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	147717240	LongDeepAlley	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	157136568	LivingRoom_02	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	157136571	LivingRoom_01	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	188676667	EquallySpacedEchoes	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	266383236	Beetle	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	369343119	SlapsEchoClose	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	403168485	WideWithCars	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	502771456	ForestAuterlitz_WideOpen	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	777687596	OpenThreeEchoes	Wwise Convolution Reverb			Impulse response created by AudioEase.   © 2011 AudioEase.  All rights reserved.
+	1095846606	LongAndComplex	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1096258038	ForestAuterlitz_DenseClose	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1139053157	DistantBuilding_MicsClose	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1218058898	Peugeot_PartnerBackClosed	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1541110787	DistantEcho	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1609411046	OpenShortTwoEchoes	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1721929831	LongSixWideEchoes	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1756167208	Staircase	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1782142158	DistantBuilding_MicsFar	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1831461191	Bathroom	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	1922795580	ComplexEcho	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2006155104	SmoothIntimate	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2198133169	Hallway	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2358985440	Peugeot_PartnerFront	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2420937077	NarrowShortAlley	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2530182247	FireDepartment	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2689042248	Attic_01	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2689042251	Attic_02	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2955946001	ComplexDistantEcho	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2957683562	Classroom	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2976146303	TwoFarBuildings	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2993824568	PheeeewEcho_02	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	2993824571	PheeeewEcho_01	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3008492597	DistantSlaps	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3054266423	Ford_TransitVanRear	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3059984139	Tunnel	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3247707937	ForestAuterlitz_DenseFar	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3250495146	Honda_ElementRear	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3270965175	Train_BlueAngel	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3465783835	WideEcho	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3494518574	LoudEcho	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3507681338	Helicopter_Sikorski	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3632432029	LongNoEchoes	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3788459820	CloseEcho	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	3788924735	Bedroom	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	4063189299	Corridor	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	4186896960	Honda_Element	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	4213309952	SchoolHall	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	4266099036	Alley_Intimate	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+	4273684962	ForestAuterlitz_BetweenTrees	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	196075525	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\New Sound SFX\Wwise Silence	
+	504140941	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows\SoundSeed Air Wind	
+	566495866	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\New Sound SFX\Wwise Silence	
+	638668611	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds\SoundSeed Air Wind	
+	970241952	CONFIRM 01	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\UI Sounds\CONFIRM 01\CONFIRM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	213633537	Music Box Melody Temp	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody Temp_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody Temp		8634432
+	222373072	MonsterAttackHit	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\MonsterAttackHit_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttackHit		92224
+	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
+	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
+	573374260	PlayerPanting	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\PlayerPanting_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\PlayerPanting		315456
+	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
+	751439041	MonsterAttack	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\MonsterAttacj_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttack		131136
+	827816364	MonsterAggro	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\MonsterAggro_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAggro		188480
+	835297814	Music Box Windup	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Music Box Windup_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		195288
+	978225663	Foot	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot		59456
+
+Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
+	13019290	Ford_TransitVanRear	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear_BFA7EF96.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Ford_TransitVanRear	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	246768
+	13682022	Train_BlueAngel	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Train_BlueAngel_059E2C69.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Train_BlueAngel	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	423520
+	30489455	ForestAuterlitz_WideOpen	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_WideOpen_4FFD1EFC.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Forest\ForestAuterlitz_WideOpen	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	901280
+	31744546	Honda_Element	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_Element_8EB39D0C.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Honda_Element	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	24672
+	42240585	LongSixWideEchoes	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongSixWideEchoes_53D675AB.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\LongSixWideEchoes	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	455072
+	58924823	Alley_Intimate	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_AlleyIntimate_74EB92A2.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Alley\Alley_Intimate	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	297248
+	60907913	Attic_02	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_02_325FEBFD.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Attic_02	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	121056
+	92795692	LongNoEchoes	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongNoEchoes_C8CD3B55.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\LongNoEchoes	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	627040
+	145606015	Bedroom	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bedroom_8D55EA30.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Bedroom	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	272368
+	198373678	LongDeepAlley	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_LongDeepAlley_6924079C.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Alley\LongDeepAlley	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	244480
+	209885183	PheeeewEcho_02	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_02_5C7714D4.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\PheeeewEcho_02	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	288704
+	217396452	Honda_ElementRear	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_ElementRear_C9397C52.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Honda_ElementRear	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	24256
+	240375163	ForestAuterlitz_BetweenTrees	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_BetweenTrees_6B4B846A.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Forest\ForestAuterlitz_BetweenTrees	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	797728
+	294815814	SmoothIntimate	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SmoothIntimate_88048682.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\SmoothIntimate	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	492624
+	335771893	Bathroom	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bathroom_88C295C4.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Bathroom	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	233008
+	364607080	LongAndComplex	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongAndComplex_831FC57E.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\LongAndComplex	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	407424
+	427082242	EquallySpacedEchoes	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_EquallySpacedEchoes_C7CFD9C1.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\EquallySpacedEchoes	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	395392
+	432605131	OpenShortTwoEchoes	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenShortTwoEchoes_CE9766C7.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\OpenShortTwoEchoes	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	382832
+	435591620	LivingRoom_01	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_01_1AAEF490.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\LivingRoom_01	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	291616
+	480496863	Hallway	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Hallway_81B22F9F.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Hallway	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	337552
+	507160656	ForestAuterlitz_DenseFar	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Forest\ForestAuterlitz_DenseFar	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	1120800
+	512867118	WideWithCars	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideWithCars_F1FC1A6B.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\WideWithCars	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	238048
+	522077337	SchoolHall	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall_CFA92CA0.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\SchoolHall	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	1019264
+	536838777	SlapsEchoClose	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SlapsEchoClose_7EBC80F1.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\SlapsEchoClose	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	279280
+	569254387	Tunnel	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel_B1340162.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Tunnel\Tunnel	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	444320
+	569393832	Peugeot_PartnerFront	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerFront_961825FF.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Peugeot_PartnerFront	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	130256
+	584011173	Peugeot_PartnerBackClosed	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Peugeot_PartnerBackClosed_555B9C55.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Peugeot_PartnerBackClosed	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	129648
+	596456986	TwoFarBuildings	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_TwoFarBuildings_EC14BD0F.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\TwoFarBuildings	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	190048
+	602284699	FireDepartment	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment_EE5F7440.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Misc\FireDepartment	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	294816
+	647831537	Corridor	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Corridor_AA3A462D.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Corridor	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	298256
+	685400320	Helicopter_Sikorski	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski_86DC0B1E.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Helicopter_Sikorski	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	42416
+	702837950	NarrowShortAlley	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_NarrowShortAlley_B1BAF16B.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Alley\NarrowShortAlley	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	901280
+	726190851	ComplexEcho	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexEcho_DB321E75.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\ComplexEcho	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	388400
+	757112749	DistantSlaps	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantSlaps_9EC31AF6.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\DistantSlaps	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	299424
+	766552005	Staircase	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase_3B6A6FB8.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Staircase	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	837056
+	783448466	PheeeewEcho_01	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_01_09E5A9BE.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\PheeeewEcho_01	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	259120
+	784884764	WideEcho	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideEcho_571F153C.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\WideEcho	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	291328
+	789847363	DistantEcho	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantEcho_152A83EC.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\DistantEcho	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	260672
+	803100438	OpenThreeEchoes	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes_BE2C0E27.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\OpenThreeEchoes	Impulse response created by AudioEase.   © 2011 AudioEase.  All rights reserved.	442880
+	832296042	CloseEcho	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho_EE58611F.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\CloseEcho	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	274608
+	847080287	ComplexDistantEcho	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexDistantEcho_639F37E9.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\ComplexDistantEcho	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	329088
+	867122333	LivingRoom_02	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_02_531CB7A8.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\LivingRoom_02	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	293136
+	873684731	ForestAuterlitz_DenseClose	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose_D1FD5366.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Forest\ForestAuterlitz_DenseClose	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	821680
+	932825353	DistantBuilding_MicsClose	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose_DFB7B606.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsClose	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	496432
+	941961704	DistantBuilding_MicsFar	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar_A82D434C.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsFar	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	645344
+	1036982009	Attic_01	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_01_E4E08886.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Attic_01	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	120240
+	1037099072	LoudEcho	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LoudEcho_DB84FF12.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Street\LoudEcho	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	211376
+	1054055703	Beetle	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Beetle_2339C574.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Beetle	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	81984
+	1065017050	Classroom	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Classroom_2A3FA59E.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Classroom	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	220880
 

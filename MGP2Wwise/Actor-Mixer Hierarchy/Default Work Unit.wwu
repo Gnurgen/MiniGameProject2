@@ -3,9 +3,33 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{5479FAAF-EF4A-4F70-81FE-59985C302091}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Music Box Melody Temp" ID="{2A4391D3-F154-43AB-BC5E-EC9A73C1AAB7}" ShortID="111598135" Type="SoundFX">
+				<Sound Name="Menu Button" ID="{D154C260-DE1D-45A4-B8D0-D7237DFF7C5B}" ShortID="341091713" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UI" ID="{1F981B7B-A173-4A9A-AC1C-C33B3799CDB2}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" ShortID="304171733">
+							<Language>SFX</Language>
+							<AudioFile>Menu Button.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<SwitchContainer Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" ShortID="246547316">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -15,17 +39,935 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+							<ObjectRef Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Music Box Melody Temp" ID="{36CB79F0-685A-4C39-AF6B-DEDCEBF7DBBE}" ShortID="213633537">
+						<Sound Name="Music Box Melody" ID="{D4492D35-23F4-40BE-AFD6-4DC965A34622}" ShortID="452875154" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Music Box Melody" ID="{20F1506B-6B4E-4E85-9B55-DBF5FF0B8343}" ShortID="343009413">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Music Box Melody.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Music Box Melody" ID="{20F1506B-6B4E-4E85-9B55-DBF5FF0B8343}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Music Box Melody Broken" ID="{55458BFB-44A3-4A51-BA11-F81BC0FEE52F}" ShortID="899197902" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Music Box Melody Broken" ID="{3535F112-C058-4775-88A3-7734B492DC3F}" ShortID="716604440">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Music Box Melody Broken.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Music Box Melody Broken" ID="{3535F112-C058-4775-88A3-7734B492DC3F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupRef Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}"/>
+						<DefaultSwitchRef Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Music Box Melody" ID="{D4492D35-23F4-40BE-AFD6-4DC965A34622}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Music Box Melody Broken" ID="{55458BFB-44A3-4A51-BA11-F81BC0FEE52F}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
+								<ItemList>
+									<ItemRef Name="Music Box Melody Broken" ID="{55458BFB-44A3-4A51-BA11-F81BC0FEE52F}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
+								<ItemList>
+									<ItemRef Name="Music Box Melody" ID="{D4492D35-23F4-40BE-AFD6-4DC965A34622}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<ActorMixer Name="Ambience" ID="{4B80667B-A39D-4BE0-A86F-9F67C402EAF0}" ShortID="389155232">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambience" ID="{1AED54A9-7FDC-42F4-AAE1-2286337615CE}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Polar Winds" ID="{C2898F7A-8CD5-4313-9FBB-0720CF7C7051}" ShortID="818670106" Type="SoundFX">
+							<Comment>Welcome to the pole.
+Air currents change during the hours of the day and months of the year.</Comment>
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>48</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-800</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="Spatialization" Type="bool" Value="False"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="SoundSeed Air Wind" ID="{CF713842-B8A9-47BA-A674-B4441E78194A}" ShortID="638668611" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+									<PropertyList>
+										<Property Name="AverageVelocity" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{62C9BE20-E369-4344-B925-4F2BDE692F5B}" ShortID="976426846">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{87F0260C-929C-40D1-A81F-A23E9ADEF24D}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>448.24003</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>17.85558</XPos>
+																<YPos>-352.90135</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>24</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
+										<Property Name="AverageVelocityRandom" Type="Real32" Value="40"/>
+										<Property Name="ChannelMask" Type="int16" Value="2"/>
+										<Property Name="Direction" Type="Real32" Value="90">
+											<RTPCList>
+												<RTPC Name="" ID="{DDF7D7D5-DFD5-433E-A011-4C2975BCA14B}" ShortID="562154341">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{06A6FB48-723E-44C6-9E30-17CBB165969F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>-90</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>90</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>12</XPos>
+																<YPos>-90</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="DirectionAutomate" Type="bool" Value="True"/>
+										<Property Name="DirectionRandom" Type="Real32" Value="10"/>
+										<Property Name="Duration" Type="Real64" Value="20"/>
+										<Property Name="DurationRandom" Type="Real32" Value="20"/>
+										<Property Name="FrequencyScale" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{C0F2604E-C86B-4B53-9D5B-C70975C9FE69}" ShortID="819418753">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{4B5371DD-F505-4245-BCDF-42AA9B21747E}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>1</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>12</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="GainOffset" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{53769B9B-99CB-4688-8500-44189A5815BA}" ShortID="238246129">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{841FEF83-E2CA-4FF3-9415-B369E713D4B6}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>18</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>6</XPos>
+																<YPos>12</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>12</XPos>
+																<YPos>18</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Gustiness" Type="Real32" Value="0.1"/>
+										<Property Name="GustinessAutomate" Type="bool" Value="True"/>
+										<Property Name="MaxDistance" Type="Real32" Value="20"/>
+										<Property Name="Variability" Type="Real32" Value="0.2"/>
+										<Property Name="VariabilityAutomate" Type="bool" Value="True"/>
+										<Property Name="VelocityDynamicRange" Type="Real32" Value="1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<PluginData>
+	<CurveList Version="1">
+		<CurveInfo Name="AverageVelocity">
+			<Curve Name="" ID="{D831618E-3362-4CD9-B3DD-B377932132C0}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>3.049</XPos>
+						<YPos>49.74095</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>4.06533</XPos>
+						<YPos>467.78173</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>6.38839</XPos>
+						<YPos>43.70944</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>7.7677</XPos>
+						<YPos>215.12876</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>11.32486</XPos>
+						<YPos>-245.40606</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>12.3049</XPos>
+						<YPos>74.13067</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>15.49909</XPos>
+						<YPos>348.32016</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>18.18512</XPos>
+						<YPos>-261.1399</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>-74.6114</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="Direction">
+			<Curve Name="" ID="{719592A9-0DCD-4562-828D-4E7234B121FE}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>-90</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="Gustiness">
+			<Curve Name="" ID="{35EBE5DA-0968-4272-8090-769346647264}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0.47151</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>-0.35233</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="Variability">
+			<Curve Name="" ID="{645EE604-217A-417A-8134-C10C6B2158DE}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0.01037</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>12.66788</XPos>
+						<YPos>0.42228</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0.25907</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+	</CurveList>
+</PluginData>
+									<PluginInnerObjectList>
+										<List Name="Deflectors">
+											<PluginInnerObject Name="" ID="{261E39C9-FE5E-4975-9991-212E2386199C}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="650"/>
+													<Property Name="PanX" Type="Real64" Value="-14.6268656716418"/>
+													<Property Name="PanY" Type="Real64" Value="27.5449101796407"/>
+													<Property Name="QFactor" Type="Real32" Value="1.7"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{B9344AA7-6F5D-48D7-A073-654CE1CC3513}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="720"/>
+													<Property Name="PanX" Type="Real64" Value="19.4029850746269"/>
+													<Property Name="PanY" Type="Real64" Value="12.5748502994012"/>
+													<Property Name="QFactor" Type="Real32" Value="2.8"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{286371C9-8F09-429A-9800-7231FA184032}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="930"/>
+													<Property Name="PanX" Type="Real64" Value="13.4328358208955"/>
+													<Property Name="PanY" Type="Real64" Value="-29.9401197604791"/>
+													<Property Name="QFactor" Type="Real32" Value="5"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{AF614C43-0E5A-430B-BDBB-ACA4D481D28A}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="924"/>
+													<Property Name="PanX" Type="Real64" Value="-9.85074626865672"/>
+													<Property Name="PanY" Type="Real64" Value="-37.7245508982036"/>
+													<Property Name="QFactor" Type="Real32" Value="6"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{C55EE3DD-8665-4D4F-B522-E4FAB2F027BE}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="90"/>
+													<Property Name="PanX" Type="Real64" Value="-0.895522388059703"/>
+													<Property Name="PanY" Type="Real64" Value="-65.2694610778443"/>
+												</PropertyList>
+											</PluginInnerObject>
+										</List>
+									</PluginInnerObjectList>
+								</SourcePlugin>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{85190475-DFCF-400F-97F5-51306A0354A2}">
+									<ChildrenList>
+										<Path2D Name="RandomWaveLocation" ID="{AF7E0CBF-1D0D-4B09-98E8-5B0ACB9C7E65}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="50"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>0</XPos>
+													<YPos>50</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="SoundSeed Air Wind" ID="{CF713842-B8A9-47BA-A674-B4441E78194A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Weeping Willows" ID="{FD2C61FD-A48E-48EE-801D-414A6ACE5B53}" ShortID="853403587" Type="SoundFX">
+							<Comment>The more afraid you are, the more the willows weep and wail.</Comment>
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Spatialization" Type="bool" Value="False"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="SoundSeed Air Wind" ID="{ADD5C596-BEDE-45FA-9A67-798E081EEE4F}" ShortID="504140941" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+									<PropertyList>
+										<Property Name="AttenuationRollOff" Type="Real32" Value="2"/>
+										<Property Name="AverageVelocity" Type="Real32" Value="-329"/>
+										<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
+										<Property Name="AverageVelocityRandom" Type="Real32" Value="300"/>
+										<Property Name="ChannelMask" Type="int16" Value="2"/>
+										<Property Name="Direction" Type="Real32" Value="135">
+											<RTPCList>
+												<RTPC Name="" ID="{4A8F4544-D15D-4C75-B1CB-533B7D43EF1B}" ShortID="940476521">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{6A19E208-8DF3-43A8-85DF-94AE671C9C06}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>60</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>135</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Duration" Type="Real64" Value="20"/>
+										<Property Name="DurationRandom" Type="Real32" Value="10"/>
+										<Property Name="FrequencyScale" Type="Real32" Value="-0.76">
+											<RTPCList>
+												<RTPC Name="" ID="{DC78C6A3-88A8-4489-AE7F-6A0DF3A11D7D}" ShortID="432677875">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{E8DE2D56-44AD-45FE-AAA7-985927A2E499}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-0.75</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="FrequencyScaleRandom" Type="Real32" Value="1.01"/>
+										<Property Name="GainOffset" Type="Real32" Value="12"/>
+										<Property Name="Gustiness" Type="Real32" Value="0.07">
+											<RTPCList>
+												<RTPC Name="" ID="{D3ADE75C-F93D-445A-A6AE-545A7663155E}" ShortID="367629313">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{7A061593-7A6C-4516-8EAD-F307B9F618B2}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0.08315</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0.5</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="MaxDistance" Type="Real32" Value="20"/>
+										<Property Name="MinDistance" Type="Real32" Value="4.6"/>
+										<Property Name="QFactorScale" Type="Real32" Value="0.08">
+											<RTPCList>
+												<RTPC Name="" ID="{25563766-3F7B-4528-AD2A-A75CEDA8C3B8}" ShortID="394469922">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{C3EDB51C-A86B-4327-81A1-628587E98245}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>3.74277</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="QFactorScaleRandom" Type="Real32" Value="0.46"/>
+										<Property Name="Variability" Type="Real32" Value="0.58">
+											<RTPCList>
+												<RTPC Name="" ID="{753C4E00-608F-491F-A4F5-F4CE6D6BA1DE}" ShortID="55489026">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{AB73306A-4529-4C01-80A5-70975EC7AC9A}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0.7888</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0.16353</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="VelocityDynamicRange" Type="Real32" Value="1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<PluginData>
+	<CurveList Version="1">
+		<CurveInfo Name="AverageVelocity">
+			<Curve Name="" ID="{22C81F34-A011-46F7-813E-5836FAA7E63A}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>4.13793</XPos>
+						<YPos>386.81319</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>7.47731</XPos>
+						<YPos>-263.73626</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>10.85299</XPos>
+						<YPos>110.16207</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>13.57532</XPos>
+						<YPos>-155.11957</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>15.24501</XPos>
+						<YPos>334.06593</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="Direction">
+			<Curve Name="" ID="{F8B026F0-9773-469D-B40D-D8C1930DD9E9}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>-90</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="FrequencyScale">
+			<Curve Name="" ID="{015374E3-0BF6-4C6D-BA3F-47E85B584608}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="Gustiness">
+			<Curve Name="" ID="{FF67F7F6-6AA7-4C46-B97C-D6380ACF0E97}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+						<SegmentShape>Exp3</SegmentShape>
+					</Point>
+					<Point>
+						<XPos>1.93103666666667</XPos>
+						<YPos>0.1116</YPos>
+						<Flags>0</Flags>
+						<SegmentShape>Log3</SegmentShape>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+		<CurveInfo Name="Variability">
+			<Curve Name="" ID="{EFE8B781-4127-428D-9758-BAF4166908A9}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0.01037</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>12.66788</XPos>
+						<YPos>0.42228</YPos>
+						<Flags>0</Flags>
+					</Point>
+					<Point>
+						<XPos>20</XPos>
+						<YPos>0.25907</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+	</CurveList>
+</PluginData>
+									<PluginInnerObjectList>
+										<List Name="Deflectors">
+											<PluginInnerObject Name="" ID="{99ACE646-7018-47A6-992E-44A8A226D7E4}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="PanX" Type="Real64" Value="-10.5970149253732"/>
+													<Property Name="PanY" Type="Real64" Value="54.4910179640719"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{42683125-8FE3-4A92-85A6-EA7A6F479649}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="660"/>
+													<Property Name="PanX" Type="Real64" Value="-22.3880597014925"/>
+													<Property Name="PanY" Type="Real64" Value="32.2776134478032"/>
+													<Property Name="QFactor" Type="Real32" Value="5"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{A4D5FFA3-1A95-422E-AF34-97541032CB42}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="660"/>
+													<Property Name="PanX" Type="Real64" Value="12.8358208955224"/>
+													<Property Name="PanY" Type="Real64" Value="29.3413173652695"/>
+													<Property Name="QFactor" Type="Real32" Value="5"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{B2242236-E949-45AB-8253-54354E55324F}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="PanX" Type="Real64" Value="33.1343283582089"/>
+													<Property Name="PanY" Type="Real64" Value="40.902532284828"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{45843ED9-D559-473F-B36E-30100BA0AE90}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="660"/>
+													<Property Name="PanX" Type="Real64" Value="27.1641791044776"/>
+													<Property Name="PanY" Type="Real64" Value="-30.0880167376091"/>
+													<Property Name="QFactor" Type="Real32" Value="5"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{6582A0C7-D60E-4A0D-85E5-F65E7077CA1E}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="PanX" Type="Real64" Value="37.910447761194"/>
+													<Property Name="PanY" Type="Real64" Value="2.56114277469158"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{3CC9150E-612F-4747-B042-A3BBD2B98328}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="660"/>
+													<Property Name="PanX" Type="Real64" Value="-42.089552238806"/>
+													<Property Name="PanY" Type="Real64" Value="6.88622754491018"/>
+													<Property Name="QFactor" Type="Real32" Value="5"/>
+												</PropertyList>
+											</PluginInnerObject>
+											<PluginInnerObject Name="" ID="{9B503A0F-0C6D-4E2C-B25A-3F05848253E1}" PluginName="Deflector" CompanyID="0" PluginID="121">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="495"/>
+													<Property Name="PanX" Type="Real64" Value="-22.9850746268657"/>
+													<Property Name="PanY" Type="Real64" Value="-14.3784719717192"/>
+													<Property Name="QFactor" Type="Real32" Value="1"/>
+												</PropertyList>
+											</PluginInnerObject>
+										</List>
+									</PluginInnerObjectList>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SoundSeed Air Wind" ID="{ADD5C596-BEDE-45FA-9A67-798E081EEE4F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+								<State Name="Custom State" ID="{FC4B1AD9-D616-4F37-B4FC-844AA717CF60}" ShortID="159020401">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-4"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</ActorMixer>
+				<Sound Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" ShortID="927362461" Type="SoundFX">
+					<PropertyList>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="SFX_Distance" ID="{C9D8B98B-D8FC-4DCA-8C82-B21C8C9F369B}" WorkUnitID="{99C17FF4-66F0-4F6B-A73B-98695604D910}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Music Box Windup" ID="{65B48D6A-82C8-48BA-9E51-4DE55FD14BBE}" ShortID="835297814">
 							<Language>SFX</Language>
-							<AudioFile>Music Box Melody Temp.wav</AudioFile>
+							<AudioFile>Music Box Windup.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+								<State Name="Custom State" ID="{78C28D36-5E23-420D-9FA2-4F0BFB31F201}" ShortID="348854283">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ActiveSourceList>
-						<ActiveSource Name="Music Box Melody Temp" ID="{36CB79F0-685A-4C39-AF6B-DEDCEBF7DBBE}" Platform="Linked"/>
+						<ActiveSource Name="Music Box Windup" ID="{65B48D6A-82C8-48BA-9E51-4DE55FD14BBE}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

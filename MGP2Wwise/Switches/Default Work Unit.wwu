@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{81E2E713-133D-426E-B9C2-023106367766}" SchemaVersion="72">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{81E2E713-133D-426E-B9C2-023106367766}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{81E2E713-133D-426E-B9C2-023106367766}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}">
+					<ChildrenList>
+						<Switch Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
+						<Switch Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}">
+					<ChildrenList>
+						<Switch Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
+						<Switch Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+						<Switch Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

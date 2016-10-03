@@ -44,6 +44,11 @@ public class StartmenuInteraction : MonoBehaviour {
         _debugPopUp.SetActive(true);
     }
 
+    public void ExitGameButton()
+    {
+        Application.Quit();
+    }
+
     public void CloseDebugScreen()
     {
         _debugPopUp.SetActive(false);

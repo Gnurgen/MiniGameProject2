@@ -7,8 +7,12 @@ public class MusicBox : MonoBehaviour {
     public GameObject ParticlePuff;
     private float timeToDie = 0;
     private bool Count = true;
+    
     void Start () {
-        GameManager.instance.MusicBoxPlay();
+        GameManager.instance.audioManager.MusicBoxStart();
+        GameManager.instance.audioManager.AmbienceStart();
+        GameManager.instance.audioManager.FootStepStart();
+        GameManager.instance.audioManager.BreathStart();
         GameManager.instance.OnMusicBoxMove += MoveToNextSpawn;
     }
 
@@ -24,6 +28,7 @@ public class MusicBox : MonoBehaviour {
         if (obj.tag == GameManager.instance.player.tag)
         {
             Count = false;
+            GameManager.instance.MusicBoxPause();
             GameManager.instance.MusicBoxRewindStart();
         }
     }
@@ -33,6 +38,7 @@ public class MusicBox : MonoBehaviour {
         if (obj.tag == GameManager.instance.player.tag)
         {
             Count = true;
+            GameManager.instance.MusicBoxResume();
             GameManager.instance.MusicBoxRewindStop();
 
         }
@@ -43,6 +49,7 @@ public class MusicBox : MonoBehaviour {
         transform.position = spawnPoint.transform.position;
         timeToDie = 0;
         Count = true;
+        
     }
 
     public void MoveToNextSpawn()
