@@ -162,8 +162,6 @@ public class PlayerControls : MonoBehaviour {
         else
         {
             stamina -= Time.deltaTime*stamNormalization;
-            if (stamina >= 100/minSprintTime)
-                exhausted = false;
             if (stamina <= 0)
             {
                 GameManager.instance.PlayerFatigue(); 
@@ -171,6 +169,8 @@ public class PlayerControls : MonoBehaviour {
                 stamina = 0;
             }
         }
+		if (stamina >= 100/minSprintTime)
+			exhausted = false;
     }
 
    /* private void updatePlayerStamina() {
