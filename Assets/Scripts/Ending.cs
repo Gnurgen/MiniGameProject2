@@ -23,7 +23,7 @@ public class Ending : MonoBehaviour {
     {
            musicbox = GameManager.instance.musicBoxCount;
         
-        if (musicbox >= 0) {
+        if (musicbox >= 5) { // Number of the last music box
             ending = true;
         }
         if (ending) {
