@@ -9,10 +9,10 @@ public class MusicBox : MonoBehaviour {
     private bool Count = true;
     
     void Start () {
-//        GameManager.instance.audioManager.MusicBoxStart();
-//        GameManager.instance.audioManager.AmbienceStart();
-//        GameManager.instance.audioManager.FootStepStart();
-//        GameManager.instance.audioManager.BreathStart();
+        GameManager.instance.audioManager.MusicBoxStart();
+        GameManager.instance.audioManager.AmbienceStart();
+        GameManager.instance.audioManager.FootStepStart();
+        GameManager.instance.audioManager.BreathStart();
         GameManager.instance.OnMusicBoxMove += MoveToNextSpawn;
     }
 

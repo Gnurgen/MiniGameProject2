@@ -39,9 +39,11 @@ public class AudioManager : MonoBehaviour{
     [SerializeField]
     private string _MonsterAttack,
         _MonsterAttackHit,
-        _MonsterSpawn,
+ //       _MonsterSpawn,
         _MonsterDespawn,
-        _MonsterAggro;
+        _MonsterAggro,
+        _MonsterGrowl_Play,
+        _MonsterGrowl_Stop;
    
     [Header("Ambience")]
     [SerializeField]
@@ -204,19 +206,17 @@ public class AudioManager : MonoBehaviour{
         AkSoundEngine.PostEvent(_MonsterAttackHit, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
     }
-    void EnemySpawn()
-    {
-        AkSoundEngine.PostEvent(_MonsterSpawn, GameManager.instance.enemy);
-        AkSoundEngine.RenderAudio();
-    }
+    
     void EnemyDespawn()
     {
+        AkSoundEngine.PostEvent(_MonsterGrowl_Stop, GameManager.instance.enemy);
         AkSoundEngine.PostEvent(_MonsterDespawn, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
     }
     void EnemyAggro()
     {
         AkSoundEngine.PostEvent(_MonsterAggro, GameManager.instance.enemy);
+        AkSoundEngine.PostEvent(_MonsterGrowl_Play, GameManager.instance.enemy);
         AkSoundEngine.RenderAudio();
     }
 
@@ -290,7 +290,6 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnEnemyAttack += EnemyAttack;
         GameManager.instance.OnEnemyStep += EnemyStep;
         GameManager.instance.OnEnemyAttackHit += EnemyAttackHit;
-        GameManager.instance.OnEnemySpawn += EnemySpawn;
         GameManager.instance.OnEnemyDespawn += EnemyDespawn;
         GameManager.instance.OnEnemyAggro += EnemyAggro;
         //Ambience Events

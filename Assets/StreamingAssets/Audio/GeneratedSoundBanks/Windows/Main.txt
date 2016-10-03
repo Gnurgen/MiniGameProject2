@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	672851034	MusicBox_Rewind_Play			\Default Work Unit\MusicBox_Rewind_Play	
 	899311691	Run_Switch			\Default Work Unit\Run_Switch	
 	938529747	Menu_Button			\Default Work Unit\Menu_Button	
+	1298383181	MusicBox_Unbroken_Switch			\Default Work Unit\MusicBox_Unbroken_Switch	
 	1326786195	Breath			\Default Work Unit\Breath	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
@@ -13,12 +14,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
 	2274660714	Idle_Switch			\Default Work Unit\Idle_Switch	
 	2302208614	MusicBox_Pause			\Default Work Unit\MusicBox_Pause	
+	2302270969	Set_State_Menu			\Default Work Unit\Set_State_Menu	
+	2451362146	MusicBox_Broken_Switch			\Default Work Unit\MusicBox_Broken_Switch	
 	2621508965	MonsterAttack			\Default Work Unit\MonsterAttack	
 	2653952097	MonsterAggro			\Default Work Unit\MonsterAggro	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
 	2857728357	Walk_Switch			\Default Work Unit\Walk_Switch	
 	3166394572	Ambience_Stop			\Default Work Unit\Ambience_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
+	4207344442	Set_State_Game			\Default Work Unit\Set_State_Game	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	2287157699	StepSwitch			\Default Work Unit\StepSwitch	

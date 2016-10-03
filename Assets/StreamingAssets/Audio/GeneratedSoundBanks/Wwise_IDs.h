@@ -24,14 +24,18 @@ namespace AK
         static const AkUniqueID MONSTERAGGRO = 2653952097U;
         static const AkUniqueID MONSTERATTACK = 2621508965U;
         static const AkUniqueID MONSTERATTACKHIT = 2015956512U;
+        static const AkUniqueID MUSICBOX_BROKEN_SWITCH = 2451362146U;
         static const AkUniqueID MUSICBOX_PAUSE = 2302208614U;
         static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
         static const AkUniqueID MUSICBOX_RESUME = 3719125665U;
         static const AkUniqueID MUSICBOX_REWIND_PLAY = 672851034U;
         static const AkUniqueID MUSICBOX_REWIND_STOP = 2071830116U;
         static const AkUniqueID MUSICBOX_STOP = 2820245704U;
+        static const AkUniqueID MUSICBOX_UNBROKEN_SWITCH = 1298383181U;
         static const AkUniqueID PUFF = 2076776060U;
         static const AkUniqueID RUN_SWITCH = 899311691U;
+        static const AkUniqueID SET_STATE_GAME = 4207344442U;
+        static const AkUniqueID SET_STATE_MENU = 2302270969U;
         static const AkUniqueID WALK_SWITCH = 2857728357U;
     } // namespace EVENTS
 
