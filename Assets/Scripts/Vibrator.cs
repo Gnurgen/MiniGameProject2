@@ -8,6 +8,7 @@ public class Vibrator : MonoBehaviour {
         .GetStatic<AndroidJavaObject>("currentActivity")            // Get the Current Activity from the Unity Player.
         .Call<AndroidJavaObject>("getSystemService", "vibrator");   // Then get the Vibration Service from the Current Activity.
 
+
     static Vibrator()
     {
         // Trick Unity into giving the App vibration permission when it builds.
