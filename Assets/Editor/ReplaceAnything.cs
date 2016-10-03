@@ -4,10 +4,10 @@ using System.Collections;
 
 public class ReplaceAnything : EditorWindow {
 
-    private Object _replacement;
-    private bool _useTranslation = true;
-    private bool _useRotation = true;
-    private bool _useScale = true;
+    private static Object _replacement;
+    private static bool _useTranslation = true;
+    private static bool _useRotation = true;
+    private static bool _useScale = true;
 
     [MenuItem("Tools/Replace Anything",false,0)]
     public static void ShowWindow()
@@ -48,7 +48,7 @@ public class ReplaceAnything : EditorWindow {
         GUI.enabled = true;
     }
 
-    private void applyTransform(GameObject obj, Transform transform)
+    private static void applyTransform(GameObject obj, Transform transform)
     {
         if (_useTranslation)
             obj.transform.position = transform.position;
