@@ -4,6 +4,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerControls : MonoBehaviour {
 
+
     public GameObject playerCamera;
     public GameObject joystick;
     private Rigidbody rgd;
@@ -24,6 +25,11 @@ public class PlayerControls : MonoBehaviour {
     public float joystickSensitivity = 1;
     public float joystickSensitivityIdle = 1;
     public float joystickDeadZone= 0.2f;
+
+	public float idleFieldOfView;
+	public float runFieldOfView;
+	public float fieldOfViewTimer;
+	private Camera camera;
 
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
@@ -57,6 +63,9 @@ public class PlayerControls : MonoBehaviour {
         stamNormalization = 100.0f / maxSprintTime;
         currentWalkingSpeed = walkingSpeed;
         currentSprintSpeed = sprintSpeed;
+
+		camera = transform.GetChild(0).GetComponent<Camera> ();
+		camera.fieldOfView = idleFieldOfView;
  
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
@@ -97,13 +106,22 @@ public class PlayerControls : MonoBehaviour {
     {
         switch (playerState)
         {
-            case PlayerState.Walk:
+		case PlayerState.Walk:
+				if (camera.fieldOfView > idleFieldOfView) {
+					camera.fieldOfView -= (runFieldOfView - idleFieldOfView) * fieldOfViewTimer * Time.deltaTime;
+				}
                 rgd.velocity = playerCamera.transform.forward * currentWalkingSpeed * Time.deltaTime;
                 break;
             case PlayerState.Sprint:
+				if (camera.fieldOfView < runFieldOfView) {
+					camera.fieldOfView += (runFieldOfView - idleFieldOfView) * fieldOfViewTimer * Time.deltaTime;
+				}
                 rgd.velocity = playerCamera.transform.forward * currentSprintSpeed * Time.deltaTime;
                 break;
             default:
+				if (camera.fieldOfView > idleFieldOfView) {
+					camera.fieldOfView -= (runFieldOfView - idleFieldOfView) * fieldOfViewTimer * Time.deltaTime;
+				}
                 rgd.velocity = Vector3.zero;
                 break;
         }
@@ -216,5 +234,4 @@ public class PlayerControls : MonoBehaviour {
     {
         playerCamera.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World); // Rotates y angle back however much it deviated when calibrationYAngle was saved.
     }
-
 }

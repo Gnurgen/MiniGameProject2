@@ -4,6 +4,8 @@ using System.Collections;
 public class MusicBoxSpawn : MonoBehaviour {
 
     private static MusicBoxSpawn current;
+
+    [HideInInspector]
     public MusicBoxSpawnList spawnList;
 
     void Start () {

@@ -70,7 +70,7 @@ public class GameManager {
             if (_audioManager == null)
             {
                 _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
-                _audioManager.Subscribe2GameManager();
+               // _audioManager.Subscribe2GameManager();
             }
             return _audioManager;
         }
