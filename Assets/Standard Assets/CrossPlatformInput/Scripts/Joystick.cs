@@ -32,8 +32,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 
         void Start()
         {
-            m_StartPos = GetComponent<RectTransform>().anchoredPosition3D;
-            Debug.Log(m_StartPos);
+            m_StartPos = transform.position;
         }
 
 		void UpdateVirtualAxes(Vector3 value)
