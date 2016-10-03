@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttackScript : MonoBehaviour
 {
     [SerializeField]
     float enemyAttackDist = 2.0f;
@@ -20,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
     {
         currentAttackTime = 0;
         playerBody = GameManager.instance.player.transform;
-        GameManager.instance.OnEnemyAttackHit += AttackVibrate;
+        GameManager.instance.OnEnemyAttackHit += rollIfHit;
     }
     // Update is called once per frame
     void Update()
@@ -32,7 +32,7 @@ public class EnemyAttack : MonoBehaviour
             if (currentAttackTime <= 0)
             {
                 GameManager.instance.EnemyAttack();
-                rollIfHit();
+                // rollIfHit();  EnemyAnimator Kalder OnAttackHit
                 currentAttackTime = timeBetweenAttack;
             }
             else
@@ -44,20 +44,21 @@ public class EnemyAttack : MonoBehaviour
         else { }
     }
 
-    public void AttackVibrate(int i)
+    void AttackVibrate()
     {
 
         //Handheld.Vibrate();
-        Vibrator.Vibrate(vibrationDuration);
+        //Vibrator.Vibrate(vibrationDuration);
     }
 
-    private void rollIfHit()
+    private void rollIfHit(int i)
     {
         if (playerHit == false)
         {
             Debug.Log("First Hit!");
-            GameManager.instance.EnemyAttackHit(1);
+            //GameManager.instance.EnemyAttackHit(1); Bliver kaldt i EnemyAnimator
             GameManager.instance.PlayerTakeDamage(1);
+            AttackVibrate();
             playerHit = true;
         }
         else
@@ -65,8 +66,9 @@ public class EnemyAttack : MonoBehaviour
             if (Random.value <= chanceforSecondAttackHit)
             {
                 Debug.Log("Second Hit!");
-                GameManager.instance.EnemyAttackHit(1);
+                //GameManager.instance.EnemyAttackHit(1); Bliver kaldt i EnemyAnimator
                 GameManager.instance.PlayerTakeDamage(1);
+                AttackVibrate();
                 playerHit = false;
             }
             else

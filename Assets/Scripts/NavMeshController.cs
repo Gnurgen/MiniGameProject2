@@ -11,14 +11,19 @@ public class NavMeshController : MonoBehaviour {
 	private Vector3 idleTar, _dir;
     private bool _noMove, _stagger = false;
     private float _staggerTime, _staggerCD = 0;
+    Animator anim;
 
     [SerializeField]
     private float _chaseTime;
     public float _chaseSpeed, _idleSpeed;
 
     void Start () {
-		curState = state.idle;
-        _staggerTime = GetComponent<EnemyAttack>().timeBetweenAttack;
+        anim = GetComponent<Animator>();
+        anim.SetFloat("walkSpeed", _idleSpeed / 0.65f);
+        anim.SetFloat("runSpeed", _chaseSpeed / 5f);
+
+        curState = state.idle;
+        _staggerTime = GetComponent<EnemyAttackScript>().timeBetweenAttack;
         GameManager.instance.OnEnemyAggro += startChase;
         GameManager.instance.OnEnemyAttackHit += doStagger;
         setCage(GameObject.Find("FirstAggroBox").transform);
@@ -28,8 +33,7 @@ public class NavMeshController : MonoBehaviour {
         if (_stagger)
         {
             _staggerCD += Time.deltaTime;
-            agent.Stop();
-            GameManager.instance.EnemyIdle();
+
             if (_staggerCD >= _staggerTime)
             {
                 agent.Resume();
@@ -109,5 +113,7 @@ public class NavMeshController : MonoBehaviour {
     private void doStagger(int dmg)
     {
         _stagger = true;
+        agent.Stop();
+        GameManager.instance.EnemyIdle();
     }
 }
