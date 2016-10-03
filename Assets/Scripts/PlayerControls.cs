@@ -74,7 +74,7 @@ public class PlayerControls : MonoBehaviour {
     void Update()
     {
         //SET STAMINA EVERY FUCKING FRAME BRO!
-        GameManager.instance.audioManager.StaminaChange(stamina);
+//        GameManager.instance.audioManager.StaminaChange(stamina);
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);
