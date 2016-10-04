@@ -31,6 +31,7 @@ public class PlayerControls : MonoBehaviour {
 	public float fieldOfViewTimer;
 
     public bool canSprint = false;
+    public bool canMove = false;
 
     private Camera camera;
 
@@ -89,7 +90,10 @@ public class PlayerControls : MonoBehaviour {
             joystick.SetActive(true);
             useJoystick();
         }
-        updatePlayerState();
+        if(canMove)
+        {
+            updatePlayerState();
+        }
         newStamina();
         
         //speed

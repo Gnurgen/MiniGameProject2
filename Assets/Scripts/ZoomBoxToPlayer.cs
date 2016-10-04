@@ -31,6 +31,7 @@ public class ZoomBoxToPlayer : MonoBehaviour {
             _normTime = 0;
             _deltaTime = 0;
             enabled = false;
+            GameManager.instance.player.GetComponent<PlayerControls>().canMove = true;
         }
 	}
 }
