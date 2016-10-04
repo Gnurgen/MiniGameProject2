@@ -26,7 +26,7 @@
 				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
 				<Event Id="2274660714" Name="Idle_Switch" ObjectPath="\Events\Default Work Unit\Idle_Switch" MaxAttenuation="0.000000"/>
-				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
+				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button" MaxAttenuation="80.000000"/>
 				<Event Id="2074283912" Name="Monster_Growl_Play" ObjectPath="\Events\Default Work Unit\Monster_Growl_Play" MaxAttenuation="80.000000"/>
 				<Event Id="156883962" Name="Monster_Growl_Stop" ObjectPath="\Events\Default Work Unit\Monster_Growl_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2653952097" Name="MonsterAggro" ObjectPath="\Events\Default Work Unit\MonsterAggro" MaxAttenuation="80.000000"/>

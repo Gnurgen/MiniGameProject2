@@ -6,12 +6,13 @@ public class LoadNextSceneFromInitialize : MonoBehaviour {
 
     public void SelectDanish()
     {
+        GameManager.instance.StartButton();
         setLanguage(GameManager.Language.Danish);
-        Debug.Log(GameManager.Language.Danish);
     }
 
     public void SelectEnglish()
     {
+        GameManager.instance.StartButton();
         setLanguage(GameManager.Language.English);
     }
 

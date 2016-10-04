@@ -268,25 +268,21 @@ public class GameManager {
     }
     public void MusicBoxMove()
     {
-        Debug.Log("MusicboxMove");
         if (OnMusicBoxMove != null)
             OnMusicBoxMove();
     }
     public void MusicBoxPause()
     {
-        Debug.Log("MusicboxPause");
         if (OnMusicBoxPause != null)
             OnMusicBoxPause();
     }
     public void MusicBoxResume()
     {
-        Debug.Log("MusicboxResume");
         if (OnMusicBoxResume != null)
             OnMusicBoxResume();
     }
     public void MusicBoxRewindStart()
     {
-        Debug.Log("MusicboxRewindStart");
 
 
         if (OnMusicBoxRewindStart != null)
@@ -294,14 +290,12 @@ public class GameManager {
     }
     public void MusicBoxRewindStop()
     {
-        Debug.Log("MusicboxRewindStop");
 
         if (OnMusicBoxRewindStop != null)
             OnMusicBoxRewindStop();
     }
     public void MusicBoxRewindComplete()
     {
-        Debug.Log("MusicboxRewindComplete");
 
         _musicBoxCount++;
         if (_musicBoxCount >= MusicBoxSpawn.GetCount())
@@ -334,6 +328,7 @@ public class GameManager {
     public event MenuButtons OnStartButton;
     public void StartButton()
     {
+        Debug.Log("startButton");
         if (OnStartButton != null)
             OnStartButton();
     }

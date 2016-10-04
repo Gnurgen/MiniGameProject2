@@ -58,7 +58,8 @@ public class AudioManager : MonoBehaviour{
     private string _StartButton;
     [SerializeField]
     private string _Set_State_Menu,
-        _Set_State_Game;
+        _Set_State_Game,
+        _Set_State_Dark_Room;
 
 
     // MISC VOIDS FOR GAME MANAGER
@@ -251,7 +252,7 @@ public class AudioManager : MonoBehaviour{
     //Menu Buttons
     void StartButton()
     {
-        AkSoundEngine.PostEvent(_StartButton, GameManager.instance.enemy);
+        AkSoundEngine.PostEvent(_StartButton, gameObject);
         AkSoundEngine.RenderAudio();
     }
 
@@ -303,6 +304,7 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnKnockOnCoffin += KnockOnCoffin;
         GameManager.instance.OnGateCreak += GateCreak;
         GameManager.instance.OnGateOpen += GateOpen;
+        GameManager.instance.OnStartButton += StartButton;
         
     }
 

@@ -55,7 +55,6 @@ public class EnemyAttackScript : MonoBehaviour
     {
         if (playerHit == false)
         {
-            Debug.Log("First Hit!");
             //GameManager.instance.EnemyAttackHit(1); Bliver kaldt i EnemyAnimator
             GameManager.instance.PlayerTakeDamage(1);
             AttackVibrate();
@@ -65,7 +64,6 @@ public class EnemyAttackScript : MonoBehaviour
         {
             if (Random.value <= chanceforSecondAttackHit)
             {
-                Debug.Log("Second Hit!");
                 //GameManager.instance.EnemyAttackHit(1); Bliver kaldt i EnemyAnimator
                 GameManager.instance.PlayerTakeDamage(1);
                 AttackVibrate();
@@ -74,7 +72,6 @@ public class EnemyAttackScript : MonoBehaviour
             else
             {
                 playerHit = false;
-                Debug.Log("Miss!");
             }
         }
     }

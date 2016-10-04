@@ -58,8 +58,8 @@ public class PlayerControls : MonoBehaviour {
 
     void Start()
     {
-        if (!Application.isEditor)
-            joystickEnable = GameManager.debug.usingJoystick;
+        //if (!Application.isEditor)
+        joystickEnable = GameManager.debug.usingJoystick;
         rgd = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
@@ -80,6 +80,7 @@ public class PlayerControls : MonoBehaviour {
 
     void Update()
     {
+
         //SET STAMINA EVERY FUCKING FRAME BRO!
         GameManager.instance.audioManager.StaminaChange(stamina);
         //controls
@@ -136,11 +137,7 @@ public class PlayerControls : MonoBehaviour {
                 rgd.velocity = Vector3.zero;
                 break;
         }
-        if (joystickEnable)
-        {
-            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * currentWalkingSpeed * Time.deltaTime;
-            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * currentWalkingSpeed * Time.deltaTime;
-        }
+
     }
 
     private void updatePlayerState() {

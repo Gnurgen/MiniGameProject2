@@ -47,61 +47,72 @@ public class StartmenuInteraction : MonoBehaviour {
 
     public void StartGameButton()
     {
-    GameManager.instance.InBetweenScreen();
+        GameManager.instance.StartButton();
+        GameManager.instance.InBetweenScreen();
     }
 
     public void InstructionsButton()
     {
+        GameManager.instance.StartButton();
         _instrucPopUp.SetActive(true);
     }
 
     public void DebugButton()
-    {
+
+    { 
+        GameManager.instance.StartButton();
         _debugPopUp.SetActive(true);
     }
 
     public void ExitGameButton()
     {
+        GameManager.instance.StartButton();
         Application.Quit();
     }
 
     public void CloseDebugScreen()
     {
+        GameManager.instance.StartButton();
         _debugPopUp.SetActive(false);
     }
 
     public void CloseInstructionScreen()
     {
+        GameManager.instance.StartButton();
         _instrucPopUp.SetActive(false);
     }
 
     public void ToggleMonsterDeath()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn;
         GameManager.debug.monsterDeathImmune = b;
     }
 
     public void ToggleMusicBoxDeath()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn;
         GameManager.debug.musicBoxDeathImmune = b;
     }
 
     public void ToggleBoundryRings()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn;
         GameManager.debug.boundryRings = b;
     }
 
     public void ToggleJoystick()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn;
-        Debug.Log(b);
         GameManager.debug.usingJoystick = b;
     }
 
     public void SoundTestButton()
     {
+        GameManager.instance.StartButton();
         StartCoroutine(stereoTest());
     }
 
@@ -121,6 +132,7 @@ public class StartmenuInteraction : MonoBehaviour {
 
     void turnImgOff()
     {
+        GameManager.instance.StartButton();
         _earFB.SetActive(false);
     }
 }
