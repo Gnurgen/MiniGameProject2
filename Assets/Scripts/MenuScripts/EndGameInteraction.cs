@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class EndGameInteraction : MonoBehaviour {
 
+    public bool whiteBackground;
+
     public Image menuButton;
 
     public Color startColor;
@@ -12,20 +14,46 @@ public class EndGameInteraction : MonoBehaviour {
     public float menuAppearDuration;
     public float waitForFadeTime;
 
-    float localTime;
-
-    bool startFading;
+    private float localTime;
+    private bool startFading;
 
     void Start()
     {
-        menuButton.color = startColor;
-        StartCoroutine(ButtonFadeIn(waitForFadeTime));
+        GameObject danishDeathText = GameObject.Find("DeathTextDanish");
+        GameObject englishDeathText = GameObject.Find("DeathTextEnglish");
 
+        if (GameManager.language == GameManager.Language.Danish)
+        {
+            danishDeathText.SetActive(true);
+            englishDeathText.SetActive(false);
+        }
+        else
+        {
+            danishDeathText.SetActive(false);
+            englishDeathText.SetActive(true);
+
+            if (whiteBackground)
+            {
+                GameObject.Find("Respawn").GetComponent<Image>().sprite = Resources.Load<Sprite>("AgainBlackEnglish");
+                GameObject.Find("BACKGROUND").GetComponent<Image>().sprite = Resources.Load<Sprite>("DeathBackgroundWhite");
+            }
+            else
+            {
+                GameObject.Find("Respawn").GetComponent<Image>().sprite = Resources.Load<Sprite>("AgainWhiteEnglish");
+                GameObject.Find("BACKGROUND").GetComponent<Image>().sprite = Resources.Load<Sprite>("DeathBackgroundBlack");
+            }
+        }
+
+        if (menuButton)
+        {
+            menuButton.color = startColor;
+            StartCoroutine(ButtonFadeIn(waitForFadeTime));
+        }
     }
 
     void Update()
     {
-        if(startFading)
+        if(menuButton && startFading)
         {
             localTime += Time.deltaTime;
             menuButton.color = Color.Lerp(startColor, endColor, localTime / menuAppearDuration);

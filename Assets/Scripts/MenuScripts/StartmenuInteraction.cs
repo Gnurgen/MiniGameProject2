@@ -15,8 +15,6 @@ public class StartmenuInteraction : MonoBehaviour {
         _earFB = GameObject.Find("EarFeedback");
         _earFB.SetActive(false);
         _debugPopUp = GameObject.Find("DebugPop-Up");
-        _earImgL = Resources.Load<Sprite>("StartMenu/leftEar");
-        _earImgR = Resources.Load<Sprite>("StartMenu/rightEar");
         _AS = GetComponent<AudioSource>();
         _AS.clip = Resources.Load<AudioClip>("StartMenu/leftRightAudio");
         print("NOTE: Left/Right audio and Left/Right images are dummies - REPLACE WITH REAL OBJECTS IN RESOURCES FOLDER");
@@ -24,12 +22,32 @@ public class StartmenuInteraction : MonoBehaviour {
         GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.instance.debug.monsterDeathImmune;
         GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.instance.debug.musicBoxDeathImmune;
         GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.instance.debug.usingJoystick;
+
+        if (GameManager.language == GameManager.Language.English)
+        {
+            displayEnglishText();
+            _earImgL = Resources.Load<Sprite>("StartMenu/leftEarEnglish");
+            _earImgR = Resources.Load<Sprite>("StartMenu/rightEarEnglish");
+        }
+        else
+        {
+            _earImgL = Resources.Load<Sprite>("StartMenu/leftEar");
+            _earImgR = Resources.Load<Sprite>("StartMenu/rightEar");
+        }
         _debugPopUp.SetActive(false);
+    }
+
+    private void displayEnglishText() {
+        GameObject.Find("StartscreenTest").GetComponent<Text>().text = "The tablet is your window out\nSo hold it up in front of your snout";
+        GameObject.Find("HowToPlay").GetComponent<Text>().text = "The goal of the game is to find music boxes and wind them up\n\nWalk by holding one finger on the screen.\n\nRun by holding to fingers on the screen.\n\nStand close and look at a music box to wind it up.\n\nWarning! A monster is guarding the music boxes.";
+        GameObject.Find("SoundProofSub").GetComponent<Text>().text = "Cannot die to time";
+        GameObject.Find("MonsterProofSub").GetComponent<Text>().text = "Cannot die from monsters";
+        GameObject.Find("SoundTest").GetComponent<Image>().sprite = Resources.Load<Sprite>("StartMenu/soundTest");
     }
 
     public void StartGameButton()
     {
-        GameManager.instance.InBetweenScreen();
+    GameManager.instance.InBetweenScreen();
     }
 
     public void InstructionsButton()
