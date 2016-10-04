@@ -13,6 +13,7 @@ public class GameManager {
 
     private static GameManager _instance;
     private static int _musicBoxCount;
+    private static Language _language = Language.None;
 
     public readonly DebugManager debug = new DebugManager();
 
@@ -20,7 +21,6 @@ public class GameManager {
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
-    private Language _language = Language.None;
 
     public enum Language {None, Danish, English};
 
@@ -34,7 +34,7 @@ public class GameManager {
         }
     }
 
-    public Language language
+    public static Language language
     {
         get
         {
