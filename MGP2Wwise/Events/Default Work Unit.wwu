@@ -112,7 +112,7 @@
 						<Action Name="Play" ID="{B1FB0825-8C2F-46AC-A8EA-DD1A757A5C9F}" ShortID="419354490" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{8D4F86DF-F7B5-40A9-B284-CCCC8BC69CE5}" Global="false">
-									<ObjectRef Name="FootSteps" ID="{B896BBB1-7EB3-4C66-8327-80D72D93810F}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+									<ObjectRef Name="Player Footsteps" ID="{5B7F8455-437F-4232-837B-A6B22F7FC998}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -222,7 +222,7 @@
 						<Action Name="Play" ID="{8A4D8D44-52C8-4C10-BE44-044C915574DD}" ShortID="913223471" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{AAF40DD7-30B0-4E7D-A1D4-5768D8212685}" Global="false">
-									<ObjectRef Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+									<ObjectRef Name="Monster Hit" ID="{F6D7B9C8-0C59-4EE6-998E-3628333DCCAC}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -298,7 +298,7 @@
 						<Action Name="Play" ID="{8B04DEF7-917E-445D-A8DE-E2B8F988630D}" ShortID="1018525978" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{C3EB9333-F496-42E9-9871-3DE6184B299B}" Global="false">
-									<ObjectRef Name="MonsterStep" ID="{48E30C42-1353-4FCC-A44C-FC757963CADE}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+									<ObjectRef Name="Monster Footsteps" ID="{5D7E40DE-3E12-4CD5-AD0F-BAA2FF22C9C2}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
