@@ -14,8 +14,7 @@ public class GameManager {
     private static GameManager _instance;
     private static int _musicBoxCount;
     private static Language _language = Language.None;
-
-    public readonly DebugManager debug = new DebugManager();
+    public static readonly DebugManager debug = new DebugManager();
 
     private GameObject _player;
     private GameObject _enemy;

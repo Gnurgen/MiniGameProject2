@@ -19,9 +19,9 @@ public class StartmenuInteraction : MonoBehaviour {
         _AS.clip = Resources.Load<AudioClip>("StartMenu/leftRightAudio");
         print("NOTE: Left/Right audio and Left/Right images are dummies - REPLACE WITH REAL OBJECTS IN RESOURCES FOLDER");
 
-        GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.instance.debug.monsterDeathImmune;
-        GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.instance.debug.musicBoxDeathImmune;
-        GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.instance.debug.usingJoystick;
+        GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.debug.monsterDeathImmune;
+        GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.debug.musicBoxDeathImmune;
+        GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.debug.usingJoystick;
 
         if (GameManager.language == GameManager.Language.English)
         {
@@ -78,26 +78,26 @@ public class StartmenuInteraction : MonoBehaviour {
     public void ToggleMonsterDeath()
     {
         bool b = GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn;
-        GameManager.instance.debug.monsterDeathImmune = b;
+        GameManager.debug.monsterDeathImmune = b;
     }
 
     public void ToggleMusicBoxDeath()
     {
         bool b = GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn;
-        GameManager.instance.debug.musicBoxDeathImmune = b;
+        GameManager.debug.musicBoxDeathImmune = b;
     }
 
     public void ToggleBoundryRings()
     {
         bool b = GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn;
-        GameManager.instance.debug.boundryRings = b;
+        GameManager.debug.boundryRings = b;
     }
 
     public void ToggleJoystick()
     {
         bool b = GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn;
         Debug.Log(b);
-        GameManager.instance.debug.usingJoystick = b;
+        GameManager.debug.usingJoystick = b;
     }
 
     public void SoundTestButton()
