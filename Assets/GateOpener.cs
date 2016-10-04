@@ -5,23 +5,18 @@ public class GateOpener : MonoBehaviour {
 
     public GameObject gateL, gateR;
 
-    public int musicBoxCount = 0;
 
-    private bool activated = false;
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+        GameManager.instance.OnGateOpen += OpenTheGate;
+
+    }
 	
 	// Update is called once per frame
-	void Update ()
+	void OpenTheGate ()
     {
-	    if(GameManager.instance.musicBoxCount == musicBoxCount && !activated)
-        {
             gateL.transform.localRotation = Quaternion.Euler(0, 90, 0);
             gateR.transform.localRotation = Quaternion.Euler(0, -90, 0);
-            activated = true;
-        }
     }
 }

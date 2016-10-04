@@ -261,8 +261,10 @@ public class GameManager {
     public event MusicBoxAction OnMusicBoxRewindStart;
     public event MusicBoxAction OnMusicBoxRewindStop;
     public event MusicBoxAction OnMusicBoxRewindComplete;
+    public event MusicBoxAction OnMusicBoxLast;
     public void MusicBoxPlay()
     {
+        
         if (OnMusicBoxPlay != null)
             OnMusicBoxPlay();
     }
@@ -281,6 +283,11 @@ public class GameManager {
         if (OnMusicBoxResume != null)
             OnMusicBoxResume();
     }
+    public void MusicBoxLast()
+    {
+        if (OnMusicBoxLast != null)
+            OnMusicBoxLast();
+    }
     public void MusicBoxRewindStart()
     {
 
@@ -298,6 +305,14 @@ public class GameManager {
     {
 
         _musicBoxCount++;
+        if(_musicBoxCount == 4)
+        {
+            OnGateOpen();
+        }
+        if(_musicBoxCount == 5)
+        {
+            OnMusicBoxLast();
+        }
         if (_musicBoxCount >= MusicBoxSpawn.GetCount())
         {
 //            PlayWinScene();

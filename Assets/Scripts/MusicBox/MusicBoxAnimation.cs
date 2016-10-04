@@ -17,8 +17,12 @@ public class MusicBoxAnimation : MonoBehaviour {
         GameManager.instance.OnMusicBoxRewindStart += MB_Rewind_Play;
         GameManager.instance.OnMusicBoxRewindStop += MB_Rewind_Stop;
         GameManager.instance.OnMusicBoxMove += MB_Move;
+        GameManager.instance.OnGateOpen += MB_LastOne;
     }
-
+    private void MB_LastOne()
+    {
+        anim.SetBool("LastBox", true);
+    }
     private void MB_Move()
     {
         animationComplete = false;

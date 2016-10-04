@@ -7,6 +7,7 @@ public class MusicBox : MonoBehaviour {
     public GameObject ParticlePuff;
     private float timeToDie = 0;
     private bool Count = true;
+    private bool FinalBox = false;
     
     void Start () {
 
@@ -15,34 +16,48 @@ public class MusicBox : MonoBehaviour {
         GameManager.instance.audioManager.FootStepStart();
         GameManager.instance.audioManager.BreathStart();
         GameManager.instance.OnMusicBoxMove += MoveToNextSpawn;
+        GameManager.instance.OnMusicBoxLast += LastMusicBox;
     }
 
+    void LastMusicBox()
+    {
+        FinalBox = true;
+    }
     void Update () {
-        if(Count)
-            timeToDie += 1 * Time.deltaTime;
-        if (timeToDie >= 90)
-            GameManager.instance.PlayDeathScene_MusicBox();
+        if (!FinalBox)
+        {
+            if (Count)
+                timeToDie += 1 * Time.deltaTime;
+            if (timeToDie >= 90)
+                GameManager.instance.PlayDeathScene_MusicBox();
+        }
     }
    
     void OnTriggerEnter(Collider obj)
     {
-        if (obj.tag == GameManager.instance.player.tag)
+        if (!FinalBox)
         {
-            Count = false;
-          
-            GameManager.instance.MusicBoxPause();
-            GameManager.instance.MusicBoxRewindStart();
+            if (obj.tag == GameManager.instance.player.tag)
+            {
+                Count = false;
+
+                GameManager.instance.MusicBoxPause();
+                GameManager.instance.MusicBoxRewindStart();
+            }
         }
     }
     
     void OnTriggerExit(Collider obj)
     {
-        if (obj.tag == GameManager.instance.player.tag)
+        if (!FinalBox)
         {
-            Count = true;
-            GameManager.instance.MusicBoxResume();
-            GameManager.instance.MusicBoxRewindStop();
+            if (obj.tag == GameManager.instance.player.tag)
+            {
+                Count = true;
+                GameManager.instance.MusicBoxResume();
+                GameManager.instance.MusicBoxRewindStop();
 
+            }
         }
     }
 

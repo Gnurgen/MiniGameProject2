@@ -247,7 +247,9 @@ public class AudioManager : MonoBehaviour{
     void GateOpen()
     {
         AkSoundEngine.PostEvent(_GateOpen, GameManager.instance.enemy);
+        AkSoundEngine.PostEvent(_MusicBoxBrokenSwitch, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
+
     }
     //Menu Buttons
     void StartButton()
