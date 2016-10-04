@@ -28,10 +28,11 @@
 				<Property Name="MonitoringManager\WatchMgr\WatchesVersion" Type="int32" Value="5"/>
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
+				<Property Name="PluginUserAcknowledge\ConvolutionReverb" Type="bool" Value="True"/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{1F981B7B-A173-4A9A-AC1C-C33B3799CDB2}"/>
-				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{4B80667B-A39D-4BE0-A86F-9F67C402EAF0}"/>
+				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{3BF4AF2F-6B9B-43E5-8705-7B9E51CF25B0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
@@ -45,12 +46,12 @@
 				<Property Name="ProjectExplorer\x64_Expanded_17_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_18_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_19_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="acjDZHfarkCdL2HZUw6O7dikFBWmHSpBoX51ygwhSfNjnoOWs8BCRqxHnfZ7WQcz"/>
+				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="acjDZHfarkCdL2HZUw6O7dikFBWmHSpBoX51ygwhSfM="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="ZuXSGmNB2kChV5435Nmcz7OdMtnX5KpFvUBusoxsTTl7ZoBLnaPgS6hvn2fEAurwsbuWuLN+ZkyDJ4DXLZOBD6/6eVRK73BPgf5ZmFwwIJHDNuk4h/yIT6kjRHETmsVhQgzjSFMTzE+kTPx1eWPK3g=="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="ZuXSGmNB2kChV5435Nmcz4jp8g5MnhVDjjoD+M2Qn3bkRVrCdcpORaZ4UqqDJfnMYLwbtZFlFUqf0o+ELsK9TbG7lrizfmZMgyeA1y2TgQ+v+nlUSu9wT4H+WZhcMCCRwzbpOIf8iE+pI0RxE5rFYUIM40hTE8xPpEz8dXljyt4="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="KiCfdoFMcU6xkg1pqgVRhQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value="E+figT0TbkK5wgIxBjZ3Ziq2bu5UitxJvwnvkh0JABrfz5cqsYbzTIadTbaiD88H"/>
-				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="eHbKUO34EkWGUGAim4vLedFroEQH0WpHqmLXSuXZoqA="/>
+				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="eHbKUO34EkWGUGAim4vLedFroEQH0WpHqmLXSuXZoqB6fG9u8RW9TIqR4vV+Wlb5"/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="GMTAzKzntEuqVIc/g+OkUw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value="NARp2SLLXkaxz8vKYzLYzA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
@@ -60,7 +61,7 @@
 				<Property Name="RTPC\GameParameterSimValue\{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" Type="Real64" Value="6"/>
 				<Property Name="RTPC\GameParameterSimValue\{A2AE79DC-CA3A-46BA-9652-9986C322A87B}" Type="Real64" Value="50"/>
 				<Property Name="RTPC\GameParameterSimValue\{A34890AB-B9D5-4526-A64D-5290C43EF2DC}" Type="Real64" Value="50"/>
-				<Property Name="RTPC\GameParameterSimValue\{B11D87DA-B197-4287-9248-651C3BB54C16}" Type="Real64" Value="20"/>
+				<Property Name="RTPC\GameParameterSimValue\{B11D87DA-B197-4287-9248-651C3BB54C16}" Type="Real64" Value="14.4186046511628"/>
 				<Property Name="RTPC\GameParameterSimValue\{E3B7811A-7B2F-490F-B44F-5FE51B468041}" Type="Real64" Value="75"/>
 				<Property Name="RTPC\GameParameterSimValue\{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}" Type="Real64" Value="75"/>
 				<Property Name="RTPC\GameParameterSimValue\{EDA87B19-73AA-40A0-9F19-2073606DB710}" Type="Real64" Value="6"/>

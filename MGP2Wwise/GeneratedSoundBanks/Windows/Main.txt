@@ -7,11 +7,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	1326786195	Breath			\Default Work Unit\Breath	
 	1363742247	MonsterStep			\Default Work Unit\MonsterStep	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
+	1652873695	Set_State_Forest			\Default Work Unit\Set_State_Forest	
 	1866025847	FootStep			\Default Work Unit\FootStep	
-	1893791182	Set_State_Dark_Room			\Default Work Unit\Set_State_Dark_Room	
 	2015956512	MonsterAttackHit			\Default Work Unit\MonsterAttackHit	
 	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
 	2074283912	Monster_Growl_Play			\Default Work Unit\Monster_Growl_Play	
+	2075652242	Set_State_Void			\Default Work Unit\Set_State_Void	
 	2076776060	Puff			\Default Work Unit\Puff	
 	2089708342	MusicBox_Play			\Default Work Unit\MusicBox_Play	
 	2274660714	Idle_Switch			\Default Work Unit\Idle_Switch	
@@ -39,18 +40,23 @@ Switch	ID	Name	Switch Group			Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2604644515	Menus			\Default Work Unit\Menus	
+	3966194980	Ending			\Default Work Unit\Ending	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Menus			
 	1631528850	In_Menu	Menus			
 	2967546505	In_Game	Menus			
-	4045452569	Dark_Room	Menus			
+	491961918	Forest	Ending			
+	748895195	None	Ending			
+	3370470011	Void	Ending			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	69137976	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
+	127640166	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody		
 	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
-	192548875	Dark_Room	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds		
 	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
-	647618978	Dark_Room	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows		
+	514505565	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Player Breath		
+	847069343	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
 	1021065351	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -115,45 +121,82 @@ Effect plug-ins	ID	Name	Type				Notes
 	4273684962	ForestAuterlitz_BetweenTrees	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	196075525	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\New Sound SFX\Wwise Silence	
 	504140941	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows\SoundSeed Air Wind	
-	566495866	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\New Sound SFX\Wwise Silence	
 	638668611	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds\SoundSeed Air Wind	
 	970241952	CONFIRM 01	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\UI Sounds\CONFIRM 01\CONFIRM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	568260	Monster Growl_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_7		153210
+	29098323	Player Breath Inhale_14	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_14_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_14		123376
+	29763416	Player Breath Inhale_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_6		128872
+	39177842	Player Breath Inhale	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale		140276
+	46359130	Player Breath Inhale_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_3		138584
+	73043969	Player Breath Exhale_11	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_11_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_11		108176
+	73508991	Player Breath Inhale_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_5		113244
+	80318688	Player Breath Inhale_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_4		128452
+	100457073	Player Breath Exhale_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_2		102260
 	124522040	Monster Attack_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_3		128684
 	149296895	Monster Aggro_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_5		202268
+	161180519	Player Breath Exhale	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale		99728
+	180354791	Player Breath Exhale_18	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_18_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_18		114928
 	197099714	Monster Aggro_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_6		173552
 	200284886	Monster Aggro_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_1		175946
 	222373072	MonsterAttackHit	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\MonsterAttackHit_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\MonsterAttackHit		92224
+	224488988	Player Breath Exhale_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_3		99728
+	224595767	Player Breath Inhale_10	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_10_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_10		131832
+	237537940	Player Breath Exhale_14	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_14_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_14		105644
+	256257779	Player Breath Inhale_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_7		137316
 	275836293	Monster Growl_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_3		168766
 	304171733	Menu Button	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Menu Button_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu Button		942504
+	312227126	Player Breath Inhale_18	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_18_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_18		123384
+	337797008	Player Breath Inhale_8	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_8_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_8		137316
 	343009413	Music Box Melody	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody		8985236
+	357132059	Player Breath Exhale_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_1		107332
 	357688293	Monster Attack_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_7		113728
+	365073419	Player Breath Exhale_9	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_9_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_9		107332
+	376293213	Player Breath Inhale_13	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_13_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_13		122536
 	400159443	Monster Attack	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack		93388
+	413907089	Player Breath Inhale_11	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_11_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_11		141964
+	418264629	Player Breath Inhale_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_1		128448
+	438821939	Player Breath Exhale_16	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_16_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_16		115348
 	449257680	Monster Growl_8	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_8_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_8		155006
+	481723118	Player Breath Exhale_8	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_8_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_8		104376
+	481756948	Player Breath Inhale_9	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_9_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_9		126760
 	508863754	Monster Attack_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_6		110738
+	513690161	Player Breath Exhale_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_4		98884
 	519676561	Monster Growl_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_6		156800
 	531680628	Monster Growl_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_4		156800
+	533676503	Player Breath Inhale_17	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_17_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_17		121272
 	553591350	Monster Attack_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_5		110736
 	555088963	Monster Aggro_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_2		167568
-	573374260	PlayerPanting	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\PlayerPanting_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\New Random Container\PlayerPanting		315456
+	561136973	Player Breath Exhale_10	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_10_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_10		114088
+	564238596	Player Breath Exhale_12	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_12_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_12		109444
+	625718149	Player Breath Inhale_16	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_16_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_16		119584
 	642122524	Monster Growl	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl		162782
 	649080794	Monster Attack_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_4		112532
+	649801416	Player Breath Exhale_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_5		115776
 	664935711	Monster Attack_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_1		108942
+	669848157	Player Breath Inhale_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_2		140276
 	671540240	Monster Aggro	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro		171756
 	689376295	Monster Aggro_4	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_4_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_4		183720
 	690696477	Monster Growl_9	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_9_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_9		188508
 	716604440	Music Box Melody Broken	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Melody Broken_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody\Music Box Melody Broken		8986724
+	760444214	Player Breath Exhale_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_6		105220
+	782013940	Player Breath Inhale_12	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_12_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_12		130556
+	799755217	Player Breath Exhale_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_7		108596
+	834914560	Player Breath Exhale_15	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_15_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_15		102688
 	835297814	Music Box Windup	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Music Box Windup_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		195288
 	863875936	Monster Aggro_3	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Aggro_3_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Aggro\Monster Aggro_3		184320
 	889558223	Monster Growl_1	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_1_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_1		197480
+	911215118	Player Breath Exhale_13	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_13_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_13		114932
 	977402937	Monster Growl_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_2		181926
 	978225663	Foot2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Footprint_4AFEA6D2.wem		\Actor-Mixer Hierarchy\KrisTempSound\FootSteps\FootSteps_Walk\Foot2		59456
 	982355987	Monster Growl_5	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_5_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_5		126292
+	996460111	Player Breath Exhale_17	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_17_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_17		110284
 	1010525196	Monster Attack_2	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Attack_2_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Attack\Monster Attack_2		130478
+	1015661812	Player Breath Inhale_19	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_19_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_19		142808
+	1041625412	Player Breath Inhale_15	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_15_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_15		140692
+	1055327226	Player Breath Exhale_19	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Exhale_19_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Exhale\Player Breath Exhale_19		98884
 
 Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
 	13019290	Ford_TransitVanRear	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear_BFA7EF96.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Transport\Ford_TransitVanRear	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	246768

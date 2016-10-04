@@ -23,6 +23,12 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Forest_Reverb" ID="{766B75FA-7A82-4799-A952-B701CFFFA480}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend1">
+							<ObjectRef Name="Void_Reverb" ID="{6A07433E-A9C8-4F0B-A2D5-00F91573A779}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Music Box Melody" ID="{D4492D35-23F4-40BE-AFD6-4DC965A34622}" ShortID="452875154" Type="SoundFX">
@@ -92,6 +98,26 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+								<State Name="Custom State" ID="{29B26CB8-6DDC-49D2-9F36-FBBBF607D020}" ShortID="127640166">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<GroupingInfo>
 						<GroupRef Name="Music_Box_Melody" ID="{EE6EB62A-8A54-49DC-BF09-EF921D09001A}"/>
 						<DefaultSwitchRef Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>
@@ -514,23 +540,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</ChildrenList>
 								</Position>
 							</PositioningInfo>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
-										<State Name="Custom State" ID="{E93D384E-4D57-40E4-AD8F-E8D93BAD4819}" ShortID="192548875">
-											<PropertyList>
-												<Property Name="Lowpass" Type="int16" Value="30"/>
-											</PropertyList>
-										</State>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Wind" ID="{CF713842-B8A9-47BA-A674-B4441E78194A}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -911,24 +920,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PluginInnerObjectList>
 								</SourcePlugin>
 							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
-										<State Name="Custom State" ID="{F03E2863-DE91-4FEB-A124-E99388586F18}" ShortID="647618978">
-											<PropertyList>
-												<Property Name="Lowpass" Type="int16" Value="60"/>
-												<Property Name="Pitch" Type="int32" Value="-710"/>
-											</PropertyList>
-										</State>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Wind" ID="{ADD5C596-BEDE-45FA-9A67-798E081EEE4F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -939,13 +930,25 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<StateGroupInfo>
 								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
 								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
 								<State Name="Custom State" ID="{FC4B1AD9-D616-4F37-B4FC-844AA717CF60}" ShortID="159020401">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-4"/>
+										<Property Name="Volume" Type="Real64" Value="-9"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+								<State Name="Custom State" ID="{E20538DB-0C81-47B6-A8AF-E4B23639DD0A}" ShortID="847069343">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="20"/>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
 									</PropertyList>
 								</State>
 							</CustomState>
@@ -956,6 +959,11 @@ Air currents change during the hours of the day and months of the year.</Comment
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
@@ -971,6 +979,12 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Forest_Reverb" ID="{766B75FA-7A82-4799-A952-B701CFFFA480}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend1">
+							<ObjectRef Name="Void_Reverb" ID="{6A07433E-A9C8-4F0B-A2D5-00F91573A779}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1002,6 +1016,22 @@ Air currents change during the hours of the day and months of the year.</Comment
 				</Sound>
 				<ActorMixer Name="Monster" ID="{47D65630-1D13-4A91-934F-E0849D324479}" ShortID="235997541">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-100</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D925E951-00FB-4329-8624-B57341DE1388}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
@@ -1023,6 +1053,9 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Forest_Reverb" ID="{766B75FA-7A82-4799-A952-B701CFFFA480}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1598,11 +1631,22 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<StateGroupInfo>
 								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
 								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
 								<State Name="Custom State" ID="{D1D0CFCE-D737-4C00-80EA-61DBA6361B88}" ShortID="1021065351">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+								<State Name="Custom State" ID="{B30064B8-CF15-468E-9AD6-D9370E5BA020}" ShortID="69137976">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64" Value="-200"/>
 									</PropertyList>
@@ -1614,14 +1658,12 @@ Air currents change during the hours of the day and months of the year.</Comment
 				<Sound Name="Menu Button" ID="{D154C260-DE1D-45A4-B8D0-D7237DFF7C5B}" ShortID="341091713" Type="SoundFX">
 					<PropertyList>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>1200</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
-									<Modifier Name="" ID="{E7D7E2B5-F5F2-4334-95E1-5CBB936D7199}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="600"/>
-										</PropertyList>
-									</Modifier>
+									<Modifier Name="" ID="{E7D7E2B5-F5F2-4334-95E1-5CBB936D7199}"/>
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
@@ -1642,6 +1684,9 @@ Air currents change during the hours of the day and months of the year.</Comment
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Forest_Reverb" ID="{766B75FA-7A82-4799-A952-B701CFFFA480}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" ShortID="304171733">
@@ -1649,10 +1694,960 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<AudioFile>Menu Button.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+					</StateInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="Player Breath" ID="{0EF2E988-9E4C-4315-8E3A-03F8CD909F76}" ShortID="894909556">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>120</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D2663CD2-904E-4FB2-9263-D7B060BDE23B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="10"/>
+											<Property Name="Min" Type="Real64" Value="-10"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0">
+							<RTPCList>
+								<RTPC Name="" ID="{B5920444-4007-49A5-A51B-D31CCF72B144}" ShortID="441895056">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}" WorkUnitID="{D9690434-CB22-465E-B1CF-CBCA6332D8CC}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{04598E26-4757-42A1-A776-2DBF0AB5BA37}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>80</XPos>
+												<YPos>0.3</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0.3</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{B7991B2F-134F-42B8-B965-00852106210C}" ShortID="183777969">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}" WorkUnitID="{D9690434-CB22-465E-B1CF-CBCA6332D8CC}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{FFD355A7-DB40-47DA-9E4D-8575F18151EC}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>30</XPos>
+												<YPos>-6</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>80</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Forest_Reverb" ID="{766B75FA-7A82-4799-A952-B701CFFFA480}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+						<Reference Name="UserAuxSend1">
+							<ObjectRef Name="Void_Reverb" ID="{6A07433E-A9C8-4F0B-A2D5-00F91573A779}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Player Exhale" ID="{B51BBC60-6591-4A15-9FD2-8F842EC2BD4D}" ShortID="146719346">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{ADEC6177-BCC4-49B1-BAA1-4B5A0DE88309}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player Breath Exhale" ID="{D02EF815-A0A8-4221-A66D-3786207639B3}" ShortID="958866428" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale" ID="{B2C77AD2-07C4-4448-BE21-E563BC9C4856}" ShortID="161180519">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale" ID="{B2C77AD2-07C4-4448-BE21-E563BC9C4856}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_1" ID="{5A2674C0-8C7B-4C00-9B32-E29A7716ACAA}" ShortID="291163319" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_1" ID="{6CA997E2-BE69-4796-9ED7-F0399898A312}" ShortID="357132059">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_1" ID="{6CA997E2-BE69-4796-9ED7-F0399898A312}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_2" ID="{A79E14D9-257C-4FEC-B93D-6725EF6E4342}" ShortID="481125801" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_2" ID="{8DDFC56F-A58F-455D-AAF4-CEFA06D2E719}" ShortID="100457073">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_2" ID="{8DDFC56F-A58F-455D-AAF4-CEFA06D2E719}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_3" ID="{EC1FC55E-692C-45D5-87F2-816F7B259966}" ShortID="507235630" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_3" ID="{8D3417D2-2497-407A-A422-E85A46DC123E}" ShortID="224488988">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_3" ID="{8D3417D2-2497-407A-A422-E85A46DC123E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_4" ID="{AC86D41E-95D4-4DD0-B9DA-1D114616E0CB}" ShortID="756637348" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_4" ID="{794929CC-61F4-4DD2-BCAA-597AC3E20E74}" ShortID="513690161">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_4" ID="{794929CC-61F4-4DD2-BCAA-597AC3E20E74}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_5" ID="{2F7A4E21-23FB-41D2-97C5-300EF2620E04}" ShortID="616445569" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_5" ID="{E8F75021-1E19-4C5E-9001-621356A490CC}" ShortID="649801416">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_5" ID="{E8F75021-1E19-4C5E-9001-621356A490CC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_6" ID="{4DAFCB85-8790-44ED-B597-191911A3F202}" ShortID="610855348" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_6" ID="{729D2296-AFB2-4720-BE77-CB191BBA4315}" ShortID="760444214">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_6" ID="{729D2296-AFB2-4720-BE77-CB191BBA4315}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_7" ID="{0A7F2550-5FF1-4B86-8DE7-A1D4E872CF53}" ShortID="1012556291" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_7" ID="{88F95E32-3458-4ED6-91D4-37315B1ACE90}" ShortID="799755217">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_7" ID="{88F95E32-3458-4ED6-91D4-37315B1ACE90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_8" ID="{A7DD2069-77D1-4374-B8C5-79DA7FBD5E76}" ShortID="1058342342" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_8" ID="{564449BE-59B6-4C49-B5CD-81B85AF7CDCE}" ShortID="481723118">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_8.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_8" ID="{564449BE-59B6-4C49-B5CD-81B85AF7CDCE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_9" ID="{A4A6EBDD-7EF5-431D-98CB-A08674D032EF}" ShortID="151830451" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_9" ID="{030C0830-FAB1-42A1-B0D6-8D709F564372}" ShortID="365073419">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_9.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_9" ID="{030C0830-FAB1-42A1-B0D6-8D709F564372}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_10" ID="{E2BFD0A1-E2D6-4672-A601-825822127812}" ShortID="750906196" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_10" ID="{4C45D1A2-2100-48F0-8126-FF2F1B352B2E}" ShortID="561136973">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_10" ID="{4C45D1A2-2100-48F0-8126-FF2F1B352B2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_11" ID="{551602DE-1931-4324-A30B-C2D37A1A9157}" ShortID="931948726" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_11" ID="{E180C699-6DEF-49F3-A6C2-44C6FA23D424}" ShortID="73043969">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_11" ID="{E180C699-6DEF-49F3-A6C2-44C6FA23D424}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_12" ID="{C1837935-6CC4-40B4-B315-742E728A086D}" ShortID="652429729" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_12" ID="{6008B5A7-0609-4C00-A0E2-9D55A255E3DC}" ShortID="564238596">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_12" ID="{6008B5A7-0609-4C00-A0E2-9D55A255E3DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_13" ID="{ECDC4004-AA77-41DA-A6D6-EA4F9E8DFA2C}" ShortID="909392828" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_13" ID="{57A65D51-F3A9-4E8A-A925-A6E3AE1BA310}" ShortID="911215118">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_13" ID="{57A65D51-F3A9-4E8A-A925-A6E3AE1BA310}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_14" ID="{27A86BD5-2471-4F3F-B5BA-9C2D5678F063}" ShortID="731541802" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_14" ID="{3CCD2F1F-269C-4B50-B508-4627C0CF75D5}" ShortID="237537940">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_14.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_14" ID="{3CCD2F1F-269C-4B50-B508-4627C0CF75D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_15" ID="{FC4BC76F-3993-4D8B-B590-4FAF0B2F57ED}" ShortID="272637657" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_15" ID="{0CEBBC04-12FB-4D37-A8B5-703462FFAE01}" ShortID="834914560">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_15.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_15" ID="{0CEBBC04-12FB-4D37-A8B5-703462FFAE01}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_16" ID="{6C040D60-BB8B-46AB-8D78-0E62B187D4E5}" ShortID="927561426" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_16" ID="{B5604603-DFDA-49E7-AF71-60A35ABE418B}" ShortID="438821939">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_16.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_16" ID="{B5604603-DFDA-49E7-AF71-60A35ABE418B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_17" ID="{88256303-7E6B-47D9-9F90-872DF52E9102}" ShortID="722674424" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_17" ID="{C48C5E60-7EC6-40B1-B604-1080CEA788EE}" ShortID="996460111">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_17.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_17" ID="{C48C5E60-7EC6-40B1-B604-1080CEA788EE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_18" ID="{A53D23B2-8A51-47ED-9874-EAF5E52A5E4C}" ShortID="786875053" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_18" ID="{3FC9001F-17DB-4908-974B-CF0C4AFE0E84}" ShortID="180354791">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_18.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_18" ID="{3FC9001F-17DB-4908-974B-CF0C4AFE0E84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Exhale_19" ID="{D8FDB6A6-1A33-448B-A42F-C147795FB44D}" ShortID="609219967" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Exhale_19" ID="{31BAEC33-A127-4ADE-84D5-2CB982991B7E}" ShortID="1055327226">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Exhale_19.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Exhale_19" ID="{31BAEC33-A127-4ADE-84D5-2CB982991B7E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Player Inhale" ID="{C25A45E4-CA75-454E-A678-52AA8325F9CC}" ShortID="151548073">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player Breath Inhale" ID="{3F82073E-F3DC-4785-B9D6-3F92780C9BD0}" ShortID="409709322" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale" ID="{D75C53F8-7597-49C9-9FA9-3D41C101C0D9}" ShortID="39177842">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale" ID="{D75C53F8-7597-49C9-9FA9-3D41C101C0D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_1" ID="{FD58B822-ED8B-42C7-81B7-F3D3E16EE8A9}" ShortID="916906141" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_1" ID="{54950914-64EC-4F05-917C-98BC9276DDB0}" ShortID="418264629">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_1" ID="{54950914-64EC-4F05-917C-98BC9276DDB0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_2" ID="{5877212F-96ED-4882-B038-E495BC0FCFCE}" ShortID="664423814" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_2" ID="{D39F7C93-FF0D-496E-9F2E-DC8176EE71E0}" ShortID="669848157">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_2" ID="{D39F7C93-FF0D-496E-9F2E-DC8176EE71E0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_3" ID="{621D2DF4-9D0F-4460-A499-28FB3C6F0FD9}" ShortID="678430740" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_3" ID="{ACC13A6D-4BFB-4020-B15E-B82526EA9306}" ShortID="46359130">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_3" ID="{ACC13A6D-4BFB-4020-B15E-B82526EA9306}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_4" ID="{401621FF-3076-43C6-A779-79A1C10DEABA}" ShortID="132140263" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_4" ID="{58D3815F-12AE-4FE6-8B06-A99E7AABD164}" ShortID="80318688">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_4" ID="{58D3815F-12AE-4FE6-8B06-A99E7AABD164}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_5" ID="{EA442047-BF16-4C09-BB91-459287063A5A}" ShortID="641531340" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_5" ID="{52EB1AB8-BB10-4542-B8B3-840180BCB83A}" ShortID="73508991">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_5" ID="{52EB1AB8-BB10-4542-B8B3-840180BCB83A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_6" ID="{55111571-1BBD-49E4-AB86-623E256CC596}" ShortID="752259620" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_6" ID="{C375DA6B-EE0A-4E94-93CE-B902A5365056}" ShortID="29763416">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_6" ID="{C375DA6B-EE0A-4E94-93CE-B902A5365056}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_7" ID="{283A6724-E2D2-4FD9-8742-F63CC0E2B68A}" ShortID="1035223274" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_7" ID="{607853F2-0B62-4F64-A862-60D4496BFFC2}" ShortID="256257779">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_7" ID="{607853F2-0B62-4F64-A862-60D4496BFFC2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_8" ID="{83ED6078-A929-443D-B6C9-4BE5838501CB}" ShortID="440388801" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_8" ID="{2A4A842E-9116-4632-AB30-3CA3E295F168}" ShortID="337797008">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_8.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_8" ID="{2A4A842E-9116-4632-AB30-3CA3E295F168}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_9" ID="{5F1E5DFB-78F6-4AE2-8C46-ECBE069BB931}" ShortID="28113108" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_9" ID="{3EC73C8F-8AFE-4315-80E4-33EC7FAC8C1D}" ShortID="481756948">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_9.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_9" ID="{3EC73C8F-8AFE-4315-80E4-33EC7FAC8C1D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_10" ID="{8C8A3D3B-60EF-4682-BC2D-6F8B356DBF4D}" ShortID="365242582" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_10" ID="{F01835E2-6673-4155-851B-2D909E6799DC}" ShortID="224595767">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_10" ID="{F01835E2-6673-4155-851B-2D909E6799DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_11" ID="{29E63314-366D-40B8-9C4C-0971C7172685}" ShortID="665990501" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_11" ID="{283287A5-C03C-4D1F-A47C-9916C5857329}" ShortID="413907089">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_11" ID="{283287A5-C03C-4D1F-A47C-9916C5857329}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_12" ID="{89F8B165-31EC-4474-9306-1A149CD539BA}" ShortID="143964778" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_12" ID="{E20CF03D-6512-4E30-8C8C-F47E0F39B960}" ShortID="782013940">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_12" ID="{E20CF03D-6512-4E30-8C8C-F47E0F39B960}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_13" ID="{B26E08B6-E2E5-4AA7-9557-477989646001}" ShortID="59702434" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_13" ID="{DF944BFA-05E9-41DD-936A-47A271798AEC}" ShortID="376293213">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_13" ID="{DF944BFA-05E9-41DD-936A-47A271798AEC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_14" ID="{31F81C98-3F9C-4EEB-87C1-CF7DD04E3BFE}" ShortID="445128074" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_14" ID="{69D000F4-67AC-4A08-BB19-062A408B1807}" ShortID="29098323">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_14.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_14" ID="{69D000F4-67AC-4A08-BB19-062A408B1807}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_15" ID="{83E644D9-13EA-47B9-AC95-759DC147046F}" ShortID="397652260" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_15" ID="{A9BDA2C7-37E6-4AB5-ACCC-A52D8B9EED79}" ShortID="1041625412">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_15.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_15" ID="{A9BDA2C7-37E6-4AB5-ACCC-A52D8B9EED79}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_16" ID="{DFC4F146-E940-4903-BE1B-9ED73A13FB05}" ShortID="349087250" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_16" ID="{BDECDFF8-7C25-4926-B520-25DD49F5D6B2}" ShortID="625718149">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_16.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_16" ID="{BDECDFF8-7C25-4926-B520-25DD49F5D6B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_17" ID="{E6C05908-0AAB-4318-A61C-FA3C0ED3A80E}" ShortID="56231972" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_17" ID="{D6F70046-7DB5-47C8-8FDA-B6B414BF0A75}" ShortID="533676503">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_17.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_17" ID="{D6F70046-7DB5-47C8-8FDA-B6B414BF0A75}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_18" ID="{6C9FFAD2-CCC9-4FFE-9161-CFC327E43E02}" ShortID="504578257" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_18" ID="{2E714FBD-5D2C-452D-86FA-9F76F99E0989}" ShortID="312227126">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_18.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_18" ID="{2E714FBD-5D2C-452D-86FA-9F76F99E0989}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player Breath Inhale_19" ID="{F8D67A42-4B19-4751-BEBF-F715D11A15A8}" ShortID="537472105" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Breath Inhale_19" ID="{09CCC268-BD67-4EFB-986D-00117CCBD618}" ShortID="1015661812">
+											<Language>SFX</Language>
+											<AudioFile>Player Breath Inhale_19.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Breath Inhale_19" ID="{09CCC268-BD67-4EFB-986D-00117CCBD618}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+								<State Name="Custom State" ID="{CF3D0401-B91F-47E1-8129-E7228E11877E}" ShortID="514505565">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-200"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<Playlist>
+						<ItemRef Name="Player Inhale" ID="{C25A45E4-CA75-454E-A678-52AA8325F9CC}"/>
+						<ItemRef Name="Player Exhale" ID="{B51BBC60-6591-4A15-9FD2-8F842EC2BD4D}"/>
+					</Playlist>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

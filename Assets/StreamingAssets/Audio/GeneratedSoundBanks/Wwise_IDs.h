@@ -35,21 +35,32 @@ namespace AK
         static const AkUniqueID MUSICBOX_UNBROKEN_SWITCH = 1298383181U;
         static const AkUniqueID PUFF = 2076776060U;
         static const AkUniqueID RUN_SWITCH = 899311691U;
-        static const AkUniqueID SET_STATE_DARK_ROOM = 1893791182U;
+        static const AkUniqueID SET_STATE_FOREST = 1652873695U;
         static const AkUniqueID SET_STATE_GAME = 4207344442U;
         static const AkUniqueID SET_STATE_MENU = 2302270969U;
+        static const AkUniqueID SET_STATE_VOID = 2075652242U;
         static const AkUniqueID WALK_SWITCH = 2857728357U;
     } // namespace EVENTS
 
     namespace STATES
     {
+        namespace ENDING
+        {
+            static const AkUniqueID GROUP = 3966194980U;
+
+            namespace STATE
+            {
+                static const AkUniqueID FOREST = 491961918U;
+                static const AkUniqueID VOID = 3370470011U;
+            } // namespace STATE
+        } // namespace ENDING
+
         namespace MENUS
         {
             static const AkUniqueID GROUP = 2604644515U;
 
             namespace STATE
             {
-                static const AkUniqueID DARK_ROOM = 4045452569U;
                 static const AkUniqueID IN_GAME = 2967546505U;
                 static const AkUniqueID IN_MENU = 1631528850U;
             } // namespace STATE
@@ -118,7 +129,8 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID DARK_FANTASY = 1850303326U;
+        static const AkUniqueID FOREST_REVERB = 920301845U;
+        static const AkUniqueID VOID_REVERB = 3356433602U;
     } // namespace AUX_BUSSES
 
 }// namespace AK

@@ -436,28 +436,6 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}" ShortID="802448312" Type="SoundFX">
-							<PropertyList>
-								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SourcePlugin Name="Wwise Silence" ID="{B662B350-DCE8-4367-A88D-6A59F56E0395}" ShortID="566495866" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-									<Language>SFX</Language>
-								</SourcePlugin>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Wwise Silence" ID="{B662B350-DCE8-4367-A88D-6A59F56E0395}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupRef Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
@@ -475,17 +453,8 @@
 									<Property Name="ContinuePlay" Type="bool" Value="True"/>
 								</PropertyList>
 							</GroupingBehavior>
-							<GroupingBehavior>
-								<ItemRef Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}"/>
-							</GroupingBehavior>
 						</GroupingBehaviorList>
 						<GroupingList>
-							<Grouping>
-								<SwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
-								<ItemList>
-									<ItemRef Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}"/>
-								</ItemList>
-							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
 								<ItemList>
@@ -501,144 +470,6 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
-				<RandomSequenceContainer Name="New Random Container" ID="{6CE5B6DA-60B0-4C64-B317-4C43EF36FAD9}" ShortID="1026063827">
-					<PropertyList>
-						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
-							<RTPCList>
-								<RTPC Name="" ID="{12F0F758-B9E3-422A-9FF4-CDAD9DC0ED54}" ShortID="908957140">
-									<ReferenceList>
-										<Reference Name="ControlInput">
-											<ObjectRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}" WorkUnitID="{D9690434-CB22-465E-B1CF-CBCA6332D8CC}"/>
-										</Reference>
-									</ReferenceList>
-									<Curve Name="" ID="{2361BF10-647D-40B6-9FDF-B92E6CA62654}">
-										<PropertyList>
-											<Property Name="Flags" Type="int32" Value="1"/>
-										</PropertyList>
-										<PointList>
-											<Point>
-												<XPos>0</XPos>
-												<YPos>0</YPos>
-												<Flags>5</Flags>
-												<SegmentShape>Log3</SegmentShape>
-											</Point>
-											<Point>
-												<XPos>100</XPos>
-												<YPos>2</YPos>
-												<Flags>37</Flags>
-											</Point>
-										</PointList>
-									</Curve>
-								</RTPC>
-							</RTPCList>
-						</Property>
-						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="PlayerPanting" ID="{619B7B5F-55F0-4BAA-883F-F17118DE3DAC}" ShortID="59001741" Type="SoundFX">
-							<PropertyList>
-								<Property Name="EnablePanner" Type="bool" Value="True"/>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>25</Value>
-									</ValueList>
-								</Property>
-								<Property Name="PreFetchLength" Type="int16">
-									<ValueList>
-										<Value>1000</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<RTPCList>
-										<RTPC Name="" ID="{D316E14A-FE01-4AFB-A1C4-49287036E676}" ShortID="207095695">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="staminaPar" ID="{B11D87DA-B197-4287-9248-651C3BB54C16}" WorkUnitID="{D9690434-CB22-465E-B1CF-CBCA6332D8CC}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{B5D1EEB3-8E27-4A21-805D-70E08F1D8995}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>20</YPos>
-														<Flags>5</Flags>
-														<SegmentShape>Exp3</SegmentShape>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>-41.16</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="PlayerPanting" ID="{5A739F31-8A84-4E47-AF83-15ABB9CE3750}" ShortID="573374260">
-									<Language>SFX</Language>
-									<AudioFile>PlayerPanting.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<PositioningInfo>
-								<Panner Name="" ID="{CA4284F0-D5DC-4DE8-8CA1-CC6BB5E159A1}">
-									<PropertyList>
-										<Property Name="PanX" Type="Real64" Value="0.407331975560076"/>
-										<Property Name="PanY" Type="Real64" Value="0.647948164146866"/>
-									</PropertyList>
-								</Panner>
-							</PositioningInfo>
-							<ActiveSourceList>
-								<ActiveSource Name="PlayerPanting" ID="{5A739F31-8A84-4E47-AF83-15ABB9CE3750}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="New Sound SFX" ID="{DEDB3B76-DE72-4CE5-8FC3-AE4F3CF8F95E}" ShortID="984985539" Type="SoundFX">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SourcePlugin Name="Wwise Silence" ID="{7B1A68BF-EFD0-4739-AB4A-56211E78AC22}" ShortID="196075525" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-									<PropertyList>
-										<Property Name="Length" Type="Real32" Value="0.01"/>
-									</PropertyList>
-									<Language>SFX</Language>
-								</SourcePlugin>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Wwise Silence" ID="{7B1A68BF-EFD0-4739-AB4A-56211E78AC22}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<Sound Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" ShortID="964430699" Type="SoundFX">
 					<PropertyList>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
