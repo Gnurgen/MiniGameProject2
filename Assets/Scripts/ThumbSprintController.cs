@@ -9,6 +9,8 @@ public class ThumbSprintController : MonoBehaviour {
     private float _onScreenTime, _offScreenTime;
     [SerializeField]
     private float _showDuration;
+    [SerializeField]
+    private float _delayDuration;
     private GameObject child;
     private bool _doShow;
 
@@ -16,7 +18,7 @@ public class ThumbSprintController : MonoBehaviour {
     {
         child = transform.GetChild(0).gameObject;
         child.SetActive(false);
-        showFirstHint();
+        StartCoroutine(startupDelay(_delayDuration));
     }
 
     public void ShowThumbs()
@@ -68,5 +70,11 @@ public class ThumbSprintController : MonoBehaviour {
     {
         child.transform.GetChild(0).gameObject.SetActive(false);
         Invoke("onScreenHint", _offScreenTime);
+    }
+
+    IEnumerator startupDelay(float time)
+    {
+        yield return new WaitForSeconds(time);
+        showFirstHint();
     }
 }
