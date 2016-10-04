@@ -32,12 +32,12 @@
 				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
 				<Event Id="2274660714" Name="Idle_Switch" ObjectPath="\Events\Default Work Unit\Idle_Switch" MaxAttenuation="0.000000"/>
-				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button" MaxAttenuation="80.000000"/>
+				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
 				<Event Id="2074283912" Name="Monster_Growl_Play" ObjectPath="\Events\Default Work Unit\Monster_Growl_Play" MaxAttenuation="80.000000"/>
 				<Event Id="156883962" Name="Monster_Growl_Stop" ObjectPath="\Events\Default Work Unit\Monster_Growl_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2653952097" Name="MonsterAggro" ObjectPath="\Events\Default Work Unit\MonsterAggro" MaxAttenuation="80.000000"/>
 				<Event Id="2621508965" Name="MonsterAttack" ObjectPath="\Events\Default Work Unit\MonsterAttack" MaxAttenuation="80.000000"/>
-				<Event Id="2015956512" Name="MonsterAttackHit" ObjectPath="\Events\Default Work Unit\MonsterAttackHit"/>
+				<Event Id="2015956512" Name="MonsterAttackHit" ObjectPath="\Events\Default Work Unit\MonsterAttackHit" MaxAttenuation="80.000000"/>
 				<Event Id="1363742247" Name="MonsterStep" ObjectPath="\Events\Default Work Unit\MonsterStep" MaxAttenuation="80.000000"/>
 				<Event Id="2451362146" Name="MusicBox_Broken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Broken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
@@ -104,6 +104,14 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_02.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_02_325FEBFD.wem</Path>
 				</File>
+				<File Id="69408028" Language="SFX">
+					<ShortName>Footsteps Run_4.wav</ShortName>
+					<Path>SFX\Footsteps Run_4_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="71046767" Language="SFX">
+					<ShortName>Footsteps Run_9.wav</ShortName>
+					<Path>SFX\Footsteps Run_9_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="73043969" Language="SFX">
 					<ShortName>Player Breath Exhale_11.wav</ShortName>
 					<Path>SFX\Player Breath Exhale_11_4AFEA6D2.wem</Path>
@@ -124,6 +132,10 @@
 					<ShortName>Player Breath Exhale_2.wav</ShortName>
 					<Path>SFX\Player Breath Exhale_2_4AFEA6D2.wem</Path>
 				</File>
+				<File Id="109560181" Language="SFX">
+					<ShortName>Footsteps Run_15.wav</ShortName>
+					<Path>SFX\Footsteps Run_15_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="124522040" Language="SFX">
 					<ShortName>Monster Attack_3.wav</ShortName>
 					<Path>SFX\Monster Attack_3_4AFEA6D2.wem</Path>
@@ -135,6 +147,10 @@
 				<File Id="149296895" Language="SFX">
 					<ShortName>Monster Aggro_5.wav</ShortName>
 					<Path>SFX\Monster Aggro_5_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="161034717" Language="SFX">
+					<ShortName>Monster Hit_4.wav</ShortName>
+					<Path>SFX\Monster Hit_4_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="161180519" Language="SFX">
 					<ShortName>Player Breath Exhale.wav</ShortName>
@@ -163,10 +179,6 @@
 				<File Id="217396452" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_ElementRear.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Honda_ElementRear_C9397C52.wem</Path>
-				</File>
-				<File Id="222373072" Language="SFX">
-					<ShortName>MonsterAttackHit.wav</ShortName>
-					<Path>SFX\MonsterAttackHit_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="224488988" Language="SFX">
 					<ShortName>Player Breath Exhale_3.wav</ShortName>
@@ -236,9 +248,21 @@
 					<ShortName>Player Breath Inhale_13.wav</ShortName>
 					<Path>SFX\Player Breath Inhale_13_4AFEA6D2.wem</Path>
 				</File>
+				<File Id="391419406" Language="SFX">
+					<ShortName>Monster Hit_3.wav</ShortName>
+					<Path>SFX\Monster Hit_3_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="391485822" Language="SFX">
+					<ShortName>Monster Hit_5.wav</ShortName>
+					<Path>SFX\Monster Hit_5_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="400159443" Language="SFX">
 					<ShortName>Monster Attack.wav</ShortName>
 					<Path>SFX\Monster Attack_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="402840174" Language="SFX">
+					<ShortName>Footsteps Run_11.wav</ShortName>
+					<Path>SFX\Footsteps Run_11_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="413907089" Language="SFX">
 					<ShortName>Player Breath Inhale_11.wav</ShortName>
@@ -280,6 +304,10 @@
 					<ShortName>Player Breath Inhale_9.wav</ShortName>
 					<Path>SFX\Player Breath Inhale_9_4AFEA6D2.wem</Path>
 				</File>
+				<File Id="496909988" Language="SFX">
+					<ShortName>Footsteps Run_7.wav</ShortName>
+					<Path>SFX\Footsteps Run_7_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="507160656" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem</Path>
@@ -303,6 +331,10 @@
 				<File Id="522077337" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall_CFA92CA0.wem</Path>
+				</File>
+				<File Id="528264846" Language="SFX">
+					<ShortName>Footsteps Run_13.wav</ShortName>
+					<Path>SFX\Footsteps Run_13_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="531680628" Language="SFX">
 					<ShortName>Monster Growl_4.wav</ShortName>
@@ -348,6 +380,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_TwoFarBuildings.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_TwoFarBuildings_EC14BD0F.wem</Path>
 				</File>
+				<File Id="601639369" Language="SFX">
+					<ShortName>Monster Hit.wav</ShortName>
+					<Path>SFX\Monster Hit_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="602284699" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment_EE5F7440.wem</Path>
@@ -384,6 +420,14 @@
 					<ShortName>Monster Aggro.wav</ShortName>
 					<Path>SFX\Monster Aggro_4AFEA6D2.wem</Path>
 				</File>
+				<File Id="676076268" Language="SFX">
+					<ShortName>Footsteps Run_16.wav</ShortName>
+					<Path>SFX\Footsteps Run_16_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="679492242" Language="SFX">
+					<ShortName>Monster Hit_2.wav</ShortName>
+					<Path>SFX\Monster Hit_2_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="685400320" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski_86DC0B1E.wem</Path>
@@ -399,6 +443,10 @@
 				<File Id="702837950" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_NarrowShortAlley.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_NarrowShortAlley_B1BAF16B.wem</Path>
+				</File>
+				<File Id="710254908" Language="SFX">
+					<ShortName>Footsteps Run_10.wav</ShortName>
+					<Path>SFX\Footsteps Run_10_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="716604440" Language="SFX">
 					<ShortName>Music Box Melody Broken.wav</ShortName>
@@ -420,6 +468,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase_3B6A6FB8.wem</Path>
 				</File>
+				<File Id="766587113" Language="SFX">
+					<ShortName>Footsteps Run_8.wav</ShortName>
+					<Path>SFX\Footsteps Run_8_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="782013940" Language="SFX">
 					<ShortName>Player Breath Inhale_12.wav</ShortName>
 					<Path>SFX\Player Breath Inhale_12_4AFEA6D2.wem</Path>
@@ -432,6 +484,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideEcho_571F153C.wem</Path>
 				</File>
+				<File Id="787075733" Language="SFX">
+					<ShortName>Monster Hit_1.wav</ShortName>
+					<Path>SFX\Monster Hit_1_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="789847363" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantEcho_152A83EC.wem</Path>
@@ -443,6 +499,10 @@
 				<File Id="803100438" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes_BE2C0E27.wem</Path>
+				</File>
+				<File Id="815039764" Language="SFX">
+					<ShortName>Footsteps Run_5.wav</ShortName>
+					<Path>SFX\Footsteps Run_5_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="832296042" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho.wav</ShortName>
@@ -472,9 +532,25 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose_D1FD5366.wem</Path>
 				</File>
+				<File Id="875304021" Language="SFX">
+					<ShortName>Footsteps Run.wav</ShortName>
+					<Path>SFX\Footsteps Run_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="883728267" Language="SFX">
+					<ShortName>Footsteps Run_3.wav</ShortName>
+					<Path>SFX\Footsteps Run_3_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="889558223" Language="SFX">
 					<ShortName>Monster Growl_1.wav</ShortName>
 					<Path>SFX\Monster Growl_1_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="906876675" Language="SFX">
+					<ShortName>Monster Hit_6.wav</ShortName>
+					<Path>SFX\Monster Hit_6_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="909482525" Language="SFX">
+					<ShortName>Footsteps Run_1.wav</ShortName>
+					<Path>SFX\Footsteps Run_1_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="911215118" Language="SFX">
 					<ShortName>Player Breath Exhale_13.wav</ShortName>
@@ -484,17 +560,25 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose_DFB7B606.wem</Path>
 				</File>
+				<File Id="933703583" Language="SFX">
+					<ShortName>Footsteps Run_6.wav</ShortName>
+					<Path>SFX\Footsteps Run_6_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="941961704" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar_A82D434C.wem</Path>
 				</File>
+				<File Id="969514296" Language="SFX">
+					<ShortName>Footsteps Run_2.wav</ShortName>
+					<Path>SFX\Footsteps Run_2_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="972577211" Language="SFX">
+					<ShortName>Monster Hit_7.wav</ShortName>
+					<Path>SFX\Monster Hit_7_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="977402937" Language="SFX">
 					<ShortName>Monster Growl_2.wav</ShortName>
 					<Path>SFX\Monster Growl_2_4AFEA6D2.wem</Path>
-				</File>
-				<File Id="978225663" Language="SFX">
-					<ShortName>Footprint.wav</ShortName>
-					<Path>SFX\Footprint_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="982355987" Language="SFX">
 					<ShortName>Monster Growl_5.wav</ShortName>
@@ -520,6 +604,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LoudEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LoudEcho_DB84FF12.wem</Path>
 				</File>
+				<File Id="1040536005" Language="SFX">
+					<ShortName>Footsteps Run_12.wav</ShortName>
+					<Path>SFX\Footsteps Run_12_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="1041625412" Language="SFX">
 					<ShortName>Player Breath Inhale_15.wav</ShortName>
 					<Path>SFX\Player Breath Inhale_15_4AFEA6D2.wem</Path>
@@ -532,9 +620,17 @@
 					<ShortName>Player Breath Exhale_19.wav</ShortName>
 					<Path>SFX\Player Breath Exhale_19_4AFEA6D2.wem</Path>
 				</File>
+				<File Id="1060553432" Language="SFX">
+					<ShortName>Footsteps Run_17.wav</ShortName>
+					<Path>SFX\Footsteps Run_17_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="1065017050" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Classroom.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Classroom_2A3FA59E.wem</Path>
+				</File>
+				<File Id="1072476948" Language="SFX">
+					<ShortName>Footsteps Run_14.wav</ShortName>
+					<Path>SFX\Footsteps Run_14_4AFEA6D2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
