@@ -53,6 +53,7 @@ public class PlayerControls : MonoBehaviour {
     private float currentWalkingSpeed;
     private float currentSprintSpeed;
     private float currentFreeze;
+    private float tempSpeed;
     private bool frozen = false;
 
     void Start()
@@ -70,7 +71,9 @@ public class PlayerControls : MonoBehaviour {
 
 		camera = transform.GetChild(0).GetComponent<Camera> ();
 		camera.fieldOfView = idleFieldOfView;
- 
+
+        tempSpeed = walkingSpeed;
+
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
@@ -90,10 +93,11 @@ public class PlayerControls : MonoBehaviour {
             joystick.SetActive(true);
             useJoystick();
         }
+
+        
         if(canMove)
-        {
             updatePlayerState();
-        }
+
         newStamina();
         
         //speed
@@ -144,7 +148,7 @@ public class PlayerControls : MonoBehaviour {
 
         if (!joystickEnable)
         {
-            if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted)
+            if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted || Input.touchCount >= 1 && !canSprint)
                 playerState = PlayerState.Walk;
             else if (Input.touchCount > 1 && canSprint)
                 playerState = PlayerState.Sprint;

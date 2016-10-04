@@ -15,21 +15,19 @@ public class FroztVignette : MonoBehaviour
     private Image[] darkness;
     private float currentDuration;
     private Transform playerBody;
-    private float playerEnemyDistance, fadeVal, vignFade;
-    private int fadeSeg, curSeg;
+    private float playerEnemyDistance, tarFadeVal, vignFade;
+    private float[] fadeVal;
 
 
     void Start()
     {
-        fadeSeg = (int)frostDistance / 5;
         playerBody = GameManager.instance.player.transform;
         vignette = GameObject.Find("MonsterGUI").transform.GetChild(0).GetComponent<Image>();
-
-
         frost = new Image[GameObject.Find("MonsterGUI").transform.GetChild(1).childCount];
         darkness = new Image[GameObject.Find("MonsterGUI").transform.GetChild(2).childCount];
 
         _fadeWithFrostImg = frost.Length - _fadeWithFrostImg;
+        fadeVal = new float[frost.Length];
 
         for (int i = 0; i < frost.Length; i++)
         {
@@ -59,12 +57,17 @@ public class FroztVignette : MonoBehaviour
     void Frost() {
         for(int x = 0; x<frost.Length; ++x)
         {
-            fadeVal = 1 - playerEnemyDistance / (frostDistance - frostDistance * ( (float)x / frost.Length));
+            tarFadeVal = 1 - playerEnemyDistance / (frostDistance - frostDistance * ( (float)x / frost.Length));
+            if(tarFadeVal!=fadeVal[x])
+                fadeVal[x] = Mathf.Lerp(fadeVal[x], tarFadeVal, 0.1f);
+            if (Mathf.Abs(tarFadeVal - fadeVal[x]) < 0.05f)
+                fadeVal[x] = tarFadeVal;
+
             if (x == 0)
-                vignette.color = new Vector4(fadeVal * _fadeWithFrostImg, fadeVal * _fadeWithFrostImg, fadeVal * _fadeWithFrostImg, 1);
+                vignette.color = new Vector4(fadeVal[x] * _fadeWithFrostImg, fadeVal[x] * _fadeWithFrostImg, fadeVal[x] * _fadeWithFrostImg, 1);
 
             if (playerEnemyDistance <= frostDistance - (frostDistance * ((float)x / frost.Length)))
-                frost[x].color = new Vector4(255, 255, 255, fadeVal);
+                frost[x].color = new Vector4(255, 255, 255, fadeVal[x]);
             else
                 frost[x].color = new Vector4(255, 255, 255, 0);
         }
@@ -75,20 +78,7 @@ public class FroztVignette : MonoBehaviour
         StartCoroutine(darknessFadeWait(fadeDuration, fadeInDuration));
     }
 
-    IEnumerator frostFadeWait(float time1, float time2)
-    {
 
-        for (int i = 0; i < frost.Length; i++)
-        {
-            frost[i].CrossFadeAlpha(1, fadeInDuration, true);
-            yield return new WaitForSeconds(time2);
-        }
-        for (int i = frost.Length-1; i >= 0; i--)
-        {
-            frost[i].CrossFadeAlpha(0, fadeDuration, true);
-            yield return new WaitForSeconds(time1);
-        }
-    }
     IEnumerator darknessFadeWait(float time1, float time2)
     {
 

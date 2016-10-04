@@ -12,19 +12,28 @@ public class ZoomBoxToPlayer : MonoBehaviour {
     private AnimationCurve _zoomBehaviour;
     private float _normTime = 0, _initDist, _deltaTime = 0;
 
+    private Quaternion tempRot;
+
 	void OnEnable () {
+        transform.LookAt(_mBox);
+        tempRot = transform.rotation;
         _player = GameManager.instance.player.transform;
         _mBox = GameManager.instance.musicBox.transform;
         _dir = (_mBox.position - _player.position).normalized; //Get direction vector from box to player
         transform.position = _mBox.position - _dir * _startDistToBox;
-        transform.LookAt(_mBox);
+
         _initPos = transform.position;
         _initDist = Vector3.Distance(_initPos, _player.position);
 	}
 	
 	void Update () {
+
+        
         _deltaTime += Time.deltaTime;
         _normTime = _deltaTime/_zoomTime;
+
+        transform.rotation = Quaternion.Lerp(tempRot, transform.rotation, _normTime);
+
         transform.position = _initPos - _dir * (_initDist * _zoomBehaviour.Evaluate(_normTime));
         if (_normTime >= 1)
         {
