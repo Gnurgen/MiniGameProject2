@@ -31,22 +31,33 @@
 				<Event Id="3166394572" Name="Ambience_Stop" ObjectPath="\Events\Default Work Unit\Ambience_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
-				<Event Id="1874288895" Name="Idle" ObjectPath="\Events\Default Work Unit\Idle" MaxAttenuation="0.000000"/>
+				<Event Id="2274660714" Name="Idle_Switch" ObjectPath="\Events\Default Work Unit\Idle_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
+				<Event Id="2074283912" Name="Monster_Growl_Play" ObjectPath="\Events\Default Work Unit\Monster_Growl_Play" MaxAttenuation="80.000000"/>
+				<Event Id="156883962" Name="Monster_Growl_Stop" ObjectPath="\Events\Default Work Unit\Monster_Growl_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2653952097" Name="MonsterAggro" ObjectPath="\Events\Default Work Unit\MonsterAggro" MaxAttenuation="80.000000"/>
 				<Event Id="2621508965" Name="MonsterAttack" ObjectPath="\Events\Default Work Unit\MonsterAttack" MaxAttenuation="80.000000"/>
 				<Event Id="2015956512" Name="MonsterAttackHit" ObjectPath="\Events\Default Work Unit\MonsterAttackHit"/>
+				<Event Id="1363742247" Name="MonsterStep" ObjectPath="\Events\Default Work Unit\MonsterStep" MaxAttenuation="80.000000"/>
+				<Event Id="2451362146" Name="MusicBox_Broken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Broken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
 				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="80.000000"/>
 				<Event Id="3719125665" Name="MusicBox_Resume" ObjectPath="\Events\Default Work Unit\MusicBox_Resume" MaxAttenuation="0.000000"/>
 				<Event Id="672851034" Name="MusicBox_Rewind_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Play" MaxAttenuation="80.000000"/>
 				<Event Id="2071830116" Name="MusicBox_Rewind_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="1298383181" Name="MusicBox_Unbroken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Unbroken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2076776060" Name="Puff" ObjectPath="\Events\Default Work Unit\Puff"/>
-				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Run" MaxAttenuation="0.000000"/>
-				<Event Id="2108779966" Name="Walk" ObjectPath="\Events\Default Work Unit\Walk" MaxAttenuation="0.000000"/>
+				<Event Id="899311691" Name="Run_Switch" ObjectPath="\Events\Default Work Unit\Run_Switch" MaxAttenuation="0.000000"/>
+				<Event Id="4207344442" Name="Set_State_Game" ObjectPath="\Events\Default Work Unit\Set_State_Game" MaxAttenuation="0.000000"/>
+				<Event Id="2302270969" Name="Set_State_Menu" ObjectPath="\Events\Default Work Unit\Set_State_Menu" MaxAttenuation="0.000000"/>
+				<Event Id="2857728357" Name="Walk_Switch" ObjectPath="\Events\Default Work Unit\Walk_Switch" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="568260" Language="SFX">
+					<ShortName>Monster Growl_7.wav</ShortName>
+					<Path>SFX\Monster Growl_7_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="13019290" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear_BFA7EF96.wem</Path>
@@ -79,13 +90,29 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongNoEchoes.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongNoEchoes_C8CD3B55.wem</Path>
 				</File>
+				<File Id="124522040" Language="SFX">
+					<ShortName>Monster Attack_3.wav</ShortName>
+					<Path>SFX\Monster Attack_3_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="145606015" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bedroom.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Bedroom_8D55EA30.wem</Path>
 				</File>
+				<File Id="149296895" Language="SFX">
+					<ShortName>Monster Aggro_5.wav</ShortName>
+					<Path>SFX\Monster Aggro_5_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="197099714" Language="SFX">
+					<ShortName>Monster Aggro_6.wav</ShortName>
+					<Path>SFX\Monster Aggro_6_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="198373678" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_LongDeepAlley.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_LongDeepAlley_6924079C.wem</Path>
+				</File>
+				<File Id="200284886" Language="SFX">
+					<ShortName>Monster Aggro_1.wav</ShortName>
+					<Path>SFX\Monster Aggro_1_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="209885183" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_PheeeewEcho_02.wav</ShortName>
@@ -103,6 +130,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_BetweenTrees.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_BetweenTrees_6B4B846A.wem</Path>
 				</File>
+				<File Id="275836293" Language="SFX">
+					<ShortName>Monster Growl_3.wav</ShortName>
+					<Path>SFX\Monster Growl_3_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="294815814" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SmoothIntimate.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SmoothIntimate_88048682.wem</Path>
@@ -119,9 +150,17 @@
 					<ShortName>Music Box Melody.wav</ShortName>
 					<Path>SFX\Music Box Melody_4AFEA6D2.wem</Path>
 				</File>
+				<File Id="357688293" Language="SFX">
+					<ShortName>Monster Attack_7.wav</ShortName>
+					<Path>SFX\Monster Attack_7_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="364607080" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongAndComplex.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_LongAndComplex_831FC57E.wem</Path>
+				</File>
+				<File Id="400159443" Language="SFX">
+					<ShortName>Monster Attack.wav</ShortName>
+					<Path>SFX\Monster Attack_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="427082242" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_EquallySpacedEchoes.wav</ShortName>
@@ -135,6 +174,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_01.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_01_1AAEF490.wem</Path>
 				</File>
+				<File Id="449257680" Language="SFX">
+					<ShortName>Monster Growl_8.wav</ShortName>
+					<Path>SFX\Monster Growl_8_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="480496863" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Hallway.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Hallway_81B22F9F.wem</Path>
@@ -143,17 +186,37 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem</Path>
 				</File>
+				<File Id="508863754" Language="SFX">
+					<ShortName>Monster Attack_6.wav</ShortName>
+					<Path>SFX\Monster Attack_6_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="512867118" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideWithCars.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_WideWithCars_F1FC1A6B.wem</Path>
+				</File>
+				<File Id="519676561" Language="SFX">
+					<ShortName>Monster Growl_6.wav</ShortName>
+					<Path>SFX\Monster Growl_6_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="522077337" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_SchoolHall_CFA92CA0.wem</Path>
 				</File>
+				<File Id="531680628" Language="SFX">
+					<ShortName>Monster Growl_4.wav</ShortName>
+					<Path>SFX\Monster Growl_4_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="536838777" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SlapsEchoClose.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_SlapsEchoClose_7EBC80F1.wem</Path>
+				</File>
+				<File Id="553591350" Language="SFX">
+					<ShortName>Monster Attack_5.wav</ShortName>
+					<Path>SFX\Monster Attack_5_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="555088963" Language="SFX">
+					<ShortName>Monster Aggro_2.wav</ShortName>
+					<Path>SFX\Monster Aggro_2_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="569254387" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel.wav</ShortName>
@@ -179,13 +242,37 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Misc\AE_FireDepartment_EE5F7440.wem</Path>
 				</File>
+				<File Id="642122524" Language="SFX">
+					<ShortName>Monster Growl.wav</ShortName>
+					<Path>SFX\Monster Growl_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="647831537" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Corridor.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_Corridor_AA3A462D.wem</Path>
 				</File>
+				<File Id="649080794" Language="SFX">
+					<ShortName>Monster Attack_4.wav</ShortName>
+					<Path>SFX\Monster Attack_4_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="664935711" Language="SFX">
+					<ShortName>Monster Attack_1.wav</ShortName>
+					<Path>SFX\Monster Attack_1_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="671540240" Language="SFX">
+					<ShortName>Monster Aggro.wav</ShortName>
+					<Path>SFX\Monster Aggro_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="685400320" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Transport\AE_Helicopter_Sikorski_86DC0B1E.wem</Path>
+				</File>
+				<File Id="689376295" Language="SFX">
+					<ShortName>Monster Aggro_4.wav</ShortName>
+					<Path>SFX\Monster Aggro_4_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="690696477" Language="SFX">
+					<ShortName>Monster Growl_9.wav</ShortName>
+					<Path>SFX\Monster Growl_9_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="702837950" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Alley\AE_NarrowShortAlley.wav</ShortName>
@@ -198,10 +285,6 @@
 				<File Id="726190851" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexEcho_DB321E75.wem</Path>
-				</File>
-				<File Id="751439041" Language="SFX">
-					<ShortName>MonsterAttacj.wav</ShortName>
-					<Path>SFX\MonsterAttacj_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="757112749" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_DistantSlaps.wav</ShortName>
@@ -227,10 +310,6 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_OpenThreeEchoes_BE2C0E27.wem</Path>
 				</File>
-				<File Id="827816364" Language="SFX">
-					<ShortName>MonsterAggro.wav</ShortName>
-					<Path>SFX\MonsterAggro_4AFEA6D2.wem</Path>
-				</File>
 				<File Id="832296042" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_CloseEcho_EE58611F.wem</Path>
@@ -243,6 +322,10 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexDistantEcho.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Street\AE_Street_ComplexDistantEcho_639F37E9.wem</Path>
 				</File>
+				<File Id="863875936" Language="SFX">
+					<ShortName>Monster Aggro_3.wav</ShortName>
+					<Path>SFX\Monster Aggro_3_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="867122333" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_02.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Domestic\AE_LivingRoom_02_531CB7A8.wem</Path>
@@ -250,6 +333,10 @@
 				<File Id="873684731" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseClose_D1FD5366.wem</Path>
+				</File>
+				<File Id="889558223" Language="SFX">
+					<ShortName>Monster Growl_1.wav</ShortName>
+					<Path>SFX\Monster Growl_1_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="932825353" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
@@ -259,9 +346,21 @@
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
 					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar_A82D434C.wem</Path>
 				</File>
+				<File Id="977402937" Language="SFX">
+					<ShortName>Monster Growl_2.wav</ShortName>
+					<Path>SFX\Monster Growl_2_4AFEA6D2.wem</Path>
+				</File>
 				<File Id="978225663" Language="SFX">
 					<ShortName>Footprint.wav</ShortName>
 					<Path>SFX\Footprint_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="982355987" Language="SFX">
+					<ShortName>Monster Growl_5.wav</ShortName>
+					<Path>SFX\Monster Growl_5_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="1010525196" Language="SFX">
+					<ShortName>Monster Attack_2.wav</ShortName>
+					<Path>SFX\Monster Attack_2_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="1036982009" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Attic_01.wav</ShortName>

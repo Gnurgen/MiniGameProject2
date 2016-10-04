@@ -17,20 +17,27 @@ namespace AK
         static const AkUniqueID AMBIENCE_STOP = 3166394572U;
         static const AkUniqueID BREATH = 1326786195U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
-        static const AkUniqueID IDLE = 1874288895U;
+        static const AkUniqueID IDLE_SWITCH = 2274660714U;
         static const AkUniqueID MENU_BUTTON = 938529747U;
+        static const AkUniqueID MONSTER_GROWL_PLAY = 2074283912U;
+        static const AkUniqueID MONSTER_GROWL_STOP = 156883962U;
         static const AkUniqueID MONSTERAGGRO = 2653952097U;
         static const AkUniqueID MONSTERATTACK = 2621508965U;
         static const AkUniqueID MONSTERATTACKHIT = 2015956512U;
+        static const AkUniqueID MONSTERSTEP = 1363742247U;
+        static const AkUniqueID MUSICBOX_BROKEN_SWITCH = 2451362146U;
         static const AkUniqueID MUSICBOX_PAUSE = 2302208614U;
         static const AkUniqueID MUSICBOX_PLAY = 2089708342U;
         static const AkUniqueID MUSICBOX_RESUME = 3719125665U;
         static const AkUniqueID MUSICBOX_REWIND_PLAY = 672851034U;
         static const AkUniqueID MUSICBOX_REWIND_STOP = 2071830116U;
         static const AkUniqueID MUSICBOX_STOP = 2820245704U;
+        static const AkUniqueID MUSICBOX_UNBROKEN_SWITCH = 1298383181U;
         static const AkUniqueID PUFF = 2076776060U;
-        static const AkUniqueID RUN = 712161704U;
-        static const AkUniqueID WALK = 2108779966U;
+        static const AkUniqueID RUN_SWITCH = 899311691U;
+        static const AkUniqueID SET_STATE_GAME = 4207344442U;
+        static const AkUniqueID SET_STATE_MENU = 2302270969U;
+        static const AkUniqueID WALK_SWITCH = 2857728357U;
     } // namespace EVENTS
 
     namespace STATES
