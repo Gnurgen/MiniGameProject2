@@ -20,6 +20,9 @@ public class GameManager {
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
+    private Language _language = Language.None;
+
+    public enum Language {None, Danish, English};
 
     public static GameManager instance
     {
@@ -28,6 +31,16 @@ public class GameManager {
             if (_instance == null)
                 _instance = new GameManager();
             return _instance;
+        }
+    }
+
+    public Language language
+    {
+        get
+        {
+            if (_language == Language.None)
+                _language = PlayerPrefs.GetInt("language",1) == 1 ? Language.Danish : Language.English;
+            return _language;
         }
     }
 
