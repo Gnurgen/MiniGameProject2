@@ -7,16 +7,16 @@
 					<ChildrenList>
 						<Bus Name="Environmental" ID="{96839E63-C0B3-4642-AC47-9DF67B590733}">
 							<ChildrenList>
-								<AuxBus Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}">
-									<ReferenceList>
-										<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-											<ObjectRef Name="ForestAuterlitz_DenseFar" ID="{0F74A865-50E7-4277-956F-A54FFB0E301C}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
-										</Reference>
-									</ReferenceList>
-								</AuxBus>
 								<Bus Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}"/>
 								<Bus Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}"/>
 								<Bus Name="Ambience" ID="{1AED54A9-7FDC-42F4-AAE1-2286337615CE}"/>
+								<AuxBus Name="dark_fantasy" ID="{B0953B1F-FAF6-4BA4-A47B-2BC6030F4C99}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="My_Closet" ID="{384A82A1-3C92-4AC5-AFC2-474F2080642C}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="UI" ID="{1F981B7B-A173-4A9A-AC1C-C33B3799CDB2}"/>

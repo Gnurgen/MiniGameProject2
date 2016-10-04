@@ -4,14 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextSceneFromInitialize : MonoBehaviour {
 
-    
-	// Use this for initialization
-	void Start () {
-		SceneManager.LoadScene("StartScene");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public void SelectDanish()
+    {
+        GameManager.instance.StartButton();
+        setLanguage(GameManager.Language.Danish);
+    }
+
+    public void SelectEnglish()
+    {
+        GameManager.instance.StartButton();
+        setLanguage(GameManager.Language.English);
+    }
+
+    private void setLanguage(GameManager.Language language)
+    {
+        GameManager.language = language;
+        SceneManager.LoadScene("StartScene");
+    }
 }

@@ -9,10 +9,11 @@ public class MusicBox : MonoBehaviour {
     private bool Count = true;
     
     void Start () {
-//        GameManager.instance.audioManager.MusicBoxStart();
-//        GameManager.instance.audioManager.AmbienceStart();
-//        GameManager.instance.audioManager.FootStepStart();
-//        GameManager.instance.audioManager.BreathStart();
+
+        GameManager.instance.audioManager.MusicBoxStart();
+        GameManager.instance.audioManager.AmbienceStart();
+        GameManager.instance.audioManager.FootStepStart();
+        GameManager.instance.audioManager.BreathStart();
         GameManager.instance.OnMusicBoxMove += MoveToNextSpawn;
     }
 
@@ -28,6 +29,7 @@ public class MusicBox : MonoBehaviour {
         if (obj.tag == GameManager.instance.player.tag)
         {
             Count = false;
+          
             GameManager.instance.MusicBoxPause();
             GameManager.instance.MusicBoxRewindStart();
         }
@@ -54,7 +56,10 @@ public class MusicBox : MonoBehaviour {
 
     public void MoveToNextSpawn()
     {
-        GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position + transform.GetChild(0).GetChild(0).localPosition - transform.GetChild(0).GetChild(0).GetChild(0).localPosition, transform.rotation);
+
+        GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position, transform.rotation);
+
+        //GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position + transform.GetChild(0).GetChild(0).localPosition - transform.GetChild(0).GetChild(0).GetChild(0).localPosition, transform.rotation);
         Destroy(particlePuff, 2f);
         MusicBoxSpawn spawnPoint = MusicBoxSpawn.GetNext();
         MusicBoxSpawn.SetCurrent(spawnPoint);

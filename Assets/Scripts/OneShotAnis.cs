@@ -36,17 +36,17 @@ public class OneShotAnis : MonoBehaviour {
     public void playOneShot()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.enabled = false;
-        transform.position = _startPos.position;
-        agent.enabled = true;
+        agent.Warp(_startPos.position);
         curState = state.one;
-        agent.speed = _idleSpeed;
+        GameManager.instance.EnemyAggro(); //HÅBER JEG
+        agent.speed = _chaseSpeed;
         agent.destination = _endPos.position;
     }
 
     private void _despawn()
     {
         GameManager.instance.player.GetComponent<ActivateDome>().spawnDomes = true;
+        GameManager.instance.player.GetComponent<PlayerControls>().canSprint = true;
         curState = state.none;
         nmc.enabled = true;
         enabled = false;

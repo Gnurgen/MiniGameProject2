@@ -34,7 +34,7 @@ public class AkExampleAppBuilderBase : MonoBehaviour
         bool isUserCancelledBuild = appPath == "";
         if (isUserCancelledBuild)
         {
-            UnityEngine.Debug.Log("WwiseUnity: User cancelled the build.");
+            UnityEngine.Debug.LogWarning("WwiseUnity: User cancelled the build.");
             return false;
         }
 

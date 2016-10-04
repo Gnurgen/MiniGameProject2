@@ -35,7 +35,7 @@ public class CageStandStill : MonoBehaviour {
     {
         if (col.gameObject == GameManager.instance.player && gameObject.name !="FirstAggroBox")
         {
-            GameManager.instance.player.GetComponent<ActivateDome>().spawnDomes = true;
+           AD.spawnDomes = true;
         }
     }
     void OnDisable()

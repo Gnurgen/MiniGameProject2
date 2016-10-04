@@ -4,34 +4,40 @@ using UnityEngine.UI;
 
 public class TextFader : MonoBehaviour {
 
-    Text _text;
+    private Text _text;
 
-    bool startFadingIn;
-    bool startFadingOut;
+    private bool startFadingIn;
+    private bool startFadingOut;
 
-    float localTime;
+    private float localTime;
 
-    [SerializeField]
-    Color startColor;
-    [SerializeField]
-    Color endColor;
+    public Color startColor;
+    public Color endColor;
 
-    [SerializeField]
-    float waitForFadeDuration;
-    [SerializeField]
-    float fadeInDuration;
-    [SerializeField]
-    float fadeOutDuration;
-    [SerializeField]
-    float textOnScreenDuration;
-
-
+    public float waitForFadeIn = 1.0f;
+    public float fadeInDuration = 0.5f;
+    public float fadeOutDuration = 0.5f;
+    public float displayDuration = 5.0f;
 
     void Start ()
     {
+        GameObject danishIntroText = GameObject.Find("IntroTextDanish");
+        GameObject englishIntroText = GameObject.Find("IntroTextEnglish");
+
+        if (GameManager.language == GameManager.Language.Danish)
+        {
+            danishIntroText.SetActive(true);
+            englishIntroText.SetActive(false);
+        }
+        else
+        {
+            danishIntroText.SetActive(false);
+            englishIntroText.SetActive(true);
+        }
+
         _text = FindObjectOfType<Text>();
         _text.color = startColor;
-        StartCoroutine(TextFade(waitForFadeDuration));
+        StartCoroutine(TextFade(waitForFadeIn));
     }
 
     void Update()
@@ -57,10 +63,10 @@ public class TextFader : MonoBehaviour {
         yield return new WaitForSeconds(fadeInDuration);
         localTime = 0;
         startFadingIn = false;
-        yield return new WaitForSeconds(textOnScreenDuration);
+        yield return new WaitForSeconds(displayDuration);
         startFadingOut = true;
         yield return new WaitForSeconds(fadeOutDuration);
 
-        //change scene to game scene!
+        GameManager.instance.StartGame();
     }
 }

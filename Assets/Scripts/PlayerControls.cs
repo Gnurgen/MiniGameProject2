@@ -29,7 +29,11 @@ public class PlayerControls : MonoBehaviour {
 	public float idleFieldOfView;
 	public float runFieldOfView;
 	public float fieldOfViewTimer;
-	private Camera camera;
+
+    public bool canSprint = false;
+    public bool canMove = false;
+
+    private Camera camera;
 
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
@@ -49,12 +53,13 @@ public class PlayerControls : MonoBehaviour {
     private float currentWalkingSpeed;
     private float currentSprintSpeed;
     private float currentFreeze;
+    private float tempSpeed;
     private bool frozen = false;
 
     void Start()
     {
-        if (!Application.isEditor)
-            joystickEnable = GameManager.instance.debug.usingJoystick;
+        //if (!Application.isEditor)
+        joystickEnable = GameManager.debug.usingJoystick;
         rgd = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
@@ -66,15 +71,18 @@ public class PlayerControls : MonoBehaviour {
 
 		camera = transform.GetChild(0).GetComponent<Camera> ();
 		camera.fieldOfView = idleFieldOfView;
- 
+
+        tempSpeed = walkingSpeed;
+
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
 
     }
 
     void Update()
     {
+
         //SET STAMINA EVERY FUCKING FRAME BRO!
-//        GameManager.instance.audioManager.StaminaChange(stamina);
+        GameManager.instance.audioManager.StaminaChange(stamina);
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);
@@ -86,7 +94,11 @@ public class PlayerControls : MonoBehaviour {
             joystick.SetActive(true);
             useJoystick();
         }
-        updatePlayerState();
+
+        
+        if(canMove)
+            updatePlayerState();
+
         newStamina();
         
         //speed
@@ -125,11 +137,7 @@ public class PlayerControls : MonoBehaviour {
                 rgd.velocity = Vector3.zero;
                 break;
         }
-        if (joystickEnable)
-        {
-            rgd.velocity = playerCamera.transform.right * Input.GetAxis("Horizontal") * currentWalkingSpeed * Time.deltaTime;
-            rgd.velocity = playerCamera.transform.forward * Input.GetAxis("Vertical") * currentWalkingSpeed * Time.deltaTime;
-        }
+
     }
 
     private void updatePlayerState() {
@@ -137,9 +145,9 @@ public class PlayerControls : MonoBehaviour {
 
         if (!joystickEnable)
         {
-            if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted)
+            if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted || Input.touchCount >= 1 && !canSprint)
                 playerState = PlayerState.Walk;
-            else if (Input.touchCount > 1)
+            else if (Input.touchCount > 1 && canSprint)
                 playerState = PlayerState.Sprint;
             else
                 playerState = PlayerState.Idle;
@@ -148,7 +156,7 @@ public class PlayerControls : MonoBehaviour {
         {
             if (Input.touchCount == 2 || Input.touchCount > 2 && exhausted)
                 playerState = PlayerState.Walk;
-            else if (Input.touchCount > 2)
+            else if (Input.touchCount > 2 && canSprint)
                 playerState = PlayerState.Sprint;
             else
                 playerState = PlayerState.Idle;

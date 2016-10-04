@@ -15,12 +15,6 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
-			<ExcludedMemoryFiles>
-				<File Id="507160656" Language="SFX">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem</Path>
-				</File>
-			</ExcludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
@@ -32,20 +26,26 @@
 				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
 				<Event Id="2274660714" Name="Idle_Switch" ObjectPath="\Events\Default Work Unit\Idle_Switch" MaxAttenuation="0.000000"/>
-				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
+				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button" MaxAttenuation="80.000000"/>
 				<Event Id="2074283912" Name="Monster_Growl_Play" ObjectPath="\Events\Default Work Unit\Monster_Growl_Play" MaxAttenuation="80.000000"/>
 				<Event Id="156883962" Name="Monster_Growl_Stop" ObjectPath="\Events\Default Work Unit\Monster_Growl_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2653952097" Name="MonsterAggro" ObjectPath="\Events\Default Work Unit\MonsterAggro" MaxAttenuation="80.000000"/>
 				<Event Id="2621508965" Name="MonsterAttack" ObjectPath="\Events\Default Work Unit\MonsterAttack" MaxAttenuation="80.000000"/>
 				<Event Id="2015956512" Name="MonsterAttackHit" ObjectPath="\Events\Default Work Unit\MonsterAttackHit"/>
+				<Event Id="1363742247" Name="MonsterStep" ObjectPath="\Events\Default Work Unit\MonsterStep" MaxAttenuation="80.000000"/>
+				<Event Id="2451362146" Name="MusicBox_Broken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Broken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2302208614" Name="MusicBox_Pause" ObjectPath="\Events\Default Work Unit\MusicBox_Pause" MaxAttenuation="0.000000"/>
 				<Event Id="2089708342" Name="MusicBox_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Play" MaxAttenuation="80.000000"/>
 				<Event Id="3719125665" Name="MusicBox_Resume" ObjectPath="\Events\Default Work Unit\MusicBox_Resume" MaxAttenuation="0.000000"/>
 				<Event Id="672851034" Name="MusicBox_Rewind_Play" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Play" MaxAttenuation="80.000000"/>
 				<Event Id="2071830116" Name="MusicBox_Rewind_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Rewind_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="2820245704" Name="MusicBox_Stop" ObjectPath="\Events\Default Work Unit\MusicBox_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="1298383181" Name="MusicBox_Unbroken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Unbroken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2076776060" Name="Puff" ObjectPath="\Events\Default Work Unit\Puff"/>
 				<Event Id="899311691" Name="Run_Switch" ObjectPath="\Events\Default Work Unit\Run_Switch" MaxAttenuation="0.000000"/>
+				<Event Id="1893791182" Name="Set_State_Dark_Room" ObjectPath="\Events\Default Work Unit\Set_State_Dark_Room" MaxAttenuation="0.000000"/>
+				<Event Id="4207344442" Name="Set_State_Game" ObjectPath="\Events\Default Work Unit\Set_State_Game" MaxAttenuation="0.000000"/>
+				<Event Id="2302270969" Name="Set_State_Menu" ObjectPath="\Events\Default Work Unit\Set_State_Menu" MaxAttenuation="0.000000"/>
 				<Event Id="2857728357" Name="Walk_Switch" ObjectPath="\Events\Default Work Unit\Walk_Switch" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>

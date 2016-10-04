@@ -3,28 +3,10 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{5479FAAF-EF4A-4F70-81FE-59985C302091}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Menu Button" ID="{D154C260-DE1D-45A4-B8D0-D7237DFF7C5B}" ShortID="341091713" Type="SoundFX">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="UI" ID="{1F981B7B-A173-4A9A-AC1C-C33B3799CDB2}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" ShortID="304171733">
-							<Language>SFX</Language>
-							<AudioFile>Menu Button.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<SwitchContainer Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" ShortID="246547316">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>6</Value>
@@ -40,9 +22,6 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -68,6 +47,13 @@
 									<AudioFile>Music Box Melody.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Music Box Melody" ID="{20F1506B-6B4E-4E85-9B55-DBF5FF0B8343}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -94,6 +80,13 @@
 									<AudioFile>Music Box Melody Broken.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Music Box Melody Broken" ID="{3535F112-C058-4775-88A3-7734B492DC3F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -127,6 +120,14 @@
 					</GroupingInfo>
 				</SwitchContainer>
 				<ActorMixer Name="Ambience" ID="{4B80667B-A39D-4BE0-A86F-9F67C402EAF0}" ShortID="389155232">
+					<PropertyList>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
@@ -513,6 +514,23 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</ChildrenList>
 								</Position>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+										<State Name="Custom State" ID="{E93D384E-4D57-40E4-AD8F-E8D93BAD4819}" ShortID="192548875">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="30"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Wind" ID="{CF713842-B8A9-47BA-A674-B4441E78194A}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -521,7 +539,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<Comment>The more afraid you are, the more the willows weep and wail.</Comment>
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Spatialization" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -532,9 +549,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -604,7 +618,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</RTPCList>
 										</Property>
 										<Property Name="FrequencyScaleRandom" Type="Real32" Value="1.01"/>
-										<Property Name="GainOffset" Type="Real32" Value="12"/>
+										<Property Name="GainOffset" Type="Real32" Value="14"/>
 										<Property Name="Gustiness" Type="Real32" Value="0.07">
 											<RTPCList>
 												<RTPC Name="" ID="{D3ADE75C-F93D-445A-A6AE-545A7663155E}" ShortID="367629313">
@@ -897,6 +911,24 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PluginInnerObjectList>
 								</SourcePlugin>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+										<State Name="Custom State" ID="{F03E2863-DE91-4FEB-A124-E99388586F18}" ShortID="647618978">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
+												<Property Name="Pitch" Type="int32" Value="-710"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Wind" ID="{ADD5C596-BEDE-45FA-9A67-798E081EEE4F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -923,6 +955,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 				<Sound Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" ShortID="927362461" Type="SoundFX">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
@@ -938,9 +971,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -993,9 +1023,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1584,6 +1611,48 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</CustomStateList>
 					</StateInfo>
 				</ActorMixer>
+				<Sound Name="Menu Button" ID="{D154C260-DE1D-45A4-B8D0-D7237DFF7C5B}" ShortID="341091713" Type="SoundFX">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E7D7E2B5-F5F2-4334-95E1-5CBB936D7199}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="600"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="SFX_Distance" ID="{C9D8B98B-D8FC-4DCA-8C82-B21C8C9F369B}" WorkUnitID="{99C17FF4-66F0-4F6B-A73B-98695604D910}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" ShortID="304171733">
+							<Language>SFX</Language>
+							<AudioFile>Menu Button.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Menu Button" ID="{FC92A6F7-034C-4F7D-ABA3-400571C93046}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

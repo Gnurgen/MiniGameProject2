@@ -152,7 +152,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -165,119 +165,9 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: monster_rig_grp
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_l_jnt/knee_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_l_jnt/knee_l_jnt/heel_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_l_jnt/knee_l_jnt/heel_l_jnt/foot_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_l_jnt/knee_l_jnt/heel_l_jnt/foot_l_jnt/toe_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_r_jnt/knee_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_r_jnt/knee_r_jnt/heer_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_r_jnt/knee_r_jnt/heer_r_jnt/foot_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/hip_r_jnt/knee_r_jnt/heer_r_jnt/foot_r_jnt/toe_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/fingers_base_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/fingers_base_l_jnt/fingers_mid_a_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/fingers_base_l_jnt/fingers_mid_a_l_jnt/fingers_mid_b_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/fingers_base_l_jnt/fingers_mid_a_l_jnt/fingers_mid_b_l_jnt/fingers_tip_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/index_base_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/index_base_l_jnt/index_mid_a_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/index_base_l_jnt/index_mid_a_l_jnt/index_mid_b_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/index_base_l_jnt/index_mid_a_l_jnt/index_mid_b_l_jnt/index_tip_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/thumb_base_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/thumb_base_l_jnt/thumb_mid_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_l_jnt/shoulder_l_jnt/elbow_l_jnt/hand_l_jnt/thumb_base_l_jnt/thumb_mid_l_jnt/thumb_tip_l_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/fingers_base_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/fingers_base_r_jnt/fingers_mid_a_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/fingers_base_r_jnt/fingers_mid_a_r_jnt/fingers_mid_b_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/fingers_base_r_jnt/fingers_mid_a_r_jnt/fingers_mid_b_r_jnt/fingers_tip_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/index_base_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/index_base_r_jnt/index_mid_a_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/index_base_r_jnt/index_mid_a_r_jnt/index_mid_b_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/index_base_r_jnt/index_mid_a_r_jnt/index_mid_b_r_jnt/index_tip_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/thumb_base_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/thumb_base_r_jnt/thumb_mid_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/clavecle_r_jnt/shoulder_r_jnt/elbow_r_jnt/hand_r_jnt/thumb_base_r_jnt/thumb_mid_r_jnt/thumb_tip_r_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt/head_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt/head_jnt/headScalp_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt/head_jnt/mouth_lower_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt/head_jnt/mouth_lower_jnt/lip_lower_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt/head_jnt/mouth_upper_jnt
-        weight: 1
-      - path: monster_rig_grp/monster_jnt_grp/COG_jnt/pelvis_jnt/spine_a_jnt/spine_b_jnt/torso_jnt/neck_jnt/head_jnt/mouth_upper_jnt/lip_upper_jnt
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+      transformMask: []
+      maskType: 1
+      maskSource: {fileID: 101100000, guid: 2f50ab08eb688e7479d638fe6b3c372a, type: 2}
       additiveReferencePoseFrame: 2
     - serializedVersion: 16
       name: Walk
@@ -290,7 +180,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -302,7 +192,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.50007045
+        functionName: EnemyFootStepEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cf85bfd896e2e5340b7cdcb06dadace1,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.99902236
+        functionName: EnemyFootStepEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cf85bfd896e2e5340b7cdcb06dadace1,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -428,7 +334,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -440,7 +346,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.4999996
+        functionName: EnemyFootStepEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cf85bfd896e2e5340b7cdcb06dadace1,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EnemyFootStepEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cf85bfd896e2e5340b7cdcb06dadace1,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -578,7 +500,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.42929125
+        functionName: AttackHitEvent
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: e0eb21c24e5e5304097944b4c657af2e,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

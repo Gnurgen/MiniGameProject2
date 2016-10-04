@@ -7,18 +7,21 @@ public class GameManager {
     private static string START_SCENE = "StartScene";
     private static string GAME_SCENE = "Game";
     private static string WIN_SCENE = "WinScene";
+    private static string INBETWEEN = "BetweenScreens";
     private static string LOSE_SCENE_TIME = "LoseTimeScene";
     private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
     private static GameManager _instance;
     private static int _musicBoxCount;
-
-    public readonly DebugManager debug = new DebugManager();
+    private static Language _language = Language.None;
+    public static readonly DebugManager debug = new DebugManager();
 
     private GameObject _player;
     private GameObject _enemy;
     private GameObject _musicBox;
     private AudioManager _audioManager;
+
+    public enum Language {None, Danish, English};
 
     public static GameManager instance
     {
@@ -27,6 +30,21 @@ public class GameManager {
             if (_instance == null)
                 _instance = new GameManager();
             return _instance;
+        }
+    }
+
+    public static Language language
+    {
+        get
+        {
+            if (_language == Language.None)
+                _language = (Language)PlayerPrefs.GetInt("language",1);
+            return _language;
+        }
+        set
+        {
+            _language = value;
+            PlayerPrefs.SetInt("language", (int)value);
         }
     }
 
@@ -70,7 +88,8 @@ public class GameManager {
             if (_audioManager == null)
             {
                 _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
-               // _audioManager.Subscribe2GameManager();
+                _audioManager.Subscribe2GameManager();
+                
             }
             return _audioManager;
         }
@@ -86,8 +105,10 @@ public class GameManager {
 
     public void LeaveGame()
     {
+
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(START_SCENE);
+        audioManager.ChangeAudioState(0);
     }
 
     public void StartGame()
@@ -96,8 +117,13 @@ public class GameManager {
         _musicBoxCount = 0;
         _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
-       
-       
+        audioManager.ChangeAudioState(1);
+    }
+
+    public void InBetweenScreen()
+    {
+        _instance = null;
+        SceneManager.LoadScene(INBETWEEN);
     }
 
     public void PlayDeathScene_MusicBox()
@@ -110,11 +136,13 @@ public class GameManager {
     public void PlayDeathScene_Monster()
     {
         AkSoundEngine.StopAll();
+        audioManager.ChangeAudioState(0);
         if (!debug.monsterDeathImmune)
             SceneManager.LoadScene(LOSE_SCENE_DEATH);
     }
     public void PlayWinScene()
     {
+        audioManager.ChangeAudioState(0);
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(WIN_SCENE);
     }
@@ -240,25 +268,21 @@ public class GameManager {
     }
     public void MusicBoxMove()
     {
-        Debug.Log("MusicboxMove");
         if (OnMusicBoxMove != null)
             OnMusicBoxMove();
     }
     public void MusicBoxPause()
     {
-        Debug.Log("MusicboxPause");
         if (OnMusicBoxPause != null)
             OnMusicBoxPause();
     }
     public void MusicBoxResume()
     {
-        Debug.Log("MusicboxResume");
         if (OnMusicBoxResume != null)
             OnMusicBoxResume();
     }
     public void MusicBoxRewindStart()
     {
-        Debug.Log("MusicboxRewindStart");
 
 
         if (OnMusicBoxRewindStart != null)
@@ -266,14 +290,12 @@ public class GameManager {
     }
     public void MusicBoxRewindStop()
     {
-        Debug.Log("MusicboxRewindStop");
 
         if (OnMusicBoxRewindStop != null)
             OnMusicBoxRewindStop();
     }
     public void MusicBoxRewindComplete()
     {
-        Debug.Log("MusicboxRewindComplete");
 
         _musicBoxCount++;
         if (_musicBoxCount >= MusicBoxSpawn.GetCount())
@@ -306,6 +328,7 @@ public class GameManager {
     public event MenuButtons OnStartButton;
     public void StartButton()
     {
+        Debug.Log("startButton");
         if (OnStartButton != null)
             OnStartButton();
     }

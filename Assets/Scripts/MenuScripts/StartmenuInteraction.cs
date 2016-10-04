@@ -15,75 +15,104 @@ public class StartmenuInteraction : MonoBehaviour {
         _earFB = GameObject.Find("EarFeedback");
         _earFB.SetActive(false);
         _debugPopUp = GameObject.Find("DebugPop-Up");
-        _earImgL = Resources.Load<Sprite>("StartMenu/leftEar");
-        _earImgR = Resources.Load<Sprite>("StartMenu/rightEar");
         _AS = GetComponent<AudioSource>();
         _AS.clip = Resources.Load<AudioClip>("StartMenu/leftRightAudio");
         print("NOTE: Left/Right audio and Left/Right images are dummies - REPLACE WITH REAL OBJECTS IN RESOURCES FOLDER");
 
-        GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.instance.debug.monsterDeathImmune;
-        GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.instance.debug.musicBoxDeathImmune;
-        GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.instance.debug.usingJoystick;
+        GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn = GameManager.debug.monsterDeathImmune;
+        GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn = GameManager.debug.musicBoxDeathImmune;
+        GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn = GameManager.debug.usingJoystick;
+
+        if (GameManager.language == GameManager.Language.English)
+        {
+            displayEnglishText();
+            _earImgL = Resources.Load<Sprite>("StartMenu/leftEarEnglish");
+            _earImgR = Resources.Load<Sprite>("StartMenu/rightEarEnglish");
+        }
+        else
+        {
+            _earImgL = Resources.Load<Sprite>("StartMenu/leftEar");
+            _earImgR = Resources.Load<Sprite>("StartMenu/rightEar");
+        }
         _debugPopUp.SetActive(false);
+    }
+
+    private void displayEnglishText() {
+        GameObject.Find("StartscreenTest").GetComponent<Text>().text = "The tablet is your window out\nSo hold it up in front of your snout";
+        GameObject.Find("HowToPlay").GetComponent<Text>().text = "The goal of the game is to find music boxes and wind them up\n\nWalk by holding one finger on the screen.\n\nRun by holding to fingers on the screen.\n\nStand close and look at a music box to wind it up.\n\nWarning! A monster is guarding the music boxes.";
+        GameObject.Find("SoundProofSub").GetComponent<Text>().text = "Cannot die to time";
+        GameObject.Find("MonsterProofSub").GetComponent<Text>().text = "Cannot die from monsters";
+        GameObject.Find("SoundTest").GetComponent<Image>().sprite = Resources.Load<Sprite>("StartMenu/soundTest");
     }
 
     public void StartGameButton()
     {
-        GameManager.instance.StartGame();
+        GameManager.instance.StartButton();
+        GameManager.instance.InBetweenScreen();
     }
 
     public void InstructionsButton()
     {
+        GameManager.instance.StartButton();
         _instrucPopUp.SetActive(true);
     }
 
     public void DebugButton()
-    {
+
+    { 
+        GameManager.instance.StartButton();
         _debugPopUp.SetActive(true);
     }
 
     public void ExitGameButton()
     {
+        GameManager.instance.StartButton();
         Application.Quit();
     }
 
     public void CloseDebugScreen()
     {
+        GameManager.instance.StartButton();
         _debugPopUp.SetActive(false);
     }
 
     public void CloseInstructionScreen()
     {
+        GameManager.instance.StartButton();
         _instrucPopUp.SetActive(false);
     }
 
     public void ToggleMonsterDeath()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_Monster").GetComponent<Toggle>().isOn;
-        GameManager.instance.debug.monsterDeathImmune = b;
+        GameManager.debug.monsterDeathImmune = b;
     }
 
     public void ToggleMusicBoxDeath()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_MusicBox").GetComponent<Toggle>().isOn;
-        GameManager.instance.debug.musicBoxDeathImmune = b;
+        GameManager.debug.musicBoxDeathImmune = b;
     }
 
     public void ToggleBoundryRings()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_DomeRings").GetComponent<Toggle>().isOn;
-        GameManager.instance.debug.boundryRings = b;
+        GameManager.debug.boundryRings = b;
     }
 
     public void ToggleJoystick()
     {
+        GameManager.instance.StartButton();
         bool b = GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn;
-        Debug.Log(b);
-        GameManager.instance.debug.monsterDeathImmune = b;
+        GameManager.debug.usingJoystick = b;
     }
 
     public void SoundTestButton()
     {
+        GameManager.instance.StartButton();
         StartCoroutine(stereoTest());
     }
 
@@ -103,6 +132,7 @@ public class StartmenuInteraction : MonoBehaviour {
 
     void turnImgOff()
     {
+        GameManager.instance.StartButton();
         _earFB.SetActive(false);
     }
 }

@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: b5ab3c24df6b26f44bf991a9acf42f6b
-timeCreated: 1475235806
-licenseType: Pro
+guid: 27fee1ecb81b45140b5d1d890fd459d5
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -29,6 +27,7 @@ ModelImporter:
     4300002: coffin_geo
     4300004: coffinHatch_geo
     4300006: wallInside_geo
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -53,7 +52,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -71,7 +70,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -87,7 +86,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
