@@ -6,6 +6,7 @@
 				<SwitchContainer Name="FootSteps" ID="{B896BBB1-7EB3-4C66-8327-80D72D93810F}" ShortID="479090351">
 					<PropertyList>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -18,6 +19,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="FootSteps_Walk" ID="{4B3FE94F-7AFA-41A4-A0EE-8A127AE0DA82}" ShortID="264535194">
 							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -35,6 +37,7 @@
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.6"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -80,6 +83,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Foot" ID="{DFE7720D-7193-46EB-99C0-D90E34478A13}" ShortID="580515802" Type="SoundFX">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
@@ -221,6 +227,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="FootSteps_Run" ID="{38E936C3-FC87-4F88-A923-4471139AC561}" ShortID="434394">
 							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>200</Value>
@@ -241,6 +248,7 @@
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.3"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -429,6 +437,10 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="New Sound SFX" ID="{15F3BFDC-90CC-4B0E-805F-9DC460855E42}" ShortID="802448312" Type="SoundFX">
+							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
@@ -524,6 +536,7 @@
 							</RTPCList>
 						</Property>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -627,6 +640,9 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<Sound Name="MonsterAttackHit" ID="{8EB4D66B-2184-42F4-962D-D7C7BFF0F093}" ShortID="964430699" Type="SoundFX">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
@@ -672,6 +688,7 @@
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
 						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.3"/>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

@@ -51,11 +51,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
+						<CurrentStateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
-						<CurrentSwitchRef Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+						<CurrentSwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

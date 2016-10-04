@@ -48,6 +48,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID DARK_ROOM = 4045452569U;
                 static const AkUniqueID IN_GAME = 2967546505U;
                 static const AkUniqueID IN_MENU = 1631528850U;
             } // namespace STATE
@@ -116,7 +117,8 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID REVERB = 348963605U;
+        static const AkUniqueID DARK_ROOM = 4045452569U;
+        static const AkUniqueID STANDARD = 3025917178U;
     } // namespace AUX_BUSSES
 
 }// namespace AK

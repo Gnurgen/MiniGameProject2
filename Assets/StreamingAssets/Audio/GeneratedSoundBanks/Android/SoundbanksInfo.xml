@@ -15,12 +15,6 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
-			<ExcludedMemoryFiles>
-				<File Id="507160656" Language="SFX">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_DenseFar_63399068.wem</Path>
-				</File>
-			</ExcludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
