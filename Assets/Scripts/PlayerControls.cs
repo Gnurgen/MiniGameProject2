@@ -58,7 +58,7 @@ public class PlayerControls : MonoBehaviour {
     void Start()
     {
         if (!Application.isEditor)
-            joystickEnable = GameManager.instance.debug.usingJoystick;
+            joystickEnable = GameManager.debug.usingJoystick;
         rgd = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
