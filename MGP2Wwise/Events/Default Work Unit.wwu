@@ -304,6 +304,16 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Set_State_Dark_Room" ID="{76FF43CC-ECD7-4CDC-84C3-D588F55FC29C}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{98137DF9-83C7-4200-90CC-0B2F142571E9}" ShortID="585477026" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+								<GroupItem Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

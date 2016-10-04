@@ -10,14 +10,13 @@
 								<Bus Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}"/>
 								<Bus Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}"/>
 								<Bus Name="Ambience" ID="{1AED54A9-7FDC-42F4-AAE1-2286337615CE}"/>
-								<AuxBus Name="Dark_Room" ID="{5F1FC923-8909-496F-97F1-723A7993B322}">
+								<AuxBus Name="dark_fantasy" ID="{B0953B1F-FAF6-4BA4-A47B-2BC6030F4C99}">
 									<ReferenceList>
-										<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-											<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="My_Closet" ID="{384A82A1-3C92-4AC5-AFC2-474F2080642C}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
-								<AuxBus Name="Standard" ID="{A6C2265B-265A-4CAF-AE89-B12DD22F03FD}"/>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="UI" ID="{1F981B7B-A173-4A9A-AC1C-C33B3799CDB2}"/>

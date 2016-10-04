@@ -51,7 +51,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Dark_Room" ID="{12834E58-13E7-46A0-AF81-06E26578E3EF}"/>
+						<CurrentStateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>

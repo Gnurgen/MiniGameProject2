@@ -17,9 +17,8 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	3025917178	Standard			\Default Work Unit\Master Audio Bus\Environmental\Standard	
-	4045452569	Dark_Room			\Default Work Unit\Master Audio Bus\Environmental\Dark_Room	
+	1850303326	dark_fantasy			\Default Work Unit\Master Audio Bus\Environmental\dark_fantasy	
 
 Effect plug-ins	ID	Name	Type				Notes
-	2995775460	Room_Small	Wwise RoomVerb			
+	2945072214	My_Closet	Wwise RoomVerb			
 

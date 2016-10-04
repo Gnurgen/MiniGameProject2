@@ -257,9 +257,6 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="Dark_Room" ID="{5F1FC923-8909-496F-97F1-723A7993B322}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Foot2" ID="{C6B68515-7368-4163-A3E4-46656F39117D}" ShortID="337079270" Type="SoundFX">
@@ -894,20 +891,6 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<SwitchContainer Name="Environment" ID="{09727CB6-111E-4E0E-8C52-C2FC4F31D210}" ShortID="210666557">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-					</ReferenceList>
-					<GroupingInfo>
-						<GroupRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-						<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-					</GroupingInfo>
-				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

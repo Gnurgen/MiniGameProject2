@@ -66,6 +66,13 @@
 									<AudioFile>Music Box Melody.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Music Box Melody" ID="{20F1506B-6B4E-4E85-9B55-DBF5FF0B8343}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -92,6 +99,13 @@
 									<AudioFile>Music Box Melody Broken.wav</AudioFile>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Music Box Melody Broken" ID="{3535F112-C058-4775-88A3-7734B492DC3F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -125,6 +139,14 @@
 					</GroupingInfo>
 				</SwitchContainer>
 				<ActorMixer Name="Ambience" ID="{4B80667B-A39D-4BE0-A86F-9F67C402EAF0}" ShortID="389155232">
+					<PropertyList>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{93903CB5-479B-461E-8181-B49874053621}"/>
@@ -511,6 +533,23 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</ChildrenList>
 								</Position>
 							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+										<State Name="Custom State" ID="{E93D384E-4D57-40E4-AD8F-E8D93BAD4819}" ShortID="192548875">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="30"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Wind" ID="{CF713842-B8A9-47BA-A674-B4441E78194A}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -519,7 +558,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<Comment>The more afraid you are, the more the willows weep and wail.</Comment>
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Spatialization" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -892,6 +930,24 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PluginInnerObjectList>
 								</SourcePlugin>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+										<State Name="Custom State" ID="{F03E2863-DE91-4FEB-A124-E99388586F18}" ShortID="647618978">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
+												<Property Name="Pitch" Type="int32" Value="-710"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SoundSeed Air Wind" ID="{ADD5C596-BEDE-45FA-9A67-798E081EEE4F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -909,14 +965,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 								<State Name="Custom State" ID="{FC4B1AD9-D616-4F37-B4FC-844AA717CF60}" ShortID="159020401">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64" Value="-4"/>
-									</PropertyList>
-								</State>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Dark_Room" ID="{12834E58-13E7-46A0-AF81-06E26578E3EF}"/>
-								<State Name="Custom State" ID="{3D2A0FD0-DF16-45A0-9938-7BDDD99420A9}" ShortID="769663170">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="15"/>
 									</PropertyList>
 								</State>
 							</CustomState>
