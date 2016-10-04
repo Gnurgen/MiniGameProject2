@@ -14,6 +14,9 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="1.5"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{B7F69D24-2A12-4E0E-9534-4C881FCB90F6}"/>
 						<State Name="Forest" ID="{B0CAA378-1655-4E56-94E2-88AC934BBB07}"/>

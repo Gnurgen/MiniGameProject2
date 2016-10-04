@@ -51,23 +51,23 @@ State	ID	Name	State Group			Notes
 	3370470011	Void	Ending			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	15440200	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds		
+	44120356	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds		
 	69137976	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
 	127640166	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Melody		
-	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
 	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
 	514505565	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Player Breath		
-	847069343	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
+	689841205	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Puff		
+	734545237	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows		
+	854725346	Void	Ending	\Actor-Mixer Hierarchy\Default Work Unit\Puff		
+	888918427	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows		
 	1021065351	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	129	MIDI note velocity			\MIDI note velocity	
 	99298381	staminaPar			\Default Work Unit\staminaPar	
 	1351367891	SS_Air_Fear			\Factory SoundSeed Air Game Syncs\SS_Air_Fear	
 	2648548617	SS_Air_Month			\Factory SoundSeed Air Game Syncs\SS_Air_Month	
 	3203397129	SS_Air_TimeOfDay			\Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay	
-
-Modulator Envelope	ID	Name			Wwise Object Path	Notes
-	773663610	Modulator Envelope (Custom)				
 
 Effect plug-ins	ID	Name	Type				Notes
 	147717240	LongDeepAlley	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
@@ -123,7 +123,6 @@ Effect plug-ins	ID	Name	Type				Notes
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	504140941	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows\SoundSeed Air Wind	
 	638668611	SoundSeed Air Wind	SoundSeed Air/SoundSeed Wind		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds\SoundSeed Air Wind	
-	970241952	CONFIRM 01	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\UI Sounds\CONFIRM 01\CONFIRM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	568260	Monster Growl_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_7		153210

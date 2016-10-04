@@ -52,7 +52,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
-						<CurrentStateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+						<CurrentStateRef Name="Forest" ID="{B0CAA378-1655-4E56-94E2-88AC934BBB07}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Unbroken" ID="{3401D850-C4D8-4DE4-8688-DD9E45B7F4E5}"/>

@@ -328,7 +328,7 @@ public class GameManager {
     public event MenuButtons OnStartButton;
     public void StartButton()
     {
-        Debug.Log("startButton");
+       
         if (OnStartButton != null)
             OnStartButton();
     }

@@ -189,7 +189,7 @@
 						<Action Name="Play" ID="{DB0BD6BA-3CF7-48C4-9426-1F87742EDE91}" ShortID="916045208" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{91E73EE4-D7B2-4E97-9100-15351BAE0257}" Global="false">
-									<ObjectRef Name="CONFIRM 01" ID="{0140E852-B3C6-4BC7-9A6C-119EB61BC4E9}" WorkUnitID="{D9329DB3-E4D7-45AA-BD40-6EB28C6C4D39}"/>
+									<ObjectRef Name="Puff" ID="{7AB118E3-9916-4E05-9307-938B05522EFE}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>

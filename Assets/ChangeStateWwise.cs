@@ -16,7 +16,7 @@ public class ChangeStateWwise : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            AkSoundEngine.SetState("Menus", "Dark_Room");
+            AkSoundEngine.SetState("Ending", "Void");
             //GameManager.instance.audioManager
         }
     }
@@ -24,7 +24,7 @@ public class ChangeStateWwise : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            AkSoundEngine.SetState("Menus", "In_Game");
+            AkSoundEngine.SetState("Ending", "Forest");
             //GameManager.instance.audioManager
         }
     }

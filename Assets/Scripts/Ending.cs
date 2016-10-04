@@ -13,12 +13,13 @@ public class Ending : MonoBehaviour {
     public float doorspeed = 0.5f;
     private float cPause;
     private float step=0;
-    public float SecondsOfAnimation;
+    private bool playAnimation = false;
+    float SecondsOfAnimation = 50;
     
     void Start () {
         playerBody = GameManager.instance.player.transform.GetChild(0);
         lighBulb = GameObject.Find("LightBulb");
-        coffinLit = GameObject.Find("coffinHatch_geo").transform;
+        coffinLit = GameObject.Find("coffinHatch_geo_move").transform;
         coffinLitTar = GameObject.Find("coffinHatch_geo_tar").transform;
  
     }
@@ -28,11 +29,12 @@ public class Ending : MonoBehaviour {
        
         musicbox = GameManager.instance.musicBoxCount;
         
-        if (musicbox >= 5) { // Number of the last music box
+        if (musicbox < 5) { // Number of the last music box
             ending = true;
         }
         if (ending) {
             checkFacingDir();
+           
         }       
     }
 
@@ -44,11 +46,12 @@ public class Ending : MonoBehaviour {
     }
 
     void closeCoffin() {
+
         if (step <=1)
         {
             step += Time.deltaTime / SecondsOfAnimation;
             coffinLit.position = Vector3.MoveTowards(coffinLit.position, coffinLitTar.position, step);
-            coffinLit.rotation = Quaternion.RotateTowards(coffinLit.rotation, coffinLitTar.rotation, step);
+            coffinLit.rotation = coffinLitTar.rotation;
            
             //coffinLit.transform.eulerAngles = new Vector3(90, 180, 0);
             //coffinLit.transform.Translate(Vector3.right * Time.deltaTime*doorspeed, Space.Self);
@@ -57,7 +60,7 @@ public class Ending : MonoBehaviour {
         else {
             if (cPause >= pauseBeforeTurnOffLight)
             {
-                StartCoroutine(EndGame(1));
+                StartCoroutine(EndGame(2));
             }
             else
                 cPause += Time.deltaTime;
