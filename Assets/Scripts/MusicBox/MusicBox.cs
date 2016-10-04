@@ -29,7 +29,7 @@ public class MusicBox : MonoBehaviour {
         if (obj.tag == GameManager.instance.player.tag)
         {
             Count = false;
-            print("rewindstart");
+          
             GameManager.instance.MusicBoxPause();
             GameManager.instance.MusicBoxRewindStart();
         }

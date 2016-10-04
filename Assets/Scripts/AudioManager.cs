@@ -90,6 +90,13 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.SetRTPCValue(_Stamina_Par, stamina);
     }
+    public void ChangeAudioState(int state)
+    {
+        if(state == 0)
+            AkSoundEngine.PostEvent(_Set_State_Menu, gameObject);
+        else
+            AkSoundEngine.PostEvent(_Set_State_Game, gameObject);
+    }
 
 
 
@@ -266,6 +273,7 @@ public class AudioManager : MonoBehaviour{
 
     public void Subscribe2GameManager()
     {
+        print("subscribed");
         // Music Box Events
         GameManager.instance.OnMusicBoxPlay += MB_Play;
         GameManager.instance.OnMusicBoxRewindComplete += MB_Stop;

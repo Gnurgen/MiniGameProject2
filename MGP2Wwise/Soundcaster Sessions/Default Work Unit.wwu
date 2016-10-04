@@ -50,7 +50,9 @@
 							<Value>50</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
 						<CurrentSwitchRef Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>

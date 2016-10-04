@@ -89,6 +89,7 @@ public class GameManager {
             {
                 _audioManager = Object.FindObjectOfType(typeof(AudioManager)) as AudioManager;
                 _audioManager.Subscribe2GameManager();
+                
             }
             return _audioManager;
         }
@@ -104,8 +105,10 @@ public class GameManager {
 
     public void LeaveGame()
     {
+
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(START_SCENE);
+        audioManager.ChangeAudioState(0);
     }
 
     public void StartGame()
@@ -114,6 +117,7 @@ public class GameManager {
         _musicBoxCount = 0;
         _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
+        audioManager.ChangeAudioState(1);
     }
 
     public void InBetweenScreen()
@@ -132,11 +136,13 @@ public class GameManager {
     public void PlayDeathScene_Monster()
     {
         AkSoundEngine.StopAll();
+        audioManager.ChangeAudioState(0);
         if (!debug.monsterDeathImmune)
             SceneManager.LoadScene(LOSE_SCENE_DEATH);
     }
     public void PlayWinScene()
     {
+        audioManager.ChangeAudioState(0);
         AkSoundEngine.StopAll();
         SceneManager.LoadScene(WIN_SCENE);
     }

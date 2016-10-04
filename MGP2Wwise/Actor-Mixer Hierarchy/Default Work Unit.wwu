@@ -939,9 +939,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Music Box Windup" ID="{65B48D6A-82C8-48BA-9E51-4DE55FD14BBE}" ShortID="835297814">
