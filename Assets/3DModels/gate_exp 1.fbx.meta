@@ -1,24 +1,31 @@
 fileFormatVersion: 2
-guid: d8dc0c1184c3a1f419bfc1b3f516763a
-timeCreated: 1475582771
+guid: 7bfdfc2487977e946a875b28e7bac3d5
+timeCreated: 1475587217
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: gate_geo
-    100004: gate_geo_grp
-    100006: pillar_geo
-    400000: //RootNode
-    400002: gate_geo
-    400004: gate_geo_grp
-    400006: pillar_geo
-    2300000: gate_geo
-    2300002: pillar_geo
-    3300000: gate_geo
-    3300002: pillar_geo
-    4300000: gate_geo
-    4300002: pillar_geo
+    100000: gate_a_geo
+    100002: gate_b_geo
+    100004: //RootNode
+    100006: gate_geo
+    100008: gate_geo_grp
+    100010: pillar_geo
+    400000: gate_a_geo
+    400002: gate_b_geo
+    400004: //RootNode
+    400006: gate_geo
+    400008: gate_geo_grp
+    400010: pillar_geo
+    2300000: gate_a_geo
+    2300002: gate_b_geo
+    2300004: pillar_geo
+    3300000: gate_a_geo
+    3300002: gate_b_geo
+    3300004: pillar_geo
+    4300000: gate_a_geo
+    4300002: gate_b_geo
+    4300004: pillar_geo
   materials:
     importMaterials: 1
     materialName: 0

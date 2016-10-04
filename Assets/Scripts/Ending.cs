@@ -28,7 +28,7 @@ public class Ending : MonoBehaviour {
        
         musicbox = GameManager.instance.musicBoxCount;
         
-        if (musicbox >= 0) { // Number of the last music box
+        if (musicbox >= 5) { // Number of the last music box
             ending = true;
         }
         if (ending) {
@@ -56,9 +56,18 @@ public class Ending : MonoBehaviour {
         }
         else {
             if (cPause >= pauseBeforeTurnOffLight)
-                lighBulb.SetActive(false);
+            {
+                StartCoroutine(EndGame(1));
+            }
             else
                 cPause += Time.deltaTime;
         }
+    }
+
+    IEnumerator EndGame(float time)
+    {
+        lighBulb.SetActive(false);
+        yield return new WaitForSeconds(time);
+        GameManager.instance.PlayWinScene();
     }
 }

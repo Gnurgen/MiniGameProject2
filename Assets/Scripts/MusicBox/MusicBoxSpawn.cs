@@ -31,6 +31,9 @@ public class MusicBoxSpawn : MonoBehaviour {
 
     public static MusicBoxSpawn GetNext()
     {
-        return current.spawnList.Next(current.gameObject).GetComponent<MusicBoxSpawn>();
+        GameObject spawnPoint = current.spawnList.Next(current.gameObject);
+        if (spawnPoint == null)
+            spawnPoint = current.spawnList.First();
+        return spawnPoint.GetComponent<MusicBoxSpawn>();
     }
 }
