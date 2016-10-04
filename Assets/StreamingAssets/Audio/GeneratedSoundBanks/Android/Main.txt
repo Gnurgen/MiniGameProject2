@@ -43,10 +43,12 @@ State	ID	Name	State Group			Notes
 	748895195	None	Menus			
 	1631528850	In_Menu	Menus			
 	2967546505	In_Game	Menus			
+	4045452569	Dark_Room	Menus			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
 	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
+	769663170	Dark_Room	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
 	1021065351	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

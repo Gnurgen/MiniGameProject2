@@ -25,6 +25,7 @@
 				<SwitchContainer Name="Music Box Melody" ID="{9CAD7991-64BB-4CCC-A5F1-851272DFD579}" ShortID="246547316">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>6</Value>
@@ -40,9 +41,6 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -533,9 +531,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<SourcePlugin Name="SoundSeed Air Wind" ID="{ADD5C596-BEDE-45FA-9A67-798E081EEE4F}" ShortID="504140941" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
@@ -604,7 +599,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</RTPCList>
 										</Property>
 										<Property Name="FrequencyScaleRandom" Type="Real32" Value="1.01"/>
-										<Property Name="GainOffset" Type="Real32" Value="12"/>
+										<Property Name="GainOffset" Type="Real32" Value="14"/>
 										<Property Name="Gustiness" Type="Real32" Value="0.07">
 											<RTPCList>
 												<RTPC Name="" ID="{D3ADE75C-F93D-445A-A6AE-545A7663155E}" ShortID="367629313">
@@ -917,12 +912,21 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PropertyList>
 								</State>
 							</CustomState>
+							<CustomState>
+								<StateRef Name="Dark_Room" ID="{12834E58-13E7-46A0-AF81-06E26578E3EF}"/>
+								<State Name="Custom State" ID="{3D2A0FD0-DF16-45A0-9938-7BDDD99420A9}" ShortID="769663170">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="15"/>
+									</PropertyList>
+								</State>
+							</CustomState>
 						</CustomStateList>
 					</StateInfo>
 				</ActorMixer>
 				<Sound Name="Music Box Windup" ID="{07898CFB-BD56-4AB4-864E-BBB2C6C3AE7F}" ShortID="927362461" Type="SoundFX">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
@@ -938,9 +942,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -993,9 +994,6 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{97BB6190-4CC2-43AB-880D-82825C7CB472}" WorkUnitID="{64C3C869-DA77-40AE-9D2F-61D9530E8EED}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

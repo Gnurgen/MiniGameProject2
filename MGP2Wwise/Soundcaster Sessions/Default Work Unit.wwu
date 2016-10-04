@@ -50,10 +50,12 @@
 							<Value>50</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Dark_Room" ID="{12834E58-13E7-46A0-AF81-06E26578E3EF}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Broken" ID="{F8357C30-2F11-4AC9-9091-EBABAF45BF96}"/>
-						<CurrentSwitchRef Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+						<CurrentSwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
