@@ -39,8 +39,13 @@ public class GameManager {
         get
         {
             if (_language == Language.None)
-                _language = PlayerPrefs.GetInt("language",1) == 1 ? Language.Danish : Language.English;
+                _language = (Language)PlayerPrefs.GetInt("language",1);
             return _language;
+        }
+        set
+        {
+            _language = value;
+            PlayerPrefs.SetInt("language", (int)value);
         }
     }
 
