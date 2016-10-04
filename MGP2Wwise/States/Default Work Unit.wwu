@@ -11,7 +11,13 @@
 						<State Name="None" ID="{1BBBB931-E471-4A85-9C1A-2F2A6AADC6A0}"/>
 						<State Name="In_Game" ID="{3A2BC036-5057-44C0-B972-0728ECFA9DB6}"/>
 						<State Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
-						<State Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}">
+					<ChildrenList>
+						<State Name="None" ID="{B7F69D24-2A12-4E0E-9534-4C881FCB90F6}"/>
+						<State Name="Forest" ID="{B0CAA378-1655-4E56-94E2-88AC934BBB07}"/>
+						<State Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

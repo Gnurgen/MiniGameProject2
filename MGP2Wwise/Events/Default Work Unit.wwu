@@ -178,7 +178,7 @@
 						<Action Name="Play" ID="{CBB0EBA1-9AB5-4621-BEE9-2090C2FC1A14}" ShortID="197403852" Type="Play" Scope="One" Global="false">
 							<ElementList>
 								<Element ID="{61EC998A-8C47-4892-992B-E90CEF6335C1}" Global="false">
-									<ObjectRef Name="New Random Container" ID="{6CE5B6DA-60B0-4C64-B317-4C43EF36FAD9}" WorkUnitID="{1AD2E566-4163-40DA-A157-9E37E4D99CCF}"/>
+									<ObjectRef Name="Player Breath" ID="{0EF2E988-9E4C-4315-8E3A-03F8CD909F76}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
 								</Element>
 							</ElementList>
 						</Action>
@@ -304,12 +304,22 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Set_State_Dark_Room" ID="{76FF43CC-ECD7-4CDC-84C3-D588F55FC29C}">
+				<Event Name="Set_State_Void" ID="{76FF43CC-ECD7-4CDC-84C3-D588F55FC29C}">
 					<ChildrenList>
 						<Action Name="Set State" ID="{98137DF9-83C7-4200-90CC-0B2F142571E9}" ShortID="585477026" Type="SetState" Scope="All" Global="true">
 							<SetItemParam>
-								<Group Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
-								<GroupItem Name="Dark_Room" ID="{2120C91C-4B51-41BA-A34F-042175A71BE7}"/>
+								<Group Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+								<GroupItem Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+							</SetItemParam>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State_Forest" ID="{F4E41122-3713-4C46-B0DE-9FDE43E87C04}">
+					<ChildrenList>
+						<Action Name="Set State" ID="{7DAE0D50-278D-4699-A485-70165BFDA673}" ShortID="664182108" Type="SetState" Scope="All" Global="true">
+							<SetItemParam>
+								<Group Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+								<GroupItem Name="Forest" ID="{B0CAA378-1655-4E56-94E2-88AC934BBB07}"/>
 							</SetItemParam>
 						</Action>
 					</ChildrenList>

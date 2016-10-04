@@ -10,12 +10,60 @@
 								<Bus Name="SFX" ID="{981BCAF9-20A1-445E-8B80-79AB10743A27}"/>
 								<Bus Name="Music Box" ID="{687FC498-314D-48B7-BEC3-641D784FBB1D}"/>
 								<Bus Name="Ambience" ID="{1AED54A9-7FDC-42F4-AAE1-2286337615CE}"/>
-								<AuxBus Name="dark_fantasy" ID="{B0953B1F-FAF6-4BA4-A47B-2BC6030F4C99}">
+								<AuxBus Name="Forest_Reverb" ID="{766B75FA-7A82-4799-A952-B701CFFFA480}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="My_Closet" ID="{384A82A1-3C92-4AC5-AFC2-474F2080642C}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+											<ObjectRef Name="ForestAuterlitz_DenseFar" ID="{0F74A865-50E7-4277-956F-A54FFB0E301C}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
 										</Reference>
 									</ReferenceList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+												<State Name="Custom State" ID="{86DA4C84-7D0E-449E-BD28-EB68CABAF348}" ShortID="316071860">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+								</AuxBus>
+								<AuxBus Name="Void_Reverb" ID="{6A07433E-A9C8-4F0B-A2D5-00F91573A779}">
+									<ReferenceList>
+										<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+											<ObjectRef Name="Inside_My_Head" ID="{94B53301-9AA1-468F-8419-92AEDAAE39DF}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Forest" ID="{B0CAA378-1655-4E56-94E2-88AC934BBB07}"/>
+												<State Name="Custom State" ID="{AFE5850D-B858-4624-8C31-B9F7BF526F5F}" ShortID="245394281">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</AuxBus>
 							</ChildrenList>
 						</Bus>
