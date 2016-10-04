@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	938529747	Menu_Button			\Default Work Unit\Menu_Button	
 	1298383181	MusicBox_Unbroken_Switch			\Default Work Unit\MusicBox_Unbroken_Switch	
 	1326786195	Breath			\Default Work Unit\Breath	
+	1363742247	MonsterStep			\Default Work Unit\MonsterStep	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
 	2015956512	MonsterAttackHit			\Default Work Unit\MonsterAttackHit	
