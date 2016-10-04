@@ -29,7 +29,10 @@ public class PlayerControls : MonoBehaviour {
 	public float idleFieldOfView;
 	public float runFieldOfView;
 	public float fieldOfViewTimer;
-	private Camera camera;
+
+    public bool canSprint = false;
+
+    private Camera camera;
 
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
@@ -139,7 +142,7 @@ public class PlayerControls : MonoBehaviour {
         {
             if (Input.touchCount == 1 || Input.touchCount > 1 && exhausted)
                 playerState = PlayerState.Walk;
-            else if (Input.touchCount > 1)
+            else if (Input.touchCount > 1 && canSprint)
                 playerState = PlayerState.Sprint;
             else
                 playerState = PlayerState.Idle;
@@ -148,7 +151,7 @@ public class PlayerControls : MonoBehaviour {
         {
             if (Input.touchCount == 2 || Input.touchCount > 2 && exhausted)
                 playerState = PlayerState.Walk;
-            else if (Input.touchCount > 2)
+            else if (Input.touchCount > 2 && canSprint)
                 playerState = PlayerState.Sprint;
             else
                 playerState = PlayerState.Idle;

@@ -79,7 +79,7 @@ public class StartmenuInteraction : MonoBehaviour {
     {
         bool b = GameObject.Find("Toggle_Joystick").GetComponent<Toggle>().isOn;
         Debug.Log(b);
-        GameManager.instance.debug.monsterDeathImmune = b;
+        GameManager.instance.debug.usingJoystick = b;
     }
 
     public void SoundTestButton()

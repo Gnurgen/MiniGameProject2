@@ -46,6 +46,7 @@ public class OneShotAnis : MonoBehaviour {
     private void _despawn()
     {
         GameManager.instance.player.GetComponent<ActivateDome>().spawnDomes = true;
+        GameManager.instance.player.GetComponent<PlayerControls>().canSprint = true;
         curState = state.none;
         nmc.enabled = true;
         enabled = false;
