@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID AMBIENCE_PLAY = 1496310610U;
         static const AkUniqueID AMBIENCE_STOP = 3166394572U;
         static const AkUniqueID BREATH = 1326786195U;
+        static const AkUniqueID ENDINGCOFFIN = 3113955711U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID IDLE_SWITCH = 2274660714U;
         static const AkUniqueID MENU_BUTTON = 938529747U;

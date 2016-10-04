@@ -6,6 +6,7 @@
 				<SoundBank Name="Main" ID="{CB78265F-883B-4B12-8DEE-A8D690B43F2B}">
 					<ObjectInclusionList>
 						<ObjectRef Name="MusicBox_Broken_Switch" ID="{98DFADC2-C117-406B-A70C-52B2E84C926F}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EndingCoffin" ID="{1F779821-6360-4175-B0F5-AE864C2F8953}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MonsterAttackHit" ID="{E228458C-A6F9-41C1-997F-23A1EDA10F17}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Set_State_Game" ID="{AC0733CB-3043-4329-843E-032AD4D0740A}" WorkUnitID="{769F202A-4C81-4E71-B192-0D69AA055185}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Factory Altiverb - Outdoor and More" ID="{C0E78DAA-768A-438F-8F7B-3701395185C3}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}" Filter="7" Origin="Manual"/>

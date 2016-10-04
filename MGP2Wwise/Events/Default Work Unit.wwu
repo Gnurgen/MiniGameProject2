@@ -324,6 +324,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="EndingCoffin" ID="{1F779821-6360-4175-B0F5-AE864C2F8953}">
+					<ChildrenList>
+						<Action Name="Play" ID="{DE91487E-03EF-4862-BA2B-8740D46B69EE}" ShortID="844284376" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{C49C797F-7DD4-4DB4-8A6A-1737AAC30FBF}" Global="false">
+									<ObjectRef Name="Ending Coffin" ID="{3353FF98-60C1-4304-8A23-CD8955D102DE}" WorkUnitID="{5479FAAF-EF4A-4F70-81FE-59985C302091}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

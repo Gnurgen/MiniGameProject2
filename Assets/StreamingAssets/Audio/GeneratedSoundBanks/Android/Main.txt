@@ -23,6 +23,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2653952097	MonsterAggro			\Default Work Unit\MonsterAggro	
 	2820245704	MusicBox_Stop			\Default Work Unit\MusicBox_Stop	
 	2857728357	Walk_Switch			\Default Work Unit\Walk_Switch	
+	3113955711	EndingCoffin			\Default Work Unit\EndingCoffin	
 	3166394572	Ambience_Stop			\Default Work Unit\Ambience_Stop	
 	3719125665	MusicBox_Resume			\Default Work Unit\MusicBox_Resume	
 	4207344442	Set_State_Game			\Default Work Unit\Set_State_Game	
@@ -131,6 +132,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	568260	Monster Growl_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Monster Growl_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_7		153210
+	8408552	Ending Coffin	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Ending Coffin_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ending Coffin		385190
 	29098323	Player Breath Inhale_14	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Player Breath Inhale_14_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_14		123376
 	29763416	Player Breath Inhale_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Player Breath Inhale_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_6		128872
 	39177842	Player Breath Inhale	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Android\SFX\Player Breath Inhale_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale		140276

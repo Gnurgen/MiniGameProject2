@@ -30,6 +30,7 @@
 				<Event Id="1496310610" Name="Ambience_Play" ObjectPath="\Events\Default Work Unit\Ambience_Play"/>
 				<Event Id="3166394572" Name="Ambience_Stop" ObjectPath="\Events\Default Work Unit\Ambience_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="1326786195" Name="Breath" ObjectPath="\Events\Default Work Unit\Breath"/>
+				<Event Id="3113955711" Name="EndingCoffin" ObjectPath="\Events\Default Work Unit\EndingCoffin" MaxAttenuation="80.000000"/>
 				<Event Id="1866025847" Name="FootStep" ObjectPath="\Events\Default Work Unit\FootStep"/>
 				<Event Id="2274660714" Name="Idle_Switch" ObjectPath="\Events\Default Work Unit\Idle_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\Menu_Button"/>
@@ -59,6 +60,10 @@
 				<File Id="568260" Language="SFX">
 					<ShortName>Monster Growl_7.wav</ShortName>
 					<Path>SFX\Monster Growl_7_4AFEA6D2.wem</Path>
+				</File>
+				<File Id="8408552" Language="SFX">
+					<ShortName>Ending Coffin.wav</ShortName>
+					<Path>SFX\Ending Coffin_4AFEA6D2.wem</Path>
 				</File>
 				<File Id="13019290" Language="SFX">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Transport\AE_Ford_TransitVanRear.wav</ShortName>
