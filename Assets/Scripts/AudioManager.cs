@@ -58,7 +58,8 @@ public class AudioManager : MonoBehaviour{
     private string _StartButton;
     [SerializeField]
     private string _Set_State_Menu,
-        _Set_State_Game;
+        _Set_State_Game,
+        _Set_State_Dark_Room;
 
 
     // MISC VOIDS FOR GAME MANAGER
@@ -90,7 +91,18 @@ public class AudioManager : MonoBehaviour{
     {
         AkSoundEngine.SetRTPCValue(_Stamina_Par, stamina);
     }
+    public void SwitchState(int state)
+    {
+       
+        if (state == 0)
+            AkSoundEngine.PostEvent(_Set_State_Menu, gameObject);
 
+        if (state == 1)
+            AkSoundEngine.PostEvent(_Set_State_Game, gameObject);
+
+        if (state == 2)
+            AkSoundEngine.PostEvent(_Set_State_Dark_Room, gameObject);
+    }
 
 
     // Music Box Events

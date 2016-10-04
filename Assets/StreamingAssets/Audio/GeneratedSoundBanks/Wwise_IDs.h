@@ -35,6 +35,7 @@ namespace AK
         static const AkUniqueID MUSICBOX_UNBROKEN_SWITCH = 1298383181U;
         static const AkUniqueID PUFF = 2076776060U;
         static const AkUniqueID RUN_SWITCH = 899311691U;
+        static const AkUniqueID SET_STATE_DARK_ROOM = 1893791182U;
         static const AkUniqueID SET_STATE_GAME = 4207344442U;
         static const AkUniqueID SET_STATE_MENU = 2302270969U;
         static const AkUniqueID WALK_SWITCH = 2857728357U;
@@ -117,8 +118,7 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID DARK_ROOM = 4045452569U;
-        static const AkUniqueID STANDARD = 3025917178U;
+        static const AkUniqueID DARK_FANTASY = 1850303326U;
     } // namespace AUX_BUSSES
 
 }// namespace AK

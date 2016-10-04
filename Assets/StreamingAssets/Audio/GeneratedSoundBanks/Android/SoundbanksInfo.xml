@@ -43,6 +43,7 @@
 				<Event Id="1298383181" Name="MusicBox_Unbroken_Switch" ObjectPath="\Events\Default Work Unit\MusicBox_Unbroken_Switch" MaxAttenuation="0.000000"/>
 				<Event Id="2076776060" Name="Puff" ObjectPath="\Events\Default Work Unit\Puff"/>
 				<Event Id="899311691" Name="Run_Switch" ObjectPath="\Events\Default Work Unit\Run_Switch" MaxAttenuation="0.000000"/>
+				<Event Id="1893791182" Name="Set_State_Dark_Room" ObjectPath="\Events\Default Work Unit\Set_State_Dark_Room" MaxAttenuation="0.000000"/>
 				<Event Id="4207344442" Name="Set_State_Game" ObjectPath="\Events\Default Work Unit\Set_State_Game" MaxAttenuation="0.000000"/>
 				<Event Id="2302270969" Name="Set_State_Menu" ObjectPath="\Events\Default Work Unit\Set_State_Menu" MaxAttenuation="0.000000"/>
 				<Event Id="2857728357" Name="Walk_Switch" ObjectPath="\Events\Default Work Unit\Walk_Switch" MaxAttenuation="0.000000"/>

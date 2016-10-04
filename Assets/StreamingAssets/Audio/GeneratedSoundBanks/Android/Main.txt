@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1363742247	MonsterStep			\Default Work Unit\MonsterStep	
 	1496310610	Ambience_Play			\Default Work Unit\Ambience_Play	
 	1866025847	FootStep			\Default Work Unit\FootStep	
+	1893791182	Set_State_Dark_Room			\Default Work Unit\Set_State_Dark_Room	
 	2015956512	MonsterAttackHit			\Default Work Unit\MonsterAttackHit	
 	2071830116	MusicBox_Rewind_Stop			\Default Work Unit\MusicBox_Rewind_Stop	
 	2074283912	Monster_Growl_Play			\Default Work Unit\Monster_Growl_Play	
@@ -47,8 +48,9 @@ State	ID	Name	State Group			Notes
 
 Custom State	ID	Name	State Group	Owner		Notes
 	159020401	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
+	192548875	Dark_Room	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Polar Winds		
 	348854283	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Music Box Windup		
-	769663170	Dark_Room	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience		
+	647618978	Dark_Room	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Weeping Willows		
 	1021065351	In_Menu	Menus	\Actor-Mixer Hierarchy\Default Work Unit\Monster		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

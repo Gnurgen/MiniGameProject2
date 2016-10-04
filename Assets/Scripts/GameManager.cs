@@ -119,6 +119,7 @@ public class GameManager {
 
     public void InBetweenScreen()
     {
+        AkSoundEngine.StopAll();
         _instance = null;
         SceneManager.LoadScene(INBETWEEN);
     }
