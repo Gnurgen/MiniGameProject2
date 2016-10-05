@@ -81,7 +81,7 @@ public class PlayerControls : MonoBehaviour {
 
     void Update()
     {
-        if (Input.touchCount == 3)
+        if (Input.touchCount == 10)
         {
             print("teleport!");
             transform.position = GameManager.instance.musicBox.transform.position + new Vector3(0, 1, 0);

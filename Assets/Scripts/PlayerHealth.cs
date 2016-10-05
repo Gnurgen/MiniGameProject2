@@ -17,15 +17,32 @@ public class PlayerHealth : MonoBehaviour {
     private float currentregenTime;
     private Transform _deathGUI;
 
+    private Image[] darkness;
+    private float currentDuration;
+    public float fadeDuration = 2.0f;
+    public float fadeInDuration = 0.5f;
+    private int amountFramesShown;
+
+
     void Start () {
+        darkness = new Image[GameObject.Find("MonsterGUI").transform.GetChild(2).childCount];
+        for (int i = 0; i < darkness.Length; i++)
+        {
+            darkness[i] = GameObject.Find("MonsterGUI").transform.GetChild(2).GetChild(i).GetComponent<Image>();
+            darkness[i].CrossFadeAlpha(0, 0, true);
+        }
         _deathGUI = GameObject.Find("ThumbPrint").transform.GetChild(1);
         currentHealth = health;
         currentregenTime = regenTime;
         GameManager.instance.OnPlayerTakeDamage += LoseLife;
         GameManager.instance.OnEnemyAttack += ResetTimer;
+        GameManager.instance.OnEnemyAttackHit += ResetDarknessVignette;
+       // GameManager.instance.OnEnemyAttackHit += Darkness;
     }
     void Update() {
-        if(!_dead)
+
+        Debug.Log(currentHealth);
+        if (!_dead)
             regenerate();
         if (currentHealth <= 0)
         {
@@ -75,4 +92,59 @@ public class PlayerHealth : MonoBehaviour {
         GameManager.instance.PlayDeathScene_Monster();
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    
+  void Darkness()
+  {
+      StartCoroutine(darknessFadeWait(regenTime, fadeInDuration));
+  }
+
+
+  IEnumerator darknessFadeWait(float time1, float time2)
+  {
+        if (currentHealth == 3)
+            amountFramesShown = 7;
+        else if (currentHealth == 2)
+            amountFramesShown = 8;
+        else if (currentHealth == 1)
+            amountFramesShown = 9;
+
+      for (int i = 0; i < amountFramesShown; i++)
+      {
+          darkness[i].CrossFadeAlpha(1, fadeInDuration, true);
+          yield return new WaitForSeconds(time2);
+      }
+      for (int i = darkness.Length - 1; i >= 0; i--)
+      {
+          darkness[i].CrossFadeAlpha(0, 15/amountFramesShown, true);
+          yield return new WaitForSeconds(time1/amountFramesShown);
+      }
+
+  }
+
+    void ResetDarknessVignette(int i)
+    {
+        for (int j = 0; i < darkness.Length; i++)
+        {
+            darkness[j].CrossFadeAlpha(0, 0, true);
+        }
+        Darkness();
+    }
 }
+
+
+
+
+
+
+

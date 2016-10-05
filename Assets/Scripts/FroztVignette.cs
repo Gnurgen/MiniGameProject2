@@ -19,6 +19,7 @@ public class FroztVignette : MonoBehaviour
     private float[] fadeVal;
 
 
+
     void Start()
     {
         playerBody = GameManager.instance.player.transform;
@@ -33,17 +34,19 @@ public class FroztVignette : MonoBehaviour
         {
             frost[i] = GameObject.Find("MonsterGUI").transform.GetChild(1).GetChild(i).GetComponent<Image>();
         }
+        /*
         for (int i = 0; i < darkness.Length; i++)
         {
             darkness[i] = GameObject.Find("MonsterGUI").transform.GetChild(2).GetChild(i).GetComponent<Image>();
             darkness[i].CrossFadeAlpha(0, 0, true);
-        }
-        GameManager.instance.OnEnemyAttackHit += ResetDarknessVignette;
-        GameManager.instance.OnEnemyAttackHit += Darkness;
+        }*/
+        //GameManager.instance.OnEnemyAttackHit += ResetDarknessVignette;
+       // GameManager.instance.OnEnemyAttackHit += Darkness;
     }
 
     void Update() {
-        playerEnemyDistance = Vector3.Distance(playerBody.position, transform.position);
+
+    playerEnemyDistance = Vector3.Distance(playerBody.position, transform.position);
         Frost();
     }
 
@@ -72,7 +75,7 @@ public class FroztVignette : MonoBehaviour
                 frost[x].color = new Vector4(255, 255, 255, 0);
         }
     }
-
+    /*
     void Darkness(int i)
     {
         StartCoroutine(darknessFadeWait(fadeDuration, fadeInDuration));
@@ -94,5 +97,7 @@ public class FroztVignette : MonoBehaviour
             yield return new WaitForSeconds(time1);
         }
 
-    }
+    }*/
+    
+
 }
