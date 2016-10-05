@@ -93,12 +93,13 @@ public class AudioManager : MonoBehaviour{
     }
     public void ChangeAudioState(int state)
     {
-        if(state == 0)
+        AkSoundEngine.SetState("Ending", "Forest");
+        if(state == 0) 
             AkSoundEngine.PostEvent(_Set_State_Menu, gameObject);
         else
             AkSoundEngine.PostEvent(_Set_State_Game, gameObject);
     }
- 
+    
 
 
     // Music Box Events
