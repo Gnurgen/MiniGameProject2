@@ -132,7 +132,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	568260	Monster Growl_7	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Monster Growl_7_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster Growl\Monster Growl_7		153210
-	8408552	Ending Coffin	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Ending Coffin_7D631B38.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ending Coffin		384760
+	8408552	Ending Coffin	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Ending Coffin_1E54C883.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ending Coffin		384760
 	29098323	Player Breath Inhale_14	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_14_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_14		123376
 	29763416	Player Breath Inhale_6	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_6_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale_6		128872
 	39177842	Player Breath Inhale	C:\Users\dadiu\Documents\MiniGameProject2\MGP2Wwise\.cache\Windows\SFX\Player Breath Inhale_4AFEA6D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Breath\Player Inhale\Player Breath Inhale		140276

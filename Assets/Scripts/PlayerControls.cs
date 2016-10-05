@@ -56,7 +56,6 @@ public class PlayerControls : MonoBehaviour {
     private float currentFreeze;
     private float tempSpeed;
     private bool frozen = false;
-    public bool StartAnimation = true;
 
     void Start()
     {
@@ -82,8 +81,11 @@ public class PlayerControls : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            GameManager.instance.MusicBoxRewindComplete();
+        if (Input.touchCount == 3)
+        {
+            print("teleport!");
+            transform.position = GameManager.instance.musicBox.transform.position + new Vector3(0, 1, 0);
+        }
         //SET STAMINA EVERY FUCKING FRAME BRO!
         if (!EnteredVoid)
             GameManager.instance.audioManager.StaminaChange(stamina);
@@ -92,11 +94,9 @@ public class PlayerControls : MonoBehaviour {
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);
-            if (!StartAnimation)
-            {
-                applyGyroRotation();
-                applyCalibration();
-            }
+
+            applyGyroRotation();
+            applyCalibration();
         }
         else
         {

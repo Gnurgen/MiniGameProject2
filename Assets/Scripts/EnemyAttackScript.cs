@@ -48,7 +48,7 @@ public class EnemyAttackScript : MonoBehaviour
     {
 
         //Handheld.Vibrate();
-        //Vibrator.Vibrate(vibrationDuration);
+        Vibrator.Vibrate(vibrationDuration);
     }
 
     private void rollIfHit(int i)

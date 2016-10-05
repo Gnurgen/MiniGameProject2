@@ -33,7 +33,7 @@ public class ZoomBoxToPlayer : MonoBehaviour {
         _deltaTime += Time.deltaTime;
         _normTime = _deltaTime/_zoomTime;
 
-        transform.rotation = Quaternion.FromToRotation(_player.position,_mBox.position);
+        //transform.rotation = Quaternion.FromToRotation(_player.position,_mBox.position);
 
         transform.position = _initPos - _dir * (_initDist * _zoomBehaviour.Evaluate(_normTime));
         if (_normTime >= 1)
@@ -42,8 +42,12 @@ public class ZoomBoxToPlayer : MonoBehaviour {
             _deltaTime = 0;
             enabled = false;
             _player.GetComponent<PlayerControls>().enabled = true;
-            _player.GetComponent<PlayerControls>().StartAnimation = false;
             _player.GetComponent<PlayerControls>().canMove = true;
         }
 	}
+
+    void LateUpdate()
+    {
+        transform.rotation = Quaternion.Lerp(tempRot, transform.rotation, _normTime);
+    }
 }

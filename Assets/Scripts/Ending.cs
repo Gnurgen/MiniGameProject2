@@ -16,7 +16,7 @@ public class Ending : MonoBehaviour {
     private bool closeIt = false;
     private bool playAnimation = false;
     private bool stopItAll = false;
-    float SecondsOfAnimation = 3;
+    float SecondsOfAnimation = 30;
     RaycastHit hit;
     Ray ray;
     void Start () {
@@ -59,9 +59,9 @@ public class Ending : MonoBehaviour {
 
     void closeCoffin() {
 
-        if (step <=1)
+        if (step <=0.1)
         {
-           
+            print(step);
             step += (1 / SecondsOfAnimation) * Time.deltaTime;
             coffinLit.position = Vector3.MoveTowards(coffinLit.position, coffinLitTar.position, step);
             coffinLit.rotation = coffinLitTar.rotation;
