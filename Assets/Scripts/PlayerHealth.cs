@@ -126,7 +126,7 @@ public class PlayerHealth : MonoBehaviour {
       }
       for (int i = darkness.Length - 1; i >= 0; i--)
       {
-          darkness[i].CrossFadeAlpha(0, 15/amountFramesShown, true);
+          darkness[i].CrossFadeAlpha(0, 15, true);
           yield return new WaitForSeconds(time1/amountFramesShown);
       }
 
