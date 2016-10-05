@@ -12,7 +12,7 @@ public class Ending : MonoBehaviour {
     public float pauseBeforeTurnOffLight = 2;
     public float doorspeed = 0.5f;
     private float cPause;
-    private float step=-1;
+    private float step=0;
     private bool closeIt = false;
     private bool playAnimation = false;
     private bool stopItAll = false;

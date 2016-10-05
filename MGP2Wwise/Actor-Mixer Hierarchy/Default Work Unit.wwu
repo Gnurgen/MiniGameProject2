@@ -3458,7 +3458,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-10</Value>
+								<Value>-5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
