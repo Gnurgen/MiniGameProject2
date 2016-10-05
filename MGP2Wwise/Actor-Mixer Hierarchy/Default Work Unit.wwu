@@ -3491,6 +3491,34 @@ Air currents change during the hours of the day and months of the year.</Comment
 									<Language>SFX</Language>
 								</SourcePlugin>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+										<State Name="Custom State" ID="{75C88674-BBD2-4BAE-814F-ACC944F5FCED}" ShortID="913562038">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+										<State Name="Custom State" ID="{3251749D-9EC3-4E4F-8ED2-2F66D9823521}" ShortID="307178813">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Wwise Silence" ID="{9BB5D56D-0E24-4B92-AB10-42C81DACFA00}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -3891,6 +3919,34 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</PropertyList>
 										</Panner>
 									</PositioningInfo>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+												<State Name="Custom State" ID="{3EF3453D-BED1-43E3-94B4-A8EE0F70F7F4}" ShortID="259180550">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+												<State Name="Custom State" ID="{F272EF4C-B699-44FD-AEC8-F7DEFCEA0B88}" ShortID="910363430">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Player Footsteps Left Run" ID="{38076CA0-8AC5-49DF-9E7D-2E6D70DD5B45}" ShortID="8150138">
 									<PropertyList>
@@ -4324,8 +4380,64 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</PropertyList>
 										</Panner>
 									</PositioningInfo>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+												<State Name="Custom State" ID="{1A6EB4CD-9AE0-40DE-8D70-428C9B0F78AA}" ShortID="845062228">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+												<State Name="Custom State" ID="{00540043-4F9E-4F23-9A7A-1DB92D333D5A}" ShortID="915491582">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+										<State Name="Custom State" ID="{EEADE2FB-DFB0-4526-A12E-8448C4D5C397}" ShortID="2411089">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+										<State Name="Custom State" ID="{16E46CA8-44A3-45FA-BE81-16C6E4BE7FD8}" ShortID="325801255">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<Playlist>
 								<ItemRef Name="Player Footsteps Left Run" ID="{38076CA0-8AC5-49DF-9E7D-2E6D70DD5B45}"/>
 								<ItemRef Name="Player Footsteps Right Run" ID="{ADE458FE-07A6-417E-9308-87D26A667C25}"/>
@@ -4727,6 +4839,34 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</PropertyList>
 										</Panner>
 									</PositioningInfo>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+												<State Name="Custom State" ID="{2DA70440-1715-404B-AB29-A5C641EA3CDF}" ShortID="430252731">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+												<State Name="Custom State" ID="{60C39397-018F-492C-8DE7-3BBB04100C3D}" ShortID="597752978">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Player Footsteps Right Walk" ID="{3026F996-28B5-4E9B-8DF7-B1C269120F28}" ShortID="659872852">
 									<PropertyList>
@@ -5160,42 +5300,70 @@ Air currents change during the hours of the day and months of the year.</Comment
 											</PropertyList>
 										</Panner>
 									</PositioningInfo>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+												<State Name="Custom State" ID="{324F5305-6EFB-4CAA-BFCC-32B34970B27D}" ShortID="112778972">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+												<State Name="Custom State" ID="{25165545-95C0-45C1-876C-B9A23FD8C115}" ShortID="223961700">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-200"/>
+													</PropertyList>
+												</State>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
+										<State Name="Custom State" ID="{3076D6E5-3353-4C82-8782-0BBB18F3D081}" ShortID="87505501">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
+										<State Name="Custom State" ID="{5663A2C4-BEE4-4F53-BF34-736BE6801E33}" ShortID="1062372098">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-200"/>
+											</PropertyList>
+										</State>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<Playlist>
 								<ItemRef Name="Player Footsteps Left Walk" ID="{86FEC5BA-03EE-441A-AA48-7C7F6A45EF6C}"/>
 								<ItemRef Name="Player Footsteps Right Walk" ID="{3026F996-28B5-4E9B-8DF7-B1C269120F28}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Ending" ID="{6E6F7C7A-15F1-4CBD-8A91-E2F57E5A56F9}"/>
-							</StateGroupInfo>
-							<StateGroupInfo>
-								<StateGroupRef Name="Menus" ID="{50CA7678-F8ED-4512-8650-60229B8BCB79}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="In_Menu" ID="{D9F8A642-D908-416A-BF27-DA41E6CCF92F}"/>
-								<State Name="Custom State" ID="{0F494CF4-88F4-441D-ABA7-280668E366D3}" ShortID="441548260">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-200"/>
-									</PropertyList>
-								</State>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Void" ID="{0D690BCE-3A28-43CB-BB24-EB7F722F2A0C}"/>
-								<State Name="Custom State" ID="{D5959A57-7274-47DD-AC0C-F68DEB734D82}" ShortID="992092646">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-200"/>
-									</PropertyList>
-								</State>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
 					<GroupingInfo>
 						<GroupRef Name="StepSwitch" ID="{2A97CFDF-86B1-4CF3-869D-4DB6A20FCF07}"/>
 						<DefaultSwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
