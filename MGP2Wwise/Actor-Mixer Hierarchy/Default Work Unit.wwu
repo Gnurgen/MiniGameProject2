@@ -3451,6 +3451,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
@@ -3458,7 +3459,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
