@@ -12,7 +12,7 @@ public class Ending : MonoBehaviour {
     public float pauseBeforeTurnOffLight = 2;
     public float doorspeed = 0.5f;
     private float cPause;
-    private float step=0;
+    private float step=-1;
     private bool closeIt = false;
     private bool playAnimation = false;
     private bool stopItAll = false;
@@ -61,7 +61,8 @@ public class Ending : MonoBehaviour {
 
         if (step <=1)
         {
-            step += Time.deltaTime / SecondsOfAnimation;
+           
+            step += (1 / SecondsOfAnimation) * Time.deltaTime;
             coffinLit.position = Vector3.MoveTowards(coffinLit.position, coffinLitTar.position, step);
             coffinLit.rotation = coffinLitTar.rotation;
             
@@ -69,7 +70,7 @@ public class Ending : MonoBehaviour {
         else if(!stopItAll)
         {
             GameManager.instance.audioManager.AmbienceStop(); 
-            StartCoroutine(EndGame(3));
+            StartCoroutine(EndGame(5));
             stopItAll = true;
         }
     }

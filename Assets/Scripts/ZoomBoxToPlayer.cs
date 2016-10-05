@@ -11,17 +11,18 @@ public class ZoomBoxToPlayer : MonoBehaviour {
     [SerializeField]
     private AnimationCurve _zoomBehaviour;
     private float _normTime = 0, _initDist, _deltaTime = 0;
+    
 
     private Quaternion tempRot;
 
 	void OnEnable () {
+
         transform.LookAt(_mBox);
         tempRot = transform.rotation;
         _player = GameManager.instance.player.transform;
         _mBox = GameManager.instance.musicBox.transform;
         _dir = (_mBox.position - _player.position).normalized; //Get direction vector from box to player
         transform.position = _mBox.position - _dir * _startDistToBox;
-
         _initPos = transform.position;
         _initDist = Vector3.Distance(_initPos, _player.position);
 	}
@@ -32,7 +33,7 @@ public class ZoomBoxToPlayer : MonoBehaviour {
         _deltaTime += Time.deltaTime;
         _normTime = _deltaTime/_zoomTime;
 
-        transform.rotation = Quaternion.Lerp(tempRot, transform.rotation, _normTime);
+        transform.rotation = Quaternion.FromToRotation(_player.position,_mBox.position);
 
         transform.position = _initPos - _dir * (_initDist * _zoomBehaviour.Evaluate(_normTime));
         if (_normTime >= 1)
@@ -40,7 +41,9 @@ public class ZoomBoxToPlayer : MonoBehaviour {
             _normTime = 0;
             _deltaTime = 0;
             enabled = false;
-            GameManager.instance.player.GetComponent<PlayerControls>().canMove = true;
+            _player.GetComponent<PlayerControls>().enabled = true;
+            _player.GetComponent<PlayerControls>().StartAnimation = false;
+            _player.GetComponent<PlayerControls>().canMove = true;
         }
 	}
 }

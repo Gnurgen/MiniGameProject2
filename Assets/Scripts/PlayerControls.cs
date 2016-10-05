@@ -56,6 +56,7 @@ public class PlayerControls : MonoBehaviour {
     private float currentFreeze;
     private float tempSpeed;
     private bool frozen = false;
+    public bool StartAnimation = true;
 
     void Start()
     {
@@ -91,8 +92,11 @@ public class PlayerControls : MonoBehaviour {
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);
-            applyGyroRotation();
-            applyCalibration();
+            if (!StartAnimation)
+            {
+                applyGyroRotation();
+                applyCalibration();
+            }
         }
         else
         {
