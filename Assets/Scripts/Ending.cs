@@ -13,9 +13,12 @@ public class Ending : MonoBehaviour {
     public float doorspeed = 0.5f;
     private float cPause;
     private float step=0;
+    private bool closeIt = false;
     private bool playAnimation = false;
-    float SecondsOfAnimation = 50;
-    
+    private bool stopItAll = false;
+    float SecondsOfAnimation = 3;
+    RaycastHit hit;
+    Ray ray;
     void Start () {
         playerBody = GameManager.instance.player.transform.GetChild(0);
         lighBulb = GameObject.Find("LightBulb");
@@ -24,22 +27,33 @@ public class Ending : MonoBehaviour {
         GameManager.instance.OnMusicBoxLast += SetEnding;
     }
     
-    void Update()
+    void FixedUpdate()
     {
-        if (ending)
+        if (ending && !closeIt)
         {
             checkFacingDir();
         }       
+    }
+    void Update()
+    {
+        if(closeIt)
+        {
+            closeCoffin();
+        }
     }
     void SetEnding()
     {
         ending = true;
     }
     void checkFacingDir() {
-        if (playerBody.transform.eulerAngles.y >= 160 && playerBody.transform.eulerAngles.y <= 190)
+
+        if (Physics.Raycast(playerBody.position, playerBody.transform.forward, out hit))
         {
-            closeCoffin();
-            GameManager.instance.KnockOnCoffin();
+            if (hit.transform.tag == "Ending")
+            {
+                closeIt = true;
+                GameManager.instance.KnockOnCoffin();
+            }
         }
     }
 
@@ -50,20 +64,13 @@ public class Ending : MonoBehaviour {
             step += Time.deltaTime / SecondsOfAnimation;
             coffinLit.position = Vector3.MoveTowards(coffinLit.position, coffinLitTar.position, step);
             coffinLit.rotation = coffinLitTar.rotation;
-        
+            
         }
-        else {
-            GameManager.instance.audioManager.AmbienceStop();
-
-
-
-
-            if (cPause >= pauseBeforeTurnOffLight)
-            {
-                StartCoroutine(EndGame(5));
-            }
-            else
-                cPause += Time.deltaTime;
+        else if(!stopItAll)
+        {
+            GameManager.instance.audioManager.AmbienceStop(); 
+            StartCoroutine(EndGame(3));
+            stopItAll = true;
         }
     }
 

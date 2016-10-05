@@ -16,7 +16,8 @@ public class GateOpener : MonoBehaviour {
 	// Update is called once per frame
 	void OpenTheGate ()
     {
-            gateL.transform.localRotation = Quaternion.Euler(0, 90, 0);
+          Debug.Log("THE GATES ARE OPEN");
+          gateL.transform.localRotation = Quaternion.Euler(0, 90, 0);
             gateR.transform.localRotation = Quaternion.Euler(0, -90, 0);
     }
 }

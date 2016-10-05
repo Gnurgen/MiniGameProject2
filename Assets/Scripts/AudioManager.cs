@@ -98,7 +98,7 @@ public class AudioManager : MonoBehaviour{
         else
             AkSoundEngine.PostEvent(_Set_State_Game, gameObject);
     }
-
+ 
 
 
     // Music Box Events
@@ -146,8 +146,7 @@ public class AudioManager : MonoBehaviour{
     }
     void MB_Move()
     {
-        AkSoundEngine.PostEvent(_MusicBoxStop, GameManager.instance.musicBox);
-        AkSoundEngine.RenderAudio();
+        MB_Stop();
         AkSoundEngine.PostEvent(_MusicBoxPuff, GameManager.instance.player);
         AkSoundEngine.PostEvent(_MusicBoxPlay, GameManager.instance.musicBox);
         AkSoundEngine.RenderAudio();
@@ -236,7 +235,7 @@ public class AudioManager : MonoBehaviour{
     }
     void KnockOnCoffin()
     {
-        AkSoundEngine.PostEvent(_KnockOnCoffin, GameManager.instance.enemy);
+        AkSoundEngine.PostEvent(_KnockOnCoffin, GameManager.instance.coffinWall_geo_grp);
         AkSoundEngine.RenderAudio();
     }
     void GateCreak()
@@ -285,6 +284,7 @@ public class AudioManager : MonoBehaviour{
         GameManager.instance.OnMusicBoxRewindStart += MB_Rewind_Play;
         GameManager.instance.OnMusicBoxRewindStop += MB_Rewind_Stop;
         GameManager.instance.OnMusicBoxMove += MB_Move;
+        GameManager.instance.OnMusicBoxLast += MB_Stop;
 
         // Player Events
         GameManager.instance.OnPlayerIdle += PlayerIdle;

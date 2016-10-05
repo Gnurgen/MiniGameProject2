@@ -10,6 +10,7 @@ public class PlayerControls : MonoBehaviour {
     private Rigidbody rgd;
     private string PAR_STAMINA;
 
+    public bool EnteredVoid = false;
     [Header("Player")]
     public float walkingSpeed = 150.0f;
     public float sprintSpeed = 300.00f;
@@ -75,14 +76,18 @@ public class PlayerControls : MonoBehaviour {
         tempSpeed = walkingSpeed;
 
         GameManager.instance.OnEnemyAttackHit += PlayerFrozen;
-
+        
     }
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+            GameManager.instance.MusicBoxRewindComplete();
         //SET STAMINA EVERY FUCKING FRAME BRO!
-        GameManager.instance.audioManager.StaminaChange(stamina);
+        if (!EnteredVoid)
+            GameManager.instance.audioManager.StaminaChange(stamina);
+        if(EnteredVoid)
+            GameManager.instance.audioManager.StaminaChange(70); // NÅR DU ER I SECRET ROOM KAN DU HØRER DIT ÅNDEDRAG
         //controls
         if (!joystickEnable) {
             joystick.SetActive(false);

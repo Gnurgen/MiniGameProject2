@@ -22,6 +22,8 @@ public class MusicBoxAnimation : MonoBehaviour {
     private void MB_LastOne()
     {
         anim.SetBool("LastBox", true);
+       
+
     }
     private void MB_Move()
     {
@@ -32,6 +34,7 @@ public class MusicBoxAnimation : MonoBehaviour {
    
     private void MB_Rewind_Complete()
     {
+       
         animationComplete = true;
         anim.ResetTrigger("IsRewinding");
         anim.speed = 1;
@@ -50,11 +53,14 @@ public class MusicBoxAnimation : MonoBehaviour {
         anim.SetTrigger("IsRewinding");
         if(!animationComplete)
         anim.speed = 1;
-       
+       if(anim.GetBool("LastBox") == true)
+        {
+            StartCoroutine(LastBoxAni(2f));
+        }
     }
-
-	void Update () {
-	
-	}
+    IEnumerator LastBoxAni(float time)
+    {   yield return new WaitForSeconds(time);
+        GameManager.instance.MusicBoxLast();
+    }
 
 }

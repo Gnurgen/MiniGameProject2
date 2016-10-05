@@ -12,13 +12,14 @@ public class GameManager {
     private static string LOSE_SCENE_DEATH = "LoseDeathScene";
 
     private static GameManager _instance;
-    private static int _musicBoxCount;
+    private static int _musicBoxCount; 
     private static Language _language = Language.None;
     public static readonly DebugManager debug = new DebugManager();
 
     private GameObject _player;
     private GameObject _enemy;
     private GameObject _musicBox;
+    private GameObject _coffinWall_geo_grp;
     private AudioManager _audioManager;
 
     public enum Language {None, Danish, English};
@@ -80,6 +81,18 @@ public class GameManager {
             return _musicBox;
         }
     }
+    public GameObject coffinWall_geo_grp
+    {
+        get
+        {
+            if (_coffinWall_geo_grp == null)
+            {
+                _coffinWall_geo_grp = GameObject.Find("coffinWall_geo_grp");
+            }
+
+            return _coffinWall_geo_grp;
+        }
+    }
 
     public AudioManager audioManager
     {
@@ -102,18 +115,19 @@ public class GameManager {
             return _musicBoxCount;
         }
     }
+ 
 
     public void LeaveGame()
     {
 
-        AkSoundEngine.StopAll();
+       
         SceneManager.LoadScene(START_SCENE);
         audioManager.ChangeAudioState(0);
     }
 
     public void StartGame()
     {
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
         _musicBoxCount = 0;
         _instance = null;
         SceneManager.LoadScene(GAME_SCENE);
@@ -124,26 +138,29 @@ public class GameManager {
     {
         _instance = null;
         SceneManager.LoadScene(INBETWEEN);
+        audioManager.ChangeAudioState(0);
     }
 
     public void PlayDeathScene_MusicBox()
     {
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
         if (!debug.musicBoxDeathImmune)
             SceneManager.LoadScene(LOSE_SCENE_TIME);
+        audioManager.ChangeAudioState(0);
     }
 
     public void PlayDeathScene_Monster()
     {
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
         audioManager.ChangeAudioState(0);
         if (!debug.monsterDeathImmune)
             SceneManager.LoadScene(LOSE_SCENE_DEATH);
+
     }
     public void PlayWinScene()
     {
         audioManager.ChangeAudioState(0);
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
         SceneManager.LoadScene(WIN_SCENE);
     }
 
@@ -285,6 +302,7 @@ public class GameManager {
     }
     public void MusicBoxLast()
     {
+        Debug.Log("SIDSTE SPILLER");
         if (OnMusicBoxLast != null)
             OnMusicBoxLast();
     }
@@ -311,7 +329,7 @@ public class GameManager {
         }
         if(_musicBoxCount == 5)
         {
-            OnMusicBoxLast();
+            MusicBoxLast();
         }
         if (_musicBoxCount >= MusicBoxSpawn.GetCount())
         {
@@ -326,6 +344,7 @@ public class GameManager {
     public event Graveyard OnGateCreak;
     public void GateOpen()
     {
+        Debug.Log("THE GATES ARE OPEN");
         if (OnGateOpen != null)
             OnGateOpen();
     }

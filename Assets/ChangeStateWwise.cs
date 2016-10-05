@@ -16,6 +16,7 @@ public class ChangeStateWwise : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
+            col.GetComponent<PlayerControls>().EnteredVoid = true;
             AkSoundEngine.SetState("Ending", "Void");
             //GameManager.instance.audioManager
         }
@@ -24,6 +25,7 @@ public class ChangeStateWwise : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
+            col.GetComponent<PlayerControls>().EnteredVoid = false;
             AkSoundEngine.SetState("Ending", "Forest");
             //GameManager.instance.audioManager
         }

@@ -12,7 +12,7 @@ public class MusicBox : MonoBehaviour {
     void Start () {
 
         GameManager.instance.audioManager.MusicBoxStart();
-        GameManager.instance.audioManager.AmbienceStart();
+        //GameManager.instance.audioManager.AmbienceStart(); DEN KOMMER FRA MENU SCENEN NU
         GameManager.instance.audioManager.FootStepStart();
         GameManager.instance.audioManager.BreathStart();
         GameManager.instance.OnMusicBoxMove += MoveToNextSpawn;
@@ -22,6 +22,7 @@ public class MusicBox : MonoBehaviour {
     void LastMusicBox()
     {
         FinalBox = true;
+        
     }
     void Update () {
         if (!FinalBox)
@@ -63,21 +64,26 @@ public class MusicBox : MonoBehaviour {
 
     private void moveTo(MusicBoxSpawn spawnPoint)
     {
-        transform.position = spawnPoint.transform.position;
-        timeToDie = 0;
-        Count = true;
-        
+        if (!FinalBox)
+        {
+
+            transform.position = spawnPoint.transform.position;
+            timeToDie = 0;
+            Count = true;
+        }
     }
 
     public void MoveToNextSpawn()
     {
+        if (!FinalBox)
+        {
+            GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position, transform.rotation);
 
-        GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position, transform.rotation);
-
-        //GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position + transform.GetChild(0).GetChild(0).localPosition - transform.GetChild(0).GetChild(0).GetChild(0).localPosition, transform.rotation);
-        Destroy(particlePuff, 2f);
-        MusicBoxSpawn spawnPoint = MusicBoxSpawn.GetNext();
-        MusicBoxSpawn.SetCurrent(spawnPoint);
-        moveTo(spawnPoint);
+            //GameObject particlePuff = (GameObject)Instantiate(ParticlePuff, transform.GetChild(0).GetChild(0).GetChild(0).position + transform.GetChild(0).GetChild(0).localPosition - transform.GetChild(0).GetChild(0).GetChild(0).localPosition, transform.rotation);
+            Destroy(particlePuff, 2f);
+            MusicBoxSpawn spawnPoint = MusicBoxSpawn.GetNext();
+            MusicBoxSpawn.SetCurrent(spawnPoint);
+            moveTo(spawnPoint);
+        }
     }
 }

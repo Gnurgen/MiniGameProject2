@@ -2132,6 +2132,11 @@ Air currents change during the hours of the day and months of the year.</Comment
 								<Value>-6</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -3115,6 +3120,11 @@ Air currents change during the hours of the day and months of the year.</Comment
 								<Value>-6</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -3201,6 +3211,10 @@ Air currents change during the hours of the day and months of the year.</Comment
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Ending Coffin" ID="{CA55BAED-6C33-4F04-BFA4-D6AEC014565B}" ShortID="8408552">
+							<PropertyList>
+								<Property Name="FadeInShape" Type="int16" Value="0"/>
+								<Property Name="TrimBegin" Type="Real64" Value="4.47737630208334E-03"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Ending Coffin.wav</AudioFile>
 						</AudioFileSource>
@@ -3440,6 +3454,11 @@ Air currents change during the hours of the day and months of the year.</Comment
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-7</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -5196,6 +5215,18 @@ Air currents change during the hours of the day and months of the year.</Comment
 								<SwitchRef Name="Idle" ID="{C670FE80-82A1-4145-B3A0-5498DA7F887E}"/>
 								<ItemList>
 									<ItemRef Name="Silence" ID="{094E9ECB-9345-4DE1-922E-2501890C21A1}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Run" ID="{5CB2B8AB-1591-40E6-952E-D4185B2B7B19}"/>
+								<ItemList>
+									<ItemRef Name="Player Footsteps Run" ID="{2C632435-068C-4227-BE85-1E3B2AA58C27}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Walk" ID="{F64407FF-7B7C-4EC7-8113-E23BD137B6E0}"/>
+								<ItemList>
+									<ItemRef Name="Player Footsteps Walk" ID="{FE9E3C59-EDDD-4938-A9A6-DD25BEF79624}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
